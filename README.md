@@ -3,27 +3,16 @@ medusa
 
 Free and Powerful CSS/JS Framevork
 
-/*************************************** 
-  --- CSS --- 
-  
-**************************************/
-
+//css </br>
 .class-names-agreement
 {
     /* ... */
 }
 
 
-
-
-/*************************************** 
-  --- JS --- 
-  
-**************************************/
-
+//js </br>
 window.medusa = {} //core object
 
-//extend
 window.medusa.modulename = function()
 {
     /* ... */

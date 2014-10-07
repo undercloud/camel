@@ -339,15 +339,22 @@ button::-moz-focus-inner {
     padding: 0;
 }
 
-input::-webkit-input-placeholder{
+input::-webkit-input-placeholder
+{
 	line-height: 1.2em;
 }
-input:-moz-placeholder {
+
+input:-moz-placeholder 
+{
 	line-height: 1.2em;
 }
-input::-moz-placeholder {
+
+input::-moz-placeholder 
+{
 	line-height: 1.2em;
 }
-input:-ms-input-placeholder {
+
+input:-ms-input-placeholder 
+{
 	line-height: 1.2em;
 }

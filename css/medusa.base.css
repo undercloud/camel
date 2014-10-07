@@ -334,7 +334,8 @@ input[type=reset]::-moz-focus-inner
 	margin-bottom: -2px; 
 }
 
-button::-moz-focus-inner {
+button::-moz-focus-inner 
+{
     border: 0;
     padding: 0;
 }

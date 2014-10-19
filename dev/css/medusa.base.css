@@ -5,8 +5,6 @@ body
 	font-size: 14px;
 	line-height: 1.5em;
 	text-rendering: optimizelegibility;
-	width: 800px;
-	margin: 0 auto;
 }
 
 h1,h2,h3,h4,h5,h6 
@@ -353,7 +351,7 @@ input::-moz-placeholder {
 input:-ms-input-placeholder {
 	line-height: 1.2em;
 }
-
+/*
 button.nested
 {
 	padding: 0;
@@ -412,26 +410,4 @@ background-color: #5bc0de;
 border-color: #5bc0de;
 color: #FFF;
 }
-
-.bold           {font-weight: bold;}
-.italic         {font-style: italic;}
-.normal         {font-style: normal;font-weight: normal}
-.text-left      {text-align:left}
-.text-right     {text-align:right}
-.text-center    {text-align:center}
-.text-justify   {text-align:justify}
-.text-overflow  {overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
-.pull-left      {float: left !important;}
-.pull-right     {float: right !important;}
-.center-block   {display: block;margin-left: auto;margin-right: auto;}
-.clearfix:before,
-.clearfix:after {content:"";display:table;}
-.clearfix:after {clear:both;}
-.clearfix       {zoom:1;}
-.block          {display: block}
-.inline         {display: block;}
-.inline-block   {display: inline-block;}
-.show           {display: block !important;}
-.hidden         {display: none !important;visibility: hidden !important;}
-.invisible      {visibility: hidden;}
-.noselect       {-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;-o-user-select: none;user-select: none;}
+*/

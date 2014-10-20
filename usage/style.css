@@ -1,0 +1,58 @@
+.wrap {width: 800px;margin: 0 auto;}
+.row-12 div, .row-16 div, .row-24 div 
+{
+	background-color: #eee;
+	text-align: center;
+	border-radius: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.pre-header
+{
+	color: #fff;
+	padding: 15px;
+	font-size: 22px;
+	font-weight: bold;
+	margin: 0;
+	background-color: #C0E089;
+	box-shadow: 0px 1px 5px #949494;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	display: block;
+}
+
+.main-container 
+{
+	width: 960px;
+	margin: 0 auto;
+	margin-top: 60px;
+	position: relative;
+}
+
+.content-list
+{
+	float: left;
+	width: 180px;
+	margin: 5px;
+}
+
+.content-list ul li
+{
+	list-style: none;
+}
+
+.content-list li.head
+{
+	font-weight: bold;
+}
+
+.content
+{
+	float: left;
+	width: 760px;
+	margin: 5px;
+}

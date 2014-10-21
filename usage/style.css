@@ -1,5 +1,13 @@
 .wrap {width: 800px;margin: 0 auto;}
-.row-12 div, .row-16 div, .row-24 div 
+
+.section-head
+{
+	color: #96AF6A;
+}
+
+.exmp .row-12 div,
+.exmp .row-16 div,
+.exmp .row-24 div 
 {
 	background-color: #eee;
 	text-align: center;

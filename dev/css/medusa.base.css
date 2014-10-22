@@ -31,9 +31,26 @@ a:active { text-decoration:underline;outline: 0; }
 
 p        { margin: 0 0 10px 0; }
 b,strong { font-weight: bold; }
-em,i     { font-style: italic; }
-q        { font-style: italic; }
+em,i,dfn { font-style: italic; }
+q,cite   { font-style: italic; }
 del,s    { text-decoration: line-through; }
+ins      { text-decoration: underline;}
+kbd 
+{
+	background-color: #565656;
+	padding: 0.15em;
+	color: #fff;
+	border-radius: 0.15em;
+}
+
+code,
+samp
+{
+	background-color: #efefef;
+	border-left: 4px solid #ddd;
+	padding: 10px;
+	display: block;
+}
 
 blockquote
 {
@@ -126,7 +143,7 @@ li
 
 iframe { border: 0; }
 
-img { border: 0; }
+img,map,area { border: 0; }
 
 address 
 {

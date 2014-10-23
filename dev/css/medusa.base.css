@@ -7,14 +7,17 @@ body
 	text-rendering: optimizelegibility;
 }
 
-h1,h2,h3,h4,h5,h6 
-{
+iframe       { border: 0; }
+img,map,area { border: 0; }
+
+div  { display: block;position: relative; }
+span { display: inline;position: relative; }
+
+h1,h2,h3,h4,h5,h6 {
 	padding: 0;
 	margin: 0;
 	font-weight: normal;
 	line-height: 2em;
-	font-family: inherit;
-	color: inherit;
 }
 
 h1 { font-size: 32px; }
@@ -25,35 +28,31 @@ h5 { font-size: 16px; }
 h6 { font-size: 14px; }
 
 a        { cursor: pointer;text-decoration:none;color: #08c; }
-a:focus  { outline: thin dotted #333;outline-offset: -2px; }
 a:hover,
 a:active { text-decoration:underline;outline: 0; }
 
-p        { margin: 0 0 10px 0; }
+p        { margin: 0 0 1em 0; }
 b,strong { font-weight: bold; }
 em,i,dfn { font-style: italic; }
 q,cite   { font-style: italic; }
 del,s    { text-decoration: line-through; }
 ins      { text-decoration: underline;}
-kbd 
-{
-	background-color: #565656;
+kbd {
+	background-color: #414341;
 	padding: 0.15em;
 	color: #fff;
 	border-radius: 0.15em;
 }
 
 code,
-samp
-{
+samp {
 	background-color: #efefef;
 	border-left: 4px solid #ddd;
 	padding: 10px;
 	display: block;
 }
 
-blockquote
-{
+blockquote {
 	margin: 0;
 	margin-left: 20px;
 	padding-left: 10px;
@@ -84,7 +83,8 @@ blockquote:after {
 small { font-size: 85%; }
 big   { font-size: 120%; }
 
-abbr  { cursor: help;border-bottom: 1px dashed #999; }
+abbr    { cursor: help;}
+address {display: block;font-style: italic;}
 
 hr {
 	margin: 1em 0;
@@ -103,13 +103,25 @@ sup {
 sup { top: -.5em; }
 sub { bottom: -.25em; }
 
+ul,
+ol {
+	padding: 0;
+	margin: 0;
+	list-style-position: inside;
+}
+
+li {
+	padding: 0;
+	margin: 0;
+	line-height: 1.5em;
+}
+
 dl { padding: 0;margin: 0; }
 dt { font-weight: bold; }
-dd { margin-left: 20px; }
+dd { margin-left: 2em; }
 
 table {
 	width: 100%;
-	background-color: transparent;
 	border-collapse: collapse;
 	border-spacing: 0;
 }
@@ -122,37 +134,11 @@ table td {
 }
 
 table th {
+	text-align: left;
 	font-weight: bold;
 	background-color: #eee;
 }
 
-ul,
-ol
-{
-	padding: 0;
-	margin: 0;
-	list-style-position: inside;
-}
-
-li
-{
-	padding: 0;
-	margin: 0;
-	line-height: 1.5em;
-}
-
-iframe { border: 0; }
-
-img,map,area { border: 0; }
-
-address 
-{
-	display: block;
-	font-style: italic;
-}
-
-div {display: block;position: relative;}
-span {display: inline;position: relative;}
 
 form, button, input, select, textarea,
 fieldset, legend, label

@@ -41,6 +41,11 @@
 	position: relative;
 }
 
+.content-body
+{
+	margin-bottom: 25px;
+}
+
 .content-list
 {
 	float: left;

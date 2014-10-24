@@ -1,0 +1,307 @@
+form, button, input, select, textarea,
+fieldset, legend, label
+{
+	padding: 0;
+	margin: 0;
+	border:0;
+	line-height: 100%;
+	position: relative;
+	outline: none;
+}
+
+fieldset
+{
+	padding: 10px;
+	padding-top: 0;
+	margin: 0px;
+}
+
+legend
+{
+	padding: 5px;
+	font-weight: bold;
+	line-height: 100%;
+}
+
+label
+{
+	vertical-align: middle;
+}
+
+button,
+input[type=button],
+input[type=submit],
+input[type=reset]
+{
+	display:inline-block;
+	margin: 2px;
+	padding: 10px 15px;
+	color: inherit;
+	border: 1px solid #cdcdcd;
+	font-size: 12px;
+	font-weight: normal;
+	text-decoration:none;
+	cursor:pointer;
+	white-space: nowrap;
+	text-align: center;
+	vertical-align: middle;
+	background: -moz-linear-gradient(
+		center top,
+		rgba(255, 255, 255, .1) 0%,
+		rgba(0, 0, 0, .1) 100%
+	);
+	background: -webkit-gradient(
+		linear,
+		center bottom,
+		center top,
+		from(rgba(0, 0, 0, .1)),
+		to(rgba(255, 255, 255, .1))
+	);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#19FFFFFF', EndColorStr='#19000000');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#19FFFFFF', EndColorStr='#19000000')";
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-radius: 2px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	-o-border-radius: 2px;
+	-khtml-border-radius: 2px;
+}
+
+button:hover,
+input[type=button]:hover,
+input[type=submit]:hover,
+input[type=reset]:hover
+{
+	zoom: 1;
+	opacity:0.85;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+	filter: alpha(style=0,opacity=85);
+	-moz-opacity: 0.85;
+	-khtml-opacity: 0.85;
+}
+
+button:active,
+input[type=button]:active,
+input[type=submit]:active,
+input[type=reset]:active
+{
+	top: 1px;
+}
+
+button[disabled]:active,
+input[type=button][disabled]:active,
+input[type=submit][disabled]:active,
+input[type=reset][disabled]:active
+{
+	top:0px;
+}
+
+input[type=text]:focus,
+input[type=password]:focus, 
+select:focus,
+textarea:focus 
+{
+	box-shadow: 0 0 3px #93d0ea;
+	border: 1px solid #93d0ea;
+}
+
+input[type=text],
+input[type=password],
+textarea
+{
+	width: 200px;
+	margin: 2px;
+	padding: 8px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	box-shadow: inset 0 1px 3px #ddd;
+	vertical-align: middle;
+	border-radius: 2px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	-o-border-radius: 2px;
+	-khtml-border-radius: 2px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+textarea 
+{ 
+	overflow: auto;
+	line-height: 1.2em;
+	resize: none;
+}
+
+select
+{
+	width: 200px;
+	padding: 7px;
+	margin: 2px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	box-shadow: 0 1px 3px #ddd;
+	vertical-align: middle;
+	border-radius:2px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	-o-border-radius: 2px;
+	-khtml-border-radius: 2px;
+}
+
+input[type=checkbox],
+input[type=radio]
+{
+	margin: 0 3px 2px 3px;
+	vertical-align: middle;
+}
+
+input[type=text][disabled],
+input[type=password][disabled],
+input[type=button][disabled],
+input[type=submit][disabled],
+input[type=reset][disabled],
+textarea[disabled],
+select[disabled],
+button[disabled]
+{
+	background: #eee;
+	color: #aaa;
+}
+
+input[type=button]::-moz-focus-inner,
+input[type=submit]::-moz-focus-inner,
+input[type=reset]::-moz-focus-inner 
+{
+	border: 0; 
+	padding: 0;
+	margin-bottom: -2px; 
+}
+
+.medusa-upload
+{
+	background-color: #EEE;
+	width: 100%;
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+}
+
+.medusa-upload:hover
+{
+	background-color: #E6E6E6;
+}
+
+.medusa-upload .medusa-upload-title
+{
+	padding: 15px 0px 15px 28px;
+	background-image: url('upload-file.png');
+	background-repeat: no-repeat;
+	background-position: left 5px center;
+	font-family: Arial;
+	font-size: 14px;
+	display: inline-block;
+}
+
+.medusa-upload input.medusa-upload-file 
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 500px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+
+
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+input::-webkit-input-placeholder{
+	line-height: 1.2em;
+}
+input:-moz-placeholder {
+	line-height: 1.2em;
+}
+input::-moz-placeholder {
+	line-height: 1.2em;
+}
+input:-ms-input-placeholder {
+	line-height: 1.2em;
+}
+
+form .form-group
+{
+	display: block;
+}
+
+
+
+/*
+button.nested
+{
+	padding: 0;
+}
+
+button span
+{
+	padding: 10px 28px;
+	display: inline-block;
+	margin: 0;
+}
+
+button span.icon
+{
+	background-image: url(http://www.irctctourism.com/ttrs/railtourism/images/newPlanner/images/add_icon.gif);
+	background-repeat: no-repeat;
+	background-position: 6px center;
+}
+
+.red
+{
+	background-color: #BE100A;
+	border-color: #BE100A;
+	color: #FFFFFF;
+}
+
+{
+background-color: #EB3434;
+border-color: #EB3434;
+color: #FFFFFF;
+}
+
+.green
+{
+	background-color: #368046;
+	border-color: #368046;
+	color: #FFFFFF;
+}
+
+.light-green
+{
+	background-color: #99CC33;
+	border-color: #99CC33;
+	color: #FFFFFF;
+}
+
+.blue
+{
+	background-color: #296F98;
+	border-color: #296F98;
+	color: #FFFFFF;
+}
+
+.light-blue{
+background-color: #5bc0de;
+border-color: #5bc0de;
+color: #FFF;
+}
+*/

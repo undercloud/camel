@@ -4,6 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="../dev/css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<link rel="stylesheet" type="text/css" href="../dev/css/medusa.base.css" />
+		<link rel="stylesheet" type="text/css" href="../dev/css/medusa.form.css" />
 		<link rel="stylesheet" type="text/css" href="../dev/css/medusa.utils.css" />
 		<link rel="stylesheet" type="text/css" href="../dev/css/medusa.grid12.css" />
 		<link rel="stylesheet" type="text/css" href="../dev/css/medusa.grid16.css" />
@@ -29,6 +30,12 @@
 					<li><a href='list'>sup,sub</a></li>
 					<li><a href='list'>small,big</a></li>
 					<li><a href='list'>address</a></li>
+					<li class='head'>Grid</li>
+					<li><a href='list'>grid 12</a></li>
+					<li><a href='list'>grid 16</a></li>
+					<li><a href='list'>grid 24</a></li>
+					<li class='head'>Tables</li>
+					<li class='head'>Forms</li>
 				</ul>
 			</div>
 			<div class="content">
@@ -140,7 +147,20 @@
 					</div>
 					<div class="row-12">
 						<div class="grid-6">
-
+							<h2 class="section-head">.unstyled</h2>
+							<ul class="unstyled">
+								<li>One</li>
+								<li>Two</li>
+								<li>Three</li>
+								<li>
+									<ul>
+										<li>Four</li>
+									</ul>
+								</li>
+								<li>Five</li>
+								<li>Six</li>
+								<li>Seven</li>
+							</ul>
 						</div>
 						<div class="grid-6">
 							<h2 class="section-head">#dl</h2>
@@ -344,6 +364,49 @@
 							<td>cell-4</td>
 						</tr>
 					</table>
+				</div>
+
+				<h1 class="section-head">Forms</h1>
+				<div class="content-body">
+					<fieldset>
+						<legend>Example</legend>
+						<form>
+							<input type="text" placeholder="login" />
+							<input type="password" placeholder="password" />
+							<textarea placeholder="textarea"></textarea>
+							<label><input name="same" type='radio'  />Yes</label>
+							<label><input name="same" type='radio'  />No</label>
+							<select>
+								<option>one</option>
+								<option>two</option>
+								<option>three</option>
+								<option>four</option>
+								<option>five</option>
+								<option>six</option>
+							</select>
+							<select multiple>
+								<option>one</option>
+								<option>two</option>
+								<option>three</option>
+								<option>four</option>
+								<option>five</option>
+								<option>six</option>
+							</select>
+							<div class='medusa-upload'>
+								<div class='medusa-upload-title'>Загрузить файл</div>
+									<input type='file' class='medusa-upload-file'/>
+							</div>
+							<label><input type='checkbox' />Remember</label>
+							<button>SignUp</button>
+						</form>
+					</fieldset>
+
+					<form class="medusa-form form-stacked">
+						<input type="text" placeholder="login" />
+						<input type="password" placeholder="password" />
+						<label><input type='checkbox' />Remember</label>
+						<button>SignUp</button>
+					</form>
 				</div>
 			</div>
 		</div>

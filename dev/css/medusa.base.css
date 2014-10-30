@@ -39,6 +39,7 @@ del,s    { text-decoration: line-through; }
 ins      { text-decoration: underline;}
 kbd {
 	background-color: #414341;
+	line-height: 100%;
 	padding: 0.15em;
 	color: #fff;
 	border-radius: 0.15em;

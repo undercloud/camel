@@ -7,6 +7,7 @@ fieldset, legend, label
 	line-height: 100%;
 	position: relative;
 	outline: none;
+	font-size: 14px;
 }
 
 fieldset
@@ -23,9 +24,12 @@ legend
 	line-height: 100%;
 }
 
-label
+label { vertical-align: middle;}
+label.require:after
 {
-	vertical-align: middle;
+	content: "*";
+	color: #c91111;
+	font-size: 1.8em;
 }
 
 button,
@@ -117,7 +121,6 @@ textarea
 	background-color: #fff;
 	border: 1px solid #ccc;
 	box-shadow: inset 0 1px 3px #ddd;
-	vertical-align: middle;
 	border-radius: 2px;
 	-moz-border-radius:2px;
 	-webkit-border-radius:2px;
@@ -154,7 +157,7 @@ select
 input[type=checkbox],
 input[type=radio]
 {
-	margin: 0 3px 2px 3px;
+	margin: 0 6px 2px 3px;
 	vertical-align: middle;
 }
 
@@ -180,6 +183,24 @@ input[type=reset]::-moz-focus-inner
 	margin-bottom: -2px; 
 }
 
+button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input::-webkit-input-placeholder{
+	line-height: 1.2em;
+}
+input:-moz-placeholder {
+	line-height: 1.2em;
+}
+input::-moz-placeholder {
+	line-height: 1.2em;
+}
+input:-ms-input-placeholder {
+	line-height: 1.2em;
+}
+
 .medusa-upload
 {
 	background-color: #EEE;
@@ -196,12 +217,7 @@ input[type=reset]::-moz-focus-inner
 
 .medusa-upload .medusa-upload-title
 {
-	padding: 15px 0px 15px 28px;
-	background-image: url('upload-file.png');
-	background-repeat: no-repeat;
-	background-position: left 5px center;
-	font-family: Arial;
-	font-size: 14px;
+	padding: 10px 0px;
 	display: inline-block;
 }
 
@@ -218,53 +234,254 @@ input[type=reset]::-moz-focus-inner
 	filter: alpha(opacity=0);
 }
 
-
-
-button::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-}
-
-input::-webkit-input-placeholder{
-	line-height: 1.2em;
-}
-input:-moz-placeholder {
-	line-height: 1.2em;
-}
-input::-moz-placeholder {
-	line-height: 1.2em;
-}
-input:-ms-input-placeholder {
-	line-height: 1.2em;
-}
-
-form .form-group
+.form-group
 {
 	display: block;
 }
 
+.input-addon
+{
+	font-size: 0;
+}
 
+span.input-addon-before,
+span.input-addon-after
+{
+	position: relative;
+	display: inline-block;
+	font-size: 14px;
+	vertical-align: middle;
+	line-height: 1;
+	padding: 9px 10px;
+	background-color: #eee;
+	border: 1px solid #ddd;
+}
 
-/*
+span.input-addon-before
+{
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+}
+
+span.input-addon-after
+{
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+
+input.input-addon-before
+{
+	margin-left: 0px;
+	vertical-align: middle;
+	border-left: none;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+input.input-addon-after
+{
+	margin-right: 0px;
+	vertical-align: middle;
+	border-right: none;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+button.full
+{
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0;
+}
+
 button.nested
 {
 	padding: 0;
 }
 
-button span
+/*button span
 {
 	padding: 10px 28px;
 	display: inline-block;
 	margin: 0;
 }
+*/
 
-button span.icon
+button.nested span
 {
-	background-image: url(http://www.irctctourism.com/ttrs/railtourism/images/newPlanner/images/add_icon.gif);
-	background-repeat: no-repeat;
-	background-position: 6px center;
+	display: inline-block;
+	padding: 10px;
 }
 
+button.nested span.icon
+{
+	margin-left: 10px;
+	padding-left: 24px; 
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+button.nested span.icon.right
+{
+	background-position: right center;
+	margin-right: 10px;
+	padding-left: 0px;
+	padding-right: 24px; 
+}
+
+button.nested 
+span.icon.no-txt
+{
+	margin-left: 8px !important;
+	margin-right: 8px !important;
+	padding-left: 4px !important;
+}
+
+.icon.no-txt:after
+{
+	content: "\00a0";
+}
+
+.icon.add
+{
+	background-image: url(https://cdn3.iconfinder.com/data/icons/eightyshades/512/14_Add-16.png);
+}
+
+.button-group
+{
+	display: inline-block;
+	overflow: hidden;
+	font-size: 0;
+}
+
+.button-group .button
+{
+	margin: 0;
+	border-radius: 0;
+}
+
+.button-group .button:first-child
+{
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px; 
+}
+
+.button-group .button:last-child
+{
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px; 
+}
+
+.button-group.collapse .button
+{
+	margin-left: -1px;
+}
+
+.button-group.collapse .button:first-child
+{
+	margin-left: 0px;
+}
+
+
+input.success,
+input.success:focus
+{
+	outline: 0;
+	-webkit-box-shadow: rgba(0,0,0,.2) 0 1px 1px inset;
+	-moz-box-shadow: rgba(0,0,0,.2) 0 1px 1px inset;
+	box-shadow: rgba(0,0,0,.2) 0 1px 1px inset;
+	border: 1px solid #99CC33;
+}
+
+input.warn,
+input.warn:focus
+{
+	outline: 0;
+	-webkit-box-shadow: rgba(0,0,0,.2) 0 1px 1px inset;
+	-moz-box-shadow: rgba(0,0,0,.2) 0 1px 1px inset;
+	box-shadow: rgba(0,0,0,.2) 0 1px 1px inset;
+	border: 1px solid rgba(255,156,0,.6);
+}
+
+input.error,
+input.error:focus
+{
+	outline: 0;
+	-webkit-box-shadow: rgba(0,0,0,.2) 0 1px 1px inset;
+	-moz-box-shadow: rgba(0,0,0,.2) 0 1px 1px inset;
+	box-shadow: rgba(0,0,0,.2) 0 1px 1px inset;
+	border: 1px solid rgba(200,10,16,.5);
+}
+
+
+.form-row
+{
+	position: relative;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	font-size: 0;
+	display: block;
+}
+
+.form-grid-1, .form-grid-2, .form-grid-3,
+.form-grid-4, .form-grid-5, .form-grid-6,
+.form-grid-7, .form-grid-8, .form-grid-9,
+.form-grid-10, .form-grid-11, .form-grid-12
+{
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	margin: 0;
+	font-size: 14px;
+}
+
+
+.form-grid-1 { width: 8.333%;}
+.form-grid-2 { width: 16.666%;}
+.form-grid-3 { width: 25%;}
+.form-grid-4 { width: 33.333%;}
+.form-grid-5 { width: 41.666%;}
+.form-grid-6 { width: 50%;}
+.form-grid-7 { width: 58.333%;}
+.form-grid-8 { width: 66.666%;}
+.form-grid-9 { width: 75%;}
+.form-grid-10 { width: 83.333%;}
+.form-grid-11 { width: 91.666%;}
+.form-grid-12 { width: 100%;}
+
+.form-row label
+{
+	display: block;
+	padding-right: 10px;
+}
+
+.form-row input[type=text],
+.form-row input[type=password],
+.form-row textarea,
+.form-row select,
+.form-row .input-addon-before,
+.form-row .input-addon-after
+{
+	position: relative;
+	margin: 0;
+	width: 100%;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+
+.form-row span.input-addon-before,
+.form-row span.input-addon-after
+{
+	display: inline-block;
+	vertical-align: middle;
+	padding: 9px 10px;
+}
+
+.form-row button
+{
+	margin: 0;
+}
+/*
 .red
 {
 	background-color: #BE100A;
@@ -284,24 +501,23 @@ color: #FFFFFF;
 	border-color: #368046;
 	color: #FFFFFF;
 }
-
+*/
 .light-green
 {
 	background-color: #99CC33;
 	border-color: #99CC33;
 	color: #FFFFFF;
 }
-
+/*
 .blue
 {
 	background-color: #296F98;
 	border-color: #296F98;
 	color: #FFFFFF;
 }
-
-.light-blue{
-background-color: #5bc0de;
-border-color: #5bc0de;
-color: #FFF;
-}
 */
+.light-blue{
+	background-color: #5bc0de;
+	border-color: #5bc0de;
+	color: #FFF;
+}

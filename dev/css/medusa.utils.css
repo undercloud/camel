@@ -2,6 +2,8 @@
 .fix { position: fixed; }
 .abs { position: absolute; }
 
+.clickable { cursor: pointer; }
+
 .bold           { font-weight: bold; }
 .italic         { font-style: italic; }
 .normal         { font-style: normal;font-weight: normal; }

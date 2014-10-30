@@ -9,6 +9,9 @@
 		<link rel="stylesheet" type="text/css" href="../dev/css/medusa.grid12.css" />
 		<link rel="stylesheet" type="text/css" href="../dev/css/medusa.grid16.css" />
 		<link rel="stylesheet" type="text/css" href="../dev/css/medusa.grid24.css" />
+
+		<script src="http://prismjs.com/prism.js" data-default-language="markup"></script>
+		<link rel="stylesheet" href="http://prismjs.com/themes/prism.css" data-noprefix />
 	</head>
 		
 	<body>
@@ -372,6 +375,8 @@
 						<legend>Example</legend>
 						<form>
 							<input type="text" placeholder="login" />
+							<input type="text" placeholder="login" />
+							<input type="text" placeholder="login" disabled />
 							<input type="password" placeholder="password" />
 							<textarea placeholder="textarea"></textarea>
 							<label><input name="same" type='radio'  />Yes</label>
@@ -393,7 +398,7 @@
 								<option>six</option>
 							</select>
 							<div class='medusa-upload'>
-								<div class='medusa-upload-title'>Загрузить файл</div>
+								<div class='medusa-upload-title'>upload file</div>
 									<input type='file' class='medusa-upload-file'/>
 							</div>
 							<label><input type='checkbox' />Remember</label>
@@ -407,6 +412,135 @@
 						<label><input type='checkbox' />Remember</label>
 						<button>SignUp</button>
 					</form>
+
+					<div>
+						<button class="nested light-green">
+							<span class="icon add">add element</span>
+						</button>
+					</div>
+
+					<div class="p-20">
+						<div class="input-envelop">
+							<span class="input-envelop-before">@</span><input type="text"/>
+						</div>
+					</div>
+
+					<div class="p-20">
+						<div>
+							<input type="text"/>
+							<span class="input-envelop-after">@</span>
+						</div>
+					</div>
+
+					<div class="p-20">
+						<div class="input-addon">
+							<span class="input-addon-before">@</span>
+							<input type="text" class="input-addon-before" />
+						</div>
+					</div>
+
+					<div class="p-20">
+						<div class="input-addon">
+							<input type="text" class="input-addon-after" />
+							<span class="input-addon-after">@</span>
+						</div>
+					</div>
+
+					<div>
+						<div class="input-addon">
+							<span class="input-addon-before">http://</span>
+							<input type="text" class="input-addon-before input-addon-after" />
+							<span class="input-addon-after">.com</span>
+						</div>
+					</div>
+
+					<div>
+						<div class="button-group">
+							<button class="button nested light-blues">
+								<span class="icon add">add element</span>
+							</button>
+							<button class="button light-greens">Two</button>
+							<button class="button nested light-greens">
+								<span class="icon add right">add element</span>
+							</button>
+							<button class="button nested light-blue">
+								<span>bichoo</span>
+							</button>
+							<button class="button nested light-green"><span class="icon add no-txt"></span></button>
+						</div>
+					</div>
+
+					<div style="width:400px">
+						<div class="form-row">
+							<div class="form-grid-4">
+								<label for="grid-text">Login</label>
+							</div>
+							<div class="form-grid-8">
+								<input type="text" />
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-grid-4">
+								<label for="grid-text">Password</label>
+							</div>
+							<div class="form-grid-8">
+								<input type="password" />
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-grid-4">
+								<label for="grid-text">HTTP</label>
+							</div>
+							<div class="form-grid-2">
+								<span class="input-addon-before">http://</span>
+							</div>
+							<div class="form-grid-4">
+								<input type="text" class="input-addon-before" />
+							</div>
+							<div class="form-grid-2">
+								<button>sasai</button>
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-grid-4">
+								<label for="grid-text">Password</label>
+							</div>
+							<div class="form-grid-8">
+								<select>
+									<option>One</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-grid-12">
+								<button class="light-blue full">ebelehae</button>
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-grid-6">
+								<div class='medusa-upload'>
+									<div class='medusa-upload-title'>upload file</div>
+										<input type='file' class='medusa-upload-file'/>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div style='width:400px'>
+						<div class="form-row">
+							<label>Login</label>
+						</div>
+						<div class="form-row">
+							<input type="text" />
+						</div>
+					</div>	
+						
+					<pre><code class="language-html">
+						&lt;p&gt;
+						Text
+						&lt;/p&gt;
+					</code></pre>
+
 				</div>
 			</div>
 		</div>

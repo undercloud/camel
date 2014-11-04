@@ -10,8 +10,8 @@
 		<link rel="stylesheet" type="text/css" href="../dev/css/medusa.grid16.css" />
 		<link rel="stylesheet" type="text/css" href="../dev/css/medusa.grid24.css" />
 
-		<script src="http://prismjs.com/prism.js" data-default-language="markup"></script>
-		<link rel="stylesheet" href="http://prismjs.com/themes/prism.css" data-noprefix />
+		<!--script src="http://prismjs.com/prism.js" data-default-language="markup"></script>
+		<link rel="stylesheet" href="http://prismjs.com/themes/prism.css" data-noprefix /-->
 	</head>
 		
 	<body>
@@ -371,176 +371,299 @@
 
 				<h1 class="section-head">Forms</h1>
 				<div class="content-body">
+					<div class="medusa-form-row">
+						<div class="form-grid-1">1</div>
+						<div class="form-grid-11">11</div>
+					</div>
+					<div class="medusa-form-row">
+						<div class="form-grid-2">2</div>
+						<div class="form-grid-10">10</div>
+					</div>
+					<div class="medusa-form-row">
+						<div class="form-grid-3">3</div>
+						<div class="form-grid-9">9</div>
+					</div>
+					<div class="medusa-form-row">
+						<div class="form-grid-4">4</div>
+						<div class="form-grid-8">8</div>
+					</div>
+					<div class="medusa-form-row">
+						<div class="form-grid-5">5</div>
+						<div class="form-grid-7">7</div>
+					</div>
+					<div class="medusa-form-row">
+						<div class="form-grid-6">6</div>
+						<div class="form-grid-6">6</div>
+					</div>
+
 					<fieldset>
 						<legend>Example</legend>
-						<form>
-							<input type="text" placeholder="login" />
-							<input type="text" placeholder="login" />
-							<input type="text" placeholder="login" disabled />
-							<input type="password" placeholder="password" />
-							<textarea placeholder="textarea"></textarea>
-							<label><input name="same" type='radio'  />Yes</label>
-							<label><input name="same" type='radio'  />No</label>
-							<select>
-								<option>one</option>
-								<option>two</option>
-								<option>three</option>
-								<option>four</option>
-								<option>five</option>
-								<option>six</option>
-							</select>
-							<select multiple>
-								<option>one</option>
-								<option>two</option>
-								<option>three</option>
-								<option>four</option>
-								<option>five</option>
-								<option>six</option>
-							</select>
-							<div class='medusa-upload'>
-								<div class='medusa-upload-title'>upload file</div>
-									<input type='file' class='medusa-upload-file'/>
+						<form class="medusa-form" style="width:694px">
+							<div class="medusa-form-row">
+								<div class="form-grid-4">
+									<label class="medusa-label">Text</label>
+								</div>
+								<div class="form-grid-4">
+									<input type="text" class="medusa-input" placeholder="login" />
+								</div>
+								<div class="form-grid-4">
+									<input type="text" class="medusa-input" placeholder="login" disabled />
+								</div>
 							</div>
-							<label><input type='checkbox' />Remember</label>
-							<button>SignUp</button>
+							<div class="medusa-form-row">
+								<div class="form-grid-4">
+									<label class="medusa-label">Text</label>
+								</div>
+								<div class="form-grid-4">
+									<span class="medusa-input-addon">
+										<span class="addon-text-left">http://</span>
+										<span class="medusa-input-addon">
+											<span class="addon-icon-left icon-add"></span>
+											<input type="text" class="medusa-input addon-left addon-right icon-left icon-right" />
+											<span class="addon-icon-right icon-del"></span>
+										</span>
+										<span class="addon-text-right">.com</span>
+									</span>
+								</div>
+								<div class="form-grid-4">
+									<span class="medusa-input-addon right">
+										<span class="addon-icon-right icon-del"></span>
+										<input type="text" class="medusa-input icon-right" placeholder="login" />
+									</span>
+								</div>
+							</div>
+							<div class="medusa-form-row">
+								<div class="form-grid-4">Password</div>
+								<div class="form-grid-4">
+									<input type="password" class="medusa-input" placeholder="password" />
+								</div>
+								<div class="form-grid-4">
+									<input type="password" class="medusa-input" placeholder="password" disabled/>
+								</div>
+							</div>
+							<div class="medusa-form-row">
+								<div class="form-grid-4">Textarea</div>
+								<div class="form-grid-4">
+									<textarea class="medusa-input" placeholder="textarea"></textarea>
+								</div>
+								<div class="form-grid-4">
+									<textarea class="medusa-input" placeholder="textarea" disabled></textarea>
+								</div>
+							</div>
+							<div class="medusa-form-row">
+								<div class="form-grid-4">Checkbox</div>
+								<div class="form-grid-4">
+									<select class="medusa-select">
+										<option>one</option>
+										<option>two</option>
+										<option>three</option>
+										<option>four</option>
+										<option>five</option>
+										<option>six</option>
+									</select>
+								</div>
+								<div class="form-grid-4">
+									<select class="medusa-select" disabled>
+										<option>one</option>
+										<option>two</option>
+										<option>three</option>
+										<option>four</option>
+										<option>five</option>
+										<option>six</option>
+									</select>
+								</div>
+							</div>
+							<div class="medusa-form-row">
+								<div class="form-grid-4">Checkbox</div>
+								<div class="form-grid-4">
+									<select class="medusa-select" multiple>
+										<option>one</option>
+										<option>two</option>
+										<option>three</option>
+										<option>four</option>
+										<option>five</option>
+										<option>six</option>
+									</select>
+								</div>
+								<div class="form-grid-4">
+									<select multiple disabled>
+										<option>one</option>
+										<option>two</option>
+										<option>three</option>
+										<option>four</option>
+										<option>five</option>
+										<option>six</option>
+									</select>
+								</div>
+							</div>
+							<div class="medusa-form-row">
+								<div class="form-grid-4">Radio</div>
+								<div class="form-grid-4">
+									<label class="medusa-label"><input name="same" type='radio'  />Yes</label>
+									<label class="medusa-label"><input name="same" type='radio'  />No</label>
+								</div>
+								<div class="form-grid-4">
+									<label><input name="same_dis" type='radio' disabled="" />Yes</label>
+									<label><input name="same_dis" type='radio' disabled="" />No</label>
+								</div>
+							</div>
+							<div class="medusa-form-row">
+								<div class="form-grid-4">Checkbox</div>
+								<div class="form-grid-4">
+									<label class="medusa-label"><input type='checkbox' />Remember</label>
+								</div>
+								<div class="form-grid-4">
+									<label><input type='checkbox' disabled />Remember</label>
+								</div>
+							</div>
+							<div class="medusa-form-row">
+								<div class="form-grid-4">File</div>
+								<div class="form-grid-8">
+									<div class='medusa-upload'>
+										<div class='medusa-upload-title'>upload file</div>
+										<input type='file' class='medusa-upload-file'/>
+									</div>
+								</div>
+							</div>
+							<div class="medusa-form-row">
+								<div class="form-grid-4">Button</div>
+								<div class="form-grid-8">
+									<button class="medusa-button">button</button>
+									<input class="medusa-button" value="button" type="button" />
+									<input class="medusa-button" value="submit" type="submit" />
+									<input class="medusa-button" value="reset" type="reset" />
+									<button class="medusa-button light-blue" disabled>button</button>
+								</div>
+							</div>
+							<div class="medusa-form-row">
+								<div class="form-grid-4">Button</div>
+								<div class="form-grid-8">
+									<button class="medusa-button">SignUp</button>
+									<button class="medusa-button light-blue">SignUp</button>
+									<button class="medusa-button addon">
+										<span class="addon-icon icon-add"></span>SignUp
+									</button>
+								
+									<button class="medusa-button addon-right light-blue">
+										<span class="addon-icon icon-del"></span>SignUp
+									</button>
+									<button class="medusa-button addon-no-text light-blue">
+										<span class="addon-icon icon-add"></span>
+									</button>
+								</div>
+							</div>
+							<div class="medusa-form-row">
+								<div class="form-grid-4"></div>
+								<div class="form-grid-8">
+									<button class="medusa-button light-blue full">full width</button>
+								</div>
+							</div>
+							<div class="medusa-form-row">
+								<div class="form-grid-4"></div>
+								<div class="form-grid-8">
+									<div class="medusa-button-group">
+										<span class="medusa-button">one</span>
+										<span class="medusa-button">two</span>
+										<span class="medusa-button">three</span>
+									</div>
+								</div>
+							</div>
+							<div class="medusa-form-row">
+								<div class="form-grid-4"></div>
+								<div class="form-grid-8">
+									<div class="medusa-button-group collapse">
+										<span class="medusa-button">one</span>
+										<span class="medusa-button">two</span>
+										<span class="medusa-button">three</span>
+									</div>
+									<div class="medusa-button-group collapse">
+										<span class="medusa-button">one</span>
+										<span class="medusa-button">\/</span>
+									</div>
+								</div>
+							</div>
+							<div class="medusa-form-row">
+								<div class="form-grid-4">
+									<span class="medusa-input-addon">
+										<span class="addon-text-left">http://</span>
+										<span class="medusa-input-addon">
+											<span class="addon-icon-left icon-add"></span>
+											<input type="text" class="medusa-input addon-left addon-right icon-left icon-right" />
+											<span class="addon-icon-right icon-del"></span>
+										</span>
+										<span class="addon-text-right">.com</span>
+									</span>
+								</div>
+								<div class="form-grid-4">
+									<span class="medusa-input-addon">
+										<span class="addon-text-left">http://</span>
+										<input type="text" class="medusa-input addon-left" /></span>
+									</div>
+								<div class="form-grid-4">
+									<span class="medusa-input-addon">
+										<span class="medusa-input-addon">
+											<span class="addon-icon-left icon-add"></span>
+											<input type="text" class="medusa-input addon-right icon-left" />
+										</span>
+										<span class="addon-text-right">.com</span>
+									</span>
+								</div>
+							</div>
+							<div class="medusa-form-row">
+								<div class="form-grid-4">
+
+								</div>
+								<div class="form-grid-8">
+									<select class="medusa-select sm">
+										<option>one</option>
+										<option>two</option>
+										<option>three</option>
+										<option>four</option>
+										<option>five</option>
+										<option>six</option>
+									</select>
+									<select class="medusa-select">
+										<option>one</option>
+										<option>two</option>
+										<option>three</option>
+										<option>four</option>
+										<option>five</option>
+										<option>six</option>
+									</select>
+									<select class="medusa-select lg">
+										<option>one</option>
+										<option>two</option>
+										<option>three</option>
+										<option>four</option>
+										<option>five</option>
+										<option>six</option>
+									</select>
+								</div>
+							</div>
+							<div class="medusa-form-row">
+								<div class="form-grid-4">
+
+								</div>
+								<div class="form-grid-8">
+									<input type="text" class="medusa-input sm" placeholder="small"/>
+									<input type="text" class="medusa-input" placeholder="default"/>
+									<input type="text" class="medusa-input lg" placeholder="large"/>
+								</div>
+							</div>
 						</form>
 					</fieldset>
 
-					<form class="medusa-form form-stacked">
-						<input type="text" placeholder="login" />
-						<input type="password" placeholder="password" />
-						<label><input type='checkbox' />Remember</label>
-						<button>SignUp</button>
-					</form>
-
-					<div>
-						<button class="nested light-green">
-							<span class="icon add">add element</span>
-						</button>
-					</div>
-
-					<div class="p-20">
-						<div class="input-envelop">
-							<span class="input-envelop-before">@</span><input type="text"/>
-						</div>
-					</div>
-
-					<div class="p-20">
-						<div>
-							<input type="text"/>
-							<span class="input-envelop-after">@</span>
-						</div>
-					</div>
-
-					<div class="p-20">
-						<div class="input-addon">
-							<span class="input-addon-before">@</span>
-							<input type="text" class="input-addon-before" />
-						</div>
-					</div>
-
-					<div class="p-20">
-						<div class="input-addon">
-							<input type="text" class="input-addon-after" />
-							<span class="input-addon-after">@</span>
-						</div>
-					</div>
-
-					<div>
-						<div class="input-addon">
-							<span class="input-addon-before">http://</span>
-							<input type="text" class="input-addon-before input-addon-after" />
-							<span class="input-addon-after">.com</span>
-						</div>
-					</div>
-
-					<div>
-						<div class="button-group">
-							<button class="button nested light-blues">
-								<span class="icon add">add element</span>
-							</button>
-							<button class="button light-greens">Two</button>
-							<button class="button nested light-greens">
-								<span class="icon add right">add element</span>
-							</button>
-							<button class="button nested light-blue">
-								<span>bichoo</span>
-							</button>
-							<button class="button nested light-green"><span class="icon add no-txt"></span></button>
-						</div>
-					</div>
-
-					<div style="width:400px">
-						<div class="form-row">
-							<div class="form-grid-4">
-								<label for="grid-text">Login</label>
-							</div>
-							<div class="form-grid-8">
-								<input type="text" />
-							</div>
-						</div>
-						<div class="form-row">
-							<div class="form-grid-4">
-								<label for="grid-text">Password</label>
-							</div>
-							<div class="form-grid-8">
-								<input type="password" />
-							</div>
-						</div>
-						<div class="form-row">
-							<div class="form-grid-4">
-								<label for="grid-text">HTTP</label>
-							</div>
-							<div class="form-grid-2">
-								<span class="input-addon-before">http://</span>
-							</div>
-							<div class="form-grid-4">
-								<input type="text" class="input-addon-before" />
-							</div>
-							<div class="form-grid-2">
-								<button>sasai</button>
-							</div>
-						</div>
-						<div class="form-row">
-							<div class="form-grid-4">
-								<label for="grid-text">Password</label>
-							</div>
-							<div class="form-grid-8">
-								<select>
-									<option>One</option>
-								</select>
-							</div>
-						</div>
-						<div class="form-row">
-							<div class="form-grid-12">
-								<button class="light-blue full">ebelehae</button>
-							</div>
-						</div>
-						<div class="form-row">
-							<div class="form-grid-6">
-								<div class='medusa-upload'>
-									<div class='medusa-upload-title'>upload file</div>
-										<input type='file' class='medusa-upload-file'/>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div style='width:400px'>
-						<div class="form-row">
-							<label>Login</label>
-						</div>
-						<div class="form-row">
-							<input type="text" />
-						</div>
-					</div>	
-						
-					<pre><code class="language-html">
-						&lt;p&gt;
-						Text
-						&lt;/p&gt;
-					</code></pre>
-
+					<ul class="medusa-breadcrumbs">
+						<li>
+							<a href="/one">One</a>
+						</li>
+						<li>	
+							<a href="/one">Two</a>
+						</li>
+						<li>
+							<a href="/one">Three</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>

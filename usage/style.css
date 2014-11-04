@@ -69,3 +69,13 @@
 	width: 760px;
 	margin: 5px;
 }
+
+.form-rows-wrap .medusa-form-row div:first-child
+{
+	background-color: #eee;
+}
+
+.form-rows-wrap .medusa-form-row div:last-child
+{
+	background-color: #ddd;
+}

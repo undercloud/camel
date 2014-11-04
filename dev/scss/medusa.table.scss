@@ -1,0 +1,19 @@
+/* table */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+table th,
+table td {
+	padding: 5px;
+	vertical-align: middle;
+	border: 1px solid $secondary-color-dark;
+}
+
+table th {
+	text-align: left;
+	font-weight: bold;
+	background-color: $secondary-color-light;
+}

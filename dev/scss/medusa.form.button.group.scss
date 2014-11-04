@@ -1,0 +1,47 @@
+/* button group */
+
+.medusa-button-group
+{
+	display: inline-block;
+	overflow: hidden;
+	font-size: 0;
+}
+
+.medusa-button-group .medusa-button
+{
+	margin: 0;
+	border-radius: 0;
+}
+
+.medusa-button-group .medusa-button:first-child
+{
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px; 
+}
+
+.medusa-button-group .medusa-button:last-child
+{
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px; 
+}
+
+.medusa-button-group.collapse .medusa-button
+{
+	margin-left: -1px;
+}
+
+.medusa-button-group.collapse .medusa-button:first-child
+{
+	margin-left: 0px;
+}
+
+.medusa-button-group.full
+{
+	width: 100%;
+	display: table;
+}
+
+.medusa-button-group.full .medusa-button
+{
+	display: table-cell;
+}

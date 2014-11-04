@@ -6,7 +6,7 @@
 	padding: 0;
 	margin: 0;
 	border:0;
-	line-height: 100%;
+	line-height: 14pxs;
 	position: relative;
 	outline: none;
 	font-size: 14px;
@@ -32,17 +32,19 @@ legend
 	position: relative;
 	margin-bottom: 10px;
 	margin-top: 10px;
-	display: block;
+	display: table;
+	width: 100%;
 }
 
-.medusa-form-row:before,
-.medusa-form-row:after {
-  content: " ";
-  display: table;
+.medusa-form-row > *
+{
+	padding-right: 10px;
 }
- 
-.medusa-form-row:after {clear: both}
-.medusa-form-row {*zoom: 1}
+
+.medusa-form-row > *:last-child
+{
+	padding-right: 0; 
+}
 
 .medusa-form-row>.form-grid-1,
 .medusa-form-row>.form-grid-2,
@@ -57,8 +59,8 @@ legend
 .medusa-form-row>.form-grid-11,
 .medusa-form-row>.form-grid-12
 {
-	display: inline;
-	float: left;
+	display: table-cell;
+	vertical-align: middle;
 	box-sizing: border-box;
 	position: relative;
 	width: 100%;
@@ -100,7 +102,6 @@ legend
 
 .medusa-label 
 {
-	padding: 10px 0;
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -116,6 +117,8 @@ legend
 {
 	width: 200px;
 	padding: 7px;
+	vertical-align: middle;
+	overflow: hidden;
 	margin: 2px;
 	background-color: #fff;
 	border: 1px solid #ccc;
@@ -126,6 +129,11 @@ legend
 	-webkit-border-radius:2px;
 	-o-border-radius: 2px;
 	-khtml-border-radius: 2px;
+}
+
+.medusa-select[multiple]
+{
+	height: auto;
 }
 
 .medusa-select.sm
@@ -261,6 +269,7 @@ textarea.medusa-input
 	padding: 0 10px;
 	background-color: #eee;
 	border: 1px solid #ddd;
+	width: 1px;
 }
 
 .medusa-input-addon .addon-text-left
@@ -398,6 +407,7 @@ input[type=radio]
 .medusa-button.full
 {
 	box-sizing: border-box;
+	display: block;
 	width: 100%;
 	margin: 0;
 }
@@ -493,6 +503,17 @@ input[type=radio]
 	margin-left: 0px;
 }
 
+.medusa-button-group.full
+{
+	width: 100%;
+	display: table;
+}
+
+.medusa-button-group.full .medusa-button
+{
+	display: table-cell;
+}
+
 /* file */
 
 .medusa-upload
@@ -539,10 +560,14 @@ input[type=radio]
 	color: #aaa;
 }
 
-input::-webkit-input-placeholder {line-height: 1.2em}
-input:-moz-placeholder           {line-height: 1em}
-input::-moz-placeholder          {line-height: 0.9em;}
-input:-ms-input-placeholder      {line-height: 1}
+input::-webkit-input-placeholder    {color: #aaa;line-height: 1.2em}
+textarea::-webkit-input-placeholder {color: #aaa;line-height: 1.2em}
+input:-moz-placeholder              {color: #aaa;line-height: 1em}
+textarea:-moz-placeholder           {color: #aaa;line-height: 1em}
+input::-moz-placeholder             {color: #aaa;line-height: 0.9em;}
+textarea::-moz-placeholder          {color: #aaa;line-height: 0.9em;}
+input:-ms-input-placeholder         {color: #aaa;line-height: 1}
+textarea:-ms-input-placeholder      {color: #aaa;line-height: 1}
 
 
 

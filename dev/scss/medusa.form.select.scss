@@ -1,0 +1,35 @@
+/* select */
+.medusa-select
+{
+	width: 200px;
+	padding: 7px;
+	vertical-align: middle;
+	overflow: hidden;
+	margin: 2px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	box-shadow: 0 1px 3px #ddd;
+
+	border-radius:2px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	-o-border-radius: 2px;
+	-khtml-border-radius: 2px;
+}
+
+.medusa-select[multiple]
+{
+	height: auto;
+}
+
+.medusa-select.sm
+{
+	font-size: 12px;
+	padding: 5px
+}
+
+.medusa-select.lg
+{
+	font-size: 16px;
+	padding: 11px;
+}

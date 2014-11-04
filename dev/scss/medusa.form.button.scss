@@ -1,0 +1,136 @@
+/* button */
+.medusa-button
+{
+	font-size: 12px;	
+	margin: 2px;
+	padding: 10px 30px;
+	border: 1px solid #cdcdcd;
+
+	cursor:pointer;
+	display:inline-block;
+	font-weight: normal;
+	text-decoration:none;
+	text-align: center;
+
+	background: -moz-linear-gradient(
+		center top,
+		rgba(255, 255, 255, .1) 0%,
+		rgba(0, 0, 0, .1) 100%
+	);
+	background: -webkit-gradient(
+		linear,
+		center bottom,
+		center top,
+		from(rgba(0, 0, 0, .1)),
+		to(rgba(255, 255, 255, .1))
+	);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#19FFFFFF', EndColorStr='#19000000');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#19FFFFFF', EndColorStr='#19000000')";
+	
+	@include text-truncate;
+	@include border-box;
+	@include border-radius(2px);
+}
+
+.medusa-button:hover
+{
+	zoom: 1;
+	opacity:0.85;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+	filter: alpha(style=0,opacity=85);
+	-moz-opacity: 0.85;
+	-khtml-opacity: 0.85;
+}
+
+.medusa-button:active
+{
+	top: 1px;
+}
+
+.medusa-button[disabled]:active
+{
+	top:0px;
+}
+
+.medusa-button[disabled]:hover
+{
+	opacity:1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(style=0,opacity=100);
+	-moz-opacity: 1;
+	-khtml-opacity: 1;
+}
+
+.medusa-button.sm
+{
+	font-size: 11px;
+	padding: 7px 15px;
+}
+
+.medusa-button.lg
+{
+	font-size: 15px;
+	padding: 14px 35px;
+}
+
+.medusa-button.full
+{
+	box-sizing: border-box;
+	display: block;
+	width: 100%;
+	margin: 0;
+}
+
+.medusa-button.addon
+{
+	padding-left: 36px;
+	padding-right: 24px;
+}
+
+.medusa-button.addon-right
+{
+	padding-left: 24px;
+	padding-right: 36px;
+}
+
+.medusa-button.addon .addon-icon,
+.medusa-button.addon-right .addon-icon,
+.medusa-button.addon-no-text .addon-icon
+{
+	display: inline-block;
+	padding: 0;
+	width: 16px;
+	height: 16px;
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 1;
+}
+
+.medusa-button.addon .addon-icon
+{
+	top: 8px;
+	left: 10px;
+}
+
+.medusa-button.addon-right .addon-icon
+{
+	left: auto;
+	top: 8px;
+	right: 10px;
+}
+
+.medusa-button.addon-no-text
+{
+	padding: 10px 15px;
+}
+
+.medusa-button.addon-no-text .addon-icon
+{
+	left: 9px;
+	top: 9px;
+}
+
+.medusa-button.addon-no-text:after
+{
+	content: "\00a0";
+}

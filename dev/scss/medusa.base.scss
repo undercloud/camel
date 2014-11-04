@@ -1,0 +1,113 @@
+body
+{
+	font-family: $font-stack;
+	color: $primary-color;
+	font-size: $default-font-size;
+	line-height: $line-height;
+	text-rendering: optimizelegibility;
+}
+
+iframe       { border: 0; }
+img,map,area { border: 0; }
+
+div  { display: block;position: relative; }
+span { display: inline;position: relative; }
+
+h1,h2,h3,h4,h5,h6 {
+	padding: 0;
+	margin: 0;
+	font-weight: normal;
+	line-height: 2em;
+}
+
+h1 { font-size: 32px; }
+h2 { font-size: 28px; }
+h3 { font-size: 24px; }
+h4 { font-size: 20px; }
+h5 { font-size: 16px; }
+h6 { font-size: 14px; }
+
+a        { 
+	cursor: pointer;
+	text-decoration:none;
+	color: $link-color; 
+}
+
+a:hover,
+a:active { 
+	text-decoration:underline;
+	outline: 0;
+}
+
+p        { margin: 0 0 1em 0; }
+b,strong { font-weight: bold; }
+em,i,dfn { font-style: italic; }
+q,cite   { font-style: italic; }
+del,s    { text-decoration: line-through; }
+ins      { text-decoration: underline;}
+kbd {
+	color: #fff;
+	background-color: $primary-color;
+	line-height: 1;
+	padding: 0.15em;
+	border-radius: 0.15em;
+}
+
+code,
+samp {
+	background-color: $secondary-color-light;
+	border-left: 4px solid $secondary-color-dark;
+	padding: 10px;
+	display: block;
+}
+
+blockquote {
+	margin: 0;
+	margin-left: 20px;
+	padding-left: 10px;
+	border-left: 5px solid $secondary-color-light;
+	quotes: "\201C" "\201D";
+	line-height: $line-height;
+}
+
+blockquote:before {
+    color: $secondary-color-dark;
+    font-size: 3em;
+    line-height: .1em;
+    margin-right: .2em;
+    vertical-align: -.4em;
+    content: open-quote; 
+    font-weight: bold;
+}
+
+blockquote:after {
+    color: $secondary-color-dark;
+    font-size: 3em;
+    line-height: .1em;
+    vertical-align: -.45em;
+    content: close-quote; 
+    font-weight: bold;
+}
+
+small { font-size: 85%; }
+big   { font-size: 120%; }
+
+abbr    { cursor: help;}
+address {display: block;font-style: italic;}
+
+hr {
+	margin: 1em 0;
+	border: 0;
+	border-top: 1px solid $secondary-color-dark;
+}
+
+sub,
+sup {
+	position: relative;
+	font-size: 90%;
+	line-height: 100%;
+	vertical-align: baseline;
+}
+
+sup { top: -.5em; }
+sub { bottom: -.25em; }

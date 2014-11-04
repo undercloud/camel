@@ -1,0 +1,71 @@
+/* grid */
+.medusa-form-row
+{
+	position: relative;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	display: table;
+	width: 100%;
+}
+
+.medusa-form-row > *
+{
+	padding-right: 10px;
+}
+
+.medusa-form-row > *:last-child
+{
+	padding-right: 0; 
+}
+
+.medusa-form-row>.form-grid-1,
+.medusa-form-row>.form-grid-2,
+.medusa-form-row>.form-grid-3,
+.medusa-form-row>.form-grid-4,
+.medusa-form-row>.form-grid-5,
+.medusa-form-row>.form-grid-6,
+.medusa-form-row>.form-grid-7,
+.medusa-form-row>.form-grid-8,
+.medusa-form-row>.form-grid-9,
+.medusa-form-row>.form-grid-10,
+.medusa-form-row>.form-grid-11,
+.medusa-form-row>.form-grid-12
+{
+	display: table-cell;
+	vertical-align: middle;
+	box-sizing: border-box;
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+	line-height: 1;
+	margin: 0;
+}
+
+.medusa-form-row>.form-grid-1 { width: 8.333%}
+.medusa-form-row>.form-grid-2 { width: 16.666%}
+.medusa-form-row>.form-grid-3 { width: 25%}
+.medusa-form-row>.form-grid-4 { width: 33.333%}
+.medusa-form-row>.form-grid-5 { width: 41.666%}
+.medusa-form-row>.form-grid-6 { width: 50%}
+.medusa-form-row>.form-grid-7 { width: 58.333%}
+.medusa-form-row>.form-grid-8 { width: 66.666%}
+.medusa-form-row>.form-grid-9 { width: 75%}
+.medusa-form-row>.form-grid-10 { width: 83.333%}
+.medusa-form-row>.form-grid-11 { width: 91.666%}
+.medusa-form-row>.form-grid-12 { width: 100%}
+
+.medusa-form-row .medusa-input,
+.medusa-form-row .medusa-input-addon,
+.medusa-form-row .medusa-select,
+.medusa-form-row .medusa-button
+{
+	position: relative;
+	margin: 0;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.medusa-form-row .medusa-button
+{
+	width: auto;
+}

@@ -4,7 +4,7 @@
 	font-size: 12px;	
 	margin: 2px;
 	padding: 10px 30px;
-	border: 1px solid #cdcdcd;
+	border: 1px solid $secondary-color-dark;
 
 	cursor:pointer;
 	display:inline-block;
@@ -29,17 +29,13 @@
 	
 	@include text-truncate;
 	@include border-box;
-	@include border-radius(2px);
+	@include border-radius($form-element-radius);
 }
 
 .medusa-button:hover
 {
 	zoom: 1;
-	opacity:0.85;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
-	filter: alpha(style=0,opacity=85);
-	-moz-opacity: 0.85;
-	-khtml-opacity: 0.85;
+	@include opacity(0.85);
 }
 
 .medusa-button:active
@@ -54,11 +50,7 @@
 
 .medusa-button[disabled]:hover
 {
-	opacity:1;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	filter: alpha(style=0,opacity=100);
-	-moz-opacity: 1;
-	-khtml-opacity: 1;
+	@include opacity(1);
 }
 
 .medusa-button.sm
@@ -75,10 +67,10 @@
 
 .medusa-button.full
 {
-	box-sizing: border-box;
 	display: block;
 	width: 100%;
 	margin: 0;
+	@include border-box;
 }
 
 .medusa-button.addon
@@ -108,15 +100,19 @@
 
 .medusa-button.addon .addon-icon
 {
-	top: 8px;
+	top: 0;
+	bottom: 0;
 	left: 10px;
+	margin: auto;
 }
 
 .medusa-button.addon-right .addon-icon
 {
 	left: auto;
-	top: 8px;
+	top: 0;
+	bottom: 0;
 	right: 10px;
+	margin: auto;
 }
 
 .medusa-button.addon-no-text
@@ -126,8 +122,11 @@
 
 .medusa-button.addon-no-text .addon-icon
 {
-	left: 9px;
-	top: 9px;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
 }
 
 .medusa-button.addon-no-text:after

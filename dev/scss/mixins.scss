@@ -4,6 +4,14 @@
 	white-space: nowrap;
 }
 
+@mixin opacity($o){
+	opacity: $o;
+	-moz-opacity: $o;
+	-khtml-opacity: $o;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + ($o * 100) + ")";
+	filter: alpha(style=0,opacity=($o * 100));
+}
+
 @mixin border-box {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -20,30 +28,38 @@
 }
 
 @mixin border-top-radius($radius) {
+	-moz-border-top-right-radius: $radius;
+	-moz-border-top-left-radius: $radius;
 	-webkit-border-top-right-radius: $radius;
-	border-top-right-radius: $radius;
 	-webkit-border-top-left-radius: $radius;
+	border-top-right-radius: $radius;
 	border-top-left-radius: $radius;
 	background-clip: padding-box;
 }
 @mixin border-right-radius($radius) {
+	-moz-border-bottom-right-radius: $radius;
+	-moz-border-top-right-radius: $radius;
 	-webkit-border-bottom-right-radius: $radius;
-	border-bottom-right-radius: $radius;
 	-webkit-border-top-right-radius: $radius;
+	border-bottom-right-radius: $radius;
 	border-top-right-radius: $radius;
 	background-clip: padding-box;
 }
 @mixin border-bottom-radius($radius) {
+	-moz-border-bottom-right-radius: $radius;
+	-moz-border-bottom-left-radius: $radius;
 	-webkit-border-bottom-right-radius: $radius;
-	border-bottom-right-radius: $radius;
 	-webkit-border-bottom-left-radius: $radius;
+	border-bottom-right-radius: $radius;
 	border-bottom-left-radius: $radius;
 	background-clip: padding-box;
 }
 @mixin border-left-radius($radius) {
+	-moz-border-bottom-left-radius: $radius;
+	-moz-border-top-left-radius: $radius;
 	-webkit-border-bottom-left-radius: $radius;
-	border-bottom-left-radius: $radius;
 	-webkit-border-top-left-radius: $radius;
+	border-bottom-left-radius: $radius;
 	border-top-left-radius: $radius;
 	background-clip: padding-box;
 }

@@ -2,12 +2,18 @@
 $font-stack: Helvetica, Arial, sans-serif;
 
 $primary-color: #414341;
-$link-color: #08c;
-$secondary-color-light: #eee;
+$primary-link-color: #08c;
+$secondary-color-light: #f2efef;
+$secondary-color-light-hover: #e6e6e6;
 $secondary-color-dark: #ddd;
 
 $default-font-size: 14px;
 $line-height: 1.5em;
+
+$form-grid-m-top: 10px;
+$form-grid-m-bottom: 10px;
+$form-grid-gutter: 10px;
+$form-element-radius: 2px;
 
 @import 'mixins';
 
@@ -22,3 +28,5 @@ $line-height: 1.5em;
 @import 'medusa.form.button';
 @import 'medusa.form.button.group';
 @import 'medusa.form.file';
+
+@import 'mixins-colors';

@@ -2,27 +2,25 @@
 
 .medusa-button-group
 {
+	font-size: 0;
 	display: inline-block;
 	overflow: hidden;
-	font-size: 0;
 }
 
 .medusa-button-group .medusa-button
 {
 	margin: 0;
-	border-radius: 0;
+	@include border-radius(0);
 }
 
 .medusa-button-group .medusa-button:first-child
 {
-	border-top-left-radius: 2px;
-	border-bottom-left-radius: 2px; 
+	@include border-left-radius($form-element-radius);
 }
 
 .medusa-button-group .medusa-button:last-child
 {
-	border-top-right-radius: 2px;
-	border-bottom-right-radius: 2px; 
+	@include border-right-radius($form-element-radius); 
 }
 
 .medusa-button-group.collapse .medusa-button

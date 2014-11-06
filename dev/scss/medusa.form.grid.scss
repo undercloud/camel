@@ -1,16 +1,16 @@
 /* grid */
 .medusa-form-row
 {
-	position: relative;
-	margin-bottom: 10px;
-	margin-top: 10px;
+	margin-top: $form-grid-m-top;
+	margin-bottom: $form-grid-m-bottom;
+	position: relative;	
 	display: table;
 	width: 100%;
 }
 
 .medusa-form-row > *
 {
-	padding-right: 10px;
+	padding-right: $form-grid-gutter;
 }
 
 .medusa-form-row > *:last-child
@@ -33,12 +33,13 @@
 {
 	display: table-cell;
 	vertical-align: middle;
-	box-sizing: border-box;
 	position: relative;
 	width: 100%;
 	min-height: 1px;
 	line-height: 1;
 	margin: 0;
+
+	@include border-box;
 }
 
 .medusa-form-row>.form-grid-1 { width: 8.333%}
@@ -62,7 +63,8 @@
 	position: relative;
 	margin: 0;
 	width: 100%;
-	box-sizing: border-box;
+
+	@include border-box;
 }
 
 .medusa-form-row .medusa-button

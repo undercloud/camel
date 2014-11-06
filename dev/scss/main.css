@@ -81,7 +81,7 @@ kbd {
 
 code,
 samp {
-  background-color: #eeeeee;
+  background-color: #f2efef;
   border-left: 4px solid #dddddd;
   padding: 10px;
   display: block; }
@@ -90,7 +90,7 @@ blockquote {
   margin: 0;
   margin-left: 20px;
   padding-left: 10px;
-  border-left: 5px solid #eeeeee;
+  border-left: 5px solid #f2efef;
   quotes: "\201C" "\201D";
   line-height: 1.5em; }
 
@@ -189,7 +189,7 @@ table td {
 table th {
   text-align: left;
   font-weight: bold;
-  background-color: #eeeeee; }
+  background-color: #f2efef; }
 
 .medusa-form,
 .medusa-button,
@@ -283,9 +283,9 @@ textarea:-ms-input-placeholder {
 
 /* grid */
 .medusa-form-row {
-  position: relative;
-  margin-bottom: 10px;
   margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
   display: table;
   width: 100%; }
 
@@ -309,12 +309,14 @@ textarea:-ms-input-placeholder {
 .medusa-form-row > .form-grid-12 {
   display: table-cell;
   vertical-align: middle;
-  box-sizing: border-box;
   position: relative;
   width: 100%;
   min-height: 1px;
   line-height: 1;
-  margin: 0; }
+  margin: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
 .medusa-form-row > .form-grid-1 {
   width: 8.333%; }
@@ -359,6 +361,8 @@ textarea:-ms-input-placeholder {
   position: relative;
   margin: 0;
   width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 .medusa-form-row .medusa-button {
@@ -372,13 +376,17 @@ textarea:-ms-input-placeholder {
   overflow: hidden;
   margin: 2px;
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid #dddddd;
   box-shadow: 0 1px 3px #ddd;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   border-radius: 2px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   -o-border-radius: 2px;
-  -khtml-border-radius: 2px; }
+  -khtml-border-radius: 2px;
+  background-clip: padding-box; }
 
 .medusa-select[multiple] {
   height: auto; }
@@ -397,16 +405,17 @@ textarea:-ms-input-placeholder {
   margin: 2px;
   padding: 8px;
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid #dddddd;
   box-shadow: inset 0 1px 3px #ddd;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   border-radius: 2px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   -o-border-radius: 2px;
   -khtml-border-radius: 2px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  background-clip: padding-box; }
 
 .medusa-input.sm {
   font-size: 12px;
@@ -482,21 +491,31 @@ textarea.medusa-input {
 .medusa-input-addon .addon-text-right {
   position: relative;
   padding: 0 10px;
-  background-color: #eee;
-  border: 1px solid #ddd;
-  width: 1px; }
+  width: 1px;
+  background-color: #f2efef;
+  border: 1px solid #dddddd; }
 
 .medusa-input-addon .addon-text-left {
   border-right: none;
   border-radius: 0;
+  -moz-border-bottom-left-radius: 2px;
+  -moz-border-top-left-radius: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  -webkit-border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
   border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px; }
+  background-clip: padding-box; }
 
 .medusa-input-addon .addon-text-right {
   border-left: none;
   border-radius: 0;
+  -moz-border-bottom-right-radius: 2px;
+  -moz-border-top-right-radius: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  -webkit-border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
   border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px; }
+  background-clip: padding-box; }
 
 .medusa-input.icon-left {
   padding-left: 32px; }
@@ -505,32 +524,41 @@ textarea.medusa-input {
   padding-right: 32px; }
 
 .medusa-input.addon-left {
+  -moz-border-bottom-left-radius: 0;
+  -moz-border-top-left-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
   border-top-left-radius: 0;
-  border-bottom-left-radius: 0; }
+  background-clip: padding-box; }
 
 .medusa-input.addon-right {
+  -moz-border-bottom-right-radius: 0;
+  -moz-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
   border-top-right-radius: 0;
-  border-bottom-right-radius: 0; }
+  background-clip: padding-box; }
 
 /* button */
 .medusa-button {
-  display: inline-block;
+  font-size: 12px;
   margin: 2px;
   padding: 10px 30px;
-  color: inherit;
-  border: 1px solid #cdcdcd;
+  border: 1px solid #dddddd;
   cursor: pointer;
-  white-space: nowrap;
-  overflow: hidden;
-  font-size: 12px;
+  display: inline-block;
   font-weight: normal;
   text-decoration: none;
-  text-overflow: ellipsis;
   text-align: center;
   background: -moz-linear-gradient(center top, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
   background: -webkit-gradient(linear, center bottom, center top, from(rgba(0, 0, 0, 0.1)), to(rgba(255, 255, 255, 0.1)));
   filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#19FFFFFF', EndColorStr='#19000000');
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#19FFFFFF', EndColorStr='#19000000')";
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -544,10 +572,10 @@ textarea.medusa-input {
 .medusa-button:hover {
   zoom: 1;
   opacity: 0.85;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
-  filter: alpha(style=0, opacity=85);
   -moz-opacity: 0.85;
-  -khtml-opacity: 0.85; }
+  -khtml-opacity: 0.85;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+  filter: alpha(style=0, opacity=85); }
 
 .medusa-button:active {
   top: 1px; }
@@ -557,10 +585,10 @@ textarea.medusa-input {
 
 .medusa-button[disabled]:hover {
   opacity: 1;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-  filter: alpha(style=0, opacity=100);
   -moz-opacity: 1;
-  -khtml-opacity: 1; }
+  -khtml-opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(style=0, opacity=100); }
 
 .medusa-button.sm {
   font-size: 11px;
@@ -571,10 +599,12 @@ textarea.medusa-input {
   padding: 14px 35px; }
 
 .medusa-button.full {
-  box-sizing: border-box;
   display: block;
   width: 100%;
-  margin: 0; }
+  margin: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
 .medusa-button.addon {
   padding-left: 36px;
@@ -596,41 +626,63 @@ textarea.medusa-input {
   z-index: 1; }
 
 .medusa-button.addon .addon-icon {
-  top: 8px;
-  left: 10px; }
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  margin: auto; }
 
 .medusa-button.addon-right .addon-icon {
   left: auto;
-  top: 8px;
-  right: 10px; }
+  top: 0;
+  bottom: 0;
+  right: 10px;
+  margin: auto; }
 
 .medusa-button.addon-no-text {
   padding: 10px 15px; }
 
 .medusa-button.addon-no-text .addon-icon {
-  left: 9px;
-  top: 9px; }
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto; }
 
 .medusa-button.addon-no-text:after {
   content: "\00a0"; }
 
 /* button group */
 .medusa-button-group {
+  font-size: 0;
   display: inline-block;
-  overflow: hidden;
-  font-size: 0; }
+  overflow: hidden; }
 
 .medusa-button-group .medusa-button {
   margin: 0;
-  border-radius: 0; }
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -o-border-radius: 0;
+  -khtml-border-radius: 0;
+  background-clip: padding-box; }
 
 .medusa-button-group .medusa-button:first-child {
+  -moz-border-bottom-left-radius: 2px;
+  -moz-border-top-left-radius: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  -webkit-border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
   border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px; }
+  background-clip: padding-box; }
 
 .medusa-button-group .medusa-button:last-child {
+  -moz-border-bottom-right-radius: 2px;
+  -moz-border-top-right-radius: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  -webkit-border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
   border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px; }
+  background-clip: padding-box; }
 
 .medusa-button-group.collapse .medusa-button {
   margin-left: -1px; }
@@ -647,26 +699,32 @@ textarea.medusa-input {
 
 /* file */
 .medusa-upload {
-  background-color: #eeeeee;
+  background-color: #f2efef;
   width: 100%;
   position: relative;
   text-align: center;
   overflow: hidden; }
 
 .medusa-upload:hover {
-  background-color: #E6E6E6; }
+  background-color: #e6e6e6; }
 
 .medusa-upload .medusa-upload-title {
   padding: 10px 0px;
-  display: inline-block; }
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
 
 .medusa-upload input[type=file].medusa-upload-file {
+  cursor: pointer;
   position: absolute;
   top: 0;
   right: 0;
   margin: 0;
   padding: 0;
   font-size: 500px;
-  cursor: pointer;
   opacity: 0;
-  filter: alpha(opacity=0); }
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(style=0, opacity=0); }

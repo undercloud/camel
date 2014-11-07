@@ -17,15 +17,15 @@ h1,h2,h3,h4,h5,h6 {
 	padding: 0;
 	margin: 0;
 	font-weight: normal;
-	line-height: 2em;
+	line-height: $h-line-height;
 }
 
-h1 { font-size: 32px; }
-h2 { font-size: 28px; }
-h3 { font-size: 24px; }
-h4 { font-size: 20px; }
-h5 { font-size: 16px; }
-h6 { font-size: 14px; }
+h1 { font-size: $h1-size; }
+h2 { font-size: $h2-size; }
+h3 { font-size: $h3-size; }
+h4 { font-size: $h4-size; }
+h5 { font-size: $h5-size; }
+h6 { font-size: $h6-size; }
 
 a { 
 	cursor: pointer;
@@ -39,7 +39,7 @@ a:active {
 	outline: 0;
 }
 
-p        { margin: 0 0 1em 0; }
+p        { margin: 0 0 1em 0;text-indent: $text-indent;}
 b,strong { font-weight: bold; }
 em,i,dfn { font-style: italic; }
 q,cite   { font-style: italic; }

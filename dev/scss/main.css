@@ -55,7 +55,8 @@ a:active {
   outline: 0; }
 
 p {
-  margin: 0 0 1em 0; }
+  margin: 0 0 1em 0;
+  text-indent: 20px; }
 
 b, strong {
   font-weight: bold; }
@@ -417,10 +418,12 @@ textarea:-ms-input-placeholder {
   -khtml-border-radius: 2px;
   background-clip: padding-box; }
 
+.medusa-input-addon .addon-text.sm,
 .medusa-input.sm {
   font-size: 12px;
   padding: 6px; }
 
+.medusa-input-addon .addon-text.lg,
 .medusa-input.lg {
   font-size: 16px;
   padding: 12px; }
@@ -430,6 +433,101 @@ textarea.medusa-input {
   line-height: 1.2em;
   resize: none; }
 
+.medusa-input-addon {
+  display: table;
+  white-space: nowrap; }
+
+.medusa-input-addon .addon-icon,
+.medusa-input-addon .addon-text,
+.medusa-input-addon .medusa-input,
+.medusa-input-addon .medusa-button {
+  display: table-cell;
+  line-height: 1;
+  margin: 0;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -o-border-radius: 0;
+  -khtml-border-radius: 0;
+  background-clip: padding-box; }
+
+.medusa-input-addon .addon-text {
+  position: relative;
+  padding: 0 10px;
+  width: 1px;
+  background-color: #f2efef;
+  border: 1px solid #dddddd; }
+
+.medusa-input-addon .medusa-button {
+  width: 1px;
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.medusa-input-addon .addon-text:first-child,
+.medusa-input-addon .medusa-button:first-child {
+  border-right: none;
+  -moz-border-bottom-left-radius: 2px;
+  -moz-border-top-left-radius: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  -webkit-border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  background-clip: padding-box; }
+
+.medusa-input-addon .addon-text:last-child,
+.medusa-input-addon .medusa-button:last-child {
+  border-left: none;
+  -moz-border-bottom-right-radius: 2px;
+  -moz-border-top-right-radius: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  -webkit-border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  background-clip: padding-box; }
+
+.medusa-input-addon .medusa-input:first-child {
+  -moz-border-bottom-left-radius: 2px;
+  -moz-border-top-left-radius: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  -webkit-border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  background-clip: padding-box; }
+
+.medusa-input-addon .medusa-input:last-child {
+  -moz-border-bottom-right-radius: 2px;
+  -moz-border-top-right-radius: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  -webkit-border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  background-clip: padding-box; }
+
+.medusa-input-addon .addon-icon {
+  width: 16px;
+  height: 16px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 1; }
+
+.medusa-input-addon .addon-icon:first-child {
+  left: 10px; }
+
+.medusa-input-addon .addon-icon:last-child {
+  right: 10px; }
+
+/*.medusa-input.icon-left
+{
+	padding-left: 32px;
+}
+
+.medusa-input.icon-right
+{
+	padding-right: 32px;
+}*/
 .medusa-input:focus,
 .medusa-select:focus {
   box-shadow: 0 0 3px #93d0ea;
@@ -458,88 +556,6 @@ textarea.medusa-input {
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 1px inset;
   box-shadow: rgba(0, 0, 0, 0.2) 0 1px 1px inset;
   border: 1px solid rgba(200, 10, 16, 0.5); }
-
-.medusa-input-addon {
-  display: table;
-  white-space: nowrap; }
-
-.medusa-input-addon .addon-icon-left,
-.medusa-input-addon .addon-icon-rigth,
-.medusa-input-addon .addon-text-left,
-.medusa-input-addon .addon-text-right,
-.medusa-input-addon .medusa-input {
-  display: table-cell;
-  margin: 0; }
-
-.medusa-input-addon .addon-icon-left,
-.medusa-input-addon .addon-icon-right {
-  width: 16px;
-  height: 16px;
-  background-repeat: no-repeat;
-  position: absolute;
-  z-index: 1; }
-
-.medusa-input-addon .addon-icon-left {
-  top: 9px;
-  left: 9px; }
-
-.medusa-input-addon .addon-icon-right {
-  top: 9px;
-  right: 9px; }
-
-.medusa-input-addon .addon-text-left,
-.medusa-input-addon .addon-text-right {
-  position: relative;
-  padding: 0 10px;
-  width: 1px;
-  background-color: #f2efef;
-  border: 1px solid #dddddd; }
-
-.medusa-input-addon .addon-text-left {
-  border-right: none;
-  border-radius: 0;
-  -moz-border-bottom-left-radius: 2px;
-  -moz-border-top-left-radius: 2px;
-  -webkit-border-bottom-left-radius: 2px;
-  -webkit-border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
-  border-top-left-radius: 2px;
-  background-clip: padding-box; }
-
-.medusa-input-addon .addon-text-right {
-  border-left: none;
-  border-radius: 0;
-  -moz-border-bottom-right-radius: 2px;
-  -moz-border-top-right-radius: 2px;
-  -webkit-border-bottom-right-radius: 2px;
-  -webkit-border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
-  border-top-right-radius: 2px;
-  background-clip: padding-box; }
-
-.medusa-input.icon-left {
-  padding-left: 32px; }
-
-.medusa-input.icon-right {
-  padding-right: 32px; }
-
-.medusa-input.addon-left {
-  -moz-border-bottom-left-radius: 0;
-  -moz-border-top-left-radius: 0;
-  -webkit-border-bottom-left-radius: 0;
-  -webkit-border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-  background-clip: padding-box; }
-
-.medusa-input.addon-right {
-  -moz-border-bottom-right-radius: 0;
-  -moz-border-top-right-radius: 0;
-  -webkit-border-bottom-right-radius: 0;
-  -webkit-border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-  background-clip: padding-box; }
 
 /* button */
 .medusa-button {

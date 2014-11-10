@@ -11,7 +11,7 @@ window.medusa.modulename = function(){}
 
 ##Gulp flow
 
-Нужен `nodejs`
+Нужен `nodejs`, какой нибудь `ruby` и что бы стоял гем `sass`.
 
 Из коря каталога (на уровне с файлом package.json) выполнить `npm install` - установит все модули нужные для gulp, sass, etc.
 

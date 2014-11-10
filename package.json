@@ -1,0 +1,13 @@
+{
+  "name": "medusa",
+  "version": "0.0.1",
+  "description": "todo",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-autoprefixer": "^1.0.1",
+    "gulp-cssmin": "^0.1.6",
+    "gulp-plumber": "^0.6.6",
+    "gulp-rename": "^1.2.0",
+    "gulp-ruby-sass": "^0.7.1"
+  }
+}

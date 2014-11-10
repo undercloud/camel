@@ -5,3 +5,8 @@
 .breadcrumbs-item {
 	float: left;
 }
+
+.test-autoprefixer {
+	border-radius: 10px;
+	background: linear-gradient(#ccc, red); // Он сам проставит префиксы если они требуются
+}

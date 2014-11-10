@@ -12,20 +12,6 @@
 	@include border-radius($form-element-radius);
 }
 
-.medusa-input-addon .addon-text.sm,
-.medusa-input.sm
-{
-	font-size: 12px;
-	padding: 6px;
-}
-
-.medusa-input-addon .addon-text.lg,
-.medusa-input.lg
-{
-	font-size: 16px;
-	padding: 12px;
-}
-
 textarea.medusa-input
 { 
 	overflow: auto;
@@ -39,7 +25,36 @@ textarea.medusa-input
 	white-space: nowrap;
 }
 
+.medusa-input-addon.sm .addon-text,
+.medusa-input-addon.sm .medusa-input,
+.medusa-input.sm
+{
+	font-size: 12px;
+	padding: 6px;
+}
+
+.medusa-input-addon.lg .addon-text,
+.medusa-input-addon.lg .medusa-input,
+.medusa-input.lg
+{
+	font-size: 16px;
+	padding: 12px;
+}
+
+.medusa-input-addon.lg .medusa-button
+{
+	font-size: 15px;
+	padding: 14px 35px;
+}
+
+.medusa-input-addon.sm .medusa-button
+{
+	font-size: 11px;
+	padding: 7px 15px;
+}
+
 .medusa-input-addon .addon-icon,
+.medusa-input-addon .addon-icon-right,
 .medusa-input-addon .addon-text,
 .medusa-input-addon .medusa-input,
 .medusa-input-addon .medusa-button
@@ -90,7 +105,8 @@ textarea.medusa-input
 	@include border-right-radius($form-element-radius);
 }
 
-.medusa-input-addon .addon-icon
+.medusa-input-addon .addon-icon,
+.medusa-input-addon .addon-icon-right
 {
 	width: 16px;
 	height: 16px;
@@ -102,25 +118,34 @@ textarea.medusa-input
 	z-index: 1;
 }
 
-.medusa-input-addon .addon-icon:first-child
+.medusa-input-addon .addon-icon
 {
+	right: auto;
 	left: 10px;
 }
 
-.medusa-input-addon .addon-icon:last-child
+.medusa-input-addon .addon-icon-right
 {
+	left: auto;
 	right: 10px;
 }
 
-/*.medusa-input.icon-left
+.medusa-input-addon .addon-icon ~ .medusa-input
 {
 	padding-left: 32px;
+	@include border-left-radius($form-element-radius);
 }
 
-.medusa-input.icon-right
+.medusa-input-addon .addon-icon-right ~ .medusa-input
 {
 	padding-right: 32px;
-}*/
+	@include border-left-radius($form-element-radius);
+}
+
+.medusa-input-addon>.medusa-input-addon *
+{
+	@include border-radius(0 !important);
+}
 
 .medusa-input:focus, 
 .medusa-select:focus

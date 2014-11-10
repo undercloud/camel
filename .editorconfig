@@ -1,0 +1,25 @@
+# All files
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# JavaScript
+[*.js]
+indent_style = tab
+indent_size = 4
+
+# Styles
+[*.scss]
+indent_style = tab
+indent_size = 4
+
+# Html
+[*.html]
+indent_style = tab
+indent_size = 4
+
+# MarkDown
+[*.md]
+trim_trailing_whitespace = false

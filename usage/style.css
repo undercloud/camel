@@ -19,7 +19,7 @@
 .pre-header
 {
 	color: #fff;
-	padding: 25px 0;
+	padding: 22px 0;
 	font-size: 22px;
 	font-weight: bold;
 	margin: 0;
@@ -36,6 +36,35 @@
 {
 	width: 960px;
 	margin: 0 auto;
+}
+
+.main-logo
+{
+	float: left;
+}
+
+.page-menu
+{
+	padding: 0;
+	padding-right: 50px;
+	list-style: none;
+	display: block;
+	font-size: 16px;
+	font-weight: normal;
+	float: right;
+}
+
+.page-menu li
+{
+	display: inline-block;
+	padding: 0 5px;
+	cursor: pointer;
+	border-bottom: 3px solid transparent;
+}
+
+.page-menu li:hover
+{
+	border-bottom: 3px solid #009871;
 }
 
 .main-container 

@@ -1,0 +1,41 @@
+.medusa-switcher
+{
+	border: 1px solid #ddd;
+	display: inline-block;
+	line-height: 1;
+	border-radius: 5px;
+	overflow: hidden;
+	font-size: 0;
+}
+
+.medusa-switcher .item
+{
+	display: inline-block;
+	padding: 9px 15px;
+	cursor: pointer;
+	border-right: 1px solid #ddd;
+	font-size: 14px;
+}
+
+.medusa-switcher.stack .item
+{
+	display: block;
+	border-right: none;
+	border-bottom: 1px solid #ddd;
+}
+
+.medusa-switcher .item:last-child
+{
+	border-right: none;
+}
+
+.medusa-switcher.stack .item:last-child
+{
+	border-bottom: none;
+}
+
+.medusa-switcher .item.selected
+{
+	background-color: #4b545f;
+	color: #fff;
+}

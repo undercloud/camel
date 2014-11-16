@@ -12,22 +12,24 @@ medusa.switcher = function(el,opt){
 		if(!el.attr('name'))
 			return;
 
-		el.find('input[type=hidden][name="' + el.attr('name') + (opt.multiple ? '[]' : '') + '"]').remove()
-
 		if(true == opt.multiple){
 			var sl = el.find('.item.selected').map(function(){return $(this).attr("data")}).get()
+			if(sl.length == 0)
+				sl.push(undefined)
 		}else{
 			var sl = [el.find('.item.selected').attr('data')]
 		}
 
-		for(var i=0;i<sl.length;i++){
-			if(typeof sl[i] == 'undefined')
-				sl[i] = '';
+		el.find('input[type=hidden]').remove()
 
+		for(var i=0;i<sl.length;i++){
 			var hd = document.createElement('input')
 			hd.setAttribute('type','hidden')
-			hd.setAttribute('name',el.attr('name') + (opt.multiple ? '[]' : ''))
-			hd.setAttribute('value',sl[i])
+			hd.setAttribute('name',
+				el.attr('name') + 
+				((opt.multiple && typeof sl[i] != 'undefined') ? '[]' : '')
+			)
+			hd.setAttribute('value',(typeof sl[i] == 'undefined') ? '' : sl[i])
 
 			el.prepend(hd)
 		}
@@ -55,16 +57,27 @@ medusa.switcher = function(el,opt){
 		getValue: function(){
 			if(opt.multiple)
 				return el.find('.item.selected').map(function(){return $(this).attr("data")}).get()
-			else
-				return el.find('.item.selected').attr('data')
+			else{
+				var e = el.find('.item.selected').attr('data');
+				return (typeof e != 'undefined') ? e : '';
+			}
 		},
-		setValue: function(value){
-			if(jQuery.isArray(value)){
-				value.each(function(i,d){
-					el.find('.item[data="' + value + '"]')
-				})
-			}else{
-				el.find('.item[data="' + value + '"]').trigger('click')
+		setValue: function(value,e){
+			if(opt.multiple && false == jQuery.isArray(value)) return;
+			if(typeof e == 'undefined') e = true;
+
+			el.find('.item').removeClass('selected')
+
+			if(false == jQuery.isArray(value))
+				value = [value];
+
+			for(var i=0;i < value.length;i++)
+				el.find('.item[data="' + value[i] + '"]').addClass('selected')
+
+			hidden()
+
+			if(e != false && typeof opt.onchange == 'function'){
+				opt.onchange(api.getValue())
 			}
 		}
 	}
@@ -74,7 +87,7 @@ medusa.switcher = function(el,opt){
 
 if(typeof medusa.register != 'undefined')
 	medusa.register('switcher')
-
+/*
 var eh = null;
 $(document).ready(function(){
 	eh = medusa.switcher(
@@ -82,8 +95,8 @@ $(document).ready(function(){
 		{
 			//multiple: true,
 			onchange: function(){
-				console.log(arguments[0])
+				console.log('vai',arguments[0])
 			}
 		}
 	)
-})
+})*/

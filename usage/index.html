@@ -9,10 +9,14 @@
 		<link rel="stylesheet" type="text/css" href="../dev/css/medusa.grid16.css" />
 		<link rel="stylesheet" type="text/css" href="../dev/css/medusa.grid24.css" />
 
+		<link rel="stylesheet" type="text/css" href="../dev/scss/medusa.com.menu.css" />
+		<link rel="stylesheet" type="text/css" href="../dev/scss/medusa.com.switcher.css" />
 		<!--script src="http://prismjs.com/prism.js" data-default-language="markup"></script>
 		<link rel="stylesheet" href="http://prismjs.com/themes/prism.css" data-noprefix /-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="../dev/js/medusa.switcher.js"></script>
 	</head>
-		
+
 	<body>
 		<div class="pre-header">
 			<div class="top-header">
@@ -179,7 +183,7 @@
 							<dl>
 								<dt>PNG</dt>
 								<dd>
-									PNG supports palette-based images (with palettes of 24-bit RGB or 32-bit RGBA colors), grayscale images (with or without alpha channel), and full-color non-palette-based RGB[A] images (with or without alpha channel). 
+									PNG supports palette-based images (with palettes of 24-bit RGB or 32-bit RGBA colors), grayscale images (with or without alpha channel), and full-color non-palette-based RGB[A] images (with or without alpha channel).
 								</dd>
 							</dl>
 							<dl>
@@ -196,7 +200,7 @@
 				<div class="content-body">
 					<h2 class="section-head">#address</h2>
 					<address>
-						Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br> 
+						Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br>
 						Visit us at:<br>
 						Example.com<br>
 						Box 564, Disneyland<br>
@@ -327,7 +331,7 @@
 						<div class="grid-12">12</div>
 					</div>
 				</div>
-				
+
 				<h1 class="section-head">Tables</h1>
 				<div class="content-body">
 					<h2 class="section-head">#table,#th,#td</h2>
@@ -394,7 +398,7 @@
 							</div>
 							<div class="form-grid-8">
 								<span class="medusa-input-addon">
-									<span class="addon-text">http://</span>	
+									<span class="addon-text">http://</span>
 									<input type="text" class="medusa-input"/>
 								</span>
 							</div>
@@ -405,9 +409,9 @@
 							</div>
 							<div class="form-grid-8">
 								<span class="medusa-input-addon">
-									<span class="addon-text">http://</span>	
+									<span class="addon-text">http://</span>
 									<input type="text" class="medusa-input"/>
-									<span class="addon-text">.com</span>	
+									<span class="addon-text">.com</span>
 								</span>
 							</div>
 						</div>
@@ -484,6 +488,23 @@
 						</div>
 						<div class="medusa-form-row">
 							<div class="form-grid-4">
+
+							</div>
+							<div class="form-grid-8">
+								<span class="medusa-input-addon">
+									<span class="addon-text">http://</span>
+									<span class="medusa-input-addon">
+										<span class="medusa-input-addon">
+											<span class="addon-icon icon-add"></span>
+											<input type="text" class="medusa-input"/>
+										</span>
+										<span class="addon-text">.com</span>
+									</span>
+								</span>
+							</div>
+						</div>
+						<div class="medusa-form-row">
+							<div class="form-grid-4">
 								<label class="medusa-label">Password</label>
 							</div>
 							<div class="form-grid-8">
@@ -495,7 +516,7 @@
 								<label class="medusa-label">Textarea</label>
 							</div>
 							<div class="form-grid-8">
-								<textarea class="medusa-input" placeholder="textarea"></textarea> 
+								<textarea class="medusa-input" placeholder="textarea"></textarea>
 							</div>
 						</div>
 						<div class="medusa-form-row">
@@ -636,7 +657,7 @@
 									<span class="addon-text">http://</span>
 									<input type="text" class="medusa-input" placeholder="small"/>
 								</span>
-								<span class="medusa-input-addon">	
+								<span class="medusa-input-addon">
 									<span class="addon-text">http://</span>
 									<input type="text" class="medusa-input" placeholder="default"/>
 								</span>
@@ -656,14 +677,14 @@
 								<span class="medusa-button full lg" >large</span>
 							</div>
 						</div>
-				
+
 					</form>
 
 					<ul class="medusa-breadcrumbs">
 						<li>
 							<a href="/one">One</a>
 						</li>
-						<li>	
+						<li>
 							<a href="/one">Two</a>
 						</li>
 						<li>
@@ -671,7 +692,88 @@
 						</li>
 					</ul>
 				</div>
+
+				<div style="margin-bottom:500px;padding: 20px;background-color: #909eab">
+					<ul class="medusa-menu">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Tutorials</a>
+							<ul>
+								<li><a href="#">Photoshop</a></li>
+								<li><a href="#">Illustrator</a></li>
+								<li><a href="#">Web Design</a>
+									<ul>
+										<li><a href="#">HTML</a></li>
+										<li>
+											<a href="#">CSS</a>
+											<ul>
+												<li><a href="#">LESS</a></li>
+												<li><a href="#">SASS</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#">Articles</a>
+							<ul>
+								<li><a href="#">Web Design</a></li>
+								<li><a href="#">User Experience</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Inspiration</a></li>
+					</ul>
+				</div>
+
+				<div>
+					<ul class="tabs">
+						<li>
+							<a href="#one">1</a>
+						</li>
+						<li>
+							<a href="#two">2</a>
+						</li>
+						<li>
+							<a href="#three">3</a>
+						</li>
+					</ul>
+					<div class="tabs-content">
+						<ul>
+							<li id="one">Content 1</li>
+							<li id="two">Content 2</li>
+							<li id="three">Content 3</li>
+						</ul>
+					</div>
+				</div>
+
+
+<ul class='accordion'>
+    <li>
+        <label for='cp-1'>Content pane 1</label>
+        <input type='radio' name='a' id='cp-1' checked='checked'>
+        <div class='content'>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+        </div>
+    </li>
+
+    <li>
+        <label for='cp-2'>Content pane 2</label>
+        <input type='radio' name='a' id='cp-2'>
+        <div class='content'>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+        </div>
+    </li>
+</ul>
+
+			<div style="padding: 100px 0">
+				<div id="switcher" class="medusa-switcher" name="swch">
+					<span data="one" class="item">One</span>
+					<span data="two" class="item">Two</span>
+					<span data="three" class="item">Three</span>
+				</div>
 			</div>
+
+			</div>
+
 			<div style="width: 100%;clear:both"></div>
 		</div>
 	</body>

@@ -1,9 +1,10 @@
 var gulp = require('gulp'),
-	sass = require('gulp-ruby-sass'),
+	sass = require('gulp-sass'),
 	prefix = require('gulp-autoprefixer'),
 	cssmin = require('gulp-cssmin'),
 	rename = require('gulp-rename'),
-	plumber = require('gulp-plumber');
+	plumber = require('gulp-plumber')
+	uglify = require('gulp-uglify');;
 
 gulp.task('styles', function () {
 	gulp.src('./src/stylesheets/**/*.scss')
@@ -21,6 +22,12 @@ gulp.task('css-min', function () {
 		.pipe(cssmin())
 		.pipe(rename({suffix: '.min'}))
 		.pipe(gulp.dest('./dist/css'));
+});
+
+gulp.task('gulp-uglify', function(){
+	gulp.src('js/*.js')
+	.pipe(uglify())
+	.pipe(gulp.dest('build/js'))
 });
 
 gulp.task('default', function () {

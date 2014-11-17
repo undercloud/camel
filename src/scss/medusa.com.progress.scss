@@ -1,0 +1,42 @@
+.medusa-progress
+{
+	display: inline-block;
+	position: relative;
+	background-color: #eee;
+	width: 200px;
+	height: 30px;
+	overflow: hidden;
+}
+
+.medusa-progress .label
+{
+	position: absolute;
+	display: block;
+	text-align: center;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	width: 100%;
+	z-index: 1;
+	height: 14px;
+	line-height: 1;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.medusa-progress .bar
+{
+	display: block;
+	position: relative;
+	height: 100%;
+	max-width: 100%;
+	background-color: #C7D3DF;
+
+	-webkit-transition : width 1s ease;
+	-moz-transition : width 1s ease;
+	-o-transition : width 1s ease;
+	transition : width 1s ease;
+}

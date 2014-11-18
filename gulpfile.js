@@ -7,11 +7,11 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify');
 
 gulp.task('styles', function () {
-	gulp.src('./src/css/*.scss')
+	gulp.src('src/css/*.scss')
 		.pipe(plumber())
 		.pipe(sass())
 		.pipe(prefix('last 2 version', 'ie 8'))
-		.pipe(gulp.dest('/src/css'));
+		.pipe(gulp.dest('src/css/'));
 });
 
 gulp.task('css-min', function () {

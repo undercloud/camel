@@ -8,7 +8,7 @@ window.medusa = {
 			if(this.modules[i] == name)
 				return true
 
-		return false
+		return false;
 	},
 	loadJS: function(path,success,error){
 		var fileref = document.createElement('script')
@@ -20,7 +20,7 @@ window.medusa = {
 
 		document.getElementsByTagName("head")[0].appendChild(fileref)
 
-		return this
+		return this;
 	},
 	loadCSS: function(path,success,error){
 		var fileref = document.createElement('link')
@@ -33,10 +33,10 @@ window.medusa = {
 
 		document.getElementsByTagName("head")[0].appendChild(fileref)
 
-		return this
+		return this;
 	},
 	register: function(obj){
 		this.modules.push(obj)
-		return this
+		return this;
 	}
 }

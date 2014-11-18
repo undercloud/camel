@@ -12,21 +12,21 @@
 
 	@include border-box;
 	@include border-radius($form-element-radius);
+
+	&.sm {
+		font-size: 12px;
+		padding: 5px;
+	}
+
+	&.lg {
+		font-size: 16px;
+		padding: 11px;
+	}
+
+	&[multiple]
+	{
+		height: auto;
+	}
 }
 
-.medusa-select[multiple]
-{
-	height: auto;
-}
 
-.medusa-select.sm
-{
-	font-size: 12px;
-	padding: 5px
-}
-
-.medusa-select.lg
-{
-	font-size: 16px;
-	padding: 11px;
-}

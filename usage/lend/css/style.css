@@ -1,0 +1,196 @@
+html,
+body,
+.page-wrap
+{
+	height: 100%;
+	position: relative;
+}
+
+body
+{
+	padding: 0;
+	margin: 0;
+	font-family: Arial;
+	font-size: 14px;
+	color: #1E2731;
+}
+
+.top-header
+{
+	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: #fff;
+	z-index: 1;
+}
+
+.top-header-container,
+.page-content,
+.footer-content
+{
+	width: 960px;
+	margin: 0 auto;
+}
+
+.top-header-container
+{
+	padding: 25px 0;
+}
+
+.top-logo
+{
+	font-size: 44px;
+	display: inline-block;
+	font-weight: bold;
+	padding-left: 60px;
+	background-image: url('https://cdn2.iconfinder.com/data/icons/black-animal-svg-icons/512/jellyfish_Medusa_Portuguese_man-of-war-48.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+.top-nav
+{
+	float: right;
+}
+
+.top-nav-list
+{
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+
+.top-nav-list li
+{
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+
+.top-nav-list li a
+{
+	text-decoration: none;
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	padding: 0;
+	text-align: center;
+	font: 13px/50px 'Arial';
+	color: #252D2C;
+	text-transform: uppercase;
+	background: rgba(0, 0, 0, 0);
+	border-radius: 3px;
+	width: 120px;
+	-webkit-transition: all 0.35s ease;
+	transition: all 0.35s ease;
+
+}
+
+.top-nav-list li a.active,
+.top-nav-list li a:hover
+{
+	color: #FFF;
+	background: #4cddf3;
+}
+
+.page-content
+{
+	padding-top: 120px;
+	padding-bottom: 100px;
+	min-height: 100%;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.page-preloader
+{
+	position: relative;
+	background-position: center;
+	background-image: url('../img/preload.gif');
+	background-repeat: no-repeat;
+	width: 100%;
+}
+
+.page-section-menu
+{
+	float: right;
+	width: 200px;
+}
+
+.page-section-menu ul,
+.page-section-menu li
+{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.page-section-menu li a
+{
+	display: block;
+	padding: 3px 12px;
+	font-size: 15px;
+	color: #999;
+	text-decoration: none;
+	margin-left: 5px;
+}
+
+.page-section-menu li a:hover
+{
+	color: #697580;
+	border-left: 3px solid #697580;
+	padding-left: 9px;
+}
+
+.page-section-menu li.head
+{
+	font-weight: bold;
+	line-height: 40px;
+	color: #697580;
+}
+
+.page-section-center
+{
+	margin-right: 220px;
+}
+
+.page-section-center a[name]
+{
+	display: block;
+	position: relative;
+	top: -120px;
+	visibility: hidden;
+}
+
+.section-head
+{
+	color: #697580;
+}
+
+.content-body
+{
+	margin-bottom: 50px;
+}
+
+.footer
+{
+	position: relative;
+	border-top: 1px dashed #AAB2BD;
+	padding: 40px 0;
+	background-color: #f5f5f5;
+	margin-top: -100px;
+	clear: both;
+}
+
+
+.footer-logo
+{
+	background-image: url('https://cdn2.iconfinder.com/data/icons/black-animal-svg-icons/512/jellyfish_Medusa_Portuguese_man-of-war-24.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding: 5px 0;
+	padding-left: 30px;
+	padding-right: 10px;
+	font-weight: bold;
+}

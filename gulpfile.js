@@ -1,40 +1,84 @@
 var gulp = require('gulp'),
+	sequence = require('run-sequence'),
+	clean = require('gulp-clean'),
 	sass = require('gulp-sass'),
 	prefix = require('gulp-autoprefixer'),
 	cssmin = require('gulp-cssmin'),
 	rename = require('gulp-rename'),
 	plumber = require('gulp-plumber'),
-	uglify = require('gulp-uglify');
+	concat = require('gulp-concat'),
+ 	uglify = require('gulp-uglify'),
+ 	beauty = require('gulp-cssbeautify');
 
-gulp.task('styles', function () {
-	gulp.src('src/css/*.scss')
+var folders = {
+	clean: ['dist/js/*.js','dist/css/*.css','src/css/*.css'],
+	src: {
+		sass: 'src/scss',
+		css: 'src/css',
+		js:  'src/js'
+	},
+	dist: {
+		css: 'dist/css',
+		js: 'dist/js'
+	}
+}
+
+gulp.task('clean',function(){
+	return gulp.src(folders.clean).pipe(clean());
+})
+
+gulp.task('sass', function () {
+	return gulp.src(folders.src.sass + '/*.scss')
 		.pipe(plumber())
-		.pipe(sass())
-		.pipe(prefix('last 2 version', 'ie 8'))
-		.pipe(gulp.dest('src/css/'));
+		.pipe(
+			sass({
+				errLogToConsole: true
+			})
+		)
+		.pipe(prefix('last 10 version'))//, 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
+		.pipe(beauty({
+			indent: '	',
+			openbrace: 'end-of-line',
+            autosemicolon: true
+		}))
+		.pipe(gulp.dest(folders.src.css));
 });
 
 gulp.task('css-min', function () {
-	gulp.src('src/css/*.css')
+	return gulp.src(folders.src.css + '/*.css')
+		.pipe(prefix('last 10 version'))
 		.pipe(cssmin())
 		.pipe(rename({suffix: '.min'}))
-		.pipe(gulp.dest('dist/css'));
+		.pipe(gulp.dest(folders.dist.css));
 });
 
 gulp.task('js-min', function(){
-	gulp.src('src/js/*.js')
+	return gulp.src(folders.src.js + '/*.js')
 	.pipe(uglify())
 	.pipe(rename({suffix: '.min'}))
-	.pipe(gulp.dest('dist/js'))
+	.pipe(gulp.dest(folders.dist.js))
 });
 
+gulp.task('js-concat',function(){
+	return gulp.src([
+		'dist/js/medusa.core.min.js',
+		'dist/js/!(medusa.core).min.js'
+	])
+	.pipe(concat('medusa.min.js'))
+	.pipe(gulp.dest(folders.dist.js))
+})
+
 gulp.task('default', function () {
-	gulp.watch('src/scss/*.scss', ['styles']);
-	gulp.watch('src/js/*.js', ['js-min']);
+	gulp.watch(folders.src.sass + '/*.scss', ['sass']);
+	gulp.watch(folders.src.js + '/*.js', ['js-min']);
 });
 
 gulp.task('build', function () {
-	gulp.run('styles');
-	gulp.run('css-min');
-	gulp.run('js-min');
+	sequence(
+		'clean',
+		'sass',
+		'css-min',
+		'js-min',
+		'js-concat'
+	);
 });

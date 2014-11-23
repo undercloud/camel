@@ -1,9 +1,10 @@
-/* grid */
+@import 'local';
+
 .medusa-form-row
 {
 	margin-top: $form-grid-m-top;
 	margin-bottom: $form-grid-m-bottom;
-	position: relative;	
+	position: relative;
 	display: table;
 	width: 100%;
 }
@@ -15,7 +16,7 @@
 
 .medusa-form-row > *:last-child
 {
-	padding-right: 0; 
+	padding-right: 0;
 }
 
 .medusa-form-row>.form-grid-1,
@@ -39,7 +40,7 @@
 	line-height: 1;
 	margin: 0;
 
-	@include border-box;
+	//@include border-box;
 }
 
 .medusa-form-row>.form-grid-1 { width: 8.333%}
@@ -64,7 +65,7 @@
 	margin: 0;
 	width: 100%;
 
-	@include border-box;
+	//@include border-box;
 }
 
 .medusa-form-row .medusa-button

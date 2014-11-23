@@ -1,4 +1,4 @@
-/* button group */
+@import 'local';
 
 .medusa-button-group
 {
@@ -10,17 +10,17 @@
 .medusa-button-group .medusa-button
 {
 	margin: 0;
-	@include border-radius(0);
+	//@include border-radius(0);
 }
 
 .medusa-button-group .medusa-button:first-child
 {
-	@include border-left-radius($form-element-radius);
+	//@include border-left-radius($form-element-radius);
 }
 
 .medusa-button-group .medusa-button:last-child
 {
-	@include border-right-radius($form-element-radius); 
+	//@include border-right-radius($form-element-radius);
 }
 
 .medusa-button-group.collapse .medusa-button

@@ -1,3 +1,5 @@
+@import 'local';
+
 .medusa-form,
 .medusa-button,
 .medusa-input,
@@ -30,7 +32,7 @@ legend
 
 /* label */
 
-.medusa-label 
+.medusa-label
 {
 	display: inline-block;
 	vertical-align: middle;

@@ -1,4 +1,5 @@
-/* input */
+@import 'local';
+
 .medusa-input
 {
 	width: 200px;
@@ -8,8 +9,8 @@
 	border: 1px solid $secondary-color-dark;
 	box-shadow: inset 0 1px 3px #ddd;
 
-	@include border-box;
-	@include border-radius($form-element-radius);
+	//@include border-box;
+	//border-radius($form-element-radius);
 }
 
 textarea.medusa-input
@@ -62,7 +63,7 @@ textarea.medusa-input
 	display: table-cell;
 	line-height: 1;
 	margin: 0;
-	@include border-radius(0);
+	//@include border-radius(0);
 }
 
 .medusa-input-addon .addon-text
@@ -85,24 +86,24 @@ textarea.medusa-input
 .medusa-input-addon .medusa-button:first-child
 {
 	border-right: none;
-	@include border-left-radius($form-element-radius);
+	//@include border-left-radius($form-element-radius);
 }
 
 .medusa-input-addon .addon-text:last-child,
 .medusa-input-addon .medusa-button:last-child
 {
 	border-left: none;
-	@include border-right-radius($form-element-radius);
+	//@include border-right-radius($form-element-radius);
 }
 
 .medusa-input-addon .medusa-input:first-child
 {
-	@include border-left-radius($form-element-radius);
+	//@include border-left-radius($form-element-radius);
 }
 
 .medusa-input-addon .medusa-input:last-child
 {
-	@include border-right-radius($form-element-radius);
+	//@include border-right-radius($form-element-radius);
 }
 
 .medusa-input-addon .addon-icon,
@@ -133,18 +134,18 @@ textarea.medusa-input
 .medusa-input-addon .addon-icon ~ .medusa-input
 {
 	padding-left: 32px;
-	@include border-left-radius($form-element-radius);
+	//@include border-left-radius($form-element-radius);
 }
 
 .medusa-input-addon .addon-icon-right ~ .medusa-input
 {
 	padding-right: 32px;
-	@include border-left-radius($form-element-radius);
+	//@include border-left-radius($form-element-radius);
 }
 
 .medusa-input-addon>.medusa-input-addon *
 {
-	@include border-radius(0);
+	//@include border-radius(0);
 }
 
 .medusa-input-addon>.medusa-input-addon:first-child

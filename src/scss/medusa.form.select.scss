@@ -1,6 +1,6 @@
-/* select */
-.medusa-select
-{
+@import 'local';
+
+.medusa-select {
 	width: 200px;
 	padding: 7px;
 	vertical-align: middle;
@@ -9,24 +9,19 @@
 	background-color: #fff;
 	border: 1px solid $secondary-color-dark;
 	box-shadow: 0 1px 3px #ddd;
-
-	@include border-box;
-	@include border-radius($form-element-radius);
+	box-sizing: border-box;
+	border-radius: $form-element-radius;
 
 	&.sm {
 		font-size: 12px;
 		padding: 5px;
 	}
-
 	&.lg {
 		font-size: 16px;
 		padding: 11px;
 	}
 
-	&[multiple]
-	{
+	&[multiple] {
 		height: auto;
 	}
 }
-
-

@@ -41,6 +41,7 @@ body
 .top-logo
 {
 	font-size: 44px;
+	line-height: 110%;
 	display: inline-block;
 	font-weight: bold;
 	padding-left: 60px;
@@ -193,4 +194,15 @@ body
 	padding-left: 30px;
 	padding-right: 10px;
 	font-weight: bold;
+}
+
+.exmp .row-12 div,
+.exmp .row-16 div,
+.exmp .row-24 div
+{
+	background-color: #eee;
+	text-align: center;
+	border-radius: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }

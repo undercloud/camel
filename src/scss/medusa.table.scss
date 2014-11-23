@@ -1,19 +1,38 @@
-/* table */
-table {
+@import 'local';
+
+table.medusa-table {
 	width: 100%;
 	border-collapse: collapse;
 	border-spacing: 0;
-}
 
-table th,
-table td {
-	padding: 5px;
-	vertical-align: middle;
-	border: 1px solid $secondary-color-dark;
-}
+	th {
+		text-align: left;
+		font-weight: bold;
+		background-color: $table-head-bg-color;
+	}
 
-table th {
-	text-align: left;
-	font-weight: bold;
-	background-color: $secondary-color-light;
+	th,
+	td {
+		padding: $table-padding;
+		vertical-align: middle;
+		border: none;
+	}
+
+	&.border th,
+	&.border td {
+		border: 1px solid $secondary-color-dark;
+	}
+
+	&.border-bottom th,
+	&.border-bottom td {
+		border-bottom: 1px solid $secondary-color-dark;
+	}
+
+	&.striped tr:nth-child(odd) td {
+		background-color: $secondary-color-light;
+	}
+
+	&.hover tr:hover td {
+		background-color: $table-row-hover-color !important;
+	}
 }

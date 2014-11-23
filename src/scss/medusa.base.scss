@@ -1,3 +1,5 @@
+@import 'local';
+
 body
 {
 	font-family: $font-stack;
@@ -27,14 +29,14 @@ h4 { font-size: $h4-size; }
 h5 { font-size: $h5-size; }
 h6 { font-size: $h6-size; }
 
-a { 
+a {
 	cursor: pointer;
 	text-decoration:none;
-	color: $primary-link-color; 
+	color: $primary-link-color;
 }
 
 a:hover,
-a:active { 
+a:active {
 	text-decoration:underline;
 	outline: 0;
 }
@@ -76,7 +78,7 @@ blockquote:before {
     line-height: .1em;
     margin-right: .2em;
     vertical-align: -.4em;
-    content: open-quote; 
+    content: open-quote;
     font-weight: bold;
 }
 
@@ -85,7 +87,7 @@ blockquote:after {
     font-size: 3em;
     line-height: .1em;
     vertical-align: -.45em;
-    content: close-quote; 
+    content: close-quote;
     font-weight: bold;
 }
 

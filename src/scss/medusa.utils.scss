@@ -1,3 +1,5 @@
+@import 'local';
+
 .rel { position: relative; }
 .fix { position: fixed; }
 .abs { position: absolute; }
@@ -13,7 +15,7 @@
 .txt-center    { text-align:center; }
 .txt-justify   { text-align:justify; }
 .txt-overflow  {overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
-.txt-no-select 
+.txt-no-select
 {
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -40,11 +42,11 @@
   content: " ";
   display: table;
 }
- 
+
 .clearfix:after {
   clear: both;
 }
- 
+
 .clearfix {
   *zoom: 1;
 }

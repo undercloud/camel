@@ -1,7 +1,8 @@
-/* button */
+@import 'local';
+
 .medusa-button
 {
-	font-size: 12px;	
+	font-size: 12px;
 	margin: 2px;
 	padding: 10px 30px;
 	border: 1px solid $secondary-color-dark;
@@ -26,16 +27,16 @@
 	);
 	filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#19FFFFFF', EndColorStr='#19000000');
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#19FFFFFF', EndColorStr='#19000000')";
-	
+
 	@include text-truncate;
-	@include border-box;
-	@include border-radius($form-element-radius);
+	//@include border-box;
+	//@include border-radius($form-element-radius);
 }
 
 .medusa-button:hover
 {
 	zoom: 1;
-	@include opacity(0.85);
+	//@include opacity(0.85);
 }
 
 .medusa-button:active
@@ -50,7 +51,7 @@
 
 .medusa-button[disabled]:hover
 {
-	@include opacity(1);
+	//@include opacity(1);
 }
 
 .medusa-button.sm
@@ -70,7 +71,7 @@
 	display: block;
 	width: 100%;
 	margin: 0;
-	@include border-box;
+	//@include border-box;
 }
 
 .medusa-button.addon

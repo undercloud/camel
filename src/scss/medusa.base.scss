@@ -1,7 +1,6 @@
 @import 'local';
 
-body
-{
+body {
 	font-family: $font-stack;
 	color: $primary-color;
 	font-size: $default-font-size;
@@ -41,7 +40,7 @@ a:active {
 	outline: 0;
 }
 
-p        { margin: 0 0 1em 0;text-indent: $text-indent;}
+p        { margin: 0.5em 0;text-indent: $text-indent;}
 b,strong { font-weight: bold; }
 em,i,dfn { font-style: italic; }
 q,cite   { font-style: italic; }

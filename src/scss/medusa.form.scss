@@ -3,52 +3,43 @@
 .medusa-form,
 .medusa-button,
 .medusa-input,
-.medusa-select
-{
+.medusa-select {
 	padding: 0;
 	margin: 0;
-	border:0;
-	line-height: 14px;
+	border: 0;
 	position: relative;
 	outline: none;
-	font-size: 14px;
+	line-height: $line-height;
+	font-size: $default-font-size;
 }
 
-fieldset
-{
+fieldset {
 	padding: 10px;
 	padding-top: 0;
 	margin: 0px;
 }
 
-legend
-{
+legend {
 	padding: 5px;
 	font-weight: bold;
 	line-height: 100%;
 }
 
-
-
-/* label */
-
 .medusa-label
 {
 	display: inline-block;
 	vertical-align: middle;
-}
 
-.medusa-label-block
-{
-	display: block;
-	padding: 5px 0;
+	&.block {
+		display: block;
+		padding: 5px 0;
+	}
 }
 
 /* checkbox, radio */
 
 input[type=checkbox],
-input[type=radio]
-{
+input[type=radio] {
 	margin: -2px 5px 0px 5px;
 	vertical-align: middle;
 }
@@ -57,14 +48,13 @@ input[type=radio]
 
 .medusa-input[disabled],
 .medusa-select[disabled],
-.medusa-button[disabled]
-{
+.medusa-button[disabled] {
 	background: #eee;
 	border: 1px solid #cdcdcd;
 	color: #aaa;
 }
 
-input::-webkit-input-placeholder    {color: #aaa;line-height: 1.2em}
+input::-webkit-input-placeholder    {color: #aaa;vertical-align:middle;line-height: 1.5em}
 textarea::-webkit-input-placeholder {color: #aaa;line-height: 1.2em}
 input:-moz-placeholder              {color: #aaa;line-height: 1em}
 textarea:-moz-placeholder           {color: #aaa;line-height: 1em}

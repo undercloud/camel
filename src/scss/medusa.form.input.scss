@@ -9,8 +9,8 @@
 	border: 1px solid $secondary-color-dark;
 	box-shadow: inset 0 1px 3px #ddd;
 
-	//@include border-box;
-	//border-radius($form-element-radius);
+	box-sizing: border-box;
+	border-radius: $form-element-radius;
 }
 
 textarea.medusa-input

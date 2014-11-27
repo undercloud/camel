@@ -1,0 +1,32 @@
+.medusa-alert {
+	padding: 1em;
+	border-radius: 0.3em;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	border-width: 1px;
+	border-style: solid;
+
+	&.info {
+		color: #31708F;
+		background-color: #D9EDF7;
+		border-color: #BCE8F1;
+	}
+
+	&.success {
+		color: #3C763D;
+		background-color: #DFF0D8;
+		border-color: #D6E9C6;
+	}
+
+	&.warn {
+		color: #8A6D3B;
+		background-color: #FCF8E3;
+		border-color: #FAEBCC;
+	}
+
+	&.danger {
+		color: #A94442;
+		background-color: #F2DEDE;
+		border-color: #EBCCD1;
+	}
+}

@@ -1,74 +1,73 @@
 @import 'local';
 
-.medusa-form-row
-{
+.medusa-form-row {
 	margin-top: $form-grid-m-top;
 	margin-bottom: $form-grid-m-bottom;
 	position: relative;
 	display: table;
 	width: 100%;
+
+	> * {
+		padding-right: $form-grid-gutter;
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+
+	.medusa-input,
+	.medusa-input-addon,
+	.medusa-select,
+	.medusa-button {
+		box-sizing: border-box;
+		position: relative;
+		width: 100%;
+		margin: 0;
+	}
+
+	.medusa-button {
+		width: auto;
+	}
 }
 
-.medusa-form-row > *
-{
-	padding-right: $form-grid-gutter;
+.medusa-form-row {
+	>.form-grid-1, >.form-grid-2, >.form-grid-3,
+	>.form-grid-4, >.form-grid-5, >.form-grid-6,
+	>.form-grid-7, >.form-grid-8, >.form-grid-9,
+	>.form-grid-10, >.form-grid-11, >.form-grid-12 {
+		box-sizing: border-box;
+		vertical-align: middle;
+		display: table-cell;
+		position: relative;
+		min-height: 1px;
+		line-height: 1;
+		width: 100%;
+		margin: 0;
+	}
 }
 
-.medusa-form-row > *:last-child
-{
-	padding-right: 0;
+.medusa-form-row {
+	>.form-grid-1 { width: (100% / 12 * 1)}
+	>.form-grid-2 { width: (100% / 12 * 2)}
+	>.form-grid-3 { width: (100% / 12 * 3)}
+	>.form-grid-4 { width: (100% / 12 * 4)}
+	>.form-grid-5 { width: (100% / 12 * 5)}
+	>.form-grid-6 { width: (100% / 12 * 6)}
+	>.form-grid-7 { width: (100% / 12 * 7)}
+	>.form-grid-8 { width: (100% / 12 * 8)}
+	>.form-grid-9 { width: (100% / 12 * 9)}
+	>.form-grid-10 { width: (100% / 12 * 10)}
+	>.form-grid-11 { width: (100% / 12 * 11)}
+	>.form-grid-12 { width: (100% / 12 * 12)}
 }
 
-.medusa-form-row>.form-grid-1,
-.medusa-form-row>.form-grid-2,
-.medusa-form-row>.form-grid-3,
-.medusa-form-row>.form-grid-4,
-.medusa-form-row>.form-grid-5,
-.medusa-form-row>.form-grid-6,
-.medusa-form-row>.form-grid-7,
-.medusa-form-row>.form-grid-8,
-.medusa-form-row>.form-grid-9,
-.medusa-form-row>.form-grid-10,
-.medusa-form-row>.form-grid-11,
-.medusa-form-row>.form-grid-12
-{
-	display: table-cell;
-	vertical-align: middle;
-	position: relative;
-	width: 100%;
-	min-height: 1px;
-	line-height: 1;
-	margin: 0;
-
-	//@include border-box;
-}
-
-.medusa-form-row>.form-grid-1 { width: 8.333%}
-.medusa-form-row>.form-grid-2 { width: 16.666%}
-.medusa-form-row>.form-grid-3 { width: 25%}
-.medusa-form-row>.form-grid-4 { width: 33.333%}
-.medusa-form-row>.form-grid-5 { width: 41.666%}
-.medusa-form-row>.form-grid-6 { width: 50%}
-.medusa-form-row>.form-grid-7 { width: 58.333%}
-.medusa-form-row>.form-grid-8 { width: 66.666%}
-.medusa-form-row>.form-grid-9 { width: 75%}
-.medusa-form-row>.form-grid-10 { width: 83.333%}
-.medusa-form-row>.form-grid-11 { width: 91.666%}
-.medusa-form-row>.form-grid-12 { width: 100%}
-
-.medusa-form-row .medusa-input,
-.medusa-form-row .medusa-input-addon,
-.medusa-form-row .medusa-select,
-.medusa-form-row .medusa-button
-{
-	position: relative;
-	margin: 0;
-	width: 100%;
-
-	//@include border-box;
-}
-
-.medusa-form-row .medusa-button
-{
-	width: auto;
+@media only screen and (max-width: 480px) {
+	.medusa-form-row {
+		>.form-grid-1, >.form-grid-2, >.form-grid-3,
+		>.form-grid-4, >.form-grid-5, >.form-grid-6,
+		>.form-grid-7, >.form-grid-8, >.form-grid-9,
+		>.form-grid-10, >.form-grid-11, >.form-grid-12 {
+			width: 100%;
+		}
+	}
 }

@@ -1,19 +1,17 @@
 @import 'local';
 
 .medusa-breadcrumbs,
-.medusa-breadcrumbs li
-{
+.medusa-breadcrumbs li {
 	display: inline-block;
 	list-style: none;
 	padding: 0;
 	margin: 0;
-}
 
-.medusa-breadcrumbs li + li:before
-{
-	content: "/";
-	color: #ccc;
-	padding: 0 5px;
-	vertical-align: middle;
-	font-size: 1.5em;
+	li + li:before {
+		content: "/";
+		color: #ccc;
+		padding: 0 5px;
+		vertical-align: middle;
+		font-size: 1.5em;
+	}
 }

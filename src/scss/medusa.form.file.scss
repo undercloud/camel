@@ -1,35 +1,30 @@
 @import 'local';
 
-.medusa-upload
-{
+.medusa-upload {
 	background-color: $secondary-color-light;
 	width: 100%;
 	position: relative;
 	text-align: center;
 	overflow: hidden;
-}
 
-.medusa-upload:hover
-{
-	background-color: $secondary-color-light-hover;
-}
+	&:hover {
+		background-color: $secondary-color-light-hover;
+	}
 
-.medusa-upload .medusa-upload-title
-{
-	padding: 10px 0px;
-	display: inline-block;
-	@include text-truncate;
-}
+	.title {
+		padding: 10px 0px;
+		display: inline-block;
+		@include text-truncate;
+	}
 
-.medusa-upload input[type=file].medusa-upload-file
-{
-	cursor: pointer;
-	position: absolute;
-	top: 0;
-	right: 0;
-	margin: 0;
-	padding: 0;
-	font-size: 500px;
-
-	//@include opacity(0);
+	input[type=file].file {
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 0;
+		padding: 0;
+		font-size: 500px;
+		opacity: 0;
+	}
 }

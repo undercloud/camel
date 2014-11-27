@@ -1,0 +1,44 @@
+ .medusa-callouts {
+	border: none;
+	border-left: 3px solid #ddd;
+	padding-left: 0.8em;
+	margin: 1em 0;
+
+	.head {
+		font-weight: bold;
+		font-size: 1.2em;
+		line-height: 1.5em;
+	}
+
+	&.info {
+		border-left-color: #5BC0DE;
+
+		.head {
+			color: #5BC0DE;
+		}
+	}
+
+	&.success {
+		border-left-color: #5CB85C;
+
+		.head {
+			color: #5CB85C;
+		}
+	}
+
+	&.warn {
+		border-left-color: #F0AD4E;
+
+		.head {
+			color: #F0AD4E;
+		}
+	}
+
+	&.danger {
+		border-left-color: #D9534F;
+
+		.head {
+			color: #D9534F;
+		}
+	}
+}

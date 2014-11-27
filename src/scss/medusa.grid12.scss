@@ -1,23 +1,5 @@
 @import 'local';
-
-.row-12
-{
-	position: relative;
-}
-
-.grid-1, .grid-2, .grid-3, .grid-4,
-.grid-5, .grid-6, .grid-7, .grid-8,
-.grid-9, .grid-10, .grid-11, .grid-12
-{
-	display: inline;
-	float: left;
-	position: relative;
-	margin: 1%;
-	width: 98%;
-}
-
-.alpha { margin-left: 0; }
-.omega { margin-right: 0; }
+@import 'medusa.grid';
 
 .row-12>.grid-1 { width: 6.333%; }
 .row-12>.grid-2 { width: 14.667%; }
@@ -92,8 +74,7 @@
 	.row-12>.grid-9,
 	.row-12>.grid-10,
 	.row-12>.grid-11,
-	.row-12>.grid-12
-	{
+	.row-12>.grid-12 {
 		padding-left: 0;
 		padding-right: 0;
 		width: 98%;

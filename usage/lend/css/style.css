@@ -203,6 +203,21 @@ body
 	background-color: #eee;
 	text-align: center;
 	border-radius: 5px;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.form-rows-wrap .medusa-form-row div {
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 5px;
+}
+
+.form-rows-wrap .medusa-form-row div:first-child {
+	background-color: #eee;
+}
+
+.form-rows-wrap .medusa-form-row div:last-child {
+	background-color: #ddd;
 }

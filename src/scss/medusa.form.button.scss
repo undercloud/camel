@@ -1,35 +1,25 @@
 @import 'local';
 
 .medusa-button {
+	cursor: pointer;
+	display: inline-block;
+	font-weight: normal;
+	text-decoration: none;
+	text-align: center;
+	box-sizing: border-box;
+
 	font-size: 12px;
 	margin: 2px;
 	padding: 10px 30px;
 	border: 1px solid $secondary-color-dark;
+	border-radius: $form-element-radius;
 
-	cursor:pointer;
-	display:inline-block;
-	font-weight: normal;
-	text-decoration:none;
-	text-align: center;
-
-	background: -moz-linear-gradient(
-		center top,
-		rgba(255, 255, 255, .1) 0%,
-		rgba(0, 0, 0, .1) 100%
-	);
-	background: -webkit-gradient(
-		linear,
-		center bottom,
-		center top,
-		from(rgba(0, 0, 0, .1)),
-		to(rgba(255, 255, 255, .1))
-	);
-	filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#19FFFFFF', EndColorStr='#19000000');
+	background: -moz-linear-gradient( center top, rgba(255, 255, 255, .1) 0%, rgba(0, 0, 0, .1) 100% );
+	background: -webkit-gradient( linear, center bottom, center top, from(rgba(0, 0, 0, .1)), to(rgba(255, 255, 255, .1)));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#19FFFFFF', EndColorStr='#19000000');
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#19FFFFFF', EndColorStr='#19000000')";
 
 	@include text-truncate;
-	//@include border-box;
-	//@include border-radius($form-element-radius);
 
 	&.sm {
 		font-size: 11px;
@@ -48,11 +38,22 @@
 		margin: 0;
 	}
 
-	&:active { top: 1px }
-	&[disabled]:active { top: 0px }
+	&:active {
+		top: 1px
+	}
 
-	&:hover { zoom: 1;opacity: 0.85 }
-	&[disabled]:hover { opacity: 1}
+	&[disabled]:active {
+		top: 0px
+	}
+
+	&:hover {
+		opacity: 0.85;
+		zoom: 1;
+	}
+
+	&[disabled]:hover {
+		opacity: 1
+	}
 }
 
 /*.medusa-button.addon

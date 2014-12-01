@@ -3,6 +3,7 @@
 .medusa-button-group
 {
 	font-size: 0;
+	position: relative;
 	display: inline-block;
 	overflow: hidden;
 
@@ -36,5 +37,9 @@
 		&:first-child {
 			margin-left: 0px;
 		}
+	}
+
+	&.collapse.full .medusa-button + .medusa-button {
+		border-left: none;
 	}
 }

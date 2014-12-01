@@ -29,4 +29,18 @@
 		background-color: #F2DEDE;
 		border-color: #EBCCD1;
 	}
+
+	.close {
+		float: right;
+		cursor: pointer;
+		display: inline;
+
+		&:after{
+			content: '\0D7';
+			font-family: sans-serif;
+			font-size: 1.5em;
+			font-weight: bold;
+			display: inline;
+		}
+	}
 }

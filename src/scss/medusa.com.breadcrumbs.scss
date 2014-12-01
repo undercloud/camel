@@ -1,11 +1,15 @@
 @import 'local';
 
-.medusa-breadcrumbs,
-.medusa-breadcrumbs li {
-	display: inline-block;
-	list-style: none;
+.medusa-breadcrumbs {
 	padding: 0;
 	margin: 0;
+
+	li {
+		display: inline-block;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
 
 	li + li:before {
 		content: "/";
@@ -15,3 +19,72 @@
 		font-size: 1.5em;
 	}
 }
+
+/*.medusa-breadcrumbs {
+	text-align: center;
+	padding: 0;
+}
+
+	.medusa-breadcrumbs {
+		list-style: none;
+		display: inline-table;
+	}
+		.medusa-breadcrumbs li {
+			display: inline;
+		}
+
+		.medusa-breadcrumbs li a {
+			display: block;
+			float: left;
+			background: #eee;
+			text-align: center;
+			padding: 10px;
+			position: relative;
+			margin: 0 10px 0 0;
+
+			text-decoration: none;
+			color: #fff;
+		}
+			.medusa-breadcrumbs li a:after {
+				content: "";
+				border-top: 20px solid transparent;
+	 			border-bottom: 20px solid transparent;
+	  			border-left: 20px solid #eee;
+				position: absolute; right: -20px; top: 0;
+				z-index: 1;
+			}
+
+			.medusa-breadcrumbs li a:before {
+				content: "";
+				border-top: 20px solid transparent;
+	  			border-bottom: 20px solid transparent;
+	  			border-left: 20px solid #fff;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+
+				.medusa-breadcrumbs li:first-child a {
+					border-top-left-radius: 5px;
+					border-bottom-left-radius: 5px;
+				}
+				.medusa-breadcrumbs li:first-child a:before {
+					display: none;
+				}
+
+				.medusa-breadcrumbs li:last-child a {
+					padding-right: 20px;
+					border-top-right-radius: 5px;
+					border-bottom-right-radius: 5px;
+				}
+				.medusa-breadcrumbs li:last-child a:after {
+					display: none;
+				}
+
+			.medusa-breadcrumbs li a:hover {
+				background: #4b545f;
+			}
+				.medusa-breadcrumbs li a:hover:after {
+					border-left-color: #4b545f;
+				}
+*/

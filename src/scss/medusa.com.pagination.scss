@@ -1,0 +1,101 @@
+@import 'local';
+
+$pag-font-size: 14px;
+$pag-color: #323232;
+$pag-background: #eee;
+$pag-padding: 7px 14px;
+$pag-border-color: #ddd;
+$pag-border-radius: 3px;
+$pag-space: 3px;
+
+$pag-active-color: #fff;
+$pag-active-border-color: #4b545f;
+$pag-active-background: #4b545f;
+
+$pag-hover-color: #fff;
+$pag-hover-border-color: #4b545f;
+$pag-hover-background: #4b545f;
+
+.medusa-pagination {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	position: relative;
+	display: inline-table;
+	line-height: 1;
+
+	li {
+		list-style: none;
+		display: block;
+		float: left;
+
+		a {
+			display: inline-block;
+			text-decoration: none;
+			padding: $pag-padding;
+			color: $pag-color;
+			border: 1px solid $pag-border-color;
+			font-size: $pag-font-size;
+			background: $pag-background;
+			border-radius: $pag-border-radius;
+
+			&.dots:after {
+				display: block;
+			}
+
+			&.to-first:after ,
+			&.to-last:after ,
+			&.to-prev:after ,
+			&.to-next:after {
+				font-size: 1.5em;
+				display: block;
+			}
+
+			&.dots:after { content: '\02026';}
+			&.to-first:after { content: '\00AB';}
+			&.to-last:after { content: '\00BB';}
+			&.to-prev:after { content: '\02039';}
+			&.to-next:after { content: '\0203a'; }
+
+			&:hover {
+				color: $pag-hover-color;
+				border-color: $pag-hover-border-color;
+				background: $pag-hover-background;
+			}
+
+			&.active {
+				color: $pag-active-color;
+				border-color: $pag-active-border-color;
+				background: $pag-active-background;
+			}
+		}
+	}
+
+	li + li {
+		margin-left: $pag-space;
+	}
+
+	&.collapse {
+		overflow: hidden;
+
+		li {
+			&:first-child a {
+				border-top-left-radius: $pag-border-radius;
+				border-bottom-left-radius: $pag-border-radius;
+			}
+
+			&:last-child a {
+				border-top-right-radius: $pag-border-radius;
+				border-bottom-right-radius: $pag-border-radius;
+			}
+		}
+
+		li + li {
+			margin-left: -1px;
+		}
+
+		li a {
+			border-radius: 0;
+		}
+	}
+}

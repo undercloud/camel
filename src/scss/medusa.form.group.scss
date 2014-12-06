@@ -1,0 +1,74 @@
+@import 'local';
+
+.medusa-form-group {
+	display: table;
+	width: 100%;
+
+	* {
+		display: table-cell;
+		border-radius: 0;
+		vertical-align: baseline;
+	}
+
+	> * {
+		&:first-child,
+		&:first-child.medusa-input-wrap .medusa-input {
+			border-top-left-radius: $form-element-radius;
+			border-bottom-left-radius: $form-element-radius;
+		}
+
+		&:last-child,
+		&:last-child.medusa-input-wrap .medusa-input {
+			border-top-right-radius: $form-element-radius;
+			border-bottom-right-radius: $form-element-radius;
+		}
+	}
+
+	.addon-text {
+		position: relative;
+		padding: 0 10px;
+		min-width: 1px;
+		background-color: $secondary-color-light;
+		border: 1px solid $secondary-color-dark;
+	}
+
+	.medusa-button {
+		line-height: 0;
+	}
+
+	.medusa-select {
+		min-width: 100px;
+	}
+
+	&.stack {
+		display: block;
+
+		> * {
+			display: block;
+			width: 100%;
+			border-radius: 0;
+
+			.medusa-input {
+				border-radius: 0;
+			}
+
+			&:first-child,
+			&:first-child .medusa-input {
+				border-radius: 0;
+				border-top-left-radius: $form-element-radius;
+				border-top-right-radius: $form-element-radius;
+			}
+
+			&:last-child,
+			&:last-child .medusa-input {
+				border-radius: 0;
+				border-bottom-left-radius: $form-element-radius;
+				border-bottom-right-radius: $form-element-radius;
+			}
+
+			&.medusa-button {
+				line-height: 1;
+			}
+		}
+	}
+}

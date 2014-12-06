@@ -71,4 +71,37 @@
 			}
 		}
 	}
+
+	.medusa-form-group {
+		display: table;
+
+		>.medusa-input,
+		>.addon-text {
+			border-radius: 0;
+		}
+
+		&:first-child * {
+			&:first-child {
+				border-radius: 0;
+				border-top-left-radius: $form-element-radius;
+			}
+
+			&:last-child {
+				border-radius: 0;
+				border-top-right-radius: $form-element-radius;
+			}
+		}
+
+		&:last-child * {
+			&:first-child {
+				border-radius: 0;
+				border-bottom-left-radius: $form-element-radius;
+			}
+
+			&:last-child {
+				border-radius: 0;
+				border-bottom-right-radius: $form-element-radius;
+			}
+		}
+	}
 }

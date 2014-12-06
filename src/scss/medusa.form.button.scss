@@ -1,6 +1,7 @@
 @import 'local';
 
 .medusa-button {
+	position: relative;
 	cursor: pointer;
 	display: inline-block;
 	font-weight: normal;
@@ -14,12 +15,23 @@
 	border: 1px solid $secondary-color-dark;
 	border-radius: $form-element-radius;
 
+	background: linear-gradient(rgba(255, 255, 255, .1), rgba(0, 0, 0, .1));
 	background: -moz-linear-gradient( center top, rgba(255, 255, 255, .1) 0%, rgba(0, 0, 0, .1) 100% );
 	background: -webkit-gradient( linear, center bottom, center top, from(rgba(0, 0, 0, .1)), to(rgba(255, 255, 255, .1)));
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#19FFFFFF', EndColorStr='#19000000');
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#19FFFFFF', EndColorStr='#19000000')";
 
 	@include text-truncate;
+
+	&.sm {
+		font-size: 11px;
+		padding: 8px 20px;
+	}
+
+	&.lg {
+		font-size: 15px;
+		padding: 14px 35px;
+	}
 
 	&.full {
 		box-sizing: border-box;
@@ -158,17 +170,4 @@
 			top: 0;
 		}
 	}
-}
-
-
-.medusa-form-group.sm .medusa-button,
-.medusa-button.sm {
-	font-size: 11px;
-	padding: 8px 20px;
-}
-
-.medusa-form-group.lg .medusa-button,
-.medusa-button.lg {
-	font-size: 15px;
-	padding: 14px 35px;
 }

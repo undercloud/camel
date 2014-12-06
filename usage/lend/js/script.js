@@ -19,4 +19,12 @@ $(document).ready(function(){
 
 		return false;
 	})
+
+	$(document).on('click','.medusa-alert .close',function(){
+		var rem = $(this).closest('.medusa-alert')
+
+		rem.fadeOut('medium',function(){
+			rem.remove()
+		})
+	})
 })

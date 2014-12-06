@@ -3,7 +3,7 @@
 .medusa-input {
 	width: 200px;
 	margin: 2px;
-	padding: 8px;
+	padding: 9px;
 	background-color: #fff;
 	border: 1px solid $secondary-color-dark;
 	box-shadow: inset 0 1px 3px #ddd;
@@ -19,142 +19,96 @@ textarea.medusa-input
 	resize: none;
 }
 
-.medusa-input-addon
-{
+.medusa-form-row .medusa-input-wrap {
+	width: 100%;
+}
+
+.medusa-input-wrap {
 	display: table;
 	white-space: nowrap;
 }
 
-.medusa-input-addon.sm .addon-text,
-.medusa-input-addon.sm .medusa-input,
-.medusa-input.sm
-{
+.medusa-form-group.sm .medusa-input,
+.medusa-form-group.sm .addon-text,
+.medusa-input-wrap.sm .medusa-input,
+.medusa-input.sm {
 	font-size: 12px;
 	padding: 6px;
 }
 
-.medusa-input-addon.lg .addon-text,
-.medusa-input-addon.lg .medusa-input,
-.medusa-input.lg
-{
+.medusa-form-group.lg .medusa-input,
+.medusa-form-group.lg .addon-text,
+.medusa-input-wrap.lg .medusa-input,
+.medusa-input.lg {
 	font-size: 16px;
 	padding: 12px;
 }
 
-.medusa-input-addon.lg .medusa-button
-{
-	font-size: 15px;
-	padding: 14px 35px;
-}
+.medusa-input-wrap {
+	.addon-icon,
+	.addon-icon-right {
+		width: 16px;
+		height: 16px;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		background-repeat: no-repeat;
+		position: absolute;
+		z-index: 1;
+	}
 
-.medusa-input-addon.sm .medusa-button
-{
-	font-size: 11px;
-	padding: 7px 15px;
-}
+	.addon-icon {
+		right: auto;
+		left: 10px;
+		~ .medusa-input {
+			padding-left: 32px;
+		}
+	}
 
-.medusa-input-addon .addon-icon,
-.medusa-input-addon .addon-icon-right,
-.medusa-input-addon .addon-text,
-.medusa-input-addon .medusa-input,
-.medusa-input-addon .medusa-button
-{
-	display: table-cell;
-	line-height: 1;
-	margin: 0;
-	//@include border-radius(0);
-}
+	.addon-icon-right {
+		left: auto;
+		right: 10px;
 
-.medusa-input-addon .addon-text
-{
-	position: relative;
-	padding: 0 10px;
-	width: 1px;
-	background-color: $secondary-color-light;
-	border: 1px solid $secondary-color-dark;
-}
+		~ .medusa-input {
+			padding-right: 32px;
+		}
+	}
 
-.medusa-input-addon .medusa-button
-{
-	width: 1px;
-	padding-top: 0;
-	padding-bottom: 0;
-}
+	&.sm {
+		.addon-icon {
+			left: 6px;
 
-.medusa-input-addon .addon-text:first-child,
-.medusa-input-addon .medusa-button:first-child
-{
-	border-right: none;
-	//@include border-left-radius($form-element-radius);
-}
+			~ .medusa-input {
+				padding-left: 26px;
+			}
+		}
 
-.medusa-input-addon .addon-text:last-child,
-.medusa-input-addon .medusa-button:last-child
-{
-	border-left: none;
-	//@include border-right-radius($form-element-radius);
-}
+		.addon-icon-right {
+			right: 6px;
 
-.medusa-input-addon .medusa-input:first-child
-{
-	//@include border-left-radius($form-element-radius);
-}
+			~ .medusa-input {
+				padding-right: 26px;
+			}
+		}
+	}
 
-.medusa-input-addon .medusa-input:last-child
-{
-	//@include border-right-radius($form-element-radius);
-}
+	&.lg {
+		.addon-icon {
+			left: 12px;
 
-.medusa-input-addon .addon-icon,
-.medusa-input-addon .addon-icon-right
-{
-	width: 16px;
-	height: 16px;
-	top: 0;
-	bottom: 0;
-	margin: auto;
-	background-repeat: no-repeat;
-	position: absolute;
-	z-index: 1;
-}
+			~ .medusa-input {
+				padding-left: 36px;
+			}
+		}
 
-.medusa-input-addon .addon-icon
-{
-	right: auto;
-	left: 10px;
-}
+		.addon-icon-right {
+			right: 12px;
 
-.medusa-input-addon .addon-icon-right
-{
-	left: auto;
-	right: 10px;
-}
-
-.medusa-input-addon .addon-icon ~ .medusa-input
-{
-	padding-left: 32px;
-	//@include border-left-radius($form-element-radius);
-}
-
-.medusa-input-addon .addon-icon-right ~ .medusa-input
-{
-	padding-right: 32px;
-	//@include border-left-radius($form-element-radius);
-}
-
-.medusa-input-addon>.medusa-input-addon *
-{
-	//@include border-radius(0);
-}
-
-.medusa-input-addon>.medusa-input-addon:first-child
-{
-
-}
-
-.medusa-input-addon>.medusa-input-addon:last-child
-{
-
+			~ .medusa-input {
+				padding-right: 36px;
+			}
+		}
+	}
 }
 
 .medusa-input:focus,

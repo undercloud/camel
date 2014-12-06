@@ -10,7 +10,7 @@
 
 	font-size: 12px;
 	margin: 2px;
-	padding: 10px 30px;
+	padding: 11px 30px;
 	border: 1px solid $secondary-color-dark;
 	border-radius: $form-element-radius;
 
@@ -20,16 +20,6 @@
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#19FFFFFF', EndColorStr='#19000000')";
 
 	@include text-truncate;
-
-	&.sm {
-		font-size: 11px;
-		padding: 7px 15px;
-	}
-
-	&.lg {
-		font-size: 15px;
-		padding: 14px 35px;
-	}
 
 	&.full {
 		box-sizing: border-box;
@@ -42,8 +32,12 @@
 		top: 1px
 	}
 
-	&[disabled]:active {
-		top: 0px
+	&[disabled] {
+		opacity: 0.7 !important;
+
+		&:active {
+			top: 0px
+		}
 	}
 
 	&:hover {
@@ -51,68 +45,130 @@
 		zoom: 1;
 	}
 
-	&[disabled]:hover {
-		opacity: 1
+	&.addon,
+	&.addon-right,
+	&.addon-no-text {
+		.addon-icon {
+			display: inline-block;
+			padding: 0;
+			width: 16px;
+			height: 16px;
+			background-repeat: no-repeat;
+			position: absolute;
+		}
+	}
+
+	&.addon {
+		padding-left: 36px;
+		padding-right: 24px;
+
+		.addon-icon {
+			top: 0;
+			bottom: 0;
+			left: 10px;
+			margin: auto;
+		}
+
+		&.sm {
+			padding-left: 26px;
+			padding-right: 14px;
+
+			.addon-icon {
+				left: 5px;
+			}
+		}
+
+		&.lg {
+			padding-left: 40px;
+			padding-right: 30px;
+
+			.addon-icon {
+				left: 12px;
+			}
+		}
+	}
+
+	&.addon-right {
+		padding-left: 24px;
+		padding-right: 36px;
+
+		.addon-icon {
+			left: auto;
+			top: 0;
+			bottom: 0;
+			right: 10px;
+			margin: auto;
+		}
+
+		&.sm {
+			padding-left: 14px;
+			padding-right: 26px;
+
+			.addon-icon {
+				right: 5px;
+			}
+		}
+
+		&.lg {
+			padding-left: 30px;
+			padding-right: 40px;
+
+			.addon-icon {
+				right: 12px;
+			}
+		}
+	}
+
+	&.addon-no-text {
+		padding: 11px 16px;
+
+		&:after {
+			content: "\00a0";
+		}
+
+		.addon-icon {
+			left: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			margin: auto;
+		}
+
+		&.sm {
+			padding: 7px 12px;
+		}
+
+		&.lg {
+			padding: 14px 20px;
+		}
+	}
+
+	&.preload {
+		color: transparent;
+
+		&:after {
+			content: '\00a0';
+			background-repeat: no-repeat;
+			background-position: center;
+			background-image: url(http://meridian.intrumnet.com/css/images/load_inline.gif);
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+		}
 	}
 }
 
-/*.medusa-button.addon
-{
-	padding-left: 36px;
-	padding-right: 24px;
+
+.medusa-form-group.sm .medusa-button,
+.medusa-button.sm {
+	font-size: 11px;
+	padding: 8px 20px;
 }
 
-.medusa-button.addon-right
-{
-	padding-left: 24px;
-	padding-right: 36px;
+.medusa-form-group.lg .medusa-button,
+.medusa-button.lg {
+	font-size: 15px;
+	padding: 14px 35px;
 }
-
-.medusa-button.addon .addon-icon,
-.medusa-button.addon-right .addon-icon,
-.medusa-button.addon-no-text .addon-icon
-{
-	display: inline-block;
-	padding: 0;
-	width: 16px;
-	height: 16px;
-	background-repeat: no-repeat;
-	position: absolute;
-	z-index: 1;
-}
-
-.medusa-button.addon .addon-icon
-{
-	top: 0;
-	bottom: 0;
-	left: 10px;
-	margin: auto;
-}
-
-.medusa-button.addon-right .addon-icon
-{
-	left: auto;
-	top: 0;
-	bottom: 0;
-	right: 10px;
-	margin: auto;
-}
-
-.medusa-button.addon-no-text
-{
-	padding: 10px 15px;
-}
-
-.medusa-button.addon-no-text .addon-icon
-{
-	left: 0;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	margin: auto;
-}
-
-.medusa-button.addon-no-text:after
-{
-	content: "\00a0";
-} */

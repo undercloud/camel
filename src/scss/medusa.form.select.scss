@@ -2,26 +2,28 @@
 
 .medusa-select {
 	width: 200px;
-	padding: 7px;
+	padding: 8px;
 	vertical-align: middle;
 	overflow: hidden;
 	margin: 2px;
 	background-color: #fff;
 	border: 1px solid $secondary-color-dark;
-	box-shadow: 0 1px 3px #ddd;
 	box-sizing: border-box;
 	border-radius: $form-element-radius;
-
-	&.sm {
-		font-size: 12px;
-		padding: 5px;
-	}
-	&.lg {
-		font-size: 16px;
-		padding: 11px;
-	}
 
 	&[multiple] {
 		height: auto;
 	}
+}
+
+.medusa-form-group.sm .medusa-select,
+.medusa-select.sm {
+	font-size: 12px;
+	padding: 5px;
+}
+
+.medusa-form-group.lg .medusa-select,
+.medusa-select.lg {
+	font-size: 16px;
+	padding: 11px;
 }

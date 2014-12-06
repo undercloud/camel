@@ -3,10 +3,12 @@
 		<ul>
 			<li><a href='#alert'>alert</a></li>
 			<li><a href='#callouts'>callouts</a></li>
+			<li><a href='#dropdown'>dropdown</a></li>
 			<li><a href='#progress'>progress</a></li>
 			<li><a href='#breadcrumbs'>breadcrumbs</a></li>
 			<li><a href='#menu'>menu</a></li>
 			<li><a href='#tooltip'>tooltip</a></li>
+			<li><a href='#pagination'>pagination</a></li>
 		</ul>
 	</div>
 	<div class="page-section-center">
@@ -14,6 +16,7 @@
 			<a name="alert"></a>
 			<h1 class="section-head">#alert</h1>
 			<div class="medusa-alert info">
+				<span class="close"></span>
 				<b>Well done!</b> You successfully read this important alert message.
 			</div>
 			<div class="medusa-alert success">
@@ -66,11 +69,23 @@
 		</div>
 
 		<div class="content-body">
+			<a name="dropdown"></a>
+			<h1 class="section-head">#dropdown</h1>
+			<button class="medusa-button">click</button>
+			<ul class="medusa-dropdown">
+				<li>first</li>
+				<li>second</li>
+				<span class="split"></span>
+				<li>last</li>
+			</ul>
+		</div>
+
+		<div class="content-body">
 			<a name="progress"></a>
 			<h1 class="section-head">#progress</h1>
 			<div class="medusa-progress">
-				<div class="label">67%</div>
 				<div class="bar" style="width:67%"></div>
+				<div class="label">67%</div>
 			</div>
 		</div>
 
@@ -96,15 +111,15 @@
 			<div style="height:300px;">
 				<ul class="medusa-menu">
 					<li><a href="#">Home</a></li>
-					<li><a href="#">Tutorials</a>
+					<li><a href="#" class="arrow">Tutorials</a>
 						<ul>
 							<li><a href="#">Photoshop</a></li>
 							<li><a href="#">Illustrator</a></li>
-							<li><a href="#">Web Design</a>
+							<li><a href="#" class="arrow">Web Design</a>
 								<ul>
 									<li><a href="#">HTML</a></li>
 									<li>
-										<a href="#">CSS</a>
+										<a href="#" class="arrow">CSS</a>
 										<ul>
 											<li><a href="#">LESS</a></li>
 											<li><a href="#">SASS</a></li>
@@ -129,10 +144,78 @@
 			<a name="tooltip"></a>
 			<h1 class="section-head">#tooltip</h1>
 
-			<span>
-				hover me
-				<span class='medusa-tooltip'>popup top</span>
-			</span>
+			<span class='medusa-tooltip' popup='popup top'>hover me</span>
+		</div>
+
+		<div class="page-section-center">
+			<div class="content-body">
+				<a name="pagination"></a>
+				<h1 class="section-head">#pagination</h1>
+				<ul class="medusa-pagination">
+					<li>
+						<a href="#" class="to-first"></a>
+					</li>
+					<li>
+						<a href="#" class="to-prev"></a>
+					</li>
+					<li>
+						<a href="#">1</a>
+					</li>
+					<li>
+						<a href="#">2</a>
+					</li>
+					<li>
+						<a href="#">3</a>
+					</li>
+					<li>
+						<a href="#" class="dots"></a>
+					</li>
+					<li>
+						<a href="#">10</a>
+					</li>
+					<li>
+						<a href="#">11</a>
+					</li>
+					<li>
+						<a href="#" class="to-next"></a>
+					</li>
+					<li>
+						<a href="#" class="to-last"></a>
+					</li>
+				</ul>
+				<ul class="medusa-pagination collapse">
+					<li>
+						<a href="#" class="to-first"></a>
+					</li>
+					<li>
+						<a href="#" class="to-prev"></a>
+					</li>
+					<li>
+						<a href="#">1</a>
+					</li>
+					<li>
+						<a href="#">2</a>
+					</li>
+					<li>
+						<a href="#">3</a>
+					</li>
+					<li>
+						<a href="#" class="dots"></a>
+					</li>
+					<li>
+						<a href="#">10</a>
+					</li>
+					<li>
+						<a href="#">11</a>
+					</li>
+					<li>
+						<a href="#" class="to-next"></a>
+					</li>
+					<li>
+						<a href="#" class="to-last"></a>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </div>

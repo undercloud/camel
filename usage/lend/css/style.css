@@ -221,3 +221,8 @@ body
 .form-rows-wrap .medusa-form-row div:last-child {
 	background-color: #ddd;
 }
+
+.icon-star {
+	background-repeat: no-repeat;
+	background-image: url(../img/icon-star.png);
+}

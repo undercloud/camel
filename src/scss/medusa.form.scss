@@ -9,7 +9,7 @@
 	border: 0;
 	position: relative;
 	outline: none;
-	line-height: $line-height;
+	line-height: 1;
 	font-size: $default-font-size;
 }
 
@@ -86,7 +86,7 @@ span.medusa-radio:before {
 	border: 1px solid #cdcdcd;
 	color: #aaa;
 }
-
+/*
 input::-webkit-input-placeholder    {color: #aaa;vertical-align:middle;line-height: 1.5em}
 textarea::-webkit-input-placeholder {color: #aaa;line-height: 1.2em}
 input:-moz-placeholder              {color: #aaa;line-height: 1em}
@@ -94,7 +94,7 @@ textarea:-moz-placeholder           {color: #aaa;line-height: 1em}
 input::-moz-placeholder             {color: #aaa;line-height: 0.9em;}
 textarea::-moz-placeholder          {color: #aaa;line-height: 0.9em;}
 input:-ms-input-placeholder         {color: #aaa;line-height: 1}
-textarea:-ms-input-placeholder      {color: #aaa;line-height: 1}
+textarea:-ms-input-placeholder      {color: #aaa;line-height: 1}*/
 
 
 

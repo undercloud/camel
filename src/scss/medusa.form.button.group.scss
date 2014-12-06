@@ -1,7 +1,6 @@
 @import 'local';
 
-.medusa-button-group
-{
+.medusa-button-group {
 	font-size: 0;
 	position: relative;
 	display: inline-block;
@@ -41,5 +40,31 @@
 
 	&.collapse.full .medusa-button + .medusa-button {
 		border-left: none;
+	}
+
+	&.stack {
+		display: inline-block;
+
+		&.collapse {
+			.medusa-button + .medusa-button {
+				margin-top: -1px;
+			}
+		}
+
+		.medusa-button {
+			margin: 0;
+			border-radius: 0;
+			display: block;
+
+			&:first-child {
+				border-top-left-radius: $form-element-radius;
+				border-top-right-radius: $form-element-radius;
+			}
+
+			&:last-child {
+				border-bottom-left-radius: $form-element-radius;
+				border-bottom-right-radius: $form-element-radius;
+			}
+		}
 	}
 }

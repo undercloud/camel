@@ -226,3 +226,9 @@ body
 	background-repeat: no-repeat;
 	background-image: url(../img/icon-star.png);
 }
+
+.btn-cool {
+	border-color: #546;
+	background-color: #546;
+	color: #fff;
+}

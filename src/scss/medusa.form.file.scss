@@ -1,6 +1,7 @@
 @import 'local';
 
 .medusa-upload {
+	border-radius: $form-element-radius;
 	background-color: $secondary-color-light;
 	width: 100%;
 	position: relative;
@@ -8,11 +9,12 @@
 	overflow: hidden;
 
 	&:hover {
-		background-color: $secondary-color-light-hover;
+		opacity: 0.85;
+		zoom: 1;
 	}
 
 	.title {
-		padding: 11px 0px;
+		padding: 12px 0px;
 		display: inline-block;
 		@include text-truncate;
 	}

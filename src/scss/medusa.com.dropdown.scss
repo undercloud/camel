@@ -1,12 +1,15 @@
 @import 'local';
 
 .medusa-dropdown {
+	left: 0;
+	top: 100%;
 	min-width: 200px;
 	display: none;
 	position: absolute;
 	list-style: none;
 	padding: 0.5em 0;
 	margin: 0;
+	margin-top: 20px;
 	border: none;
 	background-color: #4b545f;
 	border-radius: 3px;
@@ -33,6 +36,6 @@
 }
 
 
-*:focus + .medusa-dropdown {
+*:active .medusa-dropdown {
 	display: block;
 }

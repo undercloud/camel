@@ -7,7 +7,7 @@
 	* {
 		display: table-cell;
 		border-radius: 0;
-		vertical-align: baseline;
+		vertical-align: middle;
 	}
 
 	> * {
@@ -22,6 +22,14 @@
 			border-top-right-radius: $form-element-radius;
 			border-bottom-right-radius: $form-element-radius;
 		}
+
+		&:first-child.addon-text {
+			border-right: none;
+		}
+
+		&:last-child.addon-text {
+			border-left: none;
+		}
 	}
 
 	.addon-text {
@@ -30,10 +38,8 @@
 		min-width: 1px;
 		background-color: $secondary-color-light;
 		border: 1px solid $secondary-color-dark;
-	}
-
-	.medusa-button {
-		line-height: 0;
+		text-align: center;
+		vertical-align: middle;
 	}
 
 	.medusa-select {
@@ -67,7 +73,7 @@
 			}
 
 			&.medusa-button {
-				line-height: 1;
+				line-height: 0;
 			}
 		}
 	}

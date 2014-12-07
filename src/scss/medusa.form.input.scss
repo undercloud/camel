@@ -1,9 +1,10 @@
 @import 'local';
 
 .medusa-input {
+	height: 36px;
 	width: 200px;
 	margin: 2px;
-	padding: 9px;
+	padding: 10px;
 	background-color: #fff;
 	border: 1px solid $secondary-color-dark;
 	box-shadow: inset 0 1px 3px #ddd;
@@ -14,6 +15,7 @@
 
 textarea.medusa-input
 {
+	height: auto;
 	overflow: auto;
 	line-height: 1.2em;
 	resize: none;
@@ -32,16 +34,28 @@ textarea.medusa-input
 .medusa-form-group.sm .addon-text,
 .medusa-input-wrap.sm .medusa-input,
 .medusa-input.sm {
+	padding: 0 7px;
 	font-size: 12px;
-	padding: 6px;
+}
+
+.medusa-form-group.sm .medusa-input,
+.medusa-input-wrap.sm .medusa-input,
+.medusa-input.sm {
+	height: 28px;
 }
 
 .medusa-form-group.lg .medusa-input,
 .medusa-form-group.lg .addon-text,
 .medusa-input-wrap.lg .medusa-input,
 .medusa-input.lg {
+	padding: 0 12px;
 	font-size: 16px;
-	padding: 12px;
+}
+
+.medusa-form-group.lg .medusa-input,
+.medusa-input-wrap.lg .medusa-input,
+.medusa-input.lg {
+	height: 42px;
 }
 
 .medusa-input-wrap {

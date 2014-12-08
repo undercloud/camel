@@ -36,48 +36,21 @@ legend {
 	}
 }
 
-/* checkbox, radio */
-
 input[type=checkbox],
 input[type=radio] {
 	margin: -2px 5px 0px 5px;
 	vertical-align: middle;
+
+	&[disabled]{
+		cursor: not-allowed;
+	}
 }
 
-/*input[type=checkbox].medusa-checkbox,
-input[type=radio].medusa-radio {
-	position: absolute;
-	opacity: 0;
+.input[type=file] {
+	&[disabled]{
+		cursor: not-allowed;
+	}
 }
-
-input[type=checkbox]:checked + span.medusa-checkbox:before {
-	content: '\0D7';
-}
-
-input[type=radio]:checked + span.medusa-radio:before {
-	content: '\025CF';
-}
-span.medusa-checkbox:before,
-span.medusa-radio:before {
-	border: 1px solid #ddd;
-	background-color: #eee;
-	width: 14px;
-	height: 14px;
-	line-height: 14px;
-	font-size: 22px;
-	display: inline-block;
-	vertical-align: middle;
-	text-align: center;
-	margin-right: 10px;
-	content: " ";
-}
-
-span.medusa-radio:before {
-	border-radius: 100%;
-	font-size: 10px;
-}*/
-
-/* common */
 
 .medusa-input[disabled],
 .medusa-select[disabled],
@@ -85,6 +58,7 @@ span.medusa-radio:before {
 	background: #eee;
 	border: 1px solid #cdcdcd;
 	color: #aaa;
+	cursor: not-allowed;
 }
 
 input::-webkit-input-placeholder    {color: #aaa;}
@@ -95,49 +69,3 @@ input::-moz-placeholder             {color: #aaa;opacity: 1;}
 textarea::-moz-placeholder          {color: #aaa;opacity: 1;}
 input:-ms-input-placeholder         {color: #aaa;}
 textarea:-ms-input-placeholder      {color: #aaa;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.icon-add
-{
-	background-image: url(../../usage/sprite.png);
-	background-position: 0 0;
-}
-
-.icon-del
-{
-	background-image: url(../../usage/sprite.png);
-	background-position: 0 -16px;
-}
-
-.light-blue{
-	background-color: #5bc0de;
-	border-color: #5bc0de;
-	color: #FFF;
-}

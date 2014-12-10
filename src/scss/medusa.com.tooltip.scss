@@ -1,7 +1,7 @@
 *[popup-top]:hover:before,
 *[popup-bottom]:hover:before,
 *[popup-left]:hover:before,
-*[popup-right]:hover:after {
+*[popup-right]:hover:before {
 	position: absolute;
 	background: #81adc9;
 	left: 0;
@@ -75,7 +75,7 @@
 	border-bottom-color: #525252;
 }
 
-*[popup-right]:hover:before {
+*[popup-right]:hover:after {
 	margin-left: 0;
 	border-right-color: #525252;
 	margin-top: 4px;

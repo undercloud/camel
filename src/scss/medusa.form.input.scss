@@ -2,8 +2,6 @@
 
 .medusa-input {
 	height: 36px;
-	width: 200px;
-	margin: 2px;
 	padding: 10px;
 	background-color: #fff;
 	border: 1px solid $secondary-color-dark;
@@ -13,8 +11,7 @@
 	border-radius: $form-element-radius;
 }
 
-textarea.medusa-input
-{
+textarea.medusa-input {
 	height: auto;
 	overflow: auto;
 	line-height: 1.2em;
@@ -126,38 +123,31 @@ textarea.medusa-input
 }
 
 .medusa-input:focus,
-.medusa-select:focus
-{
+.medusa-select:focus {
 	box-shadow: 0 0 3px #93d0ea;
 	border: 1px solid #93d0ea;
 }
 
 .medusa-input.success,
-.medusa-input.success:focus
-{
-	outline: 0;
-	-webkit-box-shadow: rgba(0,0,0,.2) 0 1px 1px inset;
-	-moz-box-shadow: rgba(0,0,0,.2) 0 1px 1px inset;
-	box-shadow: rgba(0,0,0,.2) 0 1px 1px inset;
+.medusa-input.success:focus,
+.medusa-select.success,
+.medusa-select.success:focus {
+	box-shadow: 0 0 3px #99CC33;
 	border: 1px solid #99CC33;
 }
 
 .medusa-input.warn,
-.medusa-input.warn:focus
-{
-	outline: 0;
-	-webkit-box-shadow: rgba(0,0,0,.2) 0 1px 1px inset;
-	-moz-box-shadow: rgba(0,0,0,.2) 0 1px 1px inset;
-	box-shadow: rgba(0,0,0,.2) 0 1px 1px inset;
-	border: 1px solid rgba(255,156,0,.6);
+.medusa-input.warn:focus,
+.medusa-select.warn,
+.medusa-select.warn:focus {
+	box-shadow: 0 0 3px #ff9c00;
+	border: 1px solid #ff9c00;
 }
 
 .medusa-input.error,
-.medusa-input.error:focus
-{
-	outline: 0;
-	-webkit-box-shadow: rgba(0,0,0,.2) 0 1px 1px inset;
-	-moz-box-shadow: rgba(0,0,0,.2) 0 1px 1px inset;
-	box-shadow: rgba(0,0,0,.2) 0 1px 1px inset;
-	border: 1px solid rgba(200,10,16,.5);
+.medusa-input.error:focus,
+.medusa-select.error,
+.medusa-select.error:focus {
+	box-shadow: 0 0 3px #c80a06;
+	border: 1px solid #c80a06;
 }

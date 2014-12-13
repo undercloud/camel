@@ -13,26 +13,50 @@
 	font-size: $default-font-size;
 }
 
+form {
+	padding: 0;
+	margin: 0;
+}
+
 fieldset {
-	padding: 10px;
-	padding-top: 0;
+	padding: 0px;
 	margin: 0px;
+	border-radius: $form-element-radius;
+	border-color: $secondary-color-dark;
 }
 
 legend {
-	padding: 5px;
+	margin: 0;
+	margin-left: 0.5em;
+	padding: 0 0.5em;
 	font-weight: bold;
 	line-height: 100%;
 }
 
-.medusa-label
-{
+.medusa-label {
 	display: inline-block;
 	vertical-align: middle;
 
 	&.block {
-		display: block;
-		padding: 5px 0;
+		display: table;
+		line-height: 2em;
+	}
+
+	&.require {
+		position: relative;
+		margin-right: 0.9em;
+
+		&:after {
+			color: #F22613;
+			content: "*";
+			font-size: 1.8em;
+			position: absolute;
+			vertical-align: middle;
+			display: block;
+			padding-left: 0.1em;
+			left: 100%;
+			top: -20%;
+		}
 	}
 }
 

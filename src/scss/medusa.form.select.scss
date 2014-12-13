@@ -2,17 +2,17 @@
 
 .medusa-select {
 	height: 36px;
-	width: 200px;
 	padding: 8px;
 	vertical-align: middle;
 	overflow: hidden;
-	margin: 2px;
 	background-color: #fff;
 	border: 1px solid $secondary-color-dark;
 	box-sizing: border-box;
 	border-radius: $form-element-radius;
 
-	&[multiple] {
+	&[multiple],
+	&[multiple].sm,
+	&[multiple].lg {
 		height: auto;
 	}
 

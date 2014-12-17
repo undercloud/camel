@@ -19,6 +19,7 @@
 				<span class="close"></span>
 				<b>Well done!</b> You successfully read this important alert message.
 			</div>
+			<pre data-src="/src/alert.src" class="language-markup"></pre>
 			<div class="medusa-alert success">
 				<b>Well done!</b> You successfully read this important alert message.
 			</div>
@@ -69,6 +70,12 @@
 		</div>
 
 		<div class="content-body">
+			<a name="badge"></a>
+			<h1 class="section-head">#badge</h1>
+			<span class="medusa-badge">234</span>
+		</div>
+
+		<div class="content-body">
 			<a name="dropdown"></a>
 			<h1 class="section-head">#dropdown</h1>
 			<button class="medusa-button">click
@@ -84,16 +91,34 @@
 		<div class="content-body">
 			<a name="progress"></a>
 			<h1 class="section-head">#progress</h1>
-			<div class="medusa-progress">
+			<div class="medusa-progress striped animated">
 				<div class="bar" style="width:67%"></div>
 				<div class="label">67%</div>
+			</div>
+
+			<div class="progress-bar intrum">
+				<span style="width:50%"></span>
 			</div>
 		</div>
 
 		<div class="content-body">
 			<a name="breadcrumbs"></a>
 			<h1 class="section-head">#breadcrumbs</h1>
-			<ul class="medusa-breadcrumbs">
+			<div>
+				<ul class="medusa-breadcrumbs slash-style">
+					<li>
+						<a href="#breadcrumbs">Home</a>
+					</li>
+					<li>
+						<a href="#breadcrumbs">Category</a>
+					</li>
+					<li>
+						<a href="#breadcrumbs">Product</a>
+					</li>
+				</ul>
+			</div>
+			<div>
+			<ul class="medusa-breadcrumbs arrow-style">
 				<li>
 					<a href="#breadcrumbs">Home</a>
 				</li>
@@ -104,6 +129,7 @@
 					<a href="#breadcrumbs">Product</a>
 				</li>
 			</ul>
+			</div>
 		</div>
 
 		<div class="content-body">
@@ -162,6 +188,27 @@
 			<div popup-left='popup top'>
 				<input type="text" class="medusa-input">
 			</div>
+		</div>
+
+		<div class="content-body">
+			<a name="popover"></a>
+			<h1 class="section-head">#popover</h1>
+			<span>
+				hover me
+				<span class="medusa-popover bottom">popover content</span>
+			</span>
+			<span>
+				hover me
+				<span class="medusa-popover top">popover content</span>
+			</span>
+			<span>
+				hover me
+				<span class="medusa-popover left">popover content</span>
+			</span>
+			<span>
+				hover me
+				<span class="medusa-popover right">popover content</span>
+			</span>
 		</div>
 
 		<div class="page-section-center">

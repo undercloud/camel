@@ -42,28 +42,33 @@
 		<div class="content-body">
 			<a name="heading"></a>
 			<h2 class="section-head">#input</h2>
-			<div class="medusa-form-row">
-				<div class="form-grid-2">
-					<label class="medusa-label" for="ex-in-1">Input</label>
-				</div>
-				<div class="form-grid-5">
-					<input class="medusa-input" type="text" id="ex-in-1" placeholder="input"/>
-				</div>
-				<div class="form-grid-5">
-					<input class="medusa-input" type="text" disabled placeholder="input"/>
-				</div>
-			</div>
-			<div class="medusa-form-row">
-				<div class="form-grid-2">
-					<label class="medusa-label" for="ex-in-2">Password</label>
-				</div>
-				<div class="form-grid-5">
-					<input class="medusa-input" type="password" id="ex-in-2" placeholder="password" />
-				</div>
-				<div class="form-grid-5">
-					<input class="medusa-input" type="password" disabled placeholder="password" />
-				</div>
-			</div>
+			<form>
+				<fieldset>
+					<legend>Simple Form</legend>
+					<div class="medusa-form-row">
+						<div class="form-grid-2">
+							<label class="medusa-label" for="ex-in-1">Input</label>
+						</div>
+						<div class="form-grid-5">
+							<input class="medusa-input" type="text" id="ex-in-1" placeholder="input"/>
+						</div>
+						<div class="form-grid-5">
+							<input class="medusa-input" type="text" disabled placeholder="input"/>
+						</div>
+					</div>
+					<div class="medusa-form-row">
+						<div class="form-grid-2">
+							<label class="medusa-label" for="ex-in-2">Password</label>
+						</div>
+						<div class="form-grid-5">
+							<input class="medusa-input" type="password" id="ex-in-2" placeholder="password" />
+						</div>
+						<div class="form-grid-5">
+							<input class="medusa-input" type="password" disabled placeholder="password" />
+						</div>
+					</div>
+				</fieldset>
+			</form>
 			<div class="medusa-form-row">
 				<div class="form-grid-2">
 					<label class="medusa-label" for="ex-in-3">Textarea</label>
@@ -456,7 +461,7 @@
 					<label class="medusa-label">
 						<input type="checkbox" />Check me
 					</label>
-					<label class="medusa-label">
+					<label class="medusa-label require">
 						<input type="checkbox" disabled />Disabled
 					</label>
 				</div>

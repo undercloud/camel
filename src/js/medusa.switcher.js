@@ -8,6 +8,8 @@ medusa.switcher = function(el,opt){
 	if(typeof opt == 'undefined') opt = {}
 	if(typeof opt.multiple == 'undefined') opt.multiple = false;
 
+	el.children().wrapAll('<span class="childs"></span>')
+
 	var hidden = function(){
 		if(!el.attr('name'))
 			return;
@@ -26,7 +28,7 @@ medusa.switcher = function(el,opt){
 			var hd = document.createElement('input')
 			hd.setAttribute('type','hidden')
 			hd.setAttribute('name',
-				el.attr('name') + 
+				el.attr('name') +
 				((opt.multiple && typeof sl[i] != 'undefined') ? '[]' : '')
 			)
 			hd.setAttribute('value',(typeof sl[i] == 'undefined') ? '' : sl[i])

@@ -18,11 +18,17 @@ body
 .top-header
 {
 	box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+	border-bottom: 1px solid #CCC;
 	position: fixed;
 	top: 0;
 	width: 100%;
 	background-color: #fff;
-	z-index: 1;
+	z-index: 100;
+}
+
+.present-wrap {
+	min-height: 100%;
+	background-color: #3dc0f1;
 }
 
 .top-header-container,
@@ -48,6 +54,11 @@ body
 	background-image: url('https://cdn2.iconfinder.com/data/icons/black-animal-svg-icons/512/jellyfish_Medusa_Portuguese_man-of-war-48.png');
 	background-repeat: no-repeat;
 	background-position: left center;
+}
+
+a.main-page-link {
+	color: #1E2731;
+	display: inline-block;
 }
 
 .top-nav

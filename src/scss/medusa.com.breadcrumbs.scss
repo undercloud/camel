@@ -12,11 +12,22 @@
 	}
 
 	li + li:before {
-		content: "/";
 		color: #ccc;
-		padding: 0 5px;
-		vertical-align: middle;
+		padding: 0 0.25em;
 		font-size: 1.5em;
+	}
+
+	&.slash-style {
+		li + li:before {
+			content: "/";
+			vertical-align: middle;
+		}
+	}
+
+	&.arrow-style {
+		li + li:before {
+			content: "\0203A";
+		}
 	}
 }
 

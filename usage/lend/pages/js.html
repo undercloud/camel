@@ -1,1 +1,64 @@
-<h1>JS</h1>
+<div class="page-section">
+	<div class="page-section-menu">
+		<ul>
+			<li><a href='#slider'>slider</a></li>
+			<li><a href='#switcher'>switcher</a></li>
+		</ul>
+	</div>
+	<div class="page-section-center">
+		<div class="content-body">
+			<a name="slider"></a>
+			<h1 class="section-head">#slider</h1>
+
+			<div id='slider'>
+				<div title='Some text' url='http://link.url/'>
+					<img src='img/slider_1.jpg'/>
+				</div>
+				<div title='Some text' url='http://link.url/'>
+					<img src='img/slider_2.jpg'/>
+				</div>
+				<div title='Some text' url='http://link.url/'>
+					<img src='img/slider_3.jpg'/>
+				</div>
+				<div title='Some text' url='http://link.url/'>
+					<img src='img/slider_4.jpg'/>
+				</div>
+				<div title='Some text' url='http://link.url/'>
+					<img src='img/slider_5.jpg'/>
+				</div>
+			</div>
+		</div>
+
+		<div class="content-body">
+			<a name="switcher"></a>
+			<h1 class="section-head">#switcher</h1>
+
+			<div id="switcher" class="medusa-switcher" name="swch">
+				<span data="one" class="item">One</span>
+				<span data="two" class="item selected">Two</span>
+				<span data="three" class="item">Three</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style>
+
+</style>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		medusa.slider(
+			$('#slider'), {
+				effect: 'fade'
+			}
+		)
+
+		medusa.switcher(
+			$('#switcher'),
+			{
+
+			}
+		)
+	})
+</script>

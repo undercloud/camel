@@ -41,15 +41,12 @@ medusa.slider = function(target,options){
 
 	var t = $(target);
 
-	var complete = function() {
-		console.log(arguments)
-	}
+	var complete = function() {}
 
 	t.addClass('medusa-slider')
 	t.children().addClass('item')
 
-	var hold = t.children()
-	t.html('<div class="ribbon"></div>').children().append(hold)
+	t.children().wrapAll('<div class="ribbon"></div>')
 
 	t.find('.ribbon').children().each(function(i,d){
 		if($(d).attr('title'))
@@ -87,7 +84,10 @@ medusa.slider = function(target,options){
 	}
 
 	if(effect == "fade"){
-		t.find('.ribbon .item').css('position','absolute');
+		t.find('.ribbon .item').css({
+			position: 'absolute',
+			width: widtharea + "px"
+		});
 		t.find('.ribbon .item').each(function(i,d){
 			$(d).hide();
 		})

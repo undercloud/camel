@@ -1,9 +1,8 @@
 @import 'local';
 
-$pag-font-size: 14px;
 $pag-color: #323232;
 $pag-background: #eee;
-$pag-padding: 7px 14px;
+$pag-padding: 5px 12px;
 $pag-border-color: #ddd;
 $pag-border-radius: 3px;
 $pag-space: 3px;
@@ -35,7 +34,6 @@ $pag-hover-background: #4b545f;
 			padding: $pag-padding;
 			color: $pag-color;
 			border: 1px solid $pag-border-color;
-			font-size: $pag-font-size;
 			background: $pag-background;
 			border-radius: $pag-border-radius;
 

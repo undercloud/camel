@@ -42,7 +42,6 @@
 		bottom: 0;
 		margin: auto;
 		width: 100%;
-		line-height: 100%;
 
 		@include text-truncate;
 	}
@@ -64,5 +63,13 @@
 }
 
 @-moz-keyframes animate-stripes {
+	0% {background-position: 0 0;} 100% {background-position: 60px 0;}
+}
+
+@-ms-keyframes animate-stripes {
+	0% {background-position: 0 0;} 100% {background-position: 60px 0;}
+}
+
+@keyframes animate-stripes {
 	0% {background-position: 0 0;} 100% {background-position: 60px 0;}
 }

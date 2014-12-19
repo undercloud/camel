@@ -243,3 +243,10 @@ a.main-page-link {
 	background-color: #546;
 	color: #fff;
 }
+
+
+.medusa-preload {
+	display: inline-block;
+	height: 70px;
+	width: 30%;
+}

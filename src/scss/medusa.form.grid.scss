@@ -7,10 +7,9 @@
 	display: table;
 	width: 100%;
 	box-sizing: border-box;
-	padding-left: $form-grid-gutter;
 
-	> * {
-		padding-right: $form-grid-gutter;
+	> * + * {
+		padding-left: $form-grid-gutter;
 	}
 
 	.medusa-input,
@@ -41,6 +40,14 @@
 		line-height: 100%;
 		width: 100%;
 		margin: 0;
+
+		&.left > * {
+			float: left;
+		}
+
+		&.right > * {
+			float: right;
+		}
 	}
 }
 
@@ -61,11 +68,24 @@
 
 @media only screen and (max-width: 480px) {
 	.medusa-form-row {
+		margin: 0;
+		display: block;
+
 		>.form-grid-1, >.form-grid-2, >.form-grid-3,
 		>.form-grid-4, >.form-grid-5, >.form-grid-6,
 		>.form-grid-7, >.form-grid-8, >.form-grid-9,
 		>.form-grid-10, >.form-grid-11, >.form-grid-12 {
-			width: 100%;
+			width: 98%;
+			display: block;
+			padding: 0;
+			margin: 0 1%;
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+
+			&.left > *,
+			&.right > * {
+				float: none;
+			}
 		}
 	}
 }

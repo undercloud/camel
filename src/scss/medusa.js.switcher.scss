@@ -2,16 +2,23 @@
 
 .medusa-switcher {
 	display: inline-block;
-	line-height: 1;
+	line-height: 0;
 	font-size: 0;
 
 	.childs {
+		display: inline-block;
+
 		.item {
 			display: inline-block;
-			padding: 9px 15px;
+			text-align: center;
 			cursor: pointer;
+			padding: 10px 15px;
 			border: 1px solid #ddd;
+			line-height: 100%;
 			font-size: 14px;
+
+			@include text-truncate;
+			@include no-select;
 
 			&.selected {
 				background-color: #4b545f;
@@ -57,6 +64,20 @@
 	&.stack .childs {
 		.item + .item {
 			border-top: none;
+		}
+	}
+
+	&.sm {
+		.item {
+			padding: 7px 12px;
+			font-size: 12px;
+		}
+	}
+
+	&.lg {
+		.item {
+			padding: 16px 22px;
+			font-size: 16px;
 		}
 	}
 }

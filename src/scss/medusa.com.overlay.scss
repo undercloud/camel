@@ -1,0 +1,48 @@
+@import 'local';
+
+.medusa-overlay {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.6);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4c000000', endColorstr='#4c000000');
+	z-index: 9999;
+
+	&.hover {
+		&.slide {
+			-ms-transition: height 0.3s ease-out;
+			-webkit-transition: height 0.3s ease-out;
+			-moz-transition: height 0.3s ease-out;
+			transition: height 0.3s ease-out;
+			top: auto;
+			height: 0;
+		}
+
+		&.fade {
+			-ms-transition: all 0.2s ease-out;
+			-webkit-transition: all 0.2s ease-out;
+			-moz-transition: all 0.2s ease-out;
+			transition: all 0.2s ease-out;
+			opacity: 0;
+			filter: none;
+		}
+	}
+}
+
+*:hover > .medusa-overlay {
+	&.hover {
+		&.slide {
+			height: 100%;
+		}
+
+		&.fade {
+			opacity: 1;
+			filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4c000000', endColorstr='#4c000000');
+		}
+	}
+}

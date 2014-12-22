@@ -19,8 +19,8 @@ form {
 }
 
 fieldset {
-	padding: 0px;
-	margin: 0px;
+	padding: 0 1em;
+	margin: 0;
 	border-radius: $form-element-radius;
 	border-color: $secondary-color-dark;
 }
@@ -49,7 +49,7 @@ legend {
 		&:after {
 			color: #F22613;
 			content: "*";
-			font-size: 1.8em;
+			font-size: 1.5em;
 			position: absolute;
 			vertical-align: middle;
 			display: block;

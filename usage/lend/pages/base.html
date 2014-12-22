@@ -2,7 +2,7 @@
 	<div class="page-section-menu">
 		<ul>
 			<li><a href='#heading'>heading</a></li>
-			<li><a href='#paragraph'>paragraphs</a></li>
+			<li><a href='#paragraph'>paragraph</a></li>
 			<li><a href='#a'>a</a></li>
 			<li><a href='#hr'>hr</a></li>
 			<li><a href='#blockquote'>blockquote</a></li>
@@ -22,29 +22,48 @@
 		<div class="content-body">
 			<a name="heading"></a>
 			<h2 class="section-head">#heading</h2>
-			<h1>h1 Head</h1>
-			<h2>h2 Head</h2>
-			<h3>h3 Head</h3>
-			<h4>h4 Head</h4>
-			<h5>h5 Head</h5>
-			<h6>h6 Head</h6>
+			<span src-data="heading">
+				<h1>h1 Head</h1>
+				<h2>h2 Head</h2>
+				<h3>h3 Head</h3>
+				<h4>h4 Head</h4>
+				<h5>h5 Head</h5>
+				<h6>h6 Head</h6>
+			</span>
+			<code src-data="heading" class="language-markup"></code>
 		</div>
 
 		<div class="content-body">
 			<a name="paragraph"></a>
 			<h2 class="section-head">#paragraph</h2>
-			<p>
-				The terms Internet and World Wide Web are often used without much distinction. However, the Internet and the World Wide Web are not the same. The Internet is a global system of interconnected computer networks using standard protocols. In contrast, the "Web" is one of the services transferred over these networks using these protocols. It is a collection of text documents and other resources, linked by hyperlinks and URLs, usually accessed by web browsers from web servers
-			</p>
-			<p>
-				The primary function of a web server is to deliver web pages in response to client requests. This means delivery of HTML documents and any additional content that may be included by a document, such as images, style sheets and scripts.
-			</p>
+			<span src-data="paragraph">
+				<p>
+					The terms Internet and World Wide Web are often used
+					without much distinction. However, the Internet and
+					the World Wide Web are not the same. The Internet is a
+					global system of interconnected computer networks using
+					standard protocols. In contrast, the "Web" is one of the
+					services transferred over these networks using these protocols.
+					It is a collection of text documents and other resources, linked
+					by hyperlinks and URLs, usually accessed by web browsers from web servers
+				</p>
+				<p>
+					The primary function of a web server is to deliver web pages
+					in response to client requests. This means delivery of HTML
+					documents and any additional content that may be included by
+					a document, such as images, style sheets and scripts.
+				</p>
+			</span>
+			<code src-data="paragraph" class="language-markup"></code>
 		</div>
 
 		<div class="content-body">
 			<a name="a"></a>
 			<h2 class="section-head">#a</h2>
-			<a href="/">http://google.com</a>
+			<span src-data="a">
+				<a href="/">http://google.com</a>
+			</span>
+			<code src-data="a" class="language-markup"></code>
 		</div>
 
 		<div class="content-body">
@@ -187,6 +206,12 @@
 		<div class="content-body">
 			<a name='table'></a>
 			<h2 class="section-head">#table</h2>
+			<div class="table-control">
+				<span>.border</span>
+				<span>.border-bottom</span>
+				<span>.striped</span>
+				<span>.hover</span>
+			</div>
 			<table class="medusa-table">
 				<thead>
 					<tr>
@@ -258,3 +283,26 @@
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('span[src-data]').each(function(i,d){
+			$('code[src-data="' + $(d).attr('src-data') + '"]').html(
+					$(d).html()
+					.trim()
+					.replace(/	{4}/g,'')
+					.replace(/	/g,'&nbsp;&nbsp;&nbsp;&nbsp')
+					.replace(/</g, '&lt;')
+					.replace(/>/g, '&gt;')
+				)
+		})
+
+		Prism.highlightAll()
+
+		$('.table-control span').click(function(){
+			$(this).toggleClass('active')
+
+			$('.medusa-table').toggleClass($(this).text().substr(1))
+		})
+	})
+</script>

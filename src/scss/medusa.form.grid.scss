@@ -48,6 +48,10 @@
 		&.right > * {
 			float: right;
 		}
+
+		&.no-space {
+			padding-left: 0;
+		}
 	}
 }
 

@@ -33,6 +33,9 @@ $(document).ready(function(){
 
 		i = setTimeout(function(){
 			var scroll = $(window).scrollTop();
+
+			console.log(scroll,$('.page-section-menu').outerHeight(true))
+
 			$('.page-section-menu').animate({top: scroll},300)
 		},500)
 	})

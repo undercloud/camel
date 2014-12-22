@@ -195,7 +195,6 @@ a.main-page-link {
 	clear: both;
 }
 
-
 .footer-logo
 {
 	background-image: url('https://cdn2.iconfinder.com/data/icons/black-animal-svg-icons/512/jellyfish_Medusa_Portuguese_man-of-war-24.png');
@@ -205,6 +204,30 @@ a.main-page-link {
 	padding-left: 30px;
 	padding-right: 10px;
 	font-weight: bold;
+}
+
+code[src-data] {
+	margin: 20px 0 !important;
+	border-radius: 0 !important;
+	padding: 0.7em !important;
+}
+
+.table-control {
+	margin: 10px 0;
+}
+
+.table-control span {
+	display: inline-block;
+	background-color: #eee;
+	padding: 3px 15px;
+	border-radius: 10px;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.table-control span.active {
+	background-color: #697580;
+	color: #fff;
 }
 
 .exmp .row-12 div,

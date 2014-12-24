@@ -70,12 +70,6 @@ input[type=radio] {
 	}
 }
 
-.input[type=file] {
-	&[disabled]{
-		cursor: not-allowed;
-	}
-}
-
 .medusa-input[disabled],
 .medusa-select[disabled],
 .medusa-button[disabled] {

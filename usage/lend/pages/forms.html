@@ -2,6 +2,11 @@
 	<div class="page-section-menu">
 		<ul>
 			<li><a href='#heading'>form grid</a></li>
+			<li><a href='#input'>input</a></li>
+			<li><a href='#select'>select</a></li>
+			<li><a href='#checkbox'>checkbox, radio</a></li>
+			<li><a href='#button'>button</a></li>
+			<li><a href='#upload'>upload</a></li>
 		</ul>
 	</div>
 	<div class="page-section-center">
@@ -10,37 +15,46 @@
 			<a name="heading"></a>
 			<h2 class="section-head">#form grid</h2>
 			<div class="form-rows-wrap">
-				<div class="medusa-form-row">
-					<div class="form-grid-12">12</div>
-				</div>
-				<div class="medusa-form-row">
-					<div class="form-grid-1">1</div>
-					<div class="form-grid-11">11</div>
-				</div>
-				<div class="medusa-form-row">
-					<div class="form-grid-2">2</div>
-					<div class="form-grid-10">10</div>
-				</div>
-				<div class="medusa-form-row">
-					<div class="form-grid-3">3</div>
-					<div class="form-grid-9">9</div>
-				</div>
-				<div class="medusa-form-row">
-					<div class="form-grid-4">4</div>
-					<div class="form-grid-8">8</div>
-				</div>
-				<div class="medusa-form-row">
-					<div class="form-grid-5">5</div>
-					<div class="form-grid-7">7</div>
-				</div>
-				<div class="medusa-form-row">
-					<div class="form-grid-6">6</div>
-					<div class="form-grid-6">6</div>
-				</div>
+				<span src-data="form-grid">
+					<div class="medusa-form-row">
+						<div class="form-grid-12">
+							<span>12</span>
+						</div>
+					</div>
+					<div class="medusa-form-row">
+						<div class="form-grid-1">
+							<span>1</span>
+						</div>
+						<div class="form-grid-11">
+							<span>11</span>
+						</div>
+					</div>
+					<div class="medusa-form-row">
+						<div class="form-grid-2">2</div>
+						<div class="form-grid-10">10</div>
+					</div>
+					<div class="medusa-form-row">
+						<div class="form-grid-3">3</div>
+						<div class="form-grid-9">9</div>
+					</div>
+					<div class="medusa-form-row">
+						<div class="form-grid-4">4</div>
+						<div class="form-grid-8">8</div>
+					</div>
+					<div class="medusa-form-row">
+						<div class="form-grid-5">5</div>
+						<div class="form-grid-7">7</div>
+					</div>
+					<div class="medusa-form-row">
+						<div class="form-grid-6">6</div>
+						<div class="form-grid-6">6</div>
+					</div>
+				</span>
+				<code src-data="form-grid" class="language-markup"></code>
 			</div>
 		</div>
 		<div class="content-body">
-			<a name="heading"></a>
+			<a name="input"></a>
 			<h2 class="section-head">#input</h2>
 			<form>
 				<fieldset>
@@ -376,8 +390,45 @@
 		</div>
 
 		<div class="content-body">
-			<a name="heading"></a>
+			<a name="select"></a>
 			<h2 class="section-head">#select</h2>
+			<div class="medusa-form-row">
+				<div class="form-grid-12">
+					<select class="medusa-select sm">
+						<option>Honda</option>
+						<option>Toyota</option>
+						<option>Hyundai</option>
+						<option>Ford</option>
+						<option>Nissan</option>
+						<option>BMW</option>
+					</select>
+				</div>
+			</div>
+			<div class="medusa-form-row">
+				<div class="form-grid-12">
+					<select class="medusa-select">
+						<option>Honda</option>
+						<option>Toyota</option>
+						<option>Hyundai</option>
+						<option>Ford</option>
+						<option>Nissan</option>
+						<option>BMW</option>
+					</select>
+				</div>
+			</div>
+			<div class="medusa-form-row">
+				<div class="form-grid-12">
+					<select class="medusa-select lg">
+						<option>Honda</option>
+						<option>Toyota</option>
+						<option>Hyundai</option>
+						<option>Ford</option>
+						<option>Nissan</option>
+						<option>BMW</option>
+					</select>
+				</div>
+			</div>
+
 			<div class="medusa-form-row">
 				<div class="form-grid-2">
 					<label class="medusa-label" for="ex-in-4">Select</label>
@@ -451,7 +502,7 @@
 		</div>
 
 		<div class="content-body">
-			<a name="heading"></a>
+			<a name="checkbox"></a>
 			<h2 class="section-head">#checkbox,radio</h2>
 			<div class="medusa-form-row">
 				<div class="form-grid-2">
@@ -488,7 +539,7 @@
 		</div>
 
 		<div class="content-body">
-			<a name="heading"></a>
+			<a name="button"></a>
 			<h2 class="section-head">#button</h2>
 			<div>
 				<input type="button" value="button" class="medusa-button btn-cool"/>
@@ -602,14 +653,25 @@
 		</div>
 
 		<div class="content-body">
-			<a name="heading"></a>
-			<h2 class="section-head">#file upload</h2>
+			<a name="upload"></a>
+			<h2 class="section-head">#upload</h2>
 			<div class="medusa-form-row">
-				<div class="form-grid-10">
-					<div class="medusa-upload">
-						<div class="title">Upload File</div>
-						<input type="file" class="file" />
-					</div>
+				<div class="form-grid-12">
+					<span src-data="upload">
+						<div class="medusa-upload sm">
+							<div class="title">Upload File</div>
+							<input type="file" class="file" />
+						</div>
+						<div class="medusa-upload">
+							<div class="title">Upload File</div>
+							<input type="file" class="file" />
+						</div>
+						<div class="medusa-upload lg">
+							<div class="title">Upload File</div>
+							<input type="file" class="file" />
+						</div>
+					</span>
+					<code src-data="upload" class="language-markup"></code>
 				</div>
 			</div>
 		</div>

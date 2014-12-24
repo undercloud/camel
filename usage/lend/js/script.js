@@ -18,6 +18,37 @@ $(document).ready(function(){
 				{},
 				function(data){
 					$('.page-content').html(data)
+
+					var highlight = function(i,d){
+						var tabsize = 4;
+						if(-1 != $.inArray($(d).attr('src-data'),['ol','ul','dl','unstyled','upload'])){
+							tabsize = 6;
+						}else if($(d).attr('src-data') == 'form-grid'){
+							tabsize = 5;
+						}
+
+						$('code[src-data="' + $(d).attr('src-data') + '"]').html(
+								$(d).html()
+								.trim()
+								.replace(new RegExp('	{' + tabsize + '}','g'),'')
+								.replace(/	/g,'&nbsp;&nbsp;&nbsp;&nbsp')
+								.replace(/</g, '&lt;')
+								.replace(/>/g, '&gt;')
+							)
+					}
+
+					$('span[src-data]').each(highlight)
+
+					Prism.highlightAll()
+
+					$('.table-control span').click(function(){
+						$(this).toggleClass('active')
+						$('.medusa-table').toggleClass($(this).text().substr(1))
+
+						$('code[src-data="table"]').empty()
+						highlight(0,$('span[src-data="table"]'))
+						Prism.highlightElement($('code[src-data="table"]')[0])
+					})
 				}
 			)
 		},500)
@@ -34,7 +65,7 @@ $(document).ready(function(){
 		i = setTimeout(function(){
 			var scroll = $(window).scrollTop();
 
-			console.log(scroll,$('.page-section-menu').outerHeight(true))
+			//console.log(scroll,$('.page-section-menu').outerHeight(true))
 
 			$('.page-section-menu').animate({top: scroll},300)
 		},500)

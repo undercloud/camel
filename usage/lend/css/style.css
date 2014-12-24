@@ -273,3 +273,7 @@ code[src-data] {
 	height: 70px;
 	width: 30%;
 }
+
+.medusa-upload {
+	margin-bottom: 15px;
+}

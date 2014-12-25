@@ -241,19 +241,14 @@ code[src-data] {
 	padding-bottom: 10px;
 }
 
-.form-rows-wrap .medusa-form-row div {
+.form-rows-wrap .medusa-form-row span {
 	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	border-radius: 5px;
-}
-
-.form-rows-wrap .medusa-form-row div:first-child {
+	display: inline-block;
+	width: 100%;
 	background-color: #eee;
-}
-
-.form-rows-wrap .medusa-form-row div:last-child {
-	background-color: #ddd;
 }
 
 .icon-star {
@@ -276,4 +271,12 @@ code[src-data] {
 
 .medusa-upload {
 	margin-bottom: 15px;
+}
+
+
+.content-body code {
+	width: 100%;
+	box-sizing: border-box;
+	overflow: auto;
+	position: relative;
 }

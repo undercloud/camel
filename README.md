@@ -1,7 +1,7 @@
 medusa
 ======
 
-Free and Powerful CSS/JS Framevork<br>
+Free and Powerful CSS/JS Framework<br>
 <br>
 .class-names-agreement{}<br>
 <br>

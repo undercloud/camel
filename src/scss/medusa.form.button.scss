@@ -10,7 +10,6 @@
 	box-sizing: border-box;
 
 	font-size: 12px;
-	margin: 2px;
 	padding: 11px 30px;
 	border: 1px solid $secondary-color-dark;
 	border-radius: $form-element-radius;
@@ -153,6 +152,31 @@
 
 		&.lg {
 			padding: 16px 22px;
+		}
+	}
+
+	&.dropdown {
+		&.sm {
+			padding-right: 24px;
+		}
+
+		&:after {
+			content: '\025BC';
+			position: absolute;
+			right: 0.7em;
+			z-index: 1;
+		}
+
+		&.split {
+			padding-left: 0.8em;
+			padding-right: 0.7em;
+			border-left: 0;
+			left: -1px;
+
+			&:after {
+				position: relative;
+				right: 0;
+			}
 		}
 	}
 

@@ -71,11 +71,14 @@ input[type=radio] {
 }
 
 .medusa-input[disabled],
-.medusa-select[disabled],
-.medusa-button[disabled] {
+.medusa-select[disabled] {
 	background: #eee;
 	border: 1px solid #cdcdcd;
 	color: #aaa;
+	cursor: not-allowed;
+}
+
+.medusa-button[disabled] {
 	cursor: not-allowed;
 }
 

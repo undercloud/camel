@@ -210,7 +210,7 @@ code[src-data] {
 	margin: 20px 0 !important;
 	border-radius: 0 !important;
 	padding: 0.7em !important;
-	font-size: 12px;
+	font-size: 14px;
 }
 
 .table-control {
@@ -280,4 +280,12 @@ code[src-data] {
 	box-sizing: border-box;
 	overflow: auto;
 	position: relative;
+}
+
+.color-swatches .item {
+	display: inline-block;
+	padding: 20px;
+	color: #fff;
+	width: 140px;
+	margin-bottom: 5px;
 }

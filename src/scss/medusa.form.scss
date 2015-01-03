@@ -87,11 +87,58 @@ input[type=radio] {
 	cursor: not-allowed;
 }
 
-input::-webkit-input-placeholder    {color: #aaa;}
-textarea::-webkit-input-placeholder {color: #aaa;}
-input:-moz-placeholder              {color: #aaa;opacity: 1;}
-textarea:-moz-placeholder           {color: #aaa;opacity: 1;}
-input::-moz-placeholder             {color: #aaa;opacity: 1;}
-textarea::-moz-placeholder          {color: #aaa;opacity: 1;}
-input:-ms-input-placeholder         {color: #aaa;}
-textarea:-ms-input-placeholder      {color: #aaa;}
+input[placeholder] {
+	text-overflow: ellipsis;
+}
+
+input::-webkit-input-placeholder {
+	color: #aaa;
+	opacity: 1;
+	line-height: normal;
+}
+
+input::-moz-placeholder {
+	color: #aaa;
+	opacity: 1;
+	text-overflow:ellipsis;
+}
+
+input:-moz-placeholder {
+	color: #aaa;
+	opacity: 1;
+	text-overflow:ellipsis;
+}
+
+input:-ms-input-placeholder {
+	color: #aaa;
+	opacity: 1;
+	text-overflow: ellipsis;
+}
+
+textarea[placeholder] {
+	text-overflow: ellipsis;
+}
+
+textarea::-webkit-input-placeholder {
+	color: #aaa;
+	opacity: 1;
+	line-height: normal;
+}
+
+textarea::-moz-placeholder{
+	color: #aaa;
+	opacity: 1;
+	text-overflow: ellipsis;
+}
+
+textarea:-moz-placeholder {
+	color: #aaa;
+	opacity: 1;
+	text-overflow: ellipsis;
+}
+
+textarea:-ms-input-placeholder {
+	color: #aaa;
+	opacity: 1;
+	text-overflow: ellipsis;
+}

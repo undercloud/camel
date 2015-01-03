@@ -2,7 +2,7 @@
 
 .medusa-button {
 	position: relative;
-	
+
 	cursor: pointer;
 	display: inline-block;
 	font-weight: normal;
@@ -50,7 +50,9 @@
 	}
 
 	&[disabled] {
-		opacity: 0.7 !important;
+		opacity: 0.8 !important;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)" !important;
+ 		filter: alpha(opacity=80) !important;
 
 		&:active {
 			top: 0px
@@ -58,7 +60,9 @@
 	}
 
 	&:hover {
-		opacity: 0.85;
+		opacity: 0.90;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+ 		filter: alpha(opacity=90);
 		zoom: 1;
 	}
 

@@ -31,13 +31,13 @@ textarea.medusa-input {
 .medusa-form-group.sm .addon-text,
 .medusa-input-wrap.sm .medusa-input,
 .medusa-input.sm {
-	padding: 0 7px;
+	padding: 7px;
 	font-size: 12px;
 }
 
-.medusa-form-group.sm .medusa-input,
-.medusa-input-wrap.sm .medusa-input,
-.medusa-input.sm {
+.medusa-form-group.sm input.medusa-input,
+.medusa-input-wrap.sm input.medusa-input,
+input.medusa-input.sm {
 	height: 28px;
 }
 
@@ -45,13 +45,13 @@ textarea.medusa-input {
 .medusa-form-group.lg .addon-text,
 .medusa-input-wrap.lg .medusa-input,
 .medusa-input.lg {
-	padding: 0 12px;
+	padding: 12px;
 	font-size: 16px;
 }
 
-.medusa-form-group.lg .medusa-input,
-.medusa-input-wrap.lg .medusa-input,
-.medusa-input.lg {
+.medusa-form-group.lg input.medusa-input,
+.medusa-input-wrap.lg input.medusa-input,
+input.medusa-input.lg {
 	height: 50px;
 }
 

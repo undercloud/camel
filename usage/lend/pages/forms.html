@@ -81,10 +81,10 @@
 							<div class="form-grid-6">
 								<span>6</span>
 							</div>
-							<div class="fill"></div>
+							<div class="full"></div>
 						</div>
 						<div class="medusa-form-row">
-							<div class="fill"></div>
+							<div class="full"></div>
 							<div class="form-grid-6">
 								<span>6</span>
 							</div>
@@ -93,7 +93,7 @@
 							<div class="form-grid-4">
 								<span>4</span>
 							</div>
-							<div class="fill"></div>
+							<div class="full"></div>
 							<div class="form-grid-4">
 								<span>4</span>
 							</div>
@@ -106,7 +106,7 @@
 		<div class="content-body">
 			<a name="input"></a>
 			<h2 class="section-head">#input</h2>
-			<form class="medusa-form">
+			<!--form class="medusa-form">
 				<fieldset>
 					<legend>Simple Form</legend>
 					<div class="medusa-form-row">
@@ -114,10 +114,10 @@
 							<label class="medusa-label" for="ex-in-1">Input</label>
 						</div>
 						<div class="form-grid-5">
-							<input class="medusa-input" type="text" id="ex-in-1" placeholder="input"/>
+							<input class="medusa-input" type="text" id="ex-in-1" placeholder="Enter text"/>
 						</div>
 						<div class="form-grid-5">
-							<input class="medusa-input" type="text" disabled placeholder="input"/>
+							<input class="medusa-input" type="text" disabled placeholder="Enter text"/>
 						</div>
 					</div>
 					<div class="medusa-form-row">
@@ -132,19 +132,73 @@
 						</div>
 					</div>
 				</fieldset>
-			</form>
+			</form-->
+
+			<div>
+				<span src-data="form-input">
+					<div class="medusa-form-row">
+						<div class="form-grid-4">
+							<input type="text" class="medusa-input sm" placeholder="Small text"/>
+						</div>
+						<div class="form-grid-4">
+							<input type="text" class="medusa-input" placeholder="Default size"/>
+						</div>
+						<div class="form-grid-4">
+							<input type="text" class="medusa-input lg" placeholder="Large" />
+						</div>
+					</div>
+				</span>
+			</div>
+			<div>
+				<code src-data="form-input" class="language-markup"></code>
+			</div>
+
+			<div>
+				<span src-data="form-input-textarea">
+					<div class="medusa-form-row">
+						<div class="form-grid-4">
+							<textarea class="medusa-input sm" placeholder="Small text"></textarea>
+						</div>
+						<div class="form-grid-4">
+							<textarea class="medusa-input" placeholder="Default size"></textarea>
+						</div>
+						<div class="form-grid-4">
+							<textarea class="medusa-input lg" placeholder="Large" ></textarea>
+						</div>
+					</div>
+				</span>
+			</div>
+			<div>
+				<code src-data="form-input-textarea" class="language-markup"></code>
+			</div>
+
+			<div>
+				<span src-data="form-input-disabled">
+					<div class="medusa-form-row">
+						<div class="form-grid-6">
+							<input type="text" class="medusa-input" placeholder="Disabled text" disabled="disabled" />
+						</div>
+						<div class="form-grid-6">
+							<textarea class="medusa-input" placeholder="Disabled text" disabled="disabled"></textarea>
+						</div>
+					</div>
+				</span>
+			</div>
+			<div>
+				<code src-data="form-input-disabled" class="language-markup"></code>
+			</div>
 
 			<div>
 				<span src-data="form-input-ctx">
 					<div class="medusa-form-row">
 						<div class="form-grid-4">
-							<input tyle="text" class="medusa-input success" />
+							<input tyle="text" class="medusa-input success" placeholder="Success"/>
 						</div>
 						<div class="form-grid-4">
-							<input tyle="text" class="medusa-input warn" />
+							<input tyle="text" class="medusa-input warn" placeholder="Warning"/>
 						</div>
 						<div class="form-grid-4">
-							<input tyle="text" class="medusa-input error" />
+							<input tyle="text" class="medusa-input error" placeholder="Error" />
 						</div>
 					</div>
 				</span>
@@ -153,164 +207,115 @@
 				<code src-data="form-input-ctx" class="language-markup"></code>
 			</div>
 
+			<span src-data="form-addon-icon-l">
+				<div class="medusa-form-row">
+					<div class="form-grid-3">
+						<span class="medusa-input-wrap sm">
+							<span class="addon-icon icon-star"></span>
+							<input type='text' class='medusa-input' placeholder="Enter text"/>
+						</span>
+					</div>
+					<div class="form-grid-4">
+						<span class="medusa-input-wrap">
+							<span class="addon-icon icon-star"></span>
+							<input type='text' class='medusa-input' placeholder="Enter text"laceholder="Enter text"/>
+						</span>
+					</div>
+					<div class="form-grid-5">
+						<span class="medusa-input-wrap lg">
+							<span class="addon-icon icon-star"></span>
+							<input type='text' class='medusa-input' placeholder="Enter text"/>
+						</span>
+					</div>
+				</div>
+			</span>
 			<div class="medusa-form-row">
-				<div class="form-grid-2">
-					Sizing
-				</div>
-				<div class="form-grid-5">
-					<input class="medusa-input sm" type="text" placeholder="input"/>
-				</div>
-				<div class="form-grid-5">
-					<input class="medusa-input lg" type="text" placeholder="input"/>
-				</div>
-			</div>
-			<div class="medusa-form-row">
-				<div class="form-grid-4">
-					<span class="medusa-input-wrap sm">
-						<span class="addon-icon icon-star"></span>
-						<input type='text' class='medusa-input' />
-					</span>
-				</div>
-				<div class="form-grid-4">
-					<span class="medusa-input-wrap sm">
-						<span class="addon-icon-right icon-star"></span>
-						<input type='text' class='medusa-input' />
-					</span>
-				</div>
-				<div class="form-grid-4">
-					<span class="medusa-input-wrap sm">
-						<span class="addon-icon icon-star"></span>
-						<span class="addon-icon-right icon-star"></span>
-						<input type='text' class='medusa-input' />
-					</span>
-				</div>
-			</div>
-			<div class="medusa-form-row">
-				<div class="form-grid-4">
-					<span class="medusa-input-wrap">
-						<span class="addon-icon icon-star"></span>
-						<input type='text' class='medusa-input' />
-					</span>
-				</div>
-				<div class="form-grid-4">
-					<span class="medusa-input-wrap">
-						<span class="addon-icon-right icon-star"></span>
-						<input type='text' class='medusa-input' />
-					</span>
-				</div>
-				<div class="form-grid-4">
-					<span class="medusa-input-wrap">
-						<span class="addon-icon icon-star"></span>
-						<span class="addon-icon-right icon-star"></span>
-						<input type='text' class='medusa-input' />
-					</span>
-				</div>
-			</div>
-			
-			<div class="medusa-form-row">
-				<div class="form-grid-4">
-					<span class="medusa-input-wrap lg">
-						<span class="addon-icon icon-star"></span>
-						<input type='text' class='medusa-input' />
-					</span>
-				</div>
-				<div class="form-grid-4">
-					<span class="medusa-input-wrap lg">
-						<span class="addon-icon-right icon-star"></span>
-						<input type='text' class='medusa-input' />
-					</span>
-				</div>
-				<div class="form-grid-4">
-					<span class="medusa-input-wrap lg">
-						<span class="addon-icon icon-star"></span>
-						<span class="addon-icon-right icon-star"></span>
-						<input type='text' class='medusa-input' />
-					</span>
+				<div class="form-grid-12">
+					<code src-data="form-addon-icon-l" class="language-markup"></code>
 				</div>
 			</div>
 
-			<div class="medusa-form-row">
-				<div class="form-grid-4">
-					<span src-data="form-addon-group-sm-l">
-						<span class="medusa-form-group sm">
-							<span class="addon-text">http://</span>
-							<input type='text' class='medusa-input' placeholder="input" />
+			<span src-data="form-addon-icon-r">
+				<div class="medusa-form-row">
+					<div class="form-grid-3">
+						<span class="medusa-input-wrap sm">
+							<span class="addon-icon-right icon-star"></span>
+							<input type='text' class='medusa-input' placeholder="Enter text"/>
 						</span>
-					</span>
-				</div>
-				<div class="form-grid-2"></div>
-				<div class="form-grid-4">
-					<span src-data="form-addon-group-sm-r">
-						<span class="medusa-form-group sm">
-							<input type='text' class='medusa-input' placeholder="input" />
-							<span class="addon-text">.com</span>
+					</div>
+					<div class="form-grid-4">
+						<span class="medusa-input-wrap">
+							<span class="addon-icon-right icon-star"></span>
+							<input type='text' class='medusa-input' placeholder="Enter text"/>
 						</span>
-					</span>
+					</div>
+					<div class="form-grid-5">
+						<span class="medusa-input-wrap lg">
+							<span class="addon-icon-right icon-star"></span>
+							<input type='text' class='medusa-input' placeholder="Enter text"/>
+						</span>
+					</div>
 				</div>
-				<div class="form-grid-2"></div>
-			</div>
+			</span>
 			<div class="medusa-form-row">
-				<div class="form-grid-6">
-					<code src-data="form-addon-group-sm-l" class="language-markup"></code>
-				</div>
-				<div class="form-grid-6">
-					<code src-data="form-addon-group-sm-r" class="language-markup"></code>
+				<div class="form-grid-12">
+					<code src-data="form-addon-icon-r" class="language-markup"></code>
 				</div>
 			</div>
 
-			<div class="medusa-form-row">
-				<div class="form-grid-5">
-					<span src-data="form-addon-group-l">
+			<span src-data="form-addon-group-l">
+				<div class="medusa-form-row">
+					<div class="form-grid-3">
+						<span class="medusa-form-group sm">
+							<span class="addon-text">http://</span>
+							<input type='text' class='medusa-input' placeholder="Enter text" />
+						</span>
+					</div>
+					<div class="form-grid-4">
 						<span class="medusa-form-group">
 							<span class="addon-text">http://</span>
-							<input type='text' class='medusa-input' placeholder="input" />
+							<input type='text' class='medusa-input' placeholder="Enter text" />
 						</span>
-					</span>
-				</div>
-				<div class="fill"></div>
-				<div class="form-grid-5">
-					<span src-data="form-addon-group-r">
-						<span class="medusa-form-group">
-							<input type='text' class='medusa-input' placeholder="input" />
-							<span class="addon-text">.com</span>
+					</div>
+					<div class="form-grid-5">
+						<span class="medusa-form-group lg">
+							<span class="addon-text">http://</span>
+							<input type='text' class='medusa-input' placeholder="Enter text" />
 						</span>
-					</span>
+					</div>
 				</div>
-				<div class="fill"></div>
-			</div>
+			</span>
 			<div class="medusa-form-row">
-				<div class="form-grid-6">
+				<div class="form-grid-12">
 					<code src-data="form-addon-group-l" class="language-markup"></code>
 				</div>
-				<div class="form-grid-6">
-					<code src-data="form-addon-group-r" class="language-markup"></code>
-				</div>
 			</div>
 
-			<div class="medusa-form-row">
-				<div class="form-grid-6">
-					<span src-data="form-addon-group-lg-l">
-						<span class="medusa-form-group lg">
-							<span class="addon-text">http://</span>
-							<input type='text' class='medusa-input' placeholder="input" />
-						</span>
-					</span>
-				</div>
-				<div class="form-grid-6">
-					<span src-data="form-addon-group-lg-r">
-						<span class="medusa-form-group lg">
-							<input type='text' class='medusa-input' placeholder="input" />
+			<span src-data="form-addon-group-r">
+				<div class="medusa-form-row">
+					<div class="form-grid-3">
+						<span class="medusa-form-group sm">
+							<input type='text' class='medusa-input' placeholder="Enter text" />
 							<span class="addon-text">.com</span>
 						</span>
-					</span>
+					</div>
+					<div class="form-grid-4">
+						<span class="medusa-form-group">
+							<input type='text' class='medusa-input' placeholder="Enter text" />
+							<span class="addon-text">.com</span>
+						</span>
+					</div>
+					<div class="form-grid-5">
+						<span class="medusa-form-group lg">
+							<input type='text' class='medusa-input' placeholder="Enter text" />
+							<span class="addon-text">.com</span>
+						</span>
+					</div>
 				</div>
-			</div>
+			</span>
 			<div class="medusa-form-row">
-				<div class="form-grid-6">
-					<code src-data="form-addon-group-lg-l" class="language-markup"></code>
-				</div>
-				<div class="form-grid-6">
-					<code src-data="form-addon-group-lg-r" class="language-markup"></code>
+				<div class="form-grid-12">
+					<code src-data="form-addon-group-r" class="language-markup"></code>
 				</div>
 			</div>
 			<!--div class="medusa-form-row">
@@ -424,9 +429,9 @@
 				<div class="form-grid-6">
 					<span src-data="f-group-ad">
 						<span class="medusa-form-group stack">
-							<input type='text' class='medusa-input' placeholder="input" />
-							<input type='text' class='medusa-input' placeholder="input" />
-							<input type='text' class='medusa-input' placeholder="input" />
+							<input type='text' class='medusa-input' placeholder="Enter text" />
+							<input type='text' class='medusa-input' placeholder="Enter text" />
+							<input type='text' class='medusa-input' placeholder="Enter text" />
 						</span>
 					</span>
 				</div>
@@ -631,6 +636,7 @@
 						<button class="medusa-button sm addon-no-text">
 							<span class="addon-icon icon-star"></span>
 						</button>
+						<button class="medusa-button sm" disabled="disabled">button</button>
 					</span>
 				</div>
 			</div>
@@ -652,6 +658,7 @@
 						<button class="medusa-button addon-no-text">
 							<span class="addon-icon icon-star"></span>
 						</button>
+						<button class="medusa-button" disabled="disabled">button</button>
 					</span>
 				</div>
 			</div>
@@ -673,6 +680,7 @@
 						<button class="medusa-button lg addon-no-text">
 							<span class="addon-icon icon-star"></span>
 						</button>
+						<button class="medusa-button lg" disabled="disabled">button</button>
 					</span>
 				</div>
 			</div>
@@ -695,36 +703,66 @@
 				</div>
 			</div>
 
-			<div>
-				<div class="medusa-button-group">
-					<button class="medusa-button">first</button>
-					<button class="medusa-button">middle</button>
-					<button class="medusa-button">last</button>
+			<div class="medusa-form-row">
+				<div class="form-grid-12">
+					<span src-data="btn-group">
+						<div class="medusa-button-group">
+							<button class="medusa-button">first</button>
+							<button class="medusa-button">middle</button>
+							<button class="medusa-button">last</button>
+						</div>
+					</span>
 				</div>
 			</div>
 			<div>
-				<span class="medusa-button-group full">
-					<span class="medusa-button">first</span>
-					<span class="medusa-button">middle</span>
-					<span class="medusa-button">last</span>
-				</span>
+				<code src-data="btn-group" class="language-markup"></code>
 			</div>
 
-			<div>
-				<span class="medusa-button-group stack">
-					<button class="medusa-button addon-no-text">
-						<span class="addon-icon icon-star"></span>
-					</button>
-					<button class="medusa-button addon-no-text">
-						<span class="addon-icon icon-star"></span>
-					</button>
-					<button class="medusa-button addon-no-text">
-						<span class="addon-icon icon-star"></span>
-					</button>
-				</span>
+			<div class="medusa-form-row">
+				<div class="form-grid-12">
+					<span src-data="btn-group-full">
+						<div class="medusa-button-group full">
+							<span class="medusa-button">first</span>
+							<span class="medusa-button">middle</span>
+							<span class="medusa-button">last</span>
+						</div>
+					</span>
+				</div>
 			</div>
 			<div>
-				<button class="medusa-button preload">first</button>
+				<code src-data="btn-group-full" class="language-markup"></code>
+			</div>
+
+			<div class="medusa-form-row">
+				<div class="form-grid-12">
+					<span src-data="btn-group-stack">
+						<span class="medusa-button-group stack">
+							<button class="medusa-button addon-no-text">
+								<span class="addon-icon icon-star"></span>
+							</button>
+							<button class="medusa-button addon-no-text">
+								<span class="addon-icon icon-star"></span>
+							</button>
+							<button class="medusa-button addon-no-text">
+								<span class="addon-icon icon-star"></span>
+							</button>
+						</span>
+					</span>
+				</div>
+			</div>
+			<div>
+				<code src-data="btn-group-stack" class="language-markup"></code>
+			</div>
+
+			<div class="medusa-form-row">
+				<div class="form-grid-12">
+					<span src-data="btn-preload">
+						<button class="medusa-button preload">preload</button>
+					</span>
+				</div>
+			</div>
+			<div>
+				<code src-data="btn-preload" class="language-markup"></code>
 			</div>
 
 			<div class="medusa-form-row">

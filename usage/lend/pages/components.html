@@ -14,61 +14,77 @@
 		</ul>
 	</div>
 	<div class="page-section-center">
+		<h1 class="section-head">Components</h1>
 		<div class="content-body">
 			<a name="alert"></a>
 			<h1 class="section-head">#alert</h1>
-			<div class="medusa-alert info">
-				<span class="close"></span>
-				<b>Well done!</b> You successfully read this important alert message.
-			</div>
-			<pre data-src="/src/alert.src" class="language-markup"></pre>
-			<div class="medusa-alert success">
-				<b>Well done!</b> You successfully read this important alert message.
-			</div>
-			<div class="medusa-alert warn">
-				<b>Well done!</b> You successfully read this important alert message.
-			</div>
-			<div class="medusa-alert danger">
-				<b>Well done!</b> You successfully read this important alert message.
-			</div>
+			<span src-data="alert">
+				<div class="medusa-alert info">
+					<span class="close"></span>
+					<b>Well done!</b> You successfully read this important alert message.
+				</div>
+				<div class="medusa-alert success">
+					<span class="close"></span>
+					<b>Well done!</b> You successfully read this important alert message.
+				</div>
+				<div class="medusa-alert warn">
+					<span class="close"></span>
+					<b>Well done!</b> You successfully read this important alert message.
+				</div>
+				<div class="medusa-alert danger">
+					<span class="close"></span>
+					<b>Well done!</b> You successfully read this important alert message.
+				</div>
+			</span>
+			<code src-data="alert" class="language-markup"></code>
 		</div>
 
-
-		<div class="content-body" style="width:70%">
+		<div class="content-body">
 			<a name="callouts"></a>
 			<h1 class="section-head">#callouts</h1>
-			<div class="medusa-callouts info">
-				<div class='head'>Success</div>
-				<p>
-					Alerts don't have default classes, only base and modifier classes.
-					A default gray alert doesn't make too much sense, so you're required
-					to specify a type via contextual class. Choose from success, info, warning, or danger.
-				</p>
-			</div>
-			<div class="medusa-callouts success">
-				<div class='head'>Success</div>
-				<p>
-					Alerts don't have default classes, only base and modifier classes.
-					A default gray alert doesn't make too much sense, so you're required
-					to specify a type via contextual class. Choose from success, info, warning, or danger.
-				</p>
-			</div>
-			<div class="medusa-callouts warn">
-				<div class='head'>Success</div>
-				<p>
-					Alerts don't have default classes, only base and modifier classes.
-					A default gray alert doesn't make too much sense, so you're required
-					to specify a type via contextual class. Choose from success, info, warning, or danger.
-				</p>
-			</div>
-			<div class="medusa-callouts danger">
-				<div class='head'>Success</div>
-				<p>
-					Alerts don't have default classes, only base and modifier classes.
-					A default gray alert doesn't make too much sense, so you're required
-					to specify a type via contextual class. Choose from success, info, warning, or danger.
-				</p>
-			</div>
+			<span src-data="callouts">
+				<div class="medusa-callouts info">
+					<div class='head'>
+						Success<span class="close"></span>
+					</div>
+					<p>
+						Alerts don't have default classes, only base and modifier classes.
+						A default gray alert doesn't make too much sense, so you're required
+						to specify a type via contextual class. Choose from success, info, warning, or danger.
+					</p>
+				</div>
+				<div class="medusa-callouts success">
+					<div class='head'>
+						Success<span class="close"></span>
+					</div>
+					<p>
+						Alerts don't have default classes, only base and modifier classes.
+						A default gray alert doesn't make too much sense, so you're required
+						to specify a type via contextual class. Choose from success, info, warning, or danger.
+					</p>
+				</div>
+				<div class="medusa-callouts warn">
+					<div class='head'>
+						Success<span class="close"></span>
+					</div>
+					<p>
+						Alerts don't have default classes, only base and modifier classes.
+						A default gray alert doesn't make too much sense, so you're required
+						to specify a type via contextual class. Choose from success, info, warning, or danger.
+					</p>
+				</div>
+				<div class="medusa-callouts danger">
+					<div class='head'>
+						Success<span class="close"></span>
+					</div>
+					<p>
+						Alerts don't have default classes, only base and modifier classes.
+						A default gray alert doesn't make too much sense, so you're required
+						to specify a type via contextual class. Choose from success, info, warning, or danger.
+					</p>
+				</div>
+			</span>
+			<code src-data="callouts" class="language-markup"></code>
 		</div>
 
 		<div class="content-body">
@@ -93,6 +109,17 @@
 		<div class="content-body">
 			<a name="progress"></a>
 			<h1 class="section-head">#progress</h1>
+			<div class="medusa-progress thin">
+				<div class="bar" style="width:67%"></div>
+			</div>
+			<div class="medusa-progress">
+				<div class="bar" style="width:67%"></div>
+				<div class="label">67%</div>
+			</div>
+			<div class="medusa-progress striped">
+				<div class="bar" style="width:67%"></div>
+				<div class="label">67%</div>
+			</div>
 			<div class="medusa-progress striped animated">
 				<div class="bar" style="width:67%"></div>
 				<div class="label">67%</div>

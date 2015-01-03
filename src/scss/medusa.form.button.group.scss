@@ -10,6 +10,7 @@
 	&.full {
 		width: 100%;
 		display: table;
+		border-collapse: collapse;
 	}
 
 	&.full .medusa-button {
@@ -18,55 +19,53 @@
 
 	.medusa-button {
 		margin: 0;
+		margin-left: -1px;
 		border-radius: 0;
 
 		&:first-child {
 			border-top-left-radius: $form-element-radius;
 			border-bottom-left-radius: $form-element-radius;
+			border-left: none;
+			margin-left: 0;
 		}
 
 		&:last-child {
 			border-top-right-radius: $form-element-radius;
 			border-bottom-right-radius: $form-element-radius;
+			border-right: none;
 		}
-	}
-
-	&.collapse .medusa-button {
-		margin-left: -1px;
-
-		&:first-child {
-			margin-left: 0px;
-		}
-	}
-
-	&.collapse.full .medusa-button + .medusa-button {
-		border-left: none;
 	}
 
 	&.stack {
 		display: inline-block;
 
-		&.collapse {
-			.medusa-button + .medusa-button {
-				margin-top: -1px;
-			}
+		.medusa-button + .medusa-button {
+			margin-top: -1px;
 		}
 
 		.medusa-button {
 			margin: 0;
 			border-radius: 0;
+			border-left: none;
+			border-right: none;
 			display: block;
 			width: 100%;
 
 			&:first-child {
+				border-top: none;
 				border-top-left-radius: $form-element-radius;
 				border-top-right-radius: $form-element-radius;
 			}
 
 			&:last-child {
+				border-bottom: none;
 				border-bottom-left-radius: $form-element-radius;
 				border-bottom-right-radius: $form-element-radius;
 			}
+		}
+
+		&.full {
+			width: 100%;
 		}
 	}
 }

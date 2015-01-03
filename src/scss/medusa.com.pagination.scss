@@ -47,6 +47,8 @@ $pag-hover-background: #4b545f;
 			&.to-next:after {
 				font-size: 1.5em;
 				display: block;
+				margin-top: -0.1em;
+				margin-bottom: 0.1em;
 			}
 
 			&.dots:after { content: '\02026';}

@@ -34,6 +34,8 @@
 		float: right;
 		cursor: pointer;
 		display: inline;
+		opacity: 0.5;
+		filter: alpha(opacity=50);
 
 		&:after{
 			content: '\0D7';
@@ -41,6 +43,11 @@
 			font-size: 1.5em;
 			font-weight: bold;
 			display: inline;
+		}
+
+		&:hover {
+			opacity: 1;
+			filter: alpha(opacity=100);
 		}
 	}
 }

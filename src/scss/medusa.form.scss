@@ -13,16 +13,21 @@
 	font-size: $default-font-size;
 }
 
-form {
+form.medusa-form {
 	padding: 0;
 	margin: 0;
-}
+	padding-left: $form-grid-gutter / 2;
+	padding-right: $form-grid-gutter / 2;
+	margin-left: -$form-grid-gutter;
+	margin-right: -$form-grid-gutter;
 
-fieldset {
-	padding: 0 1em;
-	margin: 0;
-	border-radius: $form-element-radius;
-	border-color: $secondary-color-dark;
+	fieldset {
+		padding: 0 ($form-grid-gutter / 2);
+		border-radius: $form-element-radius;
+		border-color: $secondary-color-dark;
+		margin-left: ($form-grid-gutter / 2);
+		margin-right: ($form-grid-gutter / 2);
+	}
 }
 
 legend {

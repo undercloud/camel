@@ -57,18 +57,11 @@ $(document).ready(function(){
 					$('.page-content').html(data)
 
 					var highlight = function(i,d){
-						var tabsize = 4;
-						if(-1 != $.inArray($(d).attr('src-data'),['ol','ul','dl','unstyled','upload','checkbox','radio','label'])){
-							tabsize = 6;
-						}else if($(d).attr('src-data') == 'form-grid'){
-							tabsize = 5;
-						}else if(0 == $(d).attr('src-data').indexOf('select')){
-							tabsize = 6;
-						}
+						var tabsize = $(d).html().indexOf('<') - 1;
 
 						var src = $(d).html()
 						.trim()
-						.replace(new RegExp('	{' + tabsize + '}','g'),'')
+						.replace(new RegExp('^	{' + tabsize + '}','gm'),'')
 						.replace(/	/g,'&nbsp;&nbsp;&nbsp;&nbsp')
 						.replace(/</g, '&lt;')
 						.replace(/>/g, '&gt;')
@@ -100,7 +93,7 @@ $(document).ready(function(){
 
 	var i = null;
 
-	$(window).scroll(function(e){
+	$(window).off('scroll').on('scroll',function(e){
 		if(i !== null)
 			clearTimeout(i)
 

@@ -96,14 +96,36 @@
 		<div class="content-body">
 			<a name="dropdown"></a>
 			<h1 class="section-head">#dropdown</h1>
-			<button class="medusa-button">click
+			<span>
+				<button class="medusa-button dropdown" dropdown>click</button>
 				<ul class="medusa-dropdown">
 					<li onclick='alert(234)'>first</li>
 					<li>second</li>
 					<span class="split"></span>
 					<li>last</li>
 				</ul>
-			</button>
+			</span>
+			<span>
+				<span class="medusa-button-group">
+					<button class="medusa-button">button</button>
+					<button class="medusa-button dropdown split" dropdown></button>
+				</span>
+				<ul class="medusa-dropdown">
+					<li onclick='alert(234)'>first</li>
+					<li>second</li>
+					<span class="split"></span>
+					<li>last</li>
+				</ul>
+			</span>
+			<span>
+				<a dropdown>link</a>
+				<ul class="medusa-dropdown">
+					<li onclick='alert(234)'>first</li>
+					<li>second</li>
+					<span class="split"></span>
+					<li>last</li>
+				</ul>
+			</span>
 		</div>
 
 		<div class="content-body">
@@ -147,17 +169,43 @@
 				</ul>
 			</div>
 			<div>
-			<ul class="medusa-breadcrumbs arrow-style">
-				<li>
-					<a href="#breadcrumbs">Home</a>
-				</li>
-				<li>
-					<a href="#breadcrumbs">Category</a>
-				</li>
-				<li>
-					<a href="#breadcrumbs">Product</a>
-				</li>
-			</ul>
+				<ul class="medusa-breadcrumbs arrow-style">
+					<li>
+						<a href="#breadcrumbs">Home</a>
+					</li>
+					<li>
+						<a href="#breadcrumbs">Category</a>
+					</li>
+					<li>
+						<a href="#breadcrumbs">Product</a>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<ul class="medusa-breadcrumbs circle-style">
+					<li>
+						<a href="#breadcrumbs">Home</a>
+					</li>
+					<li>
+						<a href="#breadcrumbs">Category</a>
+					</li>
+					<li>
+						<a href="#breadcrumbs">Product</a>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<ul class="medusa-breadcrumbs chain-style">
+					<li>
+						<a href="#breadcrumbs">Home</a>
+					</li>
+					<li>
+						<a href="#breadcrumbs">Category</a>
+					</li>
+					<li>
+						<a href="#breadcrumbs">Product</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 

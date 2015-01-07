@@ -67,12 +67,90 @@ legend {
 
 input[type=checkbox],
 input[type=radio] {
-	margin: -2px 5px 0px 5px;
+	margin: -2px 5px 0 0;
 	vertical-align: middle;
 
 	&[disabled]{
 		cursor: not-allowed;
 	}
+}
+
+.medusa-checkbox-wrap,
+.medusa-radio-wrap {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	width: 18px;
+	height: 18px;
+	top: -2px;
+}
+
+.medusa-pseudo-radio,
+.medusa-pseudo-checkbox {
+	position: relative;
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	color: #ddd;
+	font-family: Arial;
+}
+
+.medusa-pseudo-radio:before {
+	content: '\025CB';
+	position: absolute;
+	font-size: 40px;
+	line-height: 40px;
+	bottom: -9px;
+	left: -3px;
+}
+
+.medusa-radio:checked + .medusa-pseudo-radio:after {
+	position: absolute;
+	content: "\02022";
+	color: #93d0ea;
+	font-size: 29px;
+	line-height: 30px;
+	bottom: -6px;
+	left: 4px;
+}
+
+.medusa-pseudo-checkbox:before {
+	content: ' ';
+	position: absolute;
+	font-size: 24px;
+	left: 0px;
+	top: 0px;
+	border: 2px solid;
+	height: 14px;
+	width: 14px;
+	border-radius: 3px;
+}
+
+.medusa-checkbox-wrap .medusa-checkbox,
+.medusa-radio-wrap .medusa-radio  {
+	position: absolute;
+	z-index: 1;
+	opacity: 0;
+	width: 18px;
+	height: 18px;
+	top: 0;
+	left: 0;
+}
+
+.medusa-checkbox:checked + .medusa-pseudo-checkbox:after {
+	content: '\0D7';
+	color: #93d0ea;
+	font-weight: bold;
+	position: absolute;
+	font-size: 21px;
+	line-height: 23px;
+	left: 3px;
+	top: -3px;
+}
+
+.medusa-checkbox[disabled] + .medusa-pseudo-checkbox,
+.medusa-radio[disabled] + .medusa-pseudo-radio {
+	opacity: 0.5;
 }
 
 .medusa-input[disabled],

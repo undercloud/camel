@@ -125,7 +125,7 @@ input.medusa-input.lg {
 .medusa-input:focus,
 .medusa-select:focus {
 	box-shadow: 0 0 3px #93d0ea;
-	border: 1px solid #93d0ea;
+	border-color: #93d0ea;
 }
 
 .medusa-input.success,
@@ -133,7 +133,7 @@ input.medusa-input.lg {
 .medusa-select.success,
 .medusa-select.success:focus {
 	box-shadow: 0 0 3px #99CC33;
-	border: 1px solid #99CC33;
+	border-color: #99CC33;
 }
 
 .medusa-input.warn,
@@ -141,7 +141,7 @@ input.medusa-input.lg {
 .medusa-select.warn,
 .medusa-select.warn:focus {
 	box-shadow: 0 0 3px #ff9c00;
-	border: 1px solid #ff9c00;
+	border-color: #ff9c00;
 }
 
 .medusa-input.error,
@@ -149,5 +149,5 @@ input.medusa-input.lg {
 .medusa-select.error,
 .medusa-select.error:focus {
 	box-shadow: 0 0 3px #c80a06;
-	border: 1px solid #c80a06;
+	border-color: #c80a06;
 }

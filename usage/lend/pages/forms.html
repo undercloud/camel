@@ -1,12 +1,24 @@
 <div class="page-section">
 	<div class="page-section-menu">
 		<ul>
-			<li><a href='#heading'>form grid</a></li>
-			<li><a href='#input'>input</a></li>
-			<li><a href='#select'>select</a></li>
-			<li><a href='#checkbox'>checkbox, radio, label</a></li>
-			<li><a href='#button'>button</a></li>
-			<li><a href='#upload'>upload</a></li>
+			<li>
+				<a href='#heading'>form grid</a>
+			</li>
+			<li>
+				<a href='#input'>input</a>
+			</li>
+			<li>
+				<a href='#select'>select</a>
+			</li>
+			<li>
+				<a href='#checkbox'>checkbox, radio, label</a>
+			</li>
+			<li>
+				<a href='#button'>button</a>
+			</li>
+			<li>
+				<a href='#upload'>upload</a>
+			</li>
 		</ul>
 	</div>
 	<div class="page-section-center">
@@ -74,6 +86,7 @@
 				</span>
 				<code src-data="form-grid" class="language-markup"></code>
 			</div>
+
 			<div class="form-rows-wrap">
 				<span src-data="form-grid-ad">
 					<form class="medusa-form">
@@ -101,6 +114,51 @@
 					</form>
 				</span>
 				<code src-data="form-grid-ad" class="language-markup"></code>
+			</div>
+
+			<span src-data="form-simple">
+				<form class="medusa-form">
+					<fieldset>
+						<legend>Simple Form</legend>
+						<div class="medusa-form-row">
+							<div class="form-grid-4">
+								<label class="medusa-label right">Login</label>
+							</div>
+							<div class="form-grid-8">
+								<input type="text" class="medusa-input" placeholder="login"/>
+							</div>
+						</div>
+						<div class="medusa-form-row">
+							<div class="form-grid-4">
+								<label class="medusa-label right">Password</label>
+							</div>
+							<div class="form-grid-8">
+								<input type="password" class="medusa-input" placeholder="password"/>
+							</div>
+						</div>
+						<div class="medusa-form-row">
+							<div class="full"></div>
+							<div class="form-grid-8">
+								<label class="medusa-label">
+									<span class="medusa-checkbox-wrap">
+										<input class="medusa-checkbox" type="checkbox" />
+										<span class="medusa-pseudo-checkbox"></span>
+									</span>
+									Unchecked
+								</label>
+							</div>
+						</div>
+						<div class="medusa-form-row">
+							<div class="full"></div>
+							<div class="form-grid-8">
+								<button class="medusa-button full">Sign in</button>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</span>
+			<div>
+				<code src-data="form-simple" class="language-markup"></code>
 			</div>
 		</div>
 		<div class="content-body">
@@ -137,13 +195,13 @@
 			<div>
 				<span src-data="form-input">
 					<div class="medusa-form-row">
-						<div class="form-grid-4">
+						<div class="form-grid-3">
 							<input type="text" class="medusa-input sm" placeholder="Small text"/>
 						</div>
 						<div class="form-grid-4">
 							<input type="text" class="medusa-input" placeholder="Default size"/>
 						</div>
-						<div class="form-grid-4">
+						<div class="form-grid-5">
 							<input type="text" class="medusa-input lg" placeholder="Large" />
 						</div>
 					</div>
@@ -156,13 +214,13 @@
 			<div>
 				<span src-data="form-input-textarea">
 					<div class="medusa-form-row">
-						<div class="form-grid-4">
+						<div class="form-grid-3">
 							<textarea class="medusa-input sm" placeholder="Small text"></textarea>
 						</div>
 						<div class="form-grid-4">
 							<textarea class="medusa-input" placeholder="Default size"></textarea>
 						</div>
-						<div class="form-grid-4">
+						<div class="form-grid-5">
 							<textarea class="medusa-input lg" placeholder="Large" ></textarea>
 						</div>
 					</div>
@@ -318,112 +376,32 @@
 					<code src-data="form-addon-group-r" class="language-markup"></code>
 				</div>
 			</div>
-			<!--div class="medusa-form-row">
-				<div class="form-grid-6">
-					<span class="medusa-form-group">
-						<span class="medusa-button">okay</span>
-						<span class="medusa-input-wrap">
-							<input type="text" class="medusa-input"/>
+
+			<span src-data="form-group-simple">
+				<div class="medusa-form-row">
+					<div class="form-grid-6">
+						<span class="medusa-form-group">
+							<span class="medusa-button">okay</span>
+							<span class="medusa-input-wrap">
+								<span class="addon-icon-right icon-star"></span>
+								<input type="text" class="medusa-input" placeholder="Enter text"/>
+							</span>
 						</span>
-					</span>
-				</div>
-				<div class="form-grid-6">
-					<span class="medusa-form-group">
-						<span class="medusa-input-wrap">
-							<input type="text" class="medusa-input"/>
+					</div>
+					<div class="form-grid-6">
+						<span class="medusa-form-group">
+							<span class="medusa-input-wrap">
+								<span class="addon-icon icon-star"></span>
+								<input type="text" class="medusa-input" placeholder="Enter text"/>
+							</span>
+							<span class="medusa-button">okay</span>
 						</span>
-						<span class="medusa-button">okay</span>
-					</span>
+					</div>
 				</div>
+			</span>
+			<div>
+				<code src-data="form-group-simple" class="language-markup"></code>
 			</div>
-
-			<div class="medusa-form-row">
-				<div class="form-grid-4">
-					<span class="medusa-form-group">
-						<span class="addon-text">http://</span>
-						<span class="medusa-input-wrap">
-							<span class="addon-icon icon-star"></span>
-							<span class="addon-icon-right icon-star"></span>
-							<input type='text' class='medusa-input' />
-						</span>
-						<span class="addon-text">.com</span>
-					</span>
-				</div>
-				<div class="form-grid-4">
-					<span class="medusa-form-group sm">
-						<span class="addon-text">http://</span>
-						<span class="medusa-input-wrap">
-							<span class="addon-icon icon-star"></span>
-							<span class="addon-icon-right icon-star"></span>
-							<input type='text' class='medusa-input' />
-						</span>
-						<span class="addon-text">.com</span>
-					</span>
-				</div>
-				<div class="form-grid-4">
-					<span class="medusa-form-group lg">
-						<span class="addon-text">http://</span>
-						<span class="medusa-input-wrap">
-							<span class="addon-icon icon-star"></span>
-							<span class="addon-icon-right icon-star"></span>
-							<input type='text' class='medusa-input' />
-						</span>
-						<span class="addon-text">.com</span>
-					</span>
-				</div>
-			</div-->
-
-			<!--div class="medusa-form-row">
-				<div class="form-grid-6">
-					<span class="medusa-form-group">
-						<span class="medusa-button">okay</span>
-						<span class="medusa-input-wrap">
-							<span class="addon-icon icon-star"></span>
-							<input type="text" class="medusa-input"/>
-						</span>
-					</span>
-				</div>
-				<div class="form-grid-6">
-					<span class="medusa-form-group">
-						<span class="medusa-input-wrap">
-							<span class="addon-icon icon-star"></span>
-							<input type="text" class="medusa-input"/>
-						</span>
-						<span class="medusa-button addon">
-							<span class="addon-icon icon-star"></span>okay
-						</span>
-					</span>
-				</div>
-			</div>
-
-			<div class="medusa-form-row">
-				<div class="form-grid-12">
-					<span class="medusa-form-group">
-						<span class="addon-text">http://</span>
-						<span class="medusa-input-wrap">
-							<span class="addon-icon icon-star"></span>
-							<input type="text" class="medusa-input"/>
-						</span>
-						<select class="medusa-select">
-							<option>One</option>
-							<option>Two</option>
-							<option>Three</option>
-							<option>Four</option>
-							<option>Four</option>
-							<option>Four</option>
-							<option>Four</option>
-							<option>Four</option>
-							<option>Four</option>
-							<option>Four</option>
-							<option>Four</option>
-							<option>Four</option>
-						</select>
-						<span class="medusa-button addon">
-							<span class="addon-icon icon-star"></span>okay
-						</span>
-					</span>
-				</div>
-			</div-->
 
 			<div class="medusa-form-row">
 				<div class="form-grid-6">
@@ -618,6 +596,33 @@
 					<code src-data="label" class="language-markup"></code>
 				</div>
 			</div>
+
+		<div>
+			<label class="medusa-label">
+				<span class="medusa-checkbox-wrap">
+					<input class="medusa-checkbox" type="checkbox" />
+					<span class="medusa-pseudo-checkbox"></span>
+				</span>
+				Unchecked
+			</label>
+		</div>
+
+		<div>
+			<label class="medusa-label">
+				<span class="medusa-radio-wrap">
+					<input class="medusa-radio" type="radio" name="rd"/>
+					<span class="medusa-pseudo-radio"></span>
+				</span>
+				One
+			</label>
+			<label class="medusa-label">
+				<span class="medusa-radio-wrap">
+					<input class="medusa-radio" type="radio" name="rd"/>
+					<span class="medusa-pseudo-radio"></span>
+				</span>
+				Two
+			</label>
+		</div>
 		</div>
 
 		<div class="content-body">

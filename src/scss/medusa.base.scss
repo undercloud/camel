@@ -71,23 +71,22 @@ blockquote {
 	line-height: $line-height;
 }
 
-blockquote:before {
-    color: $secondary-color-dark;
-    font-size: 3em;
-    line-height: .1em;
-    margin-right: .2em;
-    vertical-align: -.4em;
-    content: open-quote;
-    font-weight: bold;
-}
-
+blockquote:before,
 blockquote:after {
     color: $secondary-color-dark;
     font-size: 3em;
     line-height: .1em;
-    vertical-align: -.45em;
-    content: close-quote;
+    vertical-align: -.4em;
     font-weight: bold;
+}
+
+blockquote:before {
+	content: open-quote;
+	margin-right: .2em;
+}
+
+blockquote:after {
+    content: close-quote;
 }
 
 small { font-size: 85%; }

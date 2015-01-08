@@ -65,7 +65,7 @@ input.medusa-input.lg {
 		margin: auto;
 		background-repeat: no-repeat;
 		position: absolute;
-		z-index: 1;
+		z-index: 2;
 	}
 
 	.addon-icon {
@@ -126,6 +126,7 @@ input.medusa-input.lg {
 .medusa-select:focus {
 	box-shadow: 0 0 3px #93d0ea;
 	border-color: #93d0ea;
+	z-index: 1;
 }
 
 .medusa-input.success,
@@ -134,6 +135,7 @@ input.medusa-input.lg {
 .medusa-select.success:focus {
 	box-shadow: 0 0 3px #99CC33;
 	border-color: #99CC33;
+	z-index: 1;
 }
 
 .medusa-input.warn,
@@ -142,6 +144,7 @@ input.medusa-input.lg {
 .medusa-select.warn:focus {
 	box-shadow: 0 0 3px #ff9c00;
 	border-color: #ff9c00;
+	z-index: 1;
 }
 
 .medusa-input.error,
@@ -150,4 +153,5 @@ input.medusa-input.lg {
 .medusa-select.error:focus {
 	box-shadow: 0 0 3px #c80a06;
 	border-color: #c80a06;
+	z-index: 1;
 }

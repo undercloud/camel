@@ -1,4 +1,9 @@
 (function(global){
+	$(document).ready(function(){
+		if($.browser.msie && parseInt($.browser.version) == 8)
+			$(document.body).addClass('msie8')
+	})
+
 	//alert
 	$(document).on('click','.medusa-alert .close',function(){
 		var rem = $(this).closest('.medusa-alert')

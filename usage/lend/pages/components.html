@@ -80,7 +80,7 @@
 				</div>
 				<div class="medusa-callouts warn">
 					<div class='head'>
-						Success<span class="close"></span>
+						Success <span class="close"></span>
 					</div>
 					<p>
 						Alerts don't have default classes, only base and modifier classes.
@@ -106,13 +106,30 @@
 			<a name="badge"></a>
 			<h1 class="section-head">#badge</h1>
 			<span class="medusa-badge">234</span>
-			<ul class="unstyled">
-				<li>First</li>
-				<li>Two</li>
-				<li>Third<span class="medusa-badge">43</span></li>
-				<li>Fourth</li>
-				<li>Fifth</li>
-			</ul>
+			<div>
+				<button class="medusa-button">
+					Messages <span class="medusa-badge">23</span>
+				</button>
+			</div>
+			<div style="width:200px">
+				<ul class="medusa-menu">
+					<li>
+						<a>First<span class="medusa-badge right">9</span></a>
+					</li>
+					<li>
+						<a>Two</a>
+					</li>
+					<li>
+						<a>Third<span class="medusa-badge right">43</span></a>
+					</li>
+					<li>
+						<a>Fourth</a>
+					</li>
+					<li>
+						<a>Fifth</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 
 		<div class="content-body">
@@ -153,31 +170,51 @@
 		<div class="content-body">
 			<a name="progress"></a>
 			<h1 class="section-head">#progress</h1>
-			<div class="medusa-progress thin">
-				<div class="bar" style="width:67%"></div>
-			</div>
-			<div class="medusa-progress">
-				<div class="bar" style="width:67%"></div>
-				<div class="label">67%</div>
-			</div>
-			<div class="medusa-progress striped">
-				<div class="bar" style="width:67%"></div>
-				<div class="label">67%</div>
-			</div>
-			<div class="medusa-progress striped animated">
-				<div class="bar" style="width:67%"></div>
-				<div class="label">67%</div>
+			<span src-data="prgs-thin">
+				<div class="medusa-progress thin">
+					<div class="bar" style="width:67%"></div>
+				</div>
+			</span>
+			<div>
+				<code src-data="prgs-thin" class="language-markup"></code>
 			</div>
 
-			<div class="progress-bar intrum">
-				<span style="width:50%"></span>
+			<span src-data="prgs">
+				<div class="medusa-progress">
+					<div class="bar" style="width:67%"></div>
+					<div class="label">67%</div>
+				</div>
+			</span>
+			<div>
+				<code src-data="prgs" class="language-markup"></code>
+			</div>
+
+			<span src-data="prgs-strp">
+				<div class="medusa-progress striped">
+					<div class="bar" style="width:67%"></div>
+					<div class="label">67%</div>
+				</div>
+			</span>
+			<div>
+				<code src-data="prgs-strp" class="language-markup"></code>
+			</div>
+
+			<span src-data="prgs-strp-anim">
+				<div class="medusa-progress striped animated">
+					<div class="bar" style="width:67%"></div>
+					<div class="label">67%</div>
+				</div>
+			</span>
+			<div>
+				<code src-data="prgs-strp-anim" class="language-markup"></code>
 			</div>
 		</div>
 
 		<div class="content-body">
 			<a name="breadcrumbs"></a>
 			<h1 class="section-head">#breadcrumbs</h1>
-			<div>
+
+			<span src-data="brdc-slash">
 				<ul class="medusa-breadcrumbs slash-style">
 					<li>
 						<a href="#breadcrumbs">Home</a>
@@ -186,11 +223,15 @@
 						<a href="#breadcrumbs">Category</a>
 					</li>
 					<li>
-						<a href="#breadcrumbs">Product</a>
+						Product
 					</li>
 				</ul>
-			</div>
+			</span>
 			<div>
+				<code src-data="brdc-slash" class="language-markup"></code>
+			</div>
+
+			<span src-data="brdc-arrow">
 				<ul class="medusa-breadcrumbs arrow-style">
 					<li>
 						<a href="#breadcrumbs">Home</a>
@@ -199,11 +240,15 @@
 						<a href="#breadcrumbs">Category</a>
 					</li>
 					<li>
-						<a href="#breadcrumbs">Product</a>
+						Product
 					</li>
 				</ul>
-			</div>
+			</span>
 			<div>
+				<code src-data="brdc-arrow" class="language-markup"></code>
+			</div>
+
+			<span src-data="brdc-circle">
 				<ul class="medusa-breadcrumbs circle-style">
 					<li>
 						<a href="#breadcrumbs">Home</a>
@@ -212,11 +257,15 @@
 						<a href="#breadcrumbs">Category</a>
 					</li>
 					<li>
-						<a href="#breadcrumbs">Product</a>
+						Product
 					</li>
 				</ul>
-			</div>
+			</span>
 			<div>
+				<code src-data="brdc-circle" class="language-markup"></code>
+			</div>
+
+			<span src-data="brdc-chain">
 				<ul class="medusa-breadcrumbs chain-style">
 					<li>
 						<a href="#breadcrumbs">Home</a>
@@ -228,14 +277,63 @@
 						<a href="#breadcrumbs">Product</a>
 					</li>
 				</ul>
+			</span>
+			<div>
+				<code src-data="brdc-chain" class="language-markup"></code>
 			</div>
 		</div>
 
 		<div class="content-body">
 			<a name="menu"></a>
 			<h1 class="section-head">#menu</h1>
-			<div style="height:300px;">
+			<div style="width:150px">
 				<ul class="medusa-menu">
+					<li>
+						<a href="#">Home</a>
+					</li>
+					<ul>
+						<li>
+							<a>Subitem</a>
+						</li>
+						<li>
+							<a>More</a>
+						</li>
+					</ul>
+					<li>
+						<a href="#">Tutorials</a>
+					</li>
+					<li>
+						<a href="#">Articles</a>
+					</li>
+					<li>
+						<a href="#">Inspiration</a>
+					</li>
+					<span class="split"></span>
+					<li>
+						<a href="#">Archive</a>
+					</li>
+				</ul>
+			</div>
+
+			<div>
+				<ul class="medusa-menu inline">
+					<li>
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<a href="#">Tutorials</a>
+					</li>
+					<li>
+						<a href="#">Articles</a>
+					</li>
+					<li>
+						<a href="#">Inspiration</a>
+					</li>
+				</ul>
+			</div>
+
+			<div>
+				<ul class="medusa-menu navbar">
 					<li><a href="#">Home</a></li>
 					<li><a href="#" class="arrow">Tutorials</a>
 						<ul>
@@ -255,13 +353,45 @@
 							</li>
 						</ul>
 					</li>
-					<li><a href="#">Articles</a>
+					<li><a href="#">Articles</a></li>
+					<li><a href="#">Inspiration</a></li>
+				</ul>
+			</div>
+			<div style="width:150px">
+				<ul class="medusa-menu navbar stack">
+					<li><a href="#">Home</a></li>
+					<ul>
+						<li>
+							<a>Subitem</a>
+						</li>
+						<li>
+							<a>More</a>
+						</li>
+					</ul>
+					<li><a href="#" class="arrow">Tutorials</a>
 						<ul>
-							<li><a href="#">Web Design</a></li>
-							<li><a href="#">User Experience</a></li>
+							<li><a href="#">Photoshop</a></li>
+							<li><a href="#">Illustrator</a></li>
+							<li><a href="#" class="arrow">Web Design</a>
+								<ul>
+									<li><a href="#">HTML</a></li>
+									<li>
+										<a href="#" class="arrow">CSS</a>
+										<ul>
+											<li><a href="#">LESS</a></li>
+											<li><a href="#">SASS</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
 						</ul>
 					</li>
+					<li><a href="#">Articles</a></li>
 					<li><a href="#">Inspiration</a></li>
+					<span class="split"></span>
+					<li>
+						<a href="#">Archive</a>
+					</li>
 				</ul>
 			</div>
 		</div>

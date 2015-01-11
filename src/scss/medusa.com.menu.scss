@@ -42,8 +42,6 @@ $menu-sub-item-border-bottom-color: #575f6a;
 		padding-right: 0.5em;
 		border-radius: 3px;
 
-		@include text-truncate;
-
 		&:hover {
 			background-color: #eee;
 		}
@@ -51,6 +49,8 @@ $menu-sub-item-border-bottom-color: #575f6a;
 		a {
 			display: block;
 			position: relative;
+
+			@include text-truncate;
 		}
 	}
 

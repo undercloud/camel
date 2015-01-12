@@ -37,10 +37,10 @@
 */
 $(document).ready(function(){
 	$('.top-nav-list a,a.main-page-link').click(function(e){
-		if($(e.target)[0].className == 'top-logo')
-			$('.present-wrap').show()
+		if(typeof e.originalEvent == 'undefined' || $(e.target)[0].className == 'top-logo')
+			$('.present-wrap').slideDown('medium')
 		else
-			$('.present-wrap').hide()
+			$('.present-wrap').slideUp('medium')
 
 		$('.top-nav-list a').removeClass('active')
 		$(this).addClass('active')
@@ -54,6 +54,7 @@ $(document).ready(function(){
 				'pages/' + url + "?c=" + (new Date().getTime()),
 				{},
 				function(data){
+					$(window).scrollTop(0)
 					$('.page-content').html(data)
 
 					var highlight = function(i,d){
@@ -94,14 +95,21 @@ $(document).ready(function(){
 	var i = null;
 
 	$(window).off('scroll').on('scroll',function(e){
+		if(
+			($('.present-wrap').is(':visible') && $('.present-wrap').outerHeight(true) <= $(window).scrollTop()) ||
+			($('.present-wrap').is(':hidden') && $('.top-header').outerHeight(true) <= $(window).scrollTop())
+		)
+			$('.top-header').addClass('shadow')
+		else
+			$('.top-header').removeClass('shadow')
+
+
 		if(i !== null)
 			clearTimeout(i)
 
 		i = setTimeout(function(){
-			var scroll = $(window).scrollTop();
-
-			//console.log(scroll,$('.page-section-menu').outerHeight(true))
-
+			// < $('.present-wrap').outerHeight(true) ? 0 : ($('.top-header').outerHeight(true) + $(window).scrollTop() - $('.present-wrap').outerHeight(true)
+			var scroll = $(window).scrollTop()
 			$('.page-section-menu').animate({top: scroll},300)
 		},500)
 	})

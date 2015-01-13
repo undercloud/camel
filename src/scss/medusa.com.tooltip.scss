@@ -1,7 +1,7 @@
-*[popup-top]:hover:before,
-*[popup-bottom]:hover:before,
-*[popup-left]:hover:before,
-*[popup-right]:hover:before {
+*[data-popup-top]:hover:before,
+*[data-popup-bottom]:hover:before,
+*[data-popup-left]:hover:before,
+*[data-popup-right]:hover:before {
 	position: absolute;
 	background: #81adc9;
 	left: 0;
@@ -18,36 +18,36 @@
 	box-shadow: 0 1px 5px #666;
 }
 
-*[popup-top]:hover:before {
-	content: attr(popup-top);
+*[data-popup-top]:hover:before {
+	content: attr(data-popup-top);
 	bottom: 100%;
 	margin-bottom: 14px;
 }
 
-*[popup-bottom]:hover:before {
-	content: attr(popup-bottom);
+*[data-popup-bottom]:hover:before {
+	content: attr(data-popup-bottom);
 	top: 100%;
 	margin-top: 14px;
 }
 
-*[popup-right]:hover:before {
-	content: attr(popup-right);
+*[data-popup-right]:hover:before {
+	content: attr(data-popup-right);
 	top: 0;
 	left: 100%;
 	margin-left: 14px;
 }
 
-*[popup-left]:hover:before {
-	content: attr(popup-left);
+*[data-popup-left]:hover:before {
+	content: attr(data-popup-left);
 	left: auto;
 	right: 100%;
 	margin-right: 14px;
 }
 
-*[popup-top]:hover:after,
-*[popup-bottom]:hover:after,
-*[popup-left]:hover:after,
-*[popup-right]:hover:after {
+*[data-popup-top]:hover:after,
+*[data-popup-bottom]:hover:after,
+*[data-popup-left]:hover:after,
+*[data-popup-right]:hover:after {
 	border: solid transparent;
 	content: " ";
 	height: 0;
@@ -60,20 +60,20 @@
 	opacity: 0.95;
 }
 
-*[popup-top]:hover:after {
+*[data-popup-top]:hover:after {
 	bottom: 100%;
 	left: 14px;
 	border-top-color: #525252;
 }
 
-*[popup-bottom]:hover:after {
+*[data-popup-bottom]:hover:after {
 	top: 100%;
 	left: 14px;
 	margin-bottom: 14px;
 	border-bottom-color: #525252;
 }
 
-*[popup-right]:hover:after {
+*[data-popup-right]:hover:after {
 	margin-left: 0;
 	border-right-color: #525252;
 	margin-top: 4px;
@@ -81,7 +81,7 @@
 	top: 0;
 }
 
-*[popup-left]:hover:after {
+*[data-popup-left]:hover:after {
 	right: 100%;
 	border-left-color: #525252;
 	margin-top: 4px;

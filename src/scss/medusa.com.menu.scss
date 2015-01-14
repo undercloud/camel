@@ -38,19 +38,19 @@ $menu-sub-item-border-bottom-color: #575f6a;
 	li {
 		display: block;
 		line-height: 2em;
-		padding: 0 1em;
-		padding-right: 0.5em;
-		border-radius: 3px;
-
-		&:hover {
-			background-color: #eee;
-		}
 
 		a {
+			padding: 0 1em;
+			padding-right: 0.5em;
+			border-radius: 3px;
 			display: block;
 			position: relative;
 
 			@include text-truncate;
+
+			&:hover {
+				background: #eee;
+			}
 		}
 	}
 
@@ -67,7 +67,11 @@ $menu-sub-item-border-bottom-color: #575f6a;
 
 		li {
 			display: inline-block;
-			padding-right: 1em;
+			padding-right: 0;
+
+			a {
+				padding: 0 1em;
+			}
 		}
 	}
 
@@ -97,6 +101,8 @@ $menu-sub-item-border-bottom-color: #575f6a;
 				display: block;
 				text-decoration: none;
 				white-space: nowrap;
+				border-radius: 0;
+				background: inherit;
 				padding: $menu-item-padding;
 				color: $menu-item-color;
 			}
@@ -106,6 +112,7 @@ $menu-sub-item-border-bottom-color: #575f6a;
 
 				a {
 					color: $menu-item-hover-color;
+					background: inherit;
 				}
 			}
 		}

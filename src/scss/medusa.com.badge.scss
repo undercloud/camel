@@ -16,7 +16,7 @@
 	margin-left: 0.5em;
 
 	&.right {
-		right: 0;
+		right: 0.5em;
 		top: 0;
 		bottom: 0;
 		margin-top: auto;
@@ -38,6 +38,10 @@
 	&.navbar {
 		.medusa-badge {
 			margin-right: -1.5em;
+
+			&.right {
+				margin-right: 0.5em;
+			}
 		}
 
 		*.arrow {

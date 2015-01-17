@@ -1,4 +1,6 @@
-(function(global){
+(function(w){
+	"use strict"
+
 	$(document).ready(function(){
 		if($.browser.msie && parseInt($.browser.version) == 8)
 			$(document.body).addClass('msie8')
@@ -31,8 +33,44 @@
 			.show()
 			.off('click')
 			.on('click', function(){
-
 				$(this).hide()
 			})
 	})
-})(window)
+
+	var keytimer = null;
+	$(document).on('keyup paste cut','textarea[data-auto-grow]',function(){
+		/*var text = $(this)[0]
+		var max = parseInt($(this).attr('data-auto-grow'))
+
+		var adjustedHeight = text.clientHeight;
+
+		if(!max || max > adjustedHeight){
+			adjustedHeight = Math.max(text.scrollHeight, adjustedHeight)
+
+		if(max)
+			adjustedHeight = Math.min(max, adjustedHeight)
+
+		text.style.height = 0;
+		if(adjustedHeight > text.clientHeight)
+			text.style.height = adjustedHeight + "px";
+		}*/
+
+		var thisis = this;
+
+		var max = parseInt(thisis.getAttribute('data-auto-grow'))
+
+		if(null != keytimer)
+			clearInterval(keytimer)
+
+		keytimer = setTimeout(function(){
+			if(max && thisis.scrollHeight > max){
+				thisis.style.overflowY = "auto";
+				thisis.style.height = max + "px"
+			}else{
+				thisis.style.overflowY = 'hidden';
+				thisis.style.height = 0;
+				thisis.style.height = thisis.scrollHeight + 'px';
+			}
+		},300)
+	})
+}).call(this)

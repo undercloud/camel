@@ -1,9 +1,41 @@
 (function(w){
+	//document.body.className = document.body.className.replace("no-js","js");
+
 	"use strict"
 
 	$(document).ready(function(){
-		if($.browser.msie && parseInt($.browser.version) == 8)
+		if($.browser.msie && parseInt($.browser.version) == 8){
 			$(document.body).addClass('msie8')
+
+			$(document).on('change','.medusa-checkbox-wrap input[type="checkbox"].medusa-checkbox',function(){
+				if($(this).is(':checked')){
+					$(this).attr('checked','checked')
+				}else{
+					$(this).removeAttr('checked')
+				}
+			})
+
+			$(document).on('change','.medusa-radio-wrap input[type="radio"].medusa-radio',function(){
+				var n = $(this).attr('name');
+
+				var a = [$(this)];
+				if(n)
+					a = $('input.medusa-radio[name="' + n + '"]')
+
+				if(!a.length)
+					return;
+
+				for(var i=0,l = a.length; i < l;i++){
+					if($(a[i]).is(':checked')){
+						$(a[i]).attr('checked','checked')
+					}else{
+						$(a[i]).removeAttr('checked')
+					}
+				}
+			})
+
+
+		}
 	})
 
 	//alert

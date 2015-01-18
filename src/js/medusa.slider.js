@@ -64,13 +64,13 @@ medusa.slider = function(target,options){
 
 	var i = setInterval(auto,slidetime);
 
-	window.addEventListener('focus', function() {
+	$(window).on('focus', function() {
 		i = setInterval(auto,slidetime)
-	},false)
+	})
 
-	window.addEventListener('blur', function() {
+	$(window).on('blur', function() {
 		clearInterval(i)
-	},false)
+	})
 
 	if(navbuttons){
 		t.append('\

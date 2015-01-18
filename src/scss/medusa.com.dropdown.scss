@@ -2,28 +2,27 @@
 
 .medusa-dropdown {
 	left: 0;
-	top: 100%;
-	min-width: 200px;
+	top: auto;
 	display: none;
 	position: absolute;
 	list-style: none;
 	padding: 0.5em 0;
 	margin: 0;
-	margin-top: 20px;
+	margin-top: 10px;
 	border: none;
 	background-color: #fff;
 	border-radius: 3px;
 	z-index: 1;
-	box-shadow: 0 1px 5px rgba(100, 100, 100, 0.7);
-	color: #fff;
+	box-shadow: 0 1px 3px rgba(100, 100, 100, 0.7);
 
 	li {
 		display: block;
 		padding: 5px 10px;
+		padding-left: 25px;
 		cursor: pointer;
 
 		&:hover {
-			background-color: #656d78;
+			background-color: #ddd;
 		}
 	}
 

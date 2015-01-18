@@ -57,36 +57,31 @@
 	})
 
 	//dropdown
-	$(document).on('click','.medusa-button[dropdown],a[dropdown]', function(){
-		var dd = $(this).next();
+	$(document).on('click','.medusa-button[data-dropdown],a[data-dropdown]', function(){
+		var tag = $(this).attr('data-dropdown')
 
-		if(dd.hasClass('medusa-dropdown'))
-			dd.css('left',this.offsetLeft + 'px')
-			.show()
-			.off('click')
-			.on('click', function(){
-				$(this).hide()
-			})
+		if(!tag) retrun;
+
+		var dd = $('.medusa-dropdown[data-dropdown="' + tag + '"]')
+
+		if(!dd) return;
+
+		dd.css('left',this.offsetLeft + 'px')
+		.show()
+		.off('click')
+		.on('click', function(){
+			$(this).hide()
+		})
+	}).on('mouseup', function(e){
+		var container = $(".medusa-dropdown");
+
+		if(!container.is(e.target) && container.has(e.target).length === 0){
+			container.hide();
+		}
 	})
 
 	var keytimer = null;
 	$(document).on('keyup paste cut','textarea[data-auto-grow]',function(){
-		/*var text = $(this)[0]
-		var max = parseInt($(this).attr('data-auto-grow'))
-
-		var adjustedHeight = text.clientHeight;
-
-		if(!max || max > adjustedHeight){
-			adjustedHeight = Math.max(text.scrollHeight, adjustedHeight)
-
-		if(max)
-			adjustedHeight = Math.min(max, adjustedHeight)
-
-		text.style.height = 0;
-		if(adjustedHeight > text.clientHeight)
-			text.style.height = adjustedHeight + "px";
-		}*/
-
 		var thisis = this;
 
 		var max = parseInt(thisis.getAttribute('data-auto-grow'))

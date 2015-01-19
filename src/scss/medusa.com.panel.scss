@@ -1,0 +1,17 @@
+@import 'local';
+
+.medusa-panel {
+	display: block;
+	border: 1px solid #ddd;
+	width: 100%;
+
+	>.head {
+		display: block;
+		background-color: #f5f5f5;
+		font-weight: bold;
+	}
+
+	>.body {
+		display: block;
+	}
+}

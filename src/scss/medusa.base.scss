@@ -29,6 +29,7 @@ h5 { font-size: $h5-size; }
 h6 { font-size: $h6-size; }
 
 a {
+	outline: none;
 	cursor: pointer;
 	text-decoration:none;
 	color: $primary-link-color;
@@ -37,7 +38,6 @@ a {
 a:hover,
 a:active {
 	text-decoration:underline;
-	outline: 0;
 }
 
 p        { margin: 0.5em 0;text-indent: $text-indent;}

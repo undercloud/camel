@@ -56,14 +56,20 @@
 		})
 	})
 
+	//panels
+	$(document).on('click','.medusa-panel .head.expand,.medusa-panel .head.collapse',function(){
+		if($(this).hasClass('collapse'))
+			$(this).removeClass('collapse').addClass('expand')
+		else
+			$(this).removeClass('expand').addClass('collapse')
+	})
+
 	//dropdown
 	$(document).on('click','.medusa-button[data-dropdown],a[data-dropdown]', function(){
 		var tag = $(this).attr('data-dropdown')
-
 		if(!tag) retrun;
 
 		var dd = $('.medusa-dropdown[data-dropdown="' + tag + '"]')
-
 		if(!dd) return;
 
 		dd.css('left',this.offsetLeft + 'px')

@@ -181,14 +181,13 @@ $checkbox_checked_bg: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAA
 	display: inline-block;
 	width:auto;
 
-
 	.handle {
 		position: relative;
 		display: block;
-		width: 60px;
-		height: 30px;
+		width: 50px;
+		height: 25px;
 		background-color: #eee;
-		border-radius: 20px;
+		border-radius: 25px;
 
 		&:before,
 		&:after {
@@ -199,21 +198,21 @@ $checkbox_checked_bg: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAA
 			content: "";
 
 			background-color: #fff;
-			border-radius: 20px;
-			-webkit-transition: all .25s ease-in-out;
+			border-radius: 25px;
+			/*-webkit-transition: all .25s ease-in-out;
 			-moz-transition: all .25s ease-in-out;
-			transition: all .25s ease-in-out;
+			transition: all .25s ease-in-out;*/
 		}
 
 		&:before {
-			width: 30px;
-			height: 30px;
+			width: 25px;
+			height: 25px;
 		}
 
 		&:after {
-			border: 1px solid #eee;
-			width: 28px;
-			height: 28px;
+			border: 2px solid #eee;
+			width: 21px;
+			height: 21px;
 		}
 	}
 
@@ -228,13 +227,13 @@ $checkbox_checked_bg: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAA
 
 	.medusa-checkbox:checked + .handle {
 		&::before{
-			width: 60px;
+			width: 50px;
 			background-color: #269ecb;
 		}
 
 		&:after {
-			left: 30px;
-			box-shadow: 2px 2px 2px #c7ccd3;
+			left: 25px;
+			border-color: #269ecb;
 		}
 	}
 }

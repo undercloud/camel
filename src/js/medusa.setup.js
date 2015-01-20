@@ -7,7 +7,7 @@
 		if($.browser.msie && parseInt($.browser.version) == 8){
 			$(document.body).addClass('msie8')
 
-			$(document).on('change','.medusa-checkbox-wrap input[type="checkbox"].medusa-checkbox',function(){
+			$(document).on('change','.medusa-checkbox-wrap input[type="checkbox"].medusa-checkbox,.medusa-toggle input[type="checkbox"].medusa-checkbox',function(){
 				if($(this).is(':checked')){
 					$(this).attr('checked','checked')
 				}else{

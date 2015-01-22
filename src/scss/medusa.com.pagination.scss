@@ -2,9 +2,9 @@
 
 $pag-color: #323232;
 $pag-background: #eee;
-$pag-padding: 5px 12px;
+$pag-padding: 8px 12px;
 $pag-border-color: #ddd;
-$pag-border-radius: 3px;
+$pag-border-radius: 2px;
 $pag-space: 3px;
 
 $pag-active-color: #fff;
@@ -21,12 +21,13 @@ $pag-hover-background: #4b545f;
 	list-style: none;
 	position: relative;
 	display: inline-table;
-	line-height: 1;
+	line-height: 1em;
 
 	li {
 		list-style: none;
 		display: block;
 		float: left;
+		line-height: 1em;
 
 		a {
 			display: inline-block;
@@ -37,15 +38,11 @@ $pag-hover-background: #4b545f;
 			background: $pag-background;
 			border-radius: $pag-border-radius;
 
-			&.dots:after {
-				display: block;
-			}
-
 			&.to-first:after ,
 			&.to-last:after ,
 			&.to-prev:after ,
 			&.to-next:after {
-				font-size: 1.5em;
+				font-size: 1.4em;
 				display: block;
 				margin-top: -0.1em;
 				margin-bottom: 0.1em;

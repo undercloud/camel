@@ -33,6 +33,25 @@
 		}
 	}
 
+	&.wave {
+		.bar:after {
+			content: '';
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: #fff;
+			border-radius: .2857rem;
+			-webkit-animation: progress-active 2s ease infinite;
+			   -moz-animation: progress-active 2s ease infinite;
+				-ms-animation: progress-active 2s ease infinite;
+				 -o-animation: progress-active 2s ease infinite;
+					animation: progress-active 2s ease infinite;
+		}
+	}
+
 	.label {
 		position: absolute;
 		display: table;
@@ -58,18 +77,12 @@
 }
 
 
-@-webkit-keyframes animate-stripes {
-	0% {background-position: 0 0;} 100% {background-position: 60px 0;}
-}
+@-webkit-keyframes animate-stripes {0% {background-position: 0 0;} 100% {background-position: 60px 0;}}
+@-moz-keyframes animate-stripes {0% {background-position: 0 0;} 100% {background-position: 60px 0;}}
+@-ms-keyframes animate-stripes {0% {background-position: 0 0;} 100% {background-position: 60px 0;}}
+@keyframes animate-stripes {0% {background-position: 0 0;} 100% {background-position: 60px 0;}}
 
-@-moz-keyframes animate-stripes {
-	0% {background-position: 0 0;} 100% {background-position: 60px 0;}
-}
-
-@-ms-keyframes animate-stripes {
-	0% {background-position: 0 0;} 100% {background-position: 60px 0;}
-}
-
-@keyframes animate-stripes {
-	0% {background-position: 0 0;} 100% {background-position: 60px 0;}
-}
+@-webkit-keyframes progress-active {0% {opacity: 0.3;width: 0;} 100% {opacity: 0;width: 100%;}}
+@-moz-keyframes progress-active {0% {opacity: 0.3;width: 0;} 100% {opacity: 0;width: 100%;}}
+@-ms-keyframes progress-active {0% {opacity: 0.3;width: 0;} 100% {opacity: 0;width: 100%;}}
+@keyframes progress-active {0% {opacity: 0.3;width: 0;} 100% {opacity: 0;width: 100%;}}

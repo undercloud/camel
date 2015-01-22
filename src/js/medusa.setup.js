@@ -1,40 +1,38 @@
 (function(w){
-	//document.body.className = document.body.className.replace("no-js","js");
-
 	"use strict"
+
+	$(document).removeClass('no-js').addClass("js");
 
 	$(document).ready(function(){
 		if($.browser.msie && parseInt($.browser.version) == 8){
 			$(document.body).addClass('msie8')
 
 			$(document).on('change','.medusa-checkbox-wrap input[type="checkbox"].medusa-checkbox,.medusa-toggle input[type="checkbox"].medusa-checkbox',function(){
-				if($(this).is(':checked')){
-					$(this).attr('checked','checked')
+				if(this.checked){
+					this.setAttribute('checked','checked')
 				}else{
-					$(this).removeAttr('checked')
+					this.removeAttribute('checked')
 				}
 			})
 
 			$(document).on('change','.medusa-radio-wrap input[type="radio"].medusa-radio',function(){
-				var n = $(this).attr('name');
+				var n = this.getAttribute('name');
 
-				var a = [$(this)];
+				var a = [this];
 				if(n)
-					a = $('input.medusa-radio[name="' + n + '"]')
+					a = document.getElementsByName(n)
 
-				if(!a.length)
+				if(0 == a.length)
 					return;
 
 				for(var i=0,l = a.length; i < l;i++){
-					if($(a[i]).is(':checked')){
-						$(a[i]).attr('checked','checked')
+					if(a[i].checked){
+						a[i].setAttribute('checked','checked')
 					}else{
-						$(a[i]).removeAttr('checked')
+						a[i].removeAttribute('checked')
 					}
 				}
 			})
-
-
 		}
 	})
 

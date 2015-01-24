@@ -51,7 +51,7 @@
 		padding: 1em;
 	}
 
-	.head.collapse + .body {
+	.head.collapse ~ * {
 		display: none;
 	}
 }

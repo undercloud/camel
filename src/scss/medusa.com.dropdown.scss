@@ -1,6 +1,7 @@
 @import 'local';
 
 .medusa-dropdown {
+	font-size: 14px;
 	left: 0;
 	top: auto;
 	display: none;
@@ -32,4 +33,9 @@
 		display: block;
 		margin: 0.5em 0;
 	}
+}
+
+.medusa-button-group > .medusa-dropdown.active {
+	left: 0;
+	display: block;
 }

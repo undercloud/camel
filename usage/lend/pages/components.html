@@ -49,9 +49,7 @@
 			<h1 class="section-head">#callouts</h1>
 			<span src-data="callouts">
 				<div class="medusa-callouts">
-					<div class='head'>
-						Success<span class="close"></span>
-					</div>
+					<div class='head'>Success</div>
 					<p>
 						Alerts don't have default classes, only base and modifier classes.
 						A default gray alert doesn't make too much sense, so you're required
@@ -60,9 +58,7 @@
 				</div>
 
 				<div class="medusa-callouts info">
-					<div class='head'>
-						Success<span class="close"></span>
-					</div>
+					<div class='head'>Success</div>
 					<p>
 						Alerts don't have default classes, only base and modifier classes.
 						A default gray alert doesn't make too much sense, so you're required
@@ -70,9 +66,7 @@
 					</p>
 				</div>
 				<div class="medusa-callouts success">
-					<div class='head'>
-						Success<span class="close"></span>
-					</div>
+					<div class='head'>Success</div>
 					<p>
 						Alerts don't have default classes, only base and modifier classes.
 						A default gray alert doesn't make too much sense, so you're required
@@ -80,9 +74,7 @@
 					</p>
 				</div>
 				<div class="medusa-callouts warn">
-					<div class='head'>
-						Success <span class="close"></span>
-					</div>
+					<div class='head'>Success</div>
 					<p>
 						Alerts don't have default classes, only base and modifier classes.
 						A default gray alert doesn't make too much sense, so you're required
@@ -90,9 +82,7 @@
 					</p>
 				</div>
 				<div class="medusa-callouts danger">
-					<div class='head'>
-						Success<span class="close"></span>
-					</div>
+					<div class='head'>Success</div>
 					<p>
 						Alerts don't have default classes, only base and modifier classes.
 						A default gray alert doesn't make too much sense, so you're required
@@ -147,29 +137,31 @@
 			<a name="dropdown"></a>
 			<h1 class="section-head">#dropdown</h1>
 			<span>
-				<button class="medusa-button dropdown" data-dropdown="a">click</button>
-				<ul class="medusa-dropdown"  data-dropdown="a">
-					<li onclick='alert(234)'>first</li>
-					<li>second</li>
-					<span class="split"></span>
-					<li>last</li>
-				</ul>
+				<span class="medusa-button-group">
+					<button class="medusa-button dropdown" data-dropdown="a">click</button>
+					<ul class="medusa-dropdown"  data-dropdown="a">
+						<li onclick='alert(234)'>first</li>
+						<li>second</li>
+						<span class="split"></span>
+						<li>last</li>
+					</ul>
+				</span>
 			</span>
 			<span>
 				<span class="medusa-button-group">
 					<button class="medusa-button">button</button>
-					<button class="medusa-button dropdown split" dropdown></button>
+					<button class="medusa-button dropdown split" data-dropdown="b"></button>
+					<ul class="medusa-dropdown" data-dropdown="b">
+						<li onclick='alert(234)'>first</li>
+						<li>second</li>
+						<span class="split"></span>
+						<li>last</li>
+					</ul>
 				</span>
-				<ul class="medusa-dropdown">
-					<li onclick='alert(234)'>first</li>
-					<li>second</li>
-					<span class="split"></span>
-					<li>last</li>
-				</ul>
 			</span>
 			<span>
-				<a dropdown>link</a>
-				<ul class="medusa-dropdown">
+				<a data-dropdown="c">link</a>
+				<ul class="medusa-dropdown" data-dropdown="c">
 					<li onclick='alert(234)'>first</li>
 					<li>second</li>
 					<span class="split"></span>

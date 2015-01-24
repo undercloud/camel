@@ -45,15 +45,6 @@
 		})
 	})
 
-	//callouts
-	$(document).on('click','.medusa-callouts .close',function(){
-		var rem = $(this).closest('.medusa-callouts')
-
-		rem.fadeOut('medium',function(){
-			rem.remove()
-		})
-	})
-
 	//panels
 	$(document).on('click','.medusa-panel .head.expand,.medusa-panel .head.collapse',function(){
 		if($(this).hasClass('collapse'))
@@ -70,17 +61,18 @@
 		var dd = $('.medusa-dropdown[data-dropdown="' + tag + '"]')
 		if(!dd) return;
 
-		dd.css('left',this.offsetLeft + 'px')
-		.show()
-		.off('click')
+		//.css('left',this.offsetLeft + 'px')
+
+		dd.addClass('active')
+		/*.off('click')
 		.on('click', function(){
 			$(this).hide()
-		})
+		})*/
 	}).on('mouseup', function(e){
 		var container = $(".medusa-dropdown");
 
 		if(!container.is(e.target) && container.has(e.target).length === 0){
-			container.hide();
+			container.removeClass('active');
 		}
 	})
 

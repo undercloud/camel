@@ -9,9 +9,14 @@
 	right: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(0,0,0,.3);
-	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4c000000', endColorstr='#4c000000');
-	z-index: 9999;
+	color: #fff;
+	background: rgb(0,0,0);
+	background: rgba(0,0,0,.6);
+	z-index: 99;
+
+	&:nth-child(n) {
+		filter: none;
+	}
 
 	&.hover {
 		&.slide {
@@ -32,7 +37,12 @@
 			filter: none;
 		}
 	}
+
+	&[data-max-height] {
+		max-height: attr(data-max-height,px);
+	}
 }
+
 
 *:hover > .medusa-overlay {
 	&.hover {
@@ -41,8 +51,21 @@
 		}
 
 		&.fade {
+			-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#99000000', endColorstr='#99000000')";
 			opacity: 1;
-			filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#4c000000', endColorstr='#4c000000');
+
+			&:nth-child(n) {
+				filter: none;
+			}
 		}
+	}
+}
+
+
+.msie8 {
+	.medusa-overlay {
+		background: transparent;
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#99000000', endColorstr='#99000000')";
+		zoom: 1;
 	}
 }

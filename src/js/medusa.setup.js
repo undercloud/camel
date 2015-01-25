@@ -34,6 +34,13 @@
 				}
 			})
 		}
+
+		if($.browser.msie && parseInt($.browser.version) <= 9){
+			$(document).on('hover','* > .medusa-overlay.fade', function(){
+				//$(this).fadeIn(250)
+				//alert('fade')
+			})
+		}
 	})
 
 	//alert

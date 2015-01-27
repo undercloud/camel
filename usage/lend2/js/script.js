@@ -15,7 +15,7 @@ $(document).ready(function(){
 			'page/' + url + "?c=" + (new Date().getTime()),
 			{},
 			function(data){
-				$('.page-content').html(data)
+				$('.page-container').html(data)
 			}
 		)
 

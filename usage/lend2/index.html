@@ -20,19 +20,14 @@
 						<span class="logo">camel</span>
 					</a>
 					<ul class="menu">
-						<li>
-							<a href="getstarted.html">Get Started</a>
-						</li>
-						<li>
-							<a href="components.html">Components</a>
-						</li>
-						<li>
-							<a href="js.html">JS</a>
-						</li>
+						<li><a href="getstarted.html">Get Started</a></li>
+						<li><a href="css.html">CSS</a></li>
+						<li><a href="components.html">Components</a></li>
+						<li><a href="js.html">JavaScript</a></li>
 					</ul>
 				</div>
 			</div>
-			<div class="page-content">
+			<div class="page-container">
 				<!--div class="page-body"></div-->
 			</div>
 			<div class="footer-wrap">
@@ -50,7 +45,7 @@
 					async: false,
 					url: 'page/main.html',
 					success: function(data){
-						$('.page-content').html(data)
+						$('.page-container').html(data)
 					}
 				})
 			})

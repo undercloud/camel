@@ -5,7 +5,7 @@ body {
 }
 
 .page-wrap,
-.page-content {
+.page-container {
 	height: 100%;
 	position: relative;
 }
@@ -75,8 +75,35 @@ body {
 
 .page-body {
 	width: 960px;
-	margin: 0 auto;
+	margin: 50px auto;
 	min-height: 100%;
+}
+
+.page-body .side-menu {
+	float: left;
+	width: 200px;
+}
+
+.page-body .side-menu ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 20px;
+}
+
+.page-body .side-menu ul li {
+	padding: 3px 0;
+}
+
+.page-body .side-menu ul li a {
+	text-decoration: none;
+	color: #444;
+}
+
+.page-body .page-content {
+	border-left: 1px solid #eee;
+	width: 750px;
+	margin-left: 208px;
+	padding-left: 30px;
 }
 
 .footer-wrap {

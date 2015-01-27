@@ -88,6 +88,7 @@ body {
 	list-style: none;
 	margin: 0;
 	padding-left: 20px;
+	margin-bottom: 12px;
 }
 
 .page-body .side-menu ul li {
@@ -103,6 +104,16 @@ body {
 
 .page-body .side-menu ul li a:hover {
 	background-color: #eee;
+}
+
+.side-menu .sub-head {
+	font-size: 16px;
+	font-weight: bold;
+	color: #757D75;
+	margin-left: 20px;
+	padding-left: 3px;
+	margin-bottom: 5px;
+	display: inline-block;
 }
 
 .page-body .page-content {

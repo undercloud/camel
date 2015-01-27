@@ -16,24 +16,24 @@
 		<div class="page-wrap">
 			<div class="header-wrap">
 				<div class="header">
-					<span class="logo">camel</span>
+					<a class="main-page">
+						<span class="logo">camel</span>
+					</a>
 					<ul class="menu">
 						<li>
-							<a href="">Get Started</a>
+							<a href="getstarted.html">Get Started</a>
 						</li>
 						<li>
-							<a>Components</a>
+							<a href="components.html">Components</a>
 						</li>
 						<li>
-							<a>JS</a>
+							<a href="js.html">JS</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 			<div class="page-content">
-				<div class="page-body">
-
-				</div>
+				<!--div class="page-body"></div-->
 			</div>
 			<div class="footer-wrap">
 				<div class="footer">
@@ -44,5 +44,20 @@
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript">
+			$(document).on("ready mainpage",function(){
+				$.ajax({
+					async: false,
+					url: 'page/main.html',
+					success: function(data){
+						$('.page-content').html(data)
+					}
+				})
+			})
+
+			$('a.main-page').click(function(){
+				$(document).trigger('mainpage')
+			})
+		</script>
 	</body>
 </html>

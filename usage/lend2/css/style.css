@@ -4,10 +4,10 @@ body {
 	position: relative;
 }
 
-.page-wrap,
-.page-container {
-	height: 100%;
-	position: relative;
+.page-wrap {
+	height: auto;
+	min-height: 90%;
+	padding-bottom: 212px;
 }
 
 .header-wrap {
@@ -96,21 +96,28 @@ body {
 
 .page-body .side-menu ul li a {
 	text-decoration: none;
+	display: block;
 	color: #444;
+	padding-left: 5px;
+}
+
+.page-body .side-menu ul li a:hover {
+	background-color: #eee;
 }
 
 .page-body .page-content {
 	border-left: 1px solid #eee;
 	width: 750px;
-	margin-left: 208px;
+	margin-left: 200px;
 	padding-left: 30px;
 }
 
 .footer-wrap {
+	clear: both;
 	padding: 100px 0;
 	background-color: #264348;
 	color: #fff;
-	margin-bottom: -212px;
+	margin-top: -212px;
 }
 
 .footer {

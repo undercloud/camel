@@ -159,3 +159,25 @@ input.medusa-input.lg {
 	border-color: #c80a06;
 	z-index: 1;
 }
+
+input[placeholder] { text-overflow: ellipsis;}
+input::-webkit-input-placeholder { color: #aaa;opacity: 1;line-height: normal; }
+input::-moz-placeholder { color: #aaa;opacity: 1;text-overflow:ellipsis; }
+input:-moz-placeholder { color: #aaa;opacity: 1;text-overflow:ellipsis; }
+input:-ms-input-placeholder { color: #aaa;opacity: 1;text-overflow: ellipsis; }
+
+textarea[placeholder] { text-overflow: ellipsis;}
+textarea::-webkit-input-placeholder { color: #aaa;opacity: 1;line-height: normal; }
+textarea::-moz-placeholder{ color: #aaa;opacity: 1;text-overflow: ellipsis; }
+textarea:-moz-placeholder { color: #aaa;opacity: 1;text-overflow: ellipsis; }
+textarea:-ms-input-placeholder { color: #aaa;opacity: 1;text-overflow: ellipsis; }
+
+input:focus::-webkit-input-placeholder { opacity: 0 }
+input:focus:-moz-placeholder { opacity: 0 }
+input:focus::-moz-placeholder { opacity: 0 }
+input:focus:-ms-input-placeholder { opacity: 0 }
+
+textarea:focus::-webkit-input-placeholder { opacity: 0 }
+textarea:focus:-moz-placeholder { opacity: 0 }
+textarea:focus::-moz-placeholder { opacity: 0 }
+textarea:focus:-ms-input-placeholder { opacity: 0 }

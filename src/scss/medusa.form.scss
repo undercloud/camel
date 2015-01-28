@@ -79,11 +79,9 @@ input[type=radio] {
 .medusa-radio-wrap {
 	position: relative;
 	display: inline-block;
-	vertical-align: middle;
+	vertical-align: text-top;
 	width: 16px;
 	height: 16px;
-	margin-top: -2px;
-	margin-bottom: 2px;
 	font-size: 0;
 }
 
@@ -177,119 +175,6 @@ $checkbox_checked_bg: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAA
 	left: 0;
 }
 
-.medusa-toggle {
-	display: inline-block;
-	width:auto;
-
-	.handle {
-		position: relative;
-		display: block;
-		width: 50px;
-		height: 25px;
-		background-color: #ddd;
-		border-radius: 25px;
-		box-shadow: 0 1px 3px #ddd;
-
-		&:before,
-		&:after {
-			position: absolute;
-			top: 0;
-			left: 0;
-			display: block;
-			content: "";
-
-			background-color: #fff;
-			border-radius: 25px;
-			-webkit-transition: all .25s ease-in-out;
-			-moz-transition: all .25s ease-in-out;
-			-ms-transition: all .25s ease-in-out;
-			transition: all 0.25s ease-in-out;
-		}
-
-		&:before {
-			width: 20px;
-			height: 25px;
-		}
-
-		&:after {
-			border: 2px solid #ddd;
-			width: 21px;
-			height: 21px;
-		}
-	}
-
-	.medusa-checkbox {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		opacity: 0;
-		filter: alpha(opacity=0);
-		z-index: 1;
-	}
-
-	.medusa-checkbox:checked + .handle {
-		&:before{
-			width: 50px;
-			background-color: #269ecb;
-		}
-
-		&:after {
-			left: 25px;
-			border-color: #269ecb;
-		}
-	}
-
-	.medusa-checkbox[disabled] + .handle {
-		background-color: #eee;
-
-		&:after {
-			border-color: #eee;
-		}
-	}
-
-	.medusa-checkbox[disabled]:checked + .handle {
-		background-color: #eee;
-
-		&:before {
-			background-color: #eee;
-		}
-
-		&:after {
-			border-color: #eee;
-			background-color: #ddd;
-		}
-	}
-}
-
-.msie8 {
-	.medusa-toggle {
-		.medusa-checkbox[disabled][checked] + .handle {
-			background-color: #eee;
-
-			&:before {
-				background-color: #eee;
-			}
-
-			&:after {
-				border-color: #eee;
-				background-color: #ddd;
-			}
-		}
-
-		.medusa-checkbox[checked] + .handle {
-			&:before{
-				width: 50px;
-				background-color: #269ecb;
-			}
-
-			&:after {
-				left: 25px;
-				border-color: #269ecb;
-			}
-		}
-	}
-}
-
 /*.msie-lt8 {
 	.medusa-radio-wrap {
 		.medusa-radio {
@@ -309,69 +194,3 @@ $checkbox_checked_bg: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAA
 .medusa-button[disabled] {
 	cursor: not-allowed;
 }
-
-input[placeholder] {
-	text-overflow: ellipsis;
-}
-
-input::-webkit-input-placeholder {
-	color: #aaa;
-	opacity: 1;
-	line-height: normal;
-}
-
-input::-moz-placeholder {
-	color: #aaa;
-	opacity: 1;
-	text-overflow:ellipsis;
-}
-
-input:-moz-placeholder {
-	color: #aaa;
-	opacity: 1;
-	text-overflow:ellipsis;
-}
-
-input:-ms-input-placeholder {
-	color: #aaa;
-	opacity: 1;
-	text-overflow: ellipsis;
-}
-
-textarea[placeholder] {
-	text-overflow: ellipsis;
-}
-
-textarea::-webkit-input-placeholder {
-	color: #aaa;
-	opacity: 1;
-	line-height: normal;
-}
-
-textarea::-moz-placeholder{
-	color: #aaa;
-	opacity: 1;
-	text-overflow: ellipsis;
-}
-
-textarea:-moz-placeholder {
-	color: #aaa;
-	opacity: 1;
-	text-overflow: ellipsis;
-}
-
-textarea:-ms-input-placeholder {
-	color: #aaa;
-	opacity: 1;
-	text-overflow: ellipsis;
-}
-
-
-input:focus::-webkit-input-placeholder { opacity: 0 }
-input:focus:-moz-placeholder { opacity: 0 }
-input:focus::-moz-placeholder { opacity: 0 }
-input:focus:-ms-input-placeholder { opacity: 0 }
-textarea:focus::-webkit-input-placeholder { opacity: 0 }
-textarea:focus:-moz-placeholder { opacity: 0 }
-textarea:focus::-moz-placeholder { opacity: 0 }
-textarea:focus:-ms-input-placeholder { opacity: 0 }

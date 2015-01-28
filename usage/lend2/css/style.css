@@ -73,6 +73,14 @@ body {
 	transform: scaleX(1);
 }
 
+.page-preloader {
+	position: relative;
+	background-position: center;
+	background-image: url('../img/preload.gif');
+	background-repeat: no-repeat;
+	width: 100%;
+}
+
 .page-body {
 	width: 960px;
 	margin: 50px auto;

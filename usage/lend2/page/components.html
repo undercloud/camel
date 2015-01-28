@@ -14,41 +14,7 @@
 			<li><a href='overlay'>overlay</a></li>
 		</ul>
 	</div>
-	<div class="page-content"></div>
+	<div class="page-content">
+		<div class="content-section"></div>
+	</div>
 </div>
-
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('.side-menu a').click(function(){
-			$.get(
-				'page/components/' + $(this).attr('href') + '.html',
-				{},
-				function(data){
-					$('.page-content').html(data)
-
-					var highlight = function(i,d){
-						var tabsize = $(d).html().indexOf('<') - 1;
-
-						var src = $(d).html()
-						.trim()
-						.replace(new RegExp('^	{' + tabsize + '}','gm'),'')
-						.replace(/	/g,'&nbsp;&nbsp;&nbsp;&nbsp')
-						.replace(/</g, '&lt;')
-						.replace(/>/g, '&gt;')
-
-						if($.browser.msie && parseInt($.browser.version) <= 8)
-							src = src.replace(/\r?\n/g, '--ms8-newline')
-
-						$('code[src-data="' + $(d).attr('src-data') + '"]').html(src)
-					}
-
-					$('span[src-data]').each(highlight)
-
-					Prism.highlightAll()
-				}
-			)
-
-			return false;
-		})
-	})
-</script>

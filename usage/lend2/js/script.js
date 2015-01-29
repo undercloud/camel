@@ -7,7 +7,7 @@ var site = {
 			var thisis = this
 			setTimeout(function(){
 				$.get(
-					'page/' + p + '/' + $(thisis).attr('href') + '.html',
+					'page/' + p + '/' + $(thisis).attr('href') + '.html?c=' + (new Date().getTime()),
 					{},
 					function(data){
 						$('.page-content').html(data)

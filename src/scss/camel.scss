@@ -1,39 +1,39 @@
 @import 'mixins';
 
-@import 'medusa.base';
-@import 'medusa.list';
-@import 'medusa.table';
+@import 'camel.base';
+@import 'camel.list';
+@import 'camel.table';
 
-@import 'medusa.grid';
-@import 'medusa.grid12';
-@import 'medusa.grid16';
-@import 'medusa.grid24';
+@import 'camel.grid';
+@import 'camel.grid12';
+@import 'camel.grid16';
+@import 'camel.grid24';
 
-@import 'medusa.form';
-@import 'medusa.form.grid';
-@import 'medusa.form.select';
-@import 'medusa.form.toggle';
-@import 'medusa.form.input';
-@import 'medusa.form.button';
-@import 'medusa.form.button.group';
-@import 'medusa.form.file';
-@import 'medusa.form.group';
+@import 'camel.form';
+@import 'camel.form.grid';
+@import 'camel.form.select';
+@import 'camel.form.toggle';
+@import 'camel.form.input';
+@import 'camel.form.button';
+@import 'camel.form.button.group';
+@import 'camel.form.file';
+@import 'camel.form.group';
 
-@import 'medusa.com.alert';
-@import 'medusa.com.callouts';
-@import 'medusa.com.panel';
-@import 'medusa.com.dropdown';
-@import 'medusa.com.progress';
-@import 'medusa.com.breadcrumbs';
-@import 'medusa.com.badge';
-@import 'medusa.com.menu';
-@import 'medusa.com.tooltip';
-@import 'medusa.com.popover';
-@import 'medusa.com.preload';
-@import 'medusa.com.pagination';
-@import 'medusa.com.overlay';
+@import 'camel.com.alert';
+@import 'camel.com.callouts';
+@import 'camel.com.panel';
+@import 'camel.com.dropdown';
+@import 'camel.com.progress';
+@import 'camel.com.breadcrumbs';
+@import 'camel.com.badge';
+@import 'camel.com.menu';
+@import 'camel.com.tooltip';
+@import 'camel.com.popover';
+@import 'camel.com.preload';
+@import 'camel.com.pagination';
+@import 'camel.com.overlay';
 
-@import 'medusa.js.slider';
-@import 'medusa.js.switcher';
+@import 'camel.js.slider';
+@import 'camel.js.switcher';
 
-@import 'medusa.utils';
+@import 'camel.utils';

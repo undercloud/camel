@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+		<title>Camel</title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="../../dist/css/camel.min.css">
+		<link rel="stylesheet" type="text/css" href="css/prism.css?1">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="../../dist/js/camel.min.js"></script>
+		<script type="text/javascript" src="js/prism.js?1"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+	</head>
+	<body>
+		<div class="page-wrap">
+			<div class="header-wrap">
+				<div class="header">
+					<a class="main-page">
+						<span class="logo">camel</span>
+					</a>
+					<ul class="menu">
+						<li><a href="getstarted">Get Started</a></li>
+						<li><a href="css">CSS</a></li>
+						<li><a href="components">Components</a></li>
+						<li><a href="js">JavaScript</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="page-container clearfix"></div>
+		</div>
+		<div class="footer-wrap">
+			<div class="footer">
+				<ul class="footer-menu">
+					<li>Github</li>
+					<li>Issues</li>
+				</ul>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			$(document).on("ready mainpage",function(){
+				$.ajax({
+					async: false,
+					url: 'page/main.html',
+					success: function(data){
+						$('.page-container').html(data)
+					}
+				})
+			})
+
+			$('a.main-page').click(function(){
+				$(document).trigger('mainpage')
+			})
+		</script>
+	</body>
+</html>

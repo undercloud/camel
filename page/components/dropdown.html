@@ -1,0 +1,35 @@
+<div class="content-section">
+	<h1 class="section-head">#dropdown</h1>
+	<span>
+		<span class="camel-button-group">
+			<button class="camel-button dropdown" data-dropdown="a">click</button>
+			<ul class="camel-dropdown"  data-dropdown="a">
+				<li onclick='alert(234)'>first</li>
+				<li>second</li>
+				<span class="split"></span>
+				<li>last</li>
+			</ul>
+		</span>
+	</span>
+	<span>
+		<span class="camel-button-group">
+			<button class="camel-button">button</button>
+			<button class="camel-button dropdown split" data-dropdown="b"></button>
+			<ul class="camel-dropdown" data-dropdown="b">
+				<li onclick='alert(234)'>first</li>
+				<li>second</li>
+				<span class="split"></span>
+				<li>last</li>
+			</ul>
+		</span>
+	</span>
+	<span>
+		<a data-dropdown="c">link</a>
+		<ul class="camel-dropdown" data-dropdown="c">
+			<li onclick='alert(234)'>first</li>
+			<li>second</li>
+			<span class="split"></span>
+			<li>last</li>
+		</ul>
+	</span>
+</div>

@@ -10,7 +10,31 @@ body {
 
 iframe       { border: 0; }
 img,map,area { border: 0; }
-img 		 { vertical-align: top;}
+img {
+	vertical-align: top;
+	position: relative;
+	max-width: 100%;
+	height: auto;
+
+	&.left {
+		float: left;
+		margin: 0.5em 1em;
+		margin-left: 0;
+	}
+
+	&.right {
+		float: right;
+		margin: 0.5em 1em;
+		margin-right: 0;
+	}
+
+	&.clear {
+		margin: 0.5em auto;
+		display: block;
+		float: none;
+		clear: both;
+	}
+}
 
 div  { display: block;position: relative; }
 span { display: inline;position: relative; }
@@ -114,3 +138,52 @@ sup {
 
 sup { top: -.5em; }
 sub { bottom: -.25em; }
+
+/*
+article
+aside*/
+
+figure {
+	padding: 0;
+	margin: 0;
+	text-indent: 0;
+	display: inline-block;
+
+	&.left {
+		float: left;
+		margin: 0.5em 1em;
+		margin-left: 0;
+	}
+
+	&.right {
+		float: right;
+		margin: 0.5em 1em;
+		margin-right: 0;
+	}
+
+	&.clear {
+		margin: 0.5em auto;
+		display: block;
+		float: none;
+		clear: both;
+
+		img {
+			margin: 0 auto;
+			display: block;
+		}
+	}
+}
+
+figcaption {
+	text-indent: 0;
+	text-align: center;
+	padding: 0.5em 1em;
+}
+
+/*footer
+header
+main
+mark
+nav
+section
+*/

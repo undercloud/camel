@@ -131,6 +131,10 @@ body {
 	padding-left: 30px;
 }
 
+.content-section {
+	margin-bottom: 50px;
+}
+
 code[src-data] {
 	margin: 20px 0 !important;
 	border-radius: 0 !important;

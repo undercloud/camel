@@ -5,6 +5,13 @@
 
 	$(document).ready(function(){
 		if($.browser.msie && parseInt($.browser.version) == 8){
+
+			var h5 = ['article','aside','audio','canvas','command','datalist','details','figcaption','figure','footer','header','hgroup','keygen','main','mark','menu','meter','nav','output','progress','rp','rt','ruby','section','source','summary','time','video','wbr']
+
+			$.each(h5,function(i,v){
+				document.createElement(v)
+			})
+
 			$(document.body).addClass('msie8')
 
 			$(document).on('change','.medusa-checkbox-wrap input[type="checkbox"].medusa-checkbox,.medusa-toggle input[type="checkbox"].medusa-checkbox',function(){

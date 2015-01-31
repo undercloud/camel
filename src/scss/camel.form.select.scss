@@ -1,6 +1,6 @@
 @import 'local';
 
-.medusa-select {
+.camel-select {
 	height: 36px;
 	padding: 8px;
 	vertical-align: middle;
@@ -21,15 +21,15 @@
 	}
 }
 
-.medusa-form-group.sm .medusa-select,
-.medusa-select.sm {
+.camel-form-group.sm .camel-select,
+.camel-select.sm {
 	height: 28px;
 	font-size: 12px;
 	padding: 5px;
 }
 
-.medusa-form-group.lg .medusa-select,
-.medusa-select.lg {
+.camel-form-group.lg .camel-select,
+.camel-select.lg {
 	height: 50px;
 	font-size: 16px;
 	padding: 11px;

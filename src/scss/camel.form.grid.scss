@@ -1,6 +1,6 @@
 @import 'local';
 
-.medusa-form-row {
+.camel-form-row {
 	margin-top: $form-grid-m-top;
 	margin-bottom: $form-grid-m-bottom;
 	position: relative;
@@ -9,28 +9,28 @@
 	width: 100%;
 	box-sizing: border-box;
 
-	.medusa-label {
+	.camel-label {
 		&.right {
 			float: right;
 		}
 	}
 
-	.medusa-input,
-	.medusa-input-addon,
-	.medusa-select,
-	.medusa-button {
+	.camel-input,
+	.camel-input-addon,
+	.camel-select,
+	.camel-button {
 		box-sizing: border-box;
 		position: relative;
 		width: 100%;
 		margin: 0;
 	}
 
-	.medusa-button {
+	.camel-button {
 		width: auto;
 	}
 }
 
-.medusa-form-row {
+.camel-form-row {
 	>.form-grid-1, >.form-grid-2, >.form-grid-3,
 	>.form-grid-4, >.form-grid-5, >.form-grid-6,
 	>.form-grid-7, >.form-grid-8, >.form-grid-9,
@@ -59,7 +59,7 @@
 	}
 }
 
-.medusa-form-row {
+.camel-form-row {
 	>.form-grid-1 { width: (100% / 12 * 1)}
 	>.form-grid-2 { width: (100% / 12 * 2)}
 	>.form-grid-3 { width: (100% / 12 * 3)}
@@ -75,7 +75,7 @@
 }
 
 @media only screen and (max-width: 480px) {
-	.medusa-form-row {
+	.camel-form-row {
 		margin: 0;
 		display: block;
 
@@ -89,7 +89,7 @@
 			margin: 0.5em 1%;
 		}
 
-		.medusa-label {
+		.camel-label {
 			&.right {
 				float: none;
 			}

@@ -1,6 +1,6 @@
 @import 'local';
 
-.medusa-toggle {
+.camel-toggle {
 	display: inline-block;
 	width:auto;
 
@@ -41,7 +41,7 @@
 		}
 	}
 
-	.medusa-checkbox {
+	.camel-checkbox {
 		position: absolute;
 		width: 100%;
 		height: 100%;
@@ -50,7 +50,7 @@
 		z-index: 1;
 	}
 
-	.medusa-checkbox:checked + .handle {
+	.camel-checkbox:checked + .handle {
 		&:before{
 			width: 50px;
 			background-color: #269ecb;
@@ -62,7 +62,7 @@
 		}
 	}
 
-	.medusa-checkbox[disabled] + .handle {
+	.camel-checkbox[disabled] + .handle {
 		background-color: #eee;
 
 		&:after {
@@ -70,7 +70,7 @@
 		}
 	}
 
-	.medusa-checkbox[disabled]:checked + .handle {
+	.camel-checkbox[disabled]:checked + .handle {
 		background-color: #eee;
 
 		&:before {
@@ -85,8 +85,8 @@
 }
 
 .msie8 {
-	.medusa-toggle {
-		.medusa-checkbox[disabled][checked] + .handle {
+	.camel-toggle {
+		.camel-checkbox[disabled][checked] + .handle {
 			background-color: #eee;
 
 			&:before {
@@ -99,7 +99,7 @@
 			}
 		}
 
-		.medusa-checkbox[checked] + .handle {
+		.camel-checkbox[checked] + .handle {
 			&:before{
 				width: 50px;
 				background-color: #269ecb;

@@ -1,6 +1,6 @@
 @import 'local';
 
-.medusa-overlay {
+.camel-overlay {
 	display: block;
 	position: absolute;
 	top: 0;
@@ -44,7 +44,7 @@
 }
 
 
-*:hover > .medusa-overlay {
+*:hover > .camel-overlay {
 	&.hover {
 		&.slide {
 			height: 100%;
@@ -63,7 +63,7 @@
 
 
 .msie8 {
-	.medusa-overlay {
+	.camel-overlay {
 		background: transparent;
 		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#99000000', endColorstr='#99000000')";
 		zoom: 1;

@@ -1,6 +1,6 @@
 @import 'local';
 
-.medusa-form-group {
+.camel-form-group {
 	display: inline-table;
 	width: 100%;
 
@@ -12,13 +12,13 @@
 
 	> * {
 		&:first-child,
-		&:first-child.medusa-input-wrap .medusa-input {
+		&:first-child.camel-input-wrap .camel-input {
 			border-top-left-radius: $form-element-radius;
 			border-bottom-left-radius: $form-element-radius;
 		}
 
 		&:last-child,
-		&:last-child.medusa-input-wrap .medusa-input {
+		&:last-child.camel-input-wrap .camel-input {
 			border-top-right-radius: $form-element-radius;
 			border-bottom-right-radius: $form-element-radius;
 		}
@@ -42,7 +42,7 @@
 		vertical-align: middle;
 	}
 
-	.medusa-select {
+	.camel-select {
 		min-width: 100px;
 	}
 
@@ -54,19 +54,19 @@
 			width: 100%;
 			border-radius: 0;
 
-			.medusa-input {
+			.camel-input {
 				border-radius: 0;
 			}
 
 			&:first-child,
-			&:first-child .medusa-input {
+			&:first-child .camel-input {
 				border-radius: 0;
 				border-top-left-radius: $form-element-radius;
 				border-top-right-radius: $form-element-radius;
 			}
 
 			&:last-child,
-			&:last-child .medusa-input {
+			&:last-child .camel-input {
 				border-radius: 0;
 				border-bottom-left-radius: $form-element-radius;
 				border-bottom-right-radius: $form-element-radius;
@@ -78,10 +78,10 @@
 		}
 	}
 
-	.medusa-form-group {
+	.camel-form-group {
 		display: inline-table;
 
-		>.medusa-input,
+		>.camel-input,
 		>.addon-text {
 			border-radius: 0;
 		}

@@ -1,9 +1,9 @@
 @import 'local';
 
-.medusa-form,
-.medusa-button,
-.medusa-input,
-.medusa-select {
+.camel-form,
+.camel-button,
+.camel-input,
+.camel-select {
 	padding: 0;
 	margin: 0;
 	border: 0;
@@ -13,7 +13,7 @@
 	font-size: $default-font-size;
 }
 
-form.medusa-form {
+form.camel-form {
 	padding: 0;
 	margin: 0;
 	padding-left: $form-grid-gutter / 2;
@@ -38,7 +38,7 @@ legend {
 	line-height: 100%;
 }
 
-.medusa-label {
+.camel-label {
 	display: inline-block;
 	vertical-align: middle;
 	line-height: 2em;
@@ -75,8 +75,8 @@ input[type=radio] {
 	}
 }
 
-.medusa-checkbox-wrap,
-.medusa-radio-wrap {
+.camel-checkbox-wrap,
+.camel-radio-wrap {
 	position: relative;
 	display: inline-block;
 	vertical-align: text-top;
@@ -85,8 +85,8 @@ input[type=radio] {
 	font-size: 0;
 }
 
-.medusa-pseudo-radio,
-.medusa-pseudo-checkbox {
+.camel-pseudo-radio,
+.camel-pseudo-checkbox {
 	position: relative;
 	width: 16px;
 	height: 16px;
@@ -101,29 +101,29 @@ $radio_disabled_checked_bg: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA
 $radio_bg: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABFUlEQVQ4T6VT2w2CMBS1MICOoBMIG+ASEL50A3AT2EC/CCwhG1gm0BF0AKjnkrYp9dEYSEh67uPcN1tYX1VVa8/zMsZYBFUg1VwI0Q7DUKZpejddmAmapimAM5vUxCAqkiQ5KpkmqOuaI+qWFDA6413EccwJgziALIdsrzKCLqT3SGBEfgJGytHOhIgga/Ev8ZewyxnV7Pv+TRqH35wVmSS5Eu77fsNUdEobtR1+1a90KPckyymZUbsz+ocsOGUgSIHUJxNxZaL85hPMKQF963QT1VhcqZN+0sTZY7QW6QG8cyzSBTYrvUjGbPUqQ3aSBnqVgelGxj2h2rEz46H9fUx2r95mL3uSI0pkHFeHd4vVLexzfgEDoKvpvLfgUAAAAABJRU5ErkJggg==');
 $radio_checked_bg: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABcklEQVQ4T6WTMVbCQBCG5+eBrRwhFNAKRVLjDbyBAgcATwDcIDkAkJtIHQqwDYV4A2yFxzgTs+smoE+fVNld5pv5/5kBlX7eYu3VTschgbsgtPWZiTfEWB4q1WjX6+zcELiH5jwJJWhYhrpnZgq3A//R3FlAa5ZsCLjJM0YEire9YKPn5iJpSxkjgd+birb9oKPfGcBkFvobVbhrAsuVZKATlgBdi6xIICOo5is+vmRkcOe7YANTCBhrPb+j2oDNnhP1QaB1MXIM8F0WCMRpz59ayDyJVY5WAaPdzX7JTFOy8USr0O6gNV+xXqZ93xranK32qrPoAe/SftAwdybu9wCm13Tge+eAvH2uhNZsNZH+jAsVME0FMHElEPPzRRNtaxmfJhLFJjh/+zLx320sDBLRXnbg9sdBYjyJ23U7SNYUd5SZY6pQVBjlEw0BPGT/F+3pIMgW7e/L5AzcGSCfQq/GhxGYuma5NCODlgfUwvI6fwCLzO58/iWqogAAAABJRU5ErkJggg==');
 
-.medusa-radio-wrap .medusa-radio[disabled] + .medusa-pseudo-radio {
+.camel-radio-wrap .camel-radio[disabled] + .camel-pseudo-radio {
 	background-image: $radio_disabled_bg;
 }
 
-.medusa-radio-wrap .medusa-radio[disabled]:checked + .medusa-pseudo-radio {
+.camel-radio-wrap .camel-radio[disabled]:checked + .camel-pseudo-radio {
 	background-image: $radio_disabled_checked_bg;
 }
 
-.medusa-radio-wrap .medusa-radio + .medusa-pseudo-radio {
+.camel-radio-wrap .camel-radio + .camel-pseudo-radio {
 	background-image: $radio_bg;
 }
 
-.medusa-radio-wrap .medusa-radio:checked + .medusa-pseudo-radio {
+.camel-radio-wrap .camel-radio:checked + .camel-pseudo-radio {
 	background-image: $radio_checked_bg;
 }
 
 .msie8 {
-	.medusa-radio-wrap {
-		.medusa-radio[disabled][checked] + .medusa-pseudo-radio {
+	.camel-radio-wrap {
+		.camel-radio[disabled][checked] + .camel-pseudo-radio {
 			background-image: $radio_disabled_checked_bg;
 		}
 
-		.medusa-radio[checked] + .medusa-pseudo-radio {
+		.camel-radio[checked] + .camel-pseudo-radio {
 			background-image: $radio_checked_bg;
 		}
 	}
@@ -134,37 +134,37 @@ $checkbox_disabled_checked_bg: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUg
 $checkbox_bg: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAYUlEQVQ4T2NcvXq1w79//+YzMjIqMJAA/v///4CJiSmRcdWqVQ+A+uRJ0AtXCjIEZMB/kEhYWBgjKYbA9I0awMAwGgbDJgw+APMAPyn5AEntQ0ZQdgbmqgVk5MiHwCIgAQDwp3AnPE2fswAAAABJRU5ErkJggg==');
 $checkbox_checked_bg: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA2UlEQVQ4T72TsRWCQBBEZ2hAO9BAiEk01k7k2YAlaCGInWjsJcaaYAfYwK3HKTweHjzOwIv3z+7OzXKWqWUgkgGcwutJrsmEUapyEBMvti6WnNFByW/wm/qvgAieJEbNiQdPUMIIZAmNmKQx3WOFCr4ni2uYXWIITwTGbg8Ee+Pqthq1D/4WMPBtM9/ZLppnO6QZ29XZuYLpXICyqgFT1Qc7V2iKlAXtnduZcf5CJWKLG4a5Atf5jVakTNrH7a60Ds5Bp0CYqqKdrsG3IXjQnrPG0fsiDawDrF9J/oEw9fcSQAAAAABJRU5ErkJggg==');
 
-.medusa-checkbox-wrap .medusa-checkbox[disabled] + .medusa-pseudo-checkbox {
+.camel-checkbox-wrap .camel-checkbox[disabled] + .camel-pseudo-checkbox {
 	background-image: $checkbox_disabled_bg;
 }
 
-.medusa-checkbox-wrap .medusa-checkbox[disabled]:checked + .medusa-pseudo-checkbox {
+.camel-checkbox-wrap .camel-checkbox[disabled]:checked + .camel-pseudo-checkbox {
 	background-image: $checkbox_disabled_checked_bg;
 }
 
-.medusa-checkbox-wrap .medusa-checkbox + .medusa-pseudo-checkbox {
+.camel-checkbox-wrap .camel-checkbox + .camel-pseudo-checkbox {
 	background-image: $checkbox_bg;
 }
 
-.medusa-checkbox-wrap .medusa-checkbox:checked + .medusa-pseudo-checkbox {
+.camel-checkbox-wrap .camel-checkbox:checked + .camel-pseudo-checkbox {
 	background-image: $checkbox_checked_bg;
 }
 
 
 .msie8 {
-	.medusa-checkbox-wrap {
-		.medusa-checkbox[disabled][checked] + .medusa-pseudo-checkbox {
+	.camel-checkbox-wrap {
+		.camel-checkbox[disabled][checked] + .camel-pseudo-checkbox {
 			background-image: $checkbox_disabled_checked_bg;
 		}
 
-		.medusa-checkbox[checked] + .medusa-pseudo-checkbox {
+		.camel-checkbox[checked] + .camel-pseudo-checkbox {
 			background-image: $checkbox_checked_bg;
 		}
 	}
 }
 
-.medusa-checkbox-wrap .medusa-checkbox,
-.medusa-radio-wrap .medusa-radio  {
+.camel-checkbox-wrap .camel-checkbox,
+.camel-radio-wrap .camel-radio  {
 	position: absolute;
 	z-index: 1;
 	opacity: 0;
@@ -176,21 +176,21 @@ $checkbox_checked_bg: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAA
 }
 
 /*.msie-lt8 {
-	.medusa-radio-wrap {
-		.medusa-radio {
+	.camel-radio-wrap {
+		.camel-radio {
 			filter: alpha(opacity=100);
 		}
 	}
 }*/
 
-.medusa-input[disabled],
-.medusa-select[disabled] {
+.camel-input[disabled],
+.camel-select[disabled] {
 	background: #eee;
 	border: 1px solid #cdcdcd;
 	color: #aaa;
 	cursor: not-allowed;
 }
 
-.medusa-button[disabled] {
+.camel-button[disabled] {
 	cursor: not-allowed;
 }

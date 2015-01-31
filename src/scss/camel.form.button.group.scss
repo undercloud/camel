@@ -1,6 +1,6 @@
 @import 'local';
 
-.medusa-button-group {
+.camel-button-group {
 	font-size: 0;
 	position: relative;
 	display: inline-block;
@@ -12,11 +12,11 @@
 		border-collapse: collapse;
 	}
 
-	&.full .medusa-button {
+	&.full .camel-button {
 		display: table-cell;
 	}
 
-	.medusa-button {
+	.camel-button {
 		margin: 0;
 		margin-left: -1px;
 		border-radius: 0;
@@ -38,11 +38,11 @@
 	&.stack {
 		display: inline-block;
 
-		.medusa-button + .medusa-button {
+		.camel-button + .camel-button {
 			margin-top: -1px;
 		}
 
-		.medusa-button {
+		.camel-button {
 			margin: 0;
 			border-radius: 0;
 			border-left: none;

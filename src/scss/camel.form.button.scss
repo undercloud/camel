@@ -1,6 +1,6 @@
 @import 'local';
 
-.medusa-button {
+.camel-button {
 	position: relative;
 
 	cursor: pointer;
@@ -215,18 +215,18 @@
 	}
 }
 
-.medusa-button {
+.camel-button {
 	color: $default-button-color;
 	background-color: $default-button-bg-color;
 }
 
-.medusa-button.dropdown.split,
-.medusa-button-group .medusa-button {
+.camel-button.dropdown.split,
+.camel-button-group .camel-button {
 	border-left: 1px solid #234;
 	border-right: 1px solid #234;
 }
 
-.medusa-button-group.stack .medusa-button {
+.camel-button-group.stack .camel-button {
 	border-top: 1px solid #234;
 	border-bottom: 1px solid #234;
 }

@@ -1,8 +1,8 @@
-*:hover > .medusa-popover {
+*:hover > .camel-popover {
 	display: block;
 }
 
-.medusa-popover {
+.camel-popover {
 	position: absolute;
 	display: none;
 	background: #88b7d5;
@@ -11,7 +11,7 @@
 	border-radius: 5px;
 	z-index: 1;
 }
-.medusa-popover:after, .medusa-popover:before {
+.camel-popover:after, .camel-popover:before {
 	border: solid transparent;
 	content: " ";
 	height: 0;
@@ -20,92 +20,92 @@
 	pointer-events: none;
 }
 
-.medusa-popover:after {
+.camel-popover:after {
 	border-color: rgba(136, 183, 213, 0);
 	border-width: 7px;
 	margin-left: -7px;
 }
-.medusa-popover:before {
+.camel-popover:before {
 	border-color: rgba(194, 225, 245, 0);
 	border-width: 8px;
 	margin-left: -8px;
 }
 
-.medusa-popover.bottom {
+.camel-popover.bottom {
 	margin-top: 10px;
 }
 
-.medusa-popover.bottom:after,
-.medusa-popover.bottom:before {
+.camel-popover.bottom:after,
+.camel-popover.bottom:before {
 	bottom: 100%;
 	left: 50%;
 }
 
-.medusa-popover.bottom:after {
+.camel-popover.bottom:after {
 	border-bottom-color: #88b7d5;
 }
 
-.medusa-popover.bottom:before {
+.camel-popover.bottom:before {
 	border-bottom-color: #c2e1f5;
 }
 
-.medusa-popover.top {
+.camel-popover.top {
 	margin-bottom: 10px;
 	bottom: 100%;
 }
 
-.medusa-popover.top:after,
-.medusa-popover.top:before {
+.camel-popover.top:after,
+.camel-popover.top:before {
 	top: 100%;
 	left: 50%;
 }
 
-.medusa-popover.top:after {
+.camel-popover.top:after {
 	border-top-color: #88b7d5;
 }
 
-.medusa-popover.top:before {
+.camel-popover.top:before {
 	border-top-color: #c2e1f5;
 }
 
-.medusa-popover.left {
+.camel-popover.left {
 	margin-right: 10px;
 	right: 100%;
 	top: 0;
 }
 
-.medusa-popover.left:after,
-.medusa-popover.left:before {
+.camel-popover.left:after,
+.camel-popover.left:before {
 	top: 5px;
 	left: 100%;
 	margin-left: 0px;
 }
 
-.medusa-popover.left:after {
+.camel-popover.left:after {
 	border-left-color: #88b7d5;
 }
 
-.medusa-popover.left:before {
+.camel-popover.left:before {
 	border-left-color: #c2e1f5;
 }
 
-.medusa-popover.right {
+.camel-popover.right {
 	margin-left: 10px;
 	left: 100%;
 	top: 0;
 }
 
-.medusa-popover.right:after,
-.medusa-popover.right:before {
+.camel-popover.right:after,
+.camel-popover.right:before {
 	top: 5px;
 	right: 100%;
 	margin-right: 0px;
 }
 
-.medusa-popover.right:after {
+.camel-popover.right:after {
 	border-right-color: #88b7d5;
 }
 
-.medusa-popover.right:before {
+.camel-popover.right:before {
 	border-right-color: #c2e1f5;
 }

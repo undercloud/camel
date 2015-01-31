@@ -1,9 +1,9 @@
-(function(global){	
+(function(global){
 	"use strict"
 
-	global.medusa = {
+	global.camel = {
 		modules: [],
-		root: '/js/medusa/',
+		root: '/js/camel/',
 		isLoad: function(name){
 			for(var i=0;i<this.modules.length;i++)
 				if(this.modules[i] == name)

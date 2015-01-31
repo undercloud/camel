@@ -1,10 +1,10 @@
-(function(global){	
+(function(global){
 	"use strict"
 
-	if(typeof global.medusa == 'undefined')
-		global.medusa = {}
+	if(typeof global.camel == 'undefined')
+		global.camel = {}
 
-	global.medusa.switcher = function(el,opt){
+	global.camel.switcher = function(el,opt){
 		var el = $(el)
 		if(typeof opt == 'undefined') opt = {}
 		if(typeof opt.multiple == 'undefined') opt.multiple = false;
@@ -96,14 +96,14 @@
 		return api
 	}
 
-	if(typeof global.medusa.register != 'undefined')
-		global.medusa.register('switcher')
+	if(typeof global.camel.register != 'undefined')
+		global.camel.register('switcher')
 })(window)
 
 /*
 var eh = null;
 $(document).ready(function(){
-	eh = medusa.switcher(
+	eh = camel.switcher(
 		'#switcher',
 		{
 			//multiple: true,

@@ -1,9 +1,9 @@
 "use strict";
 /*
-<div class='medusa-upload'>
-	<div class='medusa-upload-title'>Загрузить файл</div>
+<div class='camel-upload'>
+	<div class='camel-upload-title'>Загрузить файл</div>
 	<form>
-		<input type='file' class='medusa-upload-file'/>
+		<input type='file' class='camel-upload-file'/>
 	</form>
 </div>
 
@@ -18,7 +18,7 @@ var api = {
 	upload: function(index ? null){}
 }
 
-var api = new medusa.upload(
+var api = new camel.upload(
 	$('input[type=file]'),
 	{
 		dragarea: $('.file-upload-fileslist'),
@@ -38,13 +38,13 @@ var api = new medusa.upload(
 )
 */
 
-if(typeof medusa == 'undefined')
-	var medusa = {}
+if(typeof camel == 'undefined')
+	var camel = {}
 
-medusa.upload = function(target,options){
+camel.upload = function(target,options){
 
 	if(!options) options = {}
-	if(!options.maxsize) options.maxsize = 2 * 1024 * 1024 
+	if(!options.maxsize) options.maxsize = 2 * 1024 * 1024
 
 	var FileTooLarge     = function(){}
 	var FileBadExtension = function(){}
@@ -98,7 +98,7 @@ medusa.upload = function(target,options){
 						inline.push(this.obj2uri(request[key] , inKey+'['+key+']'));
 					else
 						inline.push(this.obj2uri(request[key] , key));
-					
+
 			return inline.join('&');
 		},
 		obj2formData : function r(formdata,data,inkey){
@@ -144,7 +144,7 @@ medusa.upload = function(target,options){
 				}else{
 					var formdata = new FormData();
 					formdata.append($(this.files).attr('name'), list[i]);
-					
+
 					var plaindata = {};
 					this.obj2formData(plaindata,this.data)
 					for(var x in plaindata)
@@ -161,18 +161,18 @@ medusa.upload = function(target,options){
 						contentType: false,
 						processData: false,
 						iteration: i,
-						xhr: function() { 
+						xhr: function() {
 							var thisis = this
 							var myXhr = $.ajaxSettings.xhr();
 							if(myXhr.upload){
 								myXhr.upload.addEventListener('progress',function(e){
 									if(e.lengthComputable && typeof options.progress == 'function')
 										options.progress(thisis.iteration,e.loaded,e.total);
-									
+
 								}, false)
 							}
 							return myXhr;
-						},  
+						},
 						beforeSend: function(){
 							if(typeof options.begin == 'function')
 								options.begin(this.iteration,api.mode)
@@ -206,7 +206,7 @@ medusa.upload = function(target,options){
 
 			var uniqid = "frame" + new Date().getTime()
 			this.iframe_handle = $('<iframe name="'+uniqid+'" id="'+uniqid+'" style="display:none" />');
-			
+
             $("body").append(this.iframe_handle);
 
             var url = $(this.files).closest("form").attr('action');
@@ -310,5 +310,5 @@ medusa.upload = function(target,options){
 	return api;
 }
 
-if(typeof medusa.register != 'undefined')
-	medusa.register('upload')
+if(typeof camel.register != 'undefined')
+	camel.register('upload')

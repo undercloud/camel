@@ -14,7 +14,7 @@
 
 			$(document.body).addClass('msie8')
 
-			$(document).on('change','.medusa-checkbox-wrap input[type="checkbox"].medusa-checkbox,.medusa-toggle input[type="checkbox"].medusa-checkbox',function(){
+			$(document).on('change','.camel-checkbox-wrap input[type="checkbox"].camel-checkbox,.camel-toggle input[type="checkbox"].camel-checkbox',function(){
 				if(this.checked){
 					this.setAttribute('checked','checked')
 				}else{
@@ -22,7 +22,7 @@
 				}
 			})
 
-			$(document).on('change','.medusa-radio-wrap input[type="radio"].medusa-radio',function(){
+			$(document).on('change','.camel-radio-wrap input[type="radio"].camel-radio',function(){
 				var n = this.getAttribute('name');
 
 				var a = [this];
@@ -44,8 +44,8 @@
 	})
 
 	//alert
-	$(document).on('click','.medusa-alert .close',function(){
-		var rem = $(this).closest('.medusa-alert')
+	$(document).on('click','.camel-alert .close',function(){
+		var rem = $(this).closest('.camel-alert')
 
 		rem.fadeOut('medium',function(){
 			rem.remove()
@@ -53,7 +53,7 @@
 	})
 
 	//panels
-	$(document).on('click','.medusa-panel .head.expand,.medusa-panel .head.collapse',function(){
+	$(document).on('click','.camel-panel .head.expand,.camel-panel .head.collapse',function(){
 		if($(this).hasClass('collapse'))
 			$(this).removeClass('collapse').addClass('expand')
 		else
@@ -61,11 +61,11 @@
 	})
 
 	//dropdown
-	$(document).on('click','.medusa-button[data-dropdown],a[data-dropdown]', function(){
+	$(document).on('click','.camel-button[data-dropdown],a[data-dropdown]', function(){
 		var tag = $(this).attr('data-dropdown')
 		if(!tag) retrun;
 
-		var dd = $('.medusa-dropdown[data-dropdown="' + tag + '"]')
+		var dd = $('.camel-dropdown[data-dropdown="' + tag + '"]')
 		if(!dd) return;
 
 		//.css('left',this.offsetLeft + 'px')
@@ -76,7 +76,7 @@
 			$(this).hide()
 		})*/
 	}).on('mouseup', function(e){
-		var container = $(".medusa-dropdown");
+		var container = $(".camel-dropdown");
 
 		if(!container.is(e.target) && container.has(e.target).length === 0){
 			container.removeClass('active');

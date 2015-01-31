@@ -7,7 +7,7 @@
 		</div>
 	</div>
 
-	new medusa.slider(
+	new camel.slider(
 		$('#slider'),
 		{
 			width: 700,
@@ -23,10 +23,10 @@
 	)
 */
 
-if(typeof medusa == 'undefined')
-	var medusa = {}
+if(typeof camel == 'undefined')
+	var camel = {}
 
-medusa.slider = function(target,options){
+camel.slider = function(target,options){
 	var widtharea   = typeof options.width       != 'undefined' ? options.width       : 700;
 	var heightarea  = typeof options.height      != 'undefined' ? options.height      : 500;
 	var slidetime   = typeof options.slidetime   != 'undefined' ? options.slidetime   : 3000;
@@ -43,7 +43,7 @@ medusa.slider = function(target,options){
 
 	var complete = function() {}
 
-	t.addClass('medusa-slider')
+	t.addClass('camel-slider')
 	t.children().addClass('item')
 
 	t.children().wrapAll('<div class="ribbon"></div>')
@@ -197,5 +197,5 @@ medusa.slider = function(target,options){
 	}
 }
 
-if(typeof medusa.register != 'undefined')
-	medusa.register('slider')
+if(typeof camel.register != 'undefined')
+	camel.register('slider')

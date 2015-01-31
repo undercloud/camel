@@ -8,7 +8,7 @@
 		<dd id='two'></dd>
 	</dl>
 
-	api = new medusa.collapse(
+	api = new camel.collapse(
 		$('#collapse'),
 		{
 			selected: 3,
@@ -29,19 +29,19 @@
 	}
 */
 
-if(typeof medusa == 'undefined')
-	var medusa = {}
+if(typeof camel == 'undefined')
+	var camel = {}
 
-medusa.collapse = function(el,options){
+camel.collapse = function(el,options){
 	if(typeof options == 'undefined')options = {}
 	if(typeof options.selected == 'undefined') options.selected = 0
 
 	var ids = []
-	$(el).addClass('medusa-collapse-wrap')
+	$(el).addClass('camel-collapse-wrap')
 	$(el).children('dt').each(function(i,d){
 		ids.push($(d).attr('href'))
-		$(d).addClass('medusa-collapse-head').addClass('noselect')
-		$($(d).attr('href')).addClass('medusa-collapse-body').hide()
+		$(d).addClass('camel-collapse-head').addClass('noselect')
+		$($(d).attr('href')).addClass('camel-collapse-body').hide()
 
 		if(typeof options.height != 'undefined'){
 			$($(d).attr('href')).css({
@@ -70,12 +70,12 @@ medusa.collapse = function(el,options){
 			$(d).addClass('selected')
 
 			if($(d).attr('url')){
-				$($(d).attr('href')).addClass('medusa-collapse-preloader').html('')
+				$($(d).attr('href')).addClass('camel-collapse-preloader').html('')
 				$.get(
 					$(d).attr('url'),
 					function(data){
-						$($(d).attr('href')).removeClass('medusa-collapse-preloader').html(data)
-						
+						$($(d).attr('href')).removeClass('camel-collapse-preloader').html(data)
+
 						if(typeof options.ajax == 'function')
 							options.ajax(i,ids[i])
 					}
@@ -102,5 +102,5 @@ medusa.collapse = function(el,options){
 	}
 }
 
-if(typeof medusa.register != 'undefined')
-	medusa.register('collapse')
+if(typeof camel.register != 'undefined')
+	camel.register('collapse')

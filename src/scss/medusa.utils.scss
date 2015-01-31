@@ -17,7 +17,12 @@
 .txt-right     { text-align:right; }
 .txt-center    { text-align:center; }
 .txt-justify   { text-align:justify; }
-.txt-overflow  {overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.txt-overflow  {
+	overflow-x: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
 .txt-no-select {
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -27,16 +32,15 @@
 	user-select: none;
 }
 
-.pull-left      { float: left !important;}
-.pull-right     { float: right !important;}
-.pull-center    { display: block;margin-left: auto;margin-right: auto;}
-.pull-middle    { vertical-align: middle;}
+.pull-left      { float: left !important; }
+.pull-right     { float: right !important; }
+.pull-center    { display: block;margin-left: auto;margin-right: auto; }
+.pull-middle    { vertical-align: middle; }
 
 .block          { display: block; }
 .inline         { display: inline; }
 .inline-block   { display: inline-block; }
-.show           { display: block !important;}
-.show-inline    { display: inline-block !important;}
+.show           { display: block !important; }
 .hide           { display: none !important;visibility: hidden !important; }
 .invisible      { visibility: hidden; }
 

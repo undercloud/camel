@@ -61,10 +61,10 @@ gulp.task('js-min', function(){
 
 gulp.task('js-concat',function(){
 	return gulp.src([
-		'dist/js/medusa.core.min.js',
-		'dist/js/!(medusa.core).min.js'
+		'dist/js/camel.core.min.js',
+		'dist/js/!(camel.core).min.js'
 	])
-	.pipe(concat('medusa.min.js'))
+	.pipe(concat('camel.min.js'))
 	.pipe(gulp.dest(folders.dist.js))
 })
 

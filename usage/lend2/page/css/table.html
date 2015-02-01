@@ -71,3 +71,15 @@
 	</span>
 	<code src-data="table" class="language-markup"></code>
 </div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.table-control span').click(function(){
+			$(this).toggleClass('active')
+			$('.camel-table').toggleClass($(this).text().substr(1))
+
+			$('code[src-data="table"]').empty()
+			site.highlight(0,$('span[src-data="table"]'))
+			Prism.highlightElement($('code[src-data="table"]')[0])
+		})
+	})
+</script>

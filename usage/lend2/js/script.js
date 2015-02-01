@@ -11,25 +11,7 @@ var site = {
 					{},
 					function(data){
 						$('.page-content').html(data)
-
-						var highlight = function(i,d){
-							var tabsize = $(d).html().indexOf('<') - 1;
-
-							var src = $(d).html()
-							.trim()
-							.replace(new RegExp('^	{' + tabsize + '}','gm'),'')
-							.replace(/	/g,'&nbsp;&nbsp;&nbsp;&nbsp')
-							.replace(/</g, '&lt;')
-							.replace(/>/g, '&gt;')
-
-							//if($.browser.msie && parseInt($.browser.version) <= 8)
-							//	src = src.replace(/\r?\n/g, '--ms8-newline')
-
-							$('code[src-data="' + $(d).attr('src-data') + '"]').html(src)
-						}
-
-						$('span[src-data]').each(highlight)
-
+						$('span[src-data]').each(site.highlight)
 						Prism.highlightAll()
 					}
 				)
@@ -37,6 +19,21 @@ var site = {
 
 			return false;
 		})
+	},
+	highlight: function(i,d){
+		var tabsize = $(d).html().indexOf('<') - 1;
+
+		var src = $(d).html()
+		.trim()
+		.replace(new RegExp('^	{' + tabsize + '}','gm'),'')
+		.replace(/	/g,'&nbsp;&nbsp;&nbsp;&nbsp')
+		.replace(/</g, '&lt;')
+		.replace(/>/g, '&gt;')
+
+		//if($.browser.msie && parseInt($.browser.version) <= 8)
+		//	src = src.replace(/\r?\n/g, '--ms8-newline')
+
+		$('code[src-data="' + $(d).attr('src-data') + '"]').html(src)
 	}
 }
 

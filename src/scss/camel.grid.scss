@@ -4,20 +4,27 @@
 .row-16,
 .row-24 {
 	position: relative;
+	*zoom: 1;
+
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
 }
 
-.grid-1, .grid-2, .grid-3, .grid-4,
-.grid-5, .grid-6, .grid-7, .grid-8,
-.grid-9, .grid-10, .grid-11, .grid-12,
-.grid-13, .grid-14, .grid-15, .grid-16,
-.grid-17, .grid-18, .grid-19, .grid-20,
-.grid-21, .grid-22, .grid-23, .grid-24 {
+*[class*='grid-'] {
 	display: inline;
 	float: left;
 	position: relative;
 	margin: 1%;
 	width: 98%;
-	max-width: 1210px;
+	min-height: 1px;
+	max-width: 1200px;
 }
 
 .alpha { margin-left: 0; }

@@ -1,0 +1,30 @@
+<div class="content-body">
+	<h2 class="section-head">#tabs</h2>
+
+	<div id="camel-tab">
+		<ul>
+			<li>
+				<a href="#one">Home</a>
+			</li>
+			<li>
+				<a href="#two">Profile<span class="close"></span></a>
+			</li>
+		</ul>
+		<div id="one">
+			Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+		</div>
+		<div id="two">
+			Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee.
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			new camel.tabs(
+				'#camel-tab',{
+					selected: 0
+				}
+			)
+		})
+	</script>
+</div>

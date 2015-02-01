@@ -20,12 +20,19 @@
 
 	&.hover {
 		&.slide {
-			-ms-transition: height 0.3s ease-out;
-			-webkit-transition: height 0.3s ease-out;
-			-moz-transition: height 0.3s ease-out;
-			transition: height 0.3s ease-out;
+			-ms-transition: transform 0.3s ease-out;
+			-webkit-transition: transform 0.3s ease-out;
+			-moz-transition: transform 0.3s ease-out;
+			transition: transform 0.3s ease-out;
+			-ms-transform: scaleY(0) translateZ(0);
+			-webkit-transform: scaleY(0) translateZ(0);
+			-moz-transform: scaleY(0) translateZ(0);
+			transform: scaleY(0) translateZ(0);
+			-ms-transform-origin: 0 100%;
+			-webkit-transform-origin: 0 100%;
+			-moz-transform-origin: 0 100%;
+			transform-origin: 0 100%;
 			top: auto;
-			height: 0;
 		}
 
 		&.fade {
@@ -47,7 +54,10 @@
 *:hover > .camel-overlay {
 	&.hover {
 		&.slide {
-			height: 100%;
+			-ms-transform: scaleY(1) translateZ(0);
+			-webkit-transform: scaleY(1) translateZ(0);
+			-moz-transform: scaleY(1) translateZ(0);
+			transform: scaleY(1) translateZ(0);
 		}
 
 		&.fade {

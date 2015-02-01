@@ -28,7 +28,7 @@ table.camel-table {
 		border-bottom: 1px solid $secondary-color-dark;
 	}
 
-	&.striped tr:nth-child(odd) td {
+	&.striped tr:nth-child(even) td {
 		background-color: $secondary-color-light;
 	}
 

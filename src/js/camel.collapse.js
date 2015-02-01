@@ -7,7 +7,7 @@
 		<dt href='#two'>Second Header</dt>
 		<dd id='two'></dd>
 	</dl>
-
+	
 	api = new camel.collapse(
 		$('#collapse'),
 		{

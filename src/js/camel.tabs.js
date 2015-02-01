@@ -33,13 +33,49 @@ camel.tabs = function(el,options){
 	if(typeof options.position == 'undefined') options.position = 'horisontal'
 	if(typeof options.selected == 'undefined') options.selected = 0;
 
-	var ids = [];
+	$(el).each(function(i,d){
+		$(d).addClass('camel-tabs').children().not('ul').addClass('item').wrapAll('<div class="tabs-body"></div>')
+		$(d).addClass('camel-tabs').children('ul').addClass('tabs-head')
 
-	$(el).addClass('camel-tabs-wrap').addClass('camel-tabs-wrap-' + options.position)
-	$(el).children('ul').addClass('camel-tabs-header').addClass('noselect')
+		var ids = [];
+		var last_select = options.selected;
 
-	var hold = $(el).children().not('ul')
-	$(el).children('ul').after("<div class='camel-tabs-body-items-wrap'></div>").next().append(hold)
+		$(d).find('ul.tabs-head a').each(function(ii,dd){
+			ids.push($(dd).attr('href'))
+
+			if(ii == last_select){
+				$(dd).addClass('active')
+				$(d).find('.tabs-body .item').eq(ii).addClass('active')
+			}
+
+			$(dd).click(function(e){
+				if($(this).hasClass('close') && e.offsetX > $(this)[0].offsetWidth){
+					alert('close catched');
+				}
+
+				console.log(e.offsetX,$(this)[0].offsetWidth)
+
+				if(last_select == ii) return false;
+
+				//$($(dd).attr('href'))
+				$(ids[last_select]).removeClass('active')
+				$(d).find('ul.tabs-head a').eq(last_select).removeClass('active')
+
+				last_select = ii
+				$(this).addClass('active')
+				$(ids[last_select]).addClass('active')
+
+				return false;
+			})
+		})
+	})
+
+	//$(el).addClass('camel-tabs-wrap').addClass('camel-tabs-wrap-' + options.position)
+	//$(el).children('ul').addClass('camel-tabs-header').addClass('noselect')
+
+	
+
+	return;
 
 	if(options.position == 'vertical'){
 		$(el).find('.camel-tabs-body-items-wrap').eq(0).css({

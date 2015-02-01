@@ -1,0 +1,174 @@
+@import 'local';
+
+.camel-tabs {
+	> ul.tabs-head {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		white-space: nowrap;
+		display: block;
+		font-size: 0;
+		line-height: 0;
+		position: relative;
+
+		li {
+			font-size: 0;
+			line-height: 0;
+			display: inline-block;
+
+			a {
+				color: $primary-color;
+				font-size: $default-font-size;
+				padding: 1.5em;
+				display: block;
+				cursor: pointer;
+				max-width: 150px;
+				position: relative;
+				text-decoration: none;
+
+				@include text-truncate;
+
+				&.active {
+					background-color: #eee;
+				}
+
+				&.close {
+					padding-right: 2.5em;
+
+					&:after {
+						content: '\0D7';
+						font-family: Arial;
+						font-size: 1.5em;
+						font-weight: 700;
+						display: block;
+						margin-top: 0;
+						margin-bottom: 0;
+						position: absolute;
+						right: 0.5em;
+					}
+				}
+			}
+		}
+	}
+
+	> .tabs-body {
+		margin-top: 1em;
+		> .item {
+			display: none;
+
+			&.active {
+				display: block;
+			}
+		}
+	}
+}
+
+/*
+.camel-tabs-wrap
+{
+	position: relative;
+	overflow: hidden;
+}
+
+.camel-tabs-wrap-horisontal{}
+.camel-tabs-wrap-vertical{}
+
+ul.camel-tabs-header
+{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	display: inline-block;
+	font-size: 0;
+	position: relative;
+}
+
+.camel-tabs-header-overflow
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: #fff;
+	padding: 0 0 0 1px;
+}
+
+.camel-tabs-header-left,
+.camel-tabs-header-right
+{
+	display: inline-block;
+	padding: 15px 5px;
+	cursor: pointer;
+	background-color: #eee;
+	font-size: 25px;
+	color: #434143;
+}
+
+.camel-tabs-header-left:hover,
+.camel-tabs-header-right:hover
+{
+	background-color: #ddf;
+}
+
+ul.camel-tabs-header li
+{
+	padding: 15px 20px;
+	display: inline-block;
+	cursor: pointer;
+	background-color: #eee;
+	font-size: 14px;
+	margin-right: 3px;
+	max-width: 150px;
+	min-width: 100px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	position: relative;
+}
+
+ul.camel-tabs-header li:hover
+{
+	background-color: #ccc;
+}
+
+ul.camel-tabs-header li.selected
+{
+	background-color: #597BA5;
+	color: #fff;
+}
+
+.camel-tabs-body-item
+{
+	display: inline-block;
+	overflow-y: auto;
+	min-height: 200px;
+	padding: 5px;
+	white-space: normal;
+	position: relative;
+	vertical-align: top;
+	box-sizing: border-box;
+}
+
+.camel-tabs-body-items-wrap
+{
+	vertical-align: top;
+	white-space: nowrap;
+	position: relative;
+	overflow: auto;
+}
+
+.camel-tabs-inline-block
+{
+	display: inline-block;
+}
+
+.camel-tabs-preloader
+{
+	width: 100%;
+	height: 100px;
+	position: relative;
+	background-image: url('pre-load.gif');
+	background-repeat: no-repeat;
+	background-position: center center;
+}*/

@@ -43,7 +43,7 @@ camel.tabs = function(el,options){
 		var last_select = options.selected;
 
 		if(el.children('.tabs-head')[0].scrollWidth > $(el).outerWidth(true)){
-			el.children('ul.tabs-head').after('<div class="header-overflow"><div class="header-overflow-left">‹</div><div class="header-overflow-right">›</div></div>')
+			el.children('ul.tabs-head').after('<div class="header-overflow txt-no-select"><div class="header-overflow-left">‹</div><div class="header-overflow-right">›</div></div>')
 
 			var is_move = false;
 			el.find('.header-overflow-left,.header-overflow-right').on('click',function(e){

@@ -33,27 +33,50 @@ camel.tabs = function(el,options){
 	if(typeof options.position == 'undefined') options.position = 'horisontal'
 	if(typeof options.selected == 'undefined') options.selected = 0;
 
-	$(el).each(function(i,d){
+	el = $(el)
+
+	el.each(function(i,d){
 		$(d).addClass('camel-tabs').children().not('ul').addClass('item').wrapAll('<div class="tabs-body"></div>')
 		$(d).addClass('camel-tabs').children('ul').addClass('tabs-head')
 
 		var ids = [];
 		var last_select = options.selected;
 
-		if($(el).children('.tabs-head')[0].scrollWidth > $(el).outerWidth(true)){
+		if(el.children('.tabs-head')[0].scrollWidth > $(el).outerWidth(true)){
+			el.children('ul.tabs-head').after('<div class="header-overflow"><div class="header-overflow-left">‹</div><div class="header-overflow-right">›</div></div>')
 
-			alert('catch')
-			$(el).children('ul.tabs-head').after('<div class="header-overflow"><div class="header-overflow-left">‹</div><div class="header-overflow-right">›</div></div>')
+			var is_move = false;
+			el.find('.header-overflow-left,.header-overflow-right').on('click',function(e){
+				if(is_move === true)
+					return false;
 
-			$(el).find('.header-overflow-left,.header-overflow-right').on('click',function(e){
+				is_move = true
+
 				if(e.currentTarget.className == 'header-overflow-left'){
+					if(parseInt(el.children('ul.tabs-head').css('margin-left')) >= 0){
+						is_move = false
+						return false;
+					}
 
+					el.children('ul.tabs-head').animate({"margin-left": "+=80"},'fast',function(){
+						is_move = false;
+					})
 				}else if(e.currentTarget.className == 'header-overflow-right'){
+					if(el.width()
+						>=
+						((el.find('ul.tabs-head').width() + el.find('.header-overflow').width()) - Math.abs(parseInt(el.find('ul.tabs-head').css('margin-left'))))
+					){
+						is_move = false
+						return false;
+					}
 
+					el.children('ul.tabs-head').animate({"margin-left": "-=80"},'fast',function(){
+						is_move = false;
+					})
 				}
 			})
 
-			$(el).children('ul.tabs-head').bind('mousewheel', function(e){
+			el.children('ul.tabs-head').bind('mousewheel', function(e){
 				if(e.originalEvent.wheelDelta / 120 > 0) {
 					$('.header-overflow-left').trigger('click')
 				}else{

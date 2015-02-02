@@ -1,6 +1,8 @@
 @import 'local';
 
 .camel-tabs {
+	overflow: hidden;
+
 	> ul.tabs-head {
 		list-style: none;
 		margin: 0;

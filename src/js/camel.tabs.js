@@ -40,6 +40,30 @@ camel.tabs = function(el,options){
 		var ids = [];
 		var last_select = options.selected;
 
+		if($(el).children('.tabs-head')[0].scrollWidth > $(el).outerWidth(true)){
+
+			alert('catch')
+			$(el).children('ul.tabs-head').after('<div class="header-overflow"><div class="header-overflow-left">‹</div><div class="header-overflow-right">›</div></div>')
+
+			$(el).find('.header-overflow-left,.header-overflow-right').on('click',function(e){
+				if(e.currentTarget.className == 'header-overflow-left'){
+
+				}else if(e.currentTarget.className == 'header-overflow-right'){
+
+				}
+			})
+
+			$(el).children('ul.tabs-head').bind('mousewheel', function(e){
+				if(e.originalEvent.wheelDelta / 120 > 0) {
+					$('.header-overflow-left').trigger('click')
+				}else{
+					$('.header-overflow-right').trigger('click')
+				}
+
+				return false;
+			})
+		}
+
 		$(d).find('ul.tabs-head a').each(function(ii,dd){
 			ids.push($(dd).attr('href'))
 
@@ -48,22 +72,21 @@ camel.tabs = function(el,options){
 				$(d).find('.tabs-body .item').eq(ii).addClass('active')
 			}
 
+			if($(dd).hasClass('close'))
+				$(dd).after('<span class="close"></span>')
+
 			$(dd).click(function(e){
-				if($(this).hasClass('close') && e.offsetX > $(this)[0].offsetWidth){
-					alert('close catched');
-				}
-
-				console.log(e.offsetX,$(this)[0].offsetWidth)
-
 				if(last_select == ii) return false;
 
-				//$($(dd).attr('href'))
 				$(ids[last_select]).removeClass('active')
 				$(d).find('ul.tabs-head a').eq(last_select).removeClass('active')
 
 				last_select = ii
 				$(this).addClass('active')
 				$(ids[last_select]).addClass('active')
+
+				if(typeof options.onSelect == 'function')
+					options.onSelect(last_select,ids[last_select])
 
 				return false;
 			})
@@ -73,11 +96,11 @@ camel.tabs = function(el,options){
 	//$(el).addClass('camel-tabs-wrap').addClass('camel-tabs-wrap-' + options.position)
 	//$(el).children('ul').addClass('camel-tabs-header').addClass('noselect')
 
-	
+
 
 	return;
 
-	if(options.position == 'vertical'){
+	/*if(options.position == 'vertical'){
 		$(el).find('.camel-tabs-body-items-wrap').eq(0).css({
 			display: 'inline-block'
 		})
@@ -93,9 +116,9 @@ camel.tabs = function(el,options){
 		$(el).find('.camel-tabs-body-items-wrap').eq(0).css({
 			width: ($(el).parent().width() - $(el).find('.camel-tabs-header').eq(0).outerWidth(true)) + 'px'
 		})
-	}
+	}*/
 
-	var min_height = 0;
+	/*var min_height = 0;
 
 	$(el).children('ul').children('li').each(function(i,d){
 		ids.push($(d).attr('href'))
@@ -137,7 +160,7 @@ camel.tabs = function(el,options){
 	$(el).children('ul').children('li').eq(options.selected).click()
 
 	var last_select = options.selected;
-
+	*/
 	if(options.position == 'horisontal'){
 		if(typeof options.height != 'undefined')
 			$(el).find('.camel-tabs-body-items-wrap').eq(0).children().css({

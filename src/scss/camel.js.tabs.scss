@@ -8,18 +8,16 @@
 		overflow: hidden;
 		white-space: nowrap;
 		display: block;
-		font-size: 0;
 		line-height: 0;
 		position: relative;
 
 		li {
-			font-size: 0;
 			line-height: 0;
 			display: inline-block;
+			position: relative;
 
 			a {
 				color: $primary-color;
-				font-size: $default-font-size;
 				padding: 1.5em;
 				display: block;
 				cursor: pointer;
@@ -34,20 +32,56 @@
 				}
 
 				&.close {
-					padding-right: 2.5em;
-
-					&:after {
-						content: '\0D7';
-						font-family: Arial;
-						font-size: 1.5em;
-						font-weight: 700;
-						display: block;
-						margin-top: 0;
-						margin-bottom: 0;
-						position: absolute;
-						right: 0.5em;
-					}
+					padding-right: 2em;
 				}
+			}
+
+			span.close {
+				display: block;
+				margin: auto;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 0.5em;
+				width: 1em;
+				height: 0;
+				line-height: 0;
+				z-index: 1;
+				cursor: pointer;
+				opacity: 0.5;
+
+				&:after {
+					content: '\0D7';
+					font-family: Arial;
+					font-size: 1.5em;
+					display: block;
+				}
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	>.header-overflow {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: #fff;
+		padding: 0 0 0 1px;
+
+		>.header-overflow-left,
+		>.header-overflow-right {
+			display: inline-block;
+			padding: 15px 5px;
+			cursor: pointer;
+			background-color: #eee;
+			font-size: 25px;
+			font-family: Arial;
+
+			&:hover {
+				background-color: #ddf;
 			}
 		}
 	}
@@ -55,11 +89,33 @@
 	> .tabs-body {
 		margin-top: 1em;
 		> .item {
+			overflow: auto;
 			display: none;
 
 			&.active {
 				display: block;
 			}
+		}
+	}
+
+	&.vertical {
+		display: table;
+
+		>ul.tabs-head {
+			display: table-cell;
+			vertical-align: top;
+
+			>li {
+				display: block;
+			}
+		}
+
+		>.tabs-body {
+			display: table-cell;
+			vertical-align: top;
+			white-space: normal;
+			margin-top: 0;
+			padding-left: 1em;
 		}
 	}
 }

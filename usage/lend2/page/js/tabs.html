@@ -7,10 +7,22 @@
 				<a href="#one">Home</a>
 			</li>
 			<li>
-				<a href="#two" class="close">Profile</a>
+				<a href="#two">Profile</a>
 			</li>
 			<li>
-				<a href="#three">Something else</a>
+				<a href="#three">Three</a>
+			</li>
+			<li>
+				<a href="#four">Four</a>
+			</li>
+			<li>
+				<a href="#five">Five</a>
+			</li>
+			<li>
+				<a href="#six">Six</a>
+			</li>
+			<li>
+				<a href="#seven">Seven</a>
 			</li>
 		</ul>
 		<div id="one">
@@ -22,13 +34,28 @@
 		<div id="three">
 			Three
 		</div>
+		<div id="four">
+			Four
+		</div>
+		<div id="five">
+			Five
+		</div>
+		<div id="six">
+			Six
+		</div>
+		<div id="seven">
+			Seven
+		</div>
 	</div>
 
 	<script type="text/javascript">
 		$(document).ready(function(){
 			new camel.tabs(
 				'#camel-tabs',{
-					selected: 0
+					selected: 1,
+					closeable: false,
+					maxHeight: 100,
+					//position: 'vertical'
 				}
 			)
 		})

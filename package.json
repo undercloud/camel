@@ -12,7 +12,7 @@
     "gulp-uglify": "^1.0.1",
     "run-sequence": "^1.0.1",
     "gulp-clean": "^0.3.1",
-    "gulp-concat": "^1.0.1",
+    "gulp-concat": "^2.4.3",
     "gulp-cssbeautify": "^0.1.3"
   }
 }

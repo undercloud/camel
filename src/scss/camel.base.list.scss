@@ -19,6 +19,28 @@ ul,ol {
 	}
 }
 
+ol.numerable {
+	counter-reset: custom;
+
+	li {
+		list-style: none;
+
+		&:before {
+			counter-increment: custom;
+			content:counter(custom);
+			color: #fff;
+			background: #2980B9;
+			display: inline-block;
+			text-align: center;
+			line-height: 2.5em;
+			width: 2.5em;
+			height: 2.5em;
+			margin-bottom: 1em;
+			margin-right: 1em;
+		}
+	}
+}
+
 dl {
 	padding: 0;
 	margin: 0;

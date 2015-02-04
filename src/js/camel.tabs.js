@@ -55,10 +55,11 @@ camel.tabs = function(el,options){
 		var ids = [];
 		var last_select = options.selected;
 
-		/*if(parseInt(head.prop('scrollWidth')) > el.outerWidth(true)){
+		if(parseInt(head.prop('scrollWidth')) > el.outerWidth(true)){
 			head.after('<div class="header-overflow txt-no-select"><div class="header-overflow-left">‹</div><div class="header-overflow-right">›</div></div>')
 
-			el.find('.header-overflow').height(head.outerHeight(true))
+			var of = el.find('.header-overflow').height(head.outerHeight(true))
+			head.css({paddingRight: (of.outerWidth(true) + 20) + "px"})
 
 			var is_move = false;
 			el.find('.header-overflow-left,.header-overflow-right').on('click',function(e){
@@ -73,23 +74,18 @@ camel.tabs = function(el,options){
 						return false;
 					}
 
-					el.children('ul.tabs-head').animate({"margin-left": "+=35"},animate_speed,function(){
+					el.children('ul.tabs-head').animate({"margin-left": "+=80"},animate_speed,function(){
 						is_move = false;
 					})
 				}else if(e.currentTarget.className == 'header-overflow-right'){
+					var mh = Math.abs(parseInt(el.children('ul.tabs-head').css('margin-left')))
 
-					var mh = Math.abs(parseInt(head.css('margin-left')))
-					var ho = el.find('.header-overflow').outerWidth(true)
-					var ol = head.prop('offsetLeft')
-
-					console.log(el.outerWidth(true), head.prop('scrollWidth') - mh + ho)
-
-					if(el.outerWidth(true) > head.prop('scrollWidth') - mh + ho){
+					if(el.outerWidth(true) >= head.prop('scrollWidth') - mh){
 						is_move = false
 						return false;
 					}
 
-					el.children('ul.tabs-head').animate({"margin-left": "-=35"},animate_speed,function(){
+					el.children('ul.tabs-head').animate({"margin-left": "-=80"},animate_speed,function(){
 						is_move = false;
 					})
 				}
@@ -104,7 +100,7 @@ camel.tabs = function(el,options){
 
 				return false;
 			})
-		}*/
+		}
 
 		$(d).find('ul.tabs-head a').each(function(ii,dd){
 			ids.push($(dd).attr('href'))

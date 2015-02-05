@@ -34,7 +34,7 @@
 
 	global.camel.collapse = function(el,options){
 		if(typeof options == 'undefined') options = {}
-		if(typeof options.selected == 'undefined') options.selected = 0
+		if(typeof options.active == 'undefined') options.active = 0
 		if(typeof options.animate == 'undefined') options.animate = 'fast'
 		if(typeof options.collapse == 'undefined') options.collapse = false
 		if(typeof options.maxHeight == 'undefined') options.maxHeight = 'none'
@@ -52,14 +52,19 @@
 			if(true === options.close)
 				$(d).append('<span class="close"></span>')
 
-			if(i == options.selected && options.collapse == false)
-				$(this).find('>a').addClass('selected')
+			var a = $(this).find('>a')
+
+			if(a.hasClass('disabled'))
+				return $(a.attr('href')).hide()
+
+			if(i == options.active && options.collapse == false)
+				a.addClass('selected')
 		})
 
 		el.children('dd').addClass('body').each(function(i){
 			$(this).css({maxHeight: options.maxHeight})
 
-			if(i != options.selected || options.collapse == true)
+			if(i != options.active || options.collapse == true)
 				$(this).hide()
 		})
 

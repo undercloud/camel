@@ -87,7 +87,7 @@
 	$(document).on('keyup paste cut','textarea[data-auto-grow]',function(){
 		var thisis = this;
 
-		var max = parseInt(thisis.getAttribute('data-auto-grow'))
+		var max = parseInt(thisis.getAttribute('data-auto-grow')) || 0
 
 		if(null != keytimer)
 			clearInterval(keytimer)

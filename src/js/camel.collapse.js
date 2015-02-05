@@ -1,5 +1,3 @@
-
-
 /*
 	<dl id='collapse'>
 		<dt href='#one' url='/url/to/load'>First Header</dt>
@@ -37,79 +35,74 @@
 	global.camel.collapse = function(el,options){
 		if(typeof options == 'undefined') options = {}
 		if(typeof options.selected == 'undefined') options.selected = 0
+		if(typeof options.animate == 'undefined') options.animate = 'fast'
+		if(typeof options.collapse == 'undefined') options.collapse = false
+		if(typeof options.maxHeight == 'undefined') options.maxHeight = 'none'
+		if(typeof options.close == 'undefined') options.close = false
 
-		var ids = []
-		$(el).addClass('camel-collapse')
-		$(el).children('dt').each(function(i,d){
-			var a = $(d).find('>a')
+		if(options.animate == false) options.animate = 0
+		if(options.animate == true) options.animate = 'fast'
 
-			$(a).addClass('noselect')
+		var act = (typeof options.hover == 'undefined') ? 'click' : 'hover'
 
-			ids.push($(a).attr('href'))
-			$(d).addClass('head')
+		el = $(el)
 
+		el.addClass('camel-collapse')
+		el.children('dt').addClass('head').each(function(i,d){
+			if(true === options.close)
+				$(d).append('<span class="close"></span>')
 
-			$($(a).attr('href')).addClass('body').hide()
-
-			if(typeof options.height != 'undefined'){
-				$($(d).attr('href')).css({
-					height: options.height + 'px'
-				})
-			}
-
-			$(a).click(function(){
-				$('a[href='+ids[last_select]+']').removeClass('selected')
-
-				if(last_select == i){
-					if(typeof options.collapse != 'undefined' && options.collapse == true){
-						if($($(a).attr('href')).is(':hidden')){
-							$($(a).attr('href')).slideDown('fast')
-						}else{
-							$($(a).attr('href')).slideUp('fast')
-						}
-					}
-				}else{
-					$(ids[last_select]).slideUp('fast')
-					$($(a).attr('href')).slideDown('fast')
-				}
-
-				last_select = i
-
-				$(a).addClass('selected')
-
-				/*if($(d).attr('url')){
-					$($(d).attr('href')).addClass('camel-collapse-preloader').html('')
-					$.get(
-						$(d).attr('url'),
-						function(data){
-							$($(d).attr('href')).removeClass('camel-collapse-preloader').html(data)
-
-							if(typeof options.ajax == 'function')
-								options.ajax(i,ids[i])
-						}
-					)
-
-					$(d).removeAttr('url')
-				}
-
-				if(typeof options.onSelect == 'function')
-					options.onSelect(last_select,ids[last_select])*/
-
-				return false;
-			})
+			if(i == options.selected && options.collapse == false)
+				$(this).find('>a').addClass('selected')
 		})
 
-		$('dt[href='+ids[options.selected]+']').click()
-		var last_select = options.selected;
+		el.children('dd').addClass('body').each(function(i){
+			$(this).css({maxHeight: options.maxHeight})
 
-		return {
-			selected: function(){
-				return last_select
-			},
-			select: function(i){
-				$(el).find("dt[href="+ids[i]+"]").click()
+			if(i != options.selected || options.collapse == true)
+				$(this).hide()
+		})
+
+		el.on(act,'>dt.head >a',function(){
+			if($(this).hasClass('disabled'))
+				return false;
+
+			if(options.collapse == true){
+				if($(this).hasClass('selected')){
+					$(this).removeClass('selected')
+					$($(this).attr('href')).slideToggle(options.animate)
+					return false
+				}
+			}else{
+				if($(this).hasClass('selected'))
+					return false;
 			}
-		}
+
+			var href = el.find('>dt.head >a.selected').removeClass('selected').attr('href')
+			$(href).slideUp(options.animate)
+
+			href = $(this).addClass('selected').attr('href')
+			$(href).slideDown(options.animate)
+
+			if($(this).attr('data-url')){
+				$.get(
+					$(this).attr('data-url'),
+					function(data){
+
+					}
+				)
+
+				$(this).removeAttr('data-url')
+			}
+
+			return false;
+		})
+
+		if(true === options.close)
+			el.on('click','>dt.head >span.close',function(){
+				$($(this).prev().attr('href')).remove()
+				$(this).closest('dt').remove()
+			})
 	}
 
 	if(typeof global.camel.register != 'undefined')

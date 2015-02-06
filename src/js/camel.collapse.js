@@ -90,10 +90,13 @@
 			$(href).slideDown(options.animate)
 
 			if($(this).attr('data-url')){
+
+				//?$(href).addClass('preload')
+
 				$.get(
 					$(this).attr('data-url'),
-					function(data){
-
+					function(html){
+						$(href).html(html)
 					}
 				)
 
@@ -108,6 +111,15 @@
 				$($(this).prev().attr('href')).remove()
 				$(this).closest('dt').remove()
 			})
+
+		return {
+			active: function(i){
+				if(typeof i== 'undefined')
+					return el.find('>dt.head >a.selected').parent().index();
+
+				el.find('>dt.head').eq(i).('>a').trigger(act)
+			}
+		}
 	}
 
 	if(typeof global.camel.register != 'undefined')

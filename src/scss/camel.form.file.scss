@@ -1,14 +1,15 @@
 @import 'local';
 
 .camel-upload {
+	position: relative;
+	font-size: $default-font-size;
 	border-radius: $form-element-radius;
 	background-color: $secondary-color-light;
 	width: 100%;
 	position: relative;
 	text-align: center;
 	overflow: hidden;
-	font-size: 0;
-	line-height: 100%;
+	line-height: 0;
 
 	&:hover {
 		opacity: 0.85;
@@ -16,7 +17,7 @@
 	}
 
 	.title {
-		font-size: $default-font-size;
+		position: relative;
 		line-height: 100%;
 		padding: 11px 0px;
 		display: inline-block;
@@ -24,10 +25,13 @@
 		@include text-truncate;
 
 		&:before {
-			content: "\f0c2";
+			position: relative;
+			content: "\f0ee";
 			font-family: FontAwesome;
 			margin-right: 0.5em;
-			font-size: 1.3em;
+			font-size: 20px;
+			line-height: 10px;
+			vertical-align: top;
 		}
 	}
 
@@ -36,6 +40,10 @@
 			font-size: 12px;
 			padding-top: 8px;
 			padding-bottom: 8px;
+
+			&:before {
+				font-size: 14px;
+			}
 		}
 	}
 
@@ -44,6 +52,10 @@
 			font-size: 16px;
 			padding-top: 17px;
 			padding-bottom: 17px;
+
+			&:before {
+				font-size: 30px;
+			}
 		}
 	}
 

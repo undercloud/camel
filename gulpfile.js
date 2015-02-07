@@ -35,7 +35,7 @@ gulp.task('sass', function () {
 				errLogToConsole: true
 			})
 		)
-		.pipe(prefix('last 10 version'))//, 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
+		.pipe(prefix('last 100 version'))//, 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
 		.pipe(beauty({
 			indent: '	',
 			openbrace: 'end-of-line',

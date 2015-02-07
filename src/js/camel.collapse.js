@@ -97,11 +97,23 @@
 					$(this).attr('data-url'),
 					function(html){
 						$(href).html(html)
+
+						if(typeof options.onajax == 'function')
+							options.onajax(
+								$(this).parent().index(),
+								$(href)
+							)
 					}
 				)
 
 				$(this).removeAttr('data-url')
 			}
+
+			if(typeof options.onchange == 'function')
+				options.onchange(
+					$(this).parent().index(),
+					$(href)
+				)
 
 			return false;
 		})
@@ -114,10 +126,10 @@
 
 		return {
 			active: function(i){
-				if(typeof i== 'undefined')
+				if(typeof i == 'undefined')
 					return el.find('>dt.head >a.selected').parent().index();
 
-				el.find('>dt.head').eq(i).('>a').trigger(act)
+				el.find('>dt.head').eq(i).find('>a').trigger(act)
 			}
 		}
 	}

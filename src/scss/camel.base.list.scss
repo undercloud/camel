@@ -19,10 +19,10 @@ ul,ol {
 	}
 }
 
-ol.numerable {
+ol.numeric {
 	counter-reset: custom;
 
-	li {
+	> li {
 		list-style: none;
 
 		&:before {

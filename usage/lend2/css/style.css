@@ -178,10 +178,48 @@ code[src-data] {
 	display: inline-block;
 	padding: 20px;
 	color: #fff;
-	width: 130px;
+	width: 120px;
 	height: 70px;
 	vertical-align: top;
 	font-size: 14px;
+}
+
+.font-awesome > span.fa {
+	display: inline-block;
+	padding: 10px;
+	text-align: center;
+	font-family: inherit;
+	font-size: 12px;
+	word-break: break-word;
+	width: 100px;
+	box-sizing: border-box;
+}
+
+.font-awesome > span.fa:hover {
+	background-color: #414341;
+	color: #fff;
+}
+
+.font-awesome > span.fa:before {
+	font-size: 48px;
+	line-height: 48px;
+	padding-top: 16px;
+	width: 75px;
+	height: 75px;
+	box-sizing: border-box;
+	text-align: center;
+	display: block;
+	font-family: FontAwesome;
+}
+
+.icons-search-field {
+	border: none;
+	border-bottom: 3px solid;
+	outline: none;
+	padding: 12px 0;
+	width: 200px;
+	font-size: 20px;
+	margin-bottom: 1em;
 }
 
 .footer-wrap {

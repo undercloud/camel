@@ -64,6 +64,7 @@ input.camel-input.lg {
 	.addon-icon-right {
 		width: 16px;
 		height: 16px;
+		font-size: 16px;
 		top: 0;
 		bottom: 0;
 		margin: auto;
@@ -90,8 +91,15 @@ input.camel-input.lg {
 	}
 
 	&.sm {
+		.addon-icon,
+		.addon-icon-right {
+			font-size: 14px;
+			width: 14px;
+			height: 14px;
+		}
+
 		.addon-icon {
-			left: 7px;
+			left: 8px;
 
 			~ .camel-input {
 				padding-left: 26px;
@@ -99,7 +107,7 @@ input.camel-input.lg {
 		}
 
 		.addon-icon-right {
-			right: 7px;
+			right: 8px;
 
 			~ .camel-input {
 				padding-right: 26px;
@@ -108,8 +116,15 @@ input.camel-input.lg {
 	}
 
 	&.lg {
+		.addon-icon,
+		.addon-icon-right {
+			font-size: 20px;
+			width: 20px;
+			height: 20px;
+		}
+
 		.addon-icon {
-			left: 12px;
+			left: 10px;
 
 			~ .camel-input {
 				padding-left: 36px;
@@ -117,7 +132,7 @@ input.camel-input.lg {
 		}
 
 		.addon-icon-right {
-			right: 12px;
+			right: 10px;
 
 			~ .camel-input {
 				padding-right: 36px;

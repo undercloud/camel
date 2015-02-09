@@ -15,10 +15,10 @@
 	padding: 11px 30px;
 	border-radius: $form-element-radius;
 
-	background: #fefefe;
-	background: linear-gradient(rgba(255, 255, 255, .1), rgba(0, 0, 0, .1));
-	background: -moz-linear-gradient( center top, rgba(255, 255, 255, .1) 0%, rgba(0, 0, 0, .1) 100% );
-	background: -webkit-gradient( linear, center bottom, center top, from(rgba(0, 0, 0, .1)), to(rgba(255, 255, 255, .1)));
+	//background: #fefefe;
+	//background: linear-gradient(rgba(255, 255, 255, .1), rgba(0, 0, 0, .1));
+	//background: -moz-linear-gradient( center top, rgba(255, 255, 255, .1) 0%, rgba(0, 0, 0, .1) 100% );
+	//background: -webkit-gradient( linear, center bottom, center top, from(rgba(0, 0, 0, .1)), to(rgba(255, 255, 255, .1)));
 
 	@include text-truncate;
 
@@ -69,158 +69,78 @@
 	&.addon,
 	&.addon-right,
 	&.addon-no-text {
+		padding-top: 0;
+		padding-bottom: 0;
+
 		.addon-icon {
-			display: inline-block;
-			padding: 0;
-			width: 16px;
-			height: 16px;
-			font-size: 16px;
-			background-repeat: no-repeat;
-			position: absolute;
+			padding: 11px 12px 11px 11px;
+		}
+
+		&.sm {
+			.addon-icon {
+				padding: 8px 9px 8px 8px;
+			}
+		}
+
+		&.lg {
+			.addon-icon {
+				padding: 17px 18px 17px 17px;
+			}
 		}
 	}
 
 	&.addon {
-		padding-left: 36px;
-		padding-right: 24px;
+		padding-left: 0;
 
 		.addon-icon {
-			top: 0;
-			bottom: 0;
-			left: 10px;
-			margin: auto;
-		}
-
-		&.sm {
-			padding-left: 26px;
-			padding-right: 14px;
-
-			.addon-icon {
-				left: 6px;
-				font-size: 14px;
-				width: 14px;
-				height: 14px;
-			}
-		}
-
-		&.lg {
-			padding-left: 40px;
-			padding-right: 30px;
-
-			.addon-icon {
-				left: 12px;
-				font-size: 20px;
-				width: 20px;
-				height: 20px;
-			}
+			margin-right: 5px;
 		}
 	}
 
 	&.addon-right {
-		padding-left: 24px;
-		padding-right: 36px;
+		padding-right: 0;
 
 		.addon-icon {
-			left: auto;
-			top: 0;
-			bottom: 0;
-			right: 10px;
-			margin: auto;
-		}
-
-		&.sm {
-			padding-left: 14px;
-			padding-right: 26px;
-
-			.addon-icon {
-				right: 6px;
-				font-size: 14px;
-				width: 14px;
-				height: 14px;
-			}
-		}
-
-		&.lg {
-			padding-left: 30px;
-			padding-right: 40px;
-
-			.addon-icon {
-				right: 12px;
-				font-size: 20px;
-				width: 20px;
-				height: 20px;
-			}
+			margin-left: 5px;
 		}
 	}
 
 	&.addon-no-text {
-		padding: 11px 16px;
-
-		&:after {
-			content: "\00a0";
-		}
-
-		.addon-icon {
-			left: 0;
-			top: 0;
-			bottom: 0;
-			right: 0;
-			margin: auto;
-		}
-
-		&.sm {
-			padding: 8px 12px;
-
-			.addon-icon {
-				font-size: 14px;
-				width: 14px;
-				height: 14px;
-			}
-		}
-
-		&.lg {
-			padding: 17px 23px;
-
-			.addon-icon {
-				font-size: 20px;
-				width: 20px;
-				height: 20px;
-			}
-		}
+		padding-left: 0;
+		padding-right: 0;
 	}
 
 	&.dropdown {
-		padding-left: 24px;
-		padding-right: 36px;
-
-		&.lg {
-			padding-left: 30px;
-			padding-right: 40px;
-		}
-
-		&.sm {
-			padding-left: 14px;
-			padding-right: 26px;
-		}
+		padding-right: 0;
 
 		&:after {
 			content: '\025BC';
-			position: absolute;
-			right: 0.7em;
-			z-index: 1;
+			padding: 9px 11px;
+		}
+
+		&.sm:after {
+			padding: 7px 8px 6px 8px;
+		}
+
+		&.lg:after {
+			padding: 15px 17px 15px 17px;
 		}
 
 		&.split {
-			padding-left: 0.8em;
-			padding-right: 0.7em;
+			padding-left: 0;
+			padding-right: 0;
 			border-left: 0;
 			left: -1px;
-
-			&:after {
-				position: relative;
-				right: 0;
-			}
 		}
+	}
+
+	&.label {
+		position: absolute;
+		display: inline-block;
+		height: 100%;
+		width: 36px;
+		top: 0;
+		left: 0;
 	}
 
 	&.preload {

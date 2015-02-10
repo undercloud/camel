@@ -114,16 +114,22 @@
 		padding-right: 0;
 
 		&:after {
-			content: '\025BC';
+			content: "\f107";
+			font-family: FontAwesome;
 			padding: 9px 11px;
+			vertical-align: middle;
+			font-size: 20px;
+			line-height: 10px;
 		}
 
 		&.sm:after {
-			padding: 7px 8px 6px 8px;
+			padding: 0 8px;
+			font-size: 16px;
 		}
 
 		&.lg:after {
-			padding: 15px 17px 15px 17px;
+			padding: 0 17px;
+			font-size: 24px;
 		}
 
 		&.split {

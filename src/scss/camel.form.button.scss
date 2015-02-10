@@ -163,6 +163,47 @@
 .camel-button {
 	color: $default-button-color;
 	background-color: $default-button-bg-color;
+
+	&.addon .label,
+	&.addon-right .label {
+		background-color: #123;
+	}
+
+	&.addon {
+		.label {
+			margin-right: 20px;
+		}
+
+		&.sm {
+			.label {
+				margin-right: 10px;
+			}
+		}
+
+		&.lg {
+			.label {
+				margin-right: 30px;
+			}
+		}
+	}
+
+	&.addon-right {
+		.label {
+			margin-left: 20px;
+		}
+
+		&.sm {
+			.label {
+				margin-left: 10px;
+			}
+		}
+
+		&.lg {
+			.label {
+				margin-left: 30px;
+			}
+		}
+	}
 }
 
 .camel-button.dropdown.split,

@@ -7,7 +7,7 @@ var gulp = require('gulp'),
 	rename = require('gulp-rename'),
 	plumber = require('gulp-plumber'),
 	concat = require('gulp-concat'),
- 	uglify = require('gulp-uglify'),
+ 	uglify = require('gulp-uglify');
  	beauty = require('gulp-cssbeautify');
 
 var folders = {
@@ -24,7 +24,7 @@ var folders = {
 }
 
 gulp.task('clean',function(){
-	return gulp.src(folders.clean).pipe(clean());
+	return gulp.src(folders.clean).pipe(clean())
 })
 
 gulp.task('sass', function () {
@@ -35,29 +35,49 @@ gulp.task('sass', function () {
 				errLogToConsole: true
 			})
 		)
-		.pipe(prefix('last 100 version'))//, 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
+		.pipe(prefix({
+			browsers: ['> 5%','last 10 versions','ie 8', 'ie 9']
+		}))
 		.pipe(beauty({
 			indent: '	',
 			openbrace: 'end-of-line',
             autosemicolon: true
 		}))
-		.pipe(gulp.dest(folders.src.css));
-});
+		.pipe(gulp.dest(folders.src.css))
+})
+
+gulp.task('sass-dev', function () {
+	return gulp.src(folders.src.sass + '/camel.scss')
+		.pipe(plumber())
+		.pipe(
+			sass({
+				errLogToConsole: true
+			})
+		)
+		.pipe(prefix({
+			browsers: ['> 5%','last 10 versions','ie 8', 'ie 9']
+		}))
+		.pipe(beauty({
+			indent: '	',
+			openbrace: 'end-of-line',
+            autosemicolon: true
+		}))
+		.pipe(gulp.dest(folders.src.css))
+})
 
 gulp.task('css-min', function () {
 	return gulp.src(folders.src.css + '/*.css')
-		.pipe(prefix('last 10 version'))
 		.pipe(cssmin())
 		.pipe(rename({suffix: '.min'}))
-		.pipe(gulp.dest(folders.dist.css));
-});
+		.pipe(gulp.dest(folders.dist.css))
+})
 
 gulp.task('js-min', function(){
 	return gulp.src(folders.src.js + '/*.js')
 	.pipe(uglify())
 	.pipe(rename({suffix: '.min'}))
 	.pipe(gulp.dest(folders.dist.js))
-});
+})
 
 gulp.task('js-concat',function(){
 	return gulp.src([
@@ -69,14 +89,24 @@ gulp.task('js-concat',function(){
 })
 
 gulp.task('default', function () {
-	gulp.watch(folders.src.sass + '/*.scss', ['sass']);
-	gulp.watch(folders.src.js + '/*.js', ['js-min']);
-});
+	gulp.watch(folders.src.sass + '/*.scss', ['sass'])
+	gulp.watch(folders.src.js + '/*.js', ['js-min'])
+})
 
 gulp.task('build', function () {
 	sequence(
 		'clean',
 		'sass',
+		'css-min',
+		'js-min',
+		'js-concat'
+	)
+})
+
+gulp.task('release', function () {
+	sequence(
+		'clean',
+		'sass-dev',
 		'css-min',
 		'js-min',
 		'js-concat'

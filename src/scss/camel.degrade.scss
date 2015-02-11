@@ -1,0 +1,25 @@
+.msie8 {
+	.camel-checkbox-wrap {
+		.camel-checkbox[disabled][checked] + .camel-pseudo-checkbox:before {
+			color: #ddd;
+			content: "\f14a";
+		}
+
+		.camel-checkbox[checked] + .camel-pseudo-checkbox:before {
+			color: #16A085;
+			content: "\f14a";
+		}
+	}
+
+	.camel-radio-wrap {
+		.camel-radio[disabled][checked] + .camel-pseudo-radio:before {
+			color: #ddd;
+			content: "\f192";
+		}
+
+		.camel-radio[checked] + .camel-pseudo-radio:before {
+			color: #16A085;
+			content: "\f192";
+		}
+	}
+}

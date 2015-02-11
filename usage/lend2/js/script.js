@@ -21,6 +21,8 @@ var site = {
 		})
 	},
 	highlight: function(i,d){
+		return;
+
 		var tabsize = $(d).html().indexOf('<') - 1;
 
 		var src = $(d).html()

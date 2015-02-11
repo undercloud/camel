@@ -10,16 +10,12 @@ $cols: 12;
 	position: relative;
 	padding: 0 $gutter 0 0;
 	background-color: #345;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 
 	.grid {
 		display: block;
 		position: relative;
 		*zoom: 1;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 
 		&:before,
@@ -35,8 +31,6 @@ $cols: 12;
 		>*[class*='col-'] {
 			display: block;
 			position: relative;
-			-webkit-box-sizing: border-box;
-	 		-moz-box-sizing: border-box;
 			box-sizing: border-box;
 			float: left;
 			padding: 0;

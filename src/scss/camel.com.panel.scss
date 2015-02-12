@@ -24,10 +24,9 @@
 			cursor: pointer;
 
 			&:before {
-				content: '\25BC';
-				font-family: Arial;
-				margin: 0 0.3em;
-				margin-left: 0;
+				content: "\f107";
+				font-family: FontAwesome;
+				margin: 0 1em 0 0;
 			}
 		}
 
@@ -38,10 +37,9 @@
 			border-bottom-right-radius: 5px;
 
 			&:before {
-				content: '\25BA';
-				font-family: Arial;
-				margin: 0 0.3em;
-				margin-left: 0;
+				content: "\f105";
+				font-family: FontAwesome;
+				margin: 0 1em 0 0;
 			}
 		}
 	}

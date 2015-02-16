@@ -1,11 +1,12 @@
 @import 'local';
 
 @import "bootstrap/mixins/clearfix";
-@import "bootstrap/mixins/center-block";
-@import "bootstrap/mixins/nav-vertical-align";
 @import "bootstrap/mixins/grid-framework";
 @import "bootstrap/mixins/grid";
+@import "bootstrap/mixins/responsive-visibility";
 
 @import "bootstrap/variables";
 @import "bootstrap/grid";
+@import "bootstrap/responsive-utilities";
+@import "bootstrap/responsive-embed";
 @import "bootstrap/print";

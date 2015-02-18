@@ -12,7 +12,7 @@
 				document.createElement(v)
 			})
 
-			$(document.body).addClass('msie8')
+			$(document.body).addClass('ie8')
 
 			$(document).on('change','.camel-checkbox-wrap input[type="checkbox"].camel-checkbox,.camel-toggle input[type="checkbox"].camel-checkbox',function(){
 				if(this.checked){
@@ -40,6 +40,10 @@
 					}
 				}
 			})
+		}
+
+		if($.browser.msie && parseInt($.browser.version) == 9){
+			$(document.body).addClass('ie9')
 		}
 	})
 

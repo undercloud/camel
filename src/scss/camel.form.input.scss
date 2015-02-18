@@ -1,13 +1,11 @@
 @import 'local';
 
 .camel-input {
-	height: 36px;
-	padding: 10px;
 	background-color: #fff;
 	border: 1px solid $secondary-color-dark;
-	box-shadow: inset 0 1px 3px #ddd;
 	box-sizing: border-box;
 	border-radius: $form-element-radius;
+	box-shadow: inset #ddd 0px 1px 3px;
 }
 
 textarea.camel-input {
@@ -21,19 +19,42 @@ textarea[rows="1"] {
 	line-height: 1em;
 }
 
-.camel-form-row .camel-input-wrap {
-	width: 100%;
-}
-
 .camel-input-wrap {
 	display: inline-table;
 	white-space: nowrap;
 }
 
-.camel-form-group.sm .camel-input,
+.camel-form-group input.camel-input,
+.camel-input-wrap input.camel-input,
+.camel-form-group .addon-text,
+input.camel-input,
+textarea.camel-input {
+	padding: 10px;
+	font-size: 14px;
+}
+
+.camel-form-group input.camel-input,
+.camel-input-wrap input.camel-input,
+input.camel-input {
+	height: 36px;
+}
+
+.camel-form-group input.camel-input,
+.camel-input-wrap input.camel-input {
+	width: 100%;
+}
+
+.camel-form-group .addon-text {
+	width: 1px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.camel-form-group.sm input.camel-input,
+.camel-input-wrap.sm input.camel-input,
 .camel-form-group.sm .addon-text,
-.camel-input-wrap.sm .camel-input,
-.camel-input.sm {
+input.camel-input.sm,
+textarea.camel-input.sm {
 	padding: 7px;
 	font-size: 12px;
 }
@@ -44,10 +65,17 @@ input.camel-input.sm {
 	height: 28px;
 }
 
-.camel-form-group.lg .camel-input,
+.camel-form-group.sm .addon-text {
+	width: 1px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.camel-form-group.lg input.camel-input,
+.camel-input-wrap.lg input.camel-input,
 .camel-form-group.lg .addon-text,
-.camel-input-wrap.lg .camel-input,
-.camel-input.lg {
+input.camel-input.lg,
+textarea.camel-input.lg {
 	padding: 16px;
 	font-size: 16px;
 }
@@ -56,6 +84,12 @@ input.camel-input.sm {
 .camel-input-wrap.lg input.camel-input,
 input.camel-input.lg {
 	height: 50px;
+}
+
+.camel-form-group.lg .addon-text {
+	width: 1px;
+	padding-top: 0;
+	padding-bottom: 0;
 }
 
 .camel-input-wrap {

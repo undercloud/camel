@@ -34,7 +34,6 @@
 
 	.addon-text {
 		position: relative;
-		padding: 0 10px;
 		min-width: 1px;
 		background-color: $secondary-color-light;
 		border: 1px solid $secondary-color-dark;
@@ -44,6 +43,10 @@
 
 	.camel-select {
 		min-width: 100px;
+	}
+
+	.camel-button {
+		width: 1px;
 	}
 
 	&.stack {

@@ -37,19 +37,16 @@
 		cursor: pointer;
 		display: inline;
 		opacity: 0.5;
-		filter: alpha(opacity=50);
 
 		&:after{
-			content: '\0D7';
-			font-family: Arial;
-			font-size: 20px;
-			font-weight: bold;
+			content: "\f00d";
+			font-family: FontAwesome;
 			display: inline;
+			font-weight: normal;
 		}
 
 		&:hover {
 			opacity: 1;
-			filter: alpha(opacity=100);
 		}
 	}
 }

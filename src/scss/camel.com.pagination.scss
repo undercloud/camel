@@ -38,21 +38,30 @@ $pag-hover-background: #4b545f;
 			background: $pag-background;
 			border-radius: $pag-border-radius;
 
+			&.to-first ,
+			&.to-last {
+				padding: 0 10px;
+			}
+
+			&.to-prev ,
+			&.to-next {
+				padding: 0 12px;
+			}
+
 			&.to-first:after ,
 			&.to-last:after ,
 			&.to-prev:after ,
 			&.to-next:after {
-				font-size: 1.4em;
-				display: block;
-				margin-top: -0.1em;
-				margin-bottom: 0.1em;
+				font-size: 1.3em;
+				line-height: 30px;
+				font-family: "FontAwesome";
 			}
 
-			&.dots:after { content: '\02026';}
-			&.to-first:after { content: '\00AB';}
-			&.to-last:after { content: '\00BB';}
-			&.to-prev:after { content: '\02039';}
-			&.to-next:after { content: '\0203a'; }
+			&.dots:after { content: '...';}
+			&.to-first:after { content: "\f100";}
+			&.to-last:after { content: "\f101";}
+			&.to-prev:after { content: "\f104";}
+			&.to-next:after { content: "\f105"; }
 
 			&:hover {
 				color: $pag-hover-color;

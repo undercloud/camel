@@ -14,19 +14,58 @@
 }
 
 form.camel-form {
-	padding: 0;
-	margin: 0;
-	padding-left: $form-grid-gutter / 2;
-	padding-right: $form-grid-gutter / 2;
-	margin-left: -$form-grid-gutter;
-	margin-right: -$form-grid-gutter;
+	padding: 0 ($form-grid-h-gutter / 2);
+	margin-bottom: $form-grid-v-gutter;
 
 	fieldset {
-		padding: 0 ($form-grid-gutter / 2);
+		padding: 0 ($form-grid-h-gutter / 2);
+		padding-top: $form-grid-v-gutter;
 		border-radius: $form-element-radius;
 		border-color: $secondary-color-dark;
-		margin-left: ($form-grid-gutter / 2);
-		margin-right: ($form-grid-gutter / 2);
+		margin-left: ($form-grid-h-gutter / 2 * -1);
+		margin-right: ($form-grid-h-gutter / 2 * -1);
+		position: relative;
+	}
+
+	.row {
+		margin: 0;
+		display: block;
+		margin-bottom: $form-grid-v-gutter;
+		font-size: 0;
+		box-sizing: border-box;
+
+		[class*="col-"] {
+			display: inline-block;
+			vertical-align: middle;
+			box-sizing: border-box;
+			padding: 0 $form-grid-h-gutter;
+			float: none;
+			font-size: $default-font-size;
+
+			.camel-label {
+				&.right {
+					float: right;
+				}
+			}
+
+			.camel-input,
+			.camel-input-addon,
+			.camel-select,
+			.camel-button {
+				box-sizing: border-box;
+				position: relative;
+				width: 100%;
+				margin: 0;
+			}
+
+			.camel-button {
+				width: auto;
+
+				&.full {
+					width: 100%;
+				}
+			}
+		}
 	}
 }
 
@@ -148,7 +187,6 @@ input[type=radio] {
 	position: absolute;
 	z-index: 1;
 	opacity: 0;
-	filter: alpha(opacity=0);
 	width: 18px;
 	height: 14px;
 	top: 0;

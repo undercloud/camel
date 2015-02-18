@@ -253,3 +253,11 @@ code[src-data] {
 .footer-menu li + li {
 	border-left: 1px solid #fff;
 }
+
+
+.preload-wrap {
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	background-color: #526;
+}

@@ -42,12 +42,6 @@ form.camel-form {
 			float: none;
 			font-size: $default-font-size;
 
-			.camel-label {
-				&.right {
-					float: right;
-				}
-			}
-
 			.camel-input,
 			.camel-input-addon,
 			.camel-select,
@@ -80,7 +74,7 @@ legend {
 .camel-label {
 	display: inline-block;
 	vertical-align: middle;
-	line-height: 2em;
+	line-height: 1.5em;
 
 	&.block {
 		display: table;

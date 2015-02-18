@@ -28,8 +28,7 @@ ol.numeric {
 		&:before {
 			counter-increment: custom;
 			content:counter(custom);
-			color: #fff;
-			background: #2980B9;
+			background: $secondary-color-dark;
 			display: inline-block;
 			text-align: center;
 			line-height: 2.5em;

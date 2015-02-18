@@ -4,6 +4,10 @@ body {
 	position: relative;
 }
 
+p {
+	text-indent: 20px;
+}
+
 .page-wrap {
 	height: auto;
 	min-height: 90%;

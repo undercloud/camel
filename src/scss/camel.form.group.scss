@@ -1,24 +1,44 @@
 @import 'local';
 
 .camel-form-group {
+	width: auto;
 	display: inline-table;
-	width: 100%;
+	vertical-align: middle;
+	white-space: nowrap;
 
-	* {
-		display: table-cell;
-		border-radius: 0;
-		vertical-align: middle;
+	.camel-button-group {
+		.camel-button {
+			border-radius: 0;
+			left: 0;
+		}
+	}
+
+	.camel-input-wrap {
+		.camel-select {
+			border-radius: 0;
+		}
 	}
 
 	> * {
+		display: table-cell;
+		border-radius: 0;
+		width: auto;
+		vertical-align: top;
+
 		&:first-child,
-		&:first-child.camel-input-wrap .camel-input {
+		&:first-child.camel-input-wrap .camel-input,
+		&:first-child.camel-button-group .camel-button:first-child,
+		&:first-child.camel-input-wrap .camel-select:first-child {
+			border-radius: 0;
 			border-top-left-radius: $form-element-radius;
 			border-bottom-left-radius: $form-element-radius;
 		}
 
 		&:last-child,
-		&:last-child.camel-input-wrap .camel-input {
+		&:last-child.camel-input-wrap .camel-input,
+		&:last-child.camel-button-group .camel-button:last-child,
+		&:last-child.camel-input-wrap .camel-select:last-child {
+			border-radius: 0;
 			border-top-right-radius: $form-element-radius;
 			border-bottom-right-radius: $form-element-radius;
 		}
@@ -34,7 +54,7 @@
 
 	.addon-text {
 		position: relative;
-		min-width: 1px;
+		width: 1px;
 		background-color: $secondary-color-light;
 		border: 1px solid $secondary-color-dark;
 		text-align: center;
@@ -45,16 +65,11 @@
 		min-width: 100px;
 	}
 
-	.camel-button {
-		width: 1px;
-	}
-
 	&.stack {
-		display: block;
 
 		> * {
 			display: block;
-			width: 100%;
+			//width: 100%;
 			border-radius: 0;
 
 			.camel-input {
@@ -81,7 +96,7 @@
 		}
 	}
 
-	.camel-form-group {
+	/*.camel-form-group {
 		display: inline-table;
 
 		>.camel-input,
@@ -112,5 +127,5 @@
 				border-bottom-right-radius: $form-element-radius;
 			}
 		}
-	}
+	}*/
 }

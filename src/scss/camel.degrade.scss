@@ -38,9 +38,9 @@
 	.camel-input,
 	.camel-select,
 	.camel-toggle,
-	.camel-toggle .handle,
-	.camel-toggle .handle:before,
-	.camel-toggle .handle:after,
+	//.camel-toggle .handle,
+	//.camel-toggle .handle:before,
+	//.camel-toggle .handle:after,
 	.camel-upload {
 		position:relative;
 		z-index: 0;
@@ -115,5 +115,10 @@
 				display: block;
 			}
 		}
+	}
+
+	.camel-button {
+		/*-pie-background: linear-gradient(rgba(255, 255, 255, .1), rgba(0, 0, 0, .1));
+		behavior: url(../../dist/js/polyfills/PIE.php);*/
 	}
 }

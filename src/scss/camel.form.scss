@@ -27,6 +27,14 @@ form.camel-form {
 		position: relative;
 	}
 
+	legend {
+		margin: 0;
+		margin-left: 0.5em;
+		padding: 0 0.5em;
+		font-weight: bold;
+		line-height: 100%;
+	}
+
 	.row {
 		margin: 0;
 		display: block;
@@ -44,6 +52,8 @@ form.camel-form {
 
 			.camel-input,
 			.camel-input-addon,
+			.camel-input-wrap,
+			.camel-form-group,
 			.camel-select,
 			.camel-button {
 				box-sizing: border-box;

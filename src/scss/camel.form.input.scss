@@ -39,11 +39,6 @@ input.camel-input {
 	height: 36px;
 }
 
-.camel-form-group input.camel-input,
-.camel-input-wrap input.camel-input {
-	width: 100%;
-}
-
 .camel-form-group .addon-text {
 	width: 1px;
 	padding-top: 0;
@@ -183,6 +178,8 @@ input.camel-input.lg {
 
 .camel-input.success,
 .camel-input.success:focus,
+.camel-input-wrap.success .camel-input,
+.camel-input-wrap.success .camel-input:focus,
 .camel-select.success,
 .camel-select.success:focus {
 	box-shadow: 0 0 3px #99CC33;
@@ -190,8 +187,14 @@ input.camel-input.lg {
 	z-index: 1;
 }
 
+.camel-input-wrap.success .fa {
+	color: #99CC33;
+}
+
 .camel-input.warn,
 .camel-input.warn:focus,
+.camel-input-wrap.warn .camel-input,
+.camel-input-wrap.warn .camel-input:focus,
 .camel-select.warn,
 .camel-select.warn:focus {
 	box-shadow: 0 0 3px #ff9c00;
@@ -199,13 +202,23 @@ input.camel-input.lg {
 	z-index: 1;
 }
 
+.camel-input-wrap.warn .fa {
+	color: #ff9c00;
+}
+
 .camel-input.error,
 .camel-input.error:focus,
+.camel-input-wrap.error .camel-input,
+.camel-input-wrap.error .camel-input:focus,
 .camel-select.error,
 .camel-select.error:focus {
 	box-shadow: 0 0 3px #c80a06;
 	border-color: #c80a06;
 	z-index: 1;
+}
+
+.camel-input-wrap.error .fa {
+	color: #c80a06;
 }
 
 input[placeholder] { text-overflow: ellipsis;}

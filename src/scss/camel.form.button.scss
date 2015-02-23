@@ -12,13 +12,13 @@
 	text-decoration: none;
 
 	font-size: 14px;
+	line-height: 14px;
 	padding: 11px 30px;
+	height: 36px;
 	border-radius: $form-element-radius;
 
-	//background: #fefefe;
-	//background: linear-gradient(rgba(255, 255, 255, .1), rgba(0, 0, 0, .1));
-	//background: -moz-linear-gradient( center top, rgba(255, 255, 255, .1) 0%, rgba(0, 0, 0, .1) 100% );
-	//background: -webkit-gradient( linear, center bottom, center top, from(rgba(0, 0, 0, .1)), to(rgba(255, 255, 255, .1)));
+	background: #fefefe;
+	background: linear-gradient(rgba(255, 255, 255, .1), rgba(0, 0, 0, .1));
 
 	@include text-truncate;
 
@@ -30,12 +30,14 @@
 		font-size: 12px;
 		line-height: 12px;
 		padding: 8px 20px;
+		height: 28px;
 	}
 
 	&.lg {
 		line-height: 16px;
 		font-size: 16px;
 		padding: 17px 35px;
+		height: 50px;
 	}
 
 	&.full {
@@ -46,7 +48,7 @@
 	}
 
 	&:active {
-		top: 1px
+		top: 1px;
 	}
 
 	&[disabled] {
@@ -73,7 +75,7 @@
 		padding-bottom: 0;
 
 		.addon-icon {
-			padding: 11px 12px 11px 11px;
+			padding: 11px 11px 11px 12px;
 		}
 
 		&.sm {
@@ -84,7 +86,7 @@
 
 		&.lg {
 			.addon-icon {
-				padding: 17px 18px 17px 17px;
+				padding: 17px 17px 17px 18px;
 			}
 		}
 	}
@@ -137,6 +139,7 @@
 			padding-right: 0;
 			border-left: 0;
 			left: -1px;
+			margin-right: -1px;
 		}
 	}
 

@@ -44,6 +44,8 @@
 .hide           { display: none !important;visibility: hidden !important; }
 .invisible      { visibility: hidden; }
 
+.shadow         { box-shadow: 2px 3px 3px #e6e6e6; }
+
 .clearfix:before,
 .clearfix:after {
 	content: " ";

@@ -8,9 +8,9 @@
 		position: relative;
 		display: block;
 		width: 50px;
-		height: 25px;
+		height: 22px;
 		background-color: #ddd;
-		border-radius: 25px;
+		border-radius: 22px;
 
 		&:before,
 		&:after {
@@ -21,19 +21,21 @@
 			content: "";
 
 			background-color: #fff;
-			border-radius: 25px;
+			border-radius: 22px;
 			transition: all 0.25s ease-in-out;
 		}
 
 		&:before {
-			width: 25px;
-			height: 25px;
+			margin: 0;
+			width: 22px;
+			height: 22px;
+			background-color: transparent;
 		}
 
 		&:after {
-			border: 2px solid #ddd;
-			width: 21px;
-			height: 21px;
+			margin: 2px;
+			width: 18px;
+			height: 18px;
 		}
 	}
 
@@ -52,12 +54,13 @@
 	.camel-checkbox:checked + .handle {
 		&:before{
 			width: 50px;
-			background-color: #269ecb;
+			background-color: #16A085;
 		}
 
 		&:after {
-			left: 25px;
-			border-color: #269ecb;
+			left: 28px;
+			border: none;
+			margin: 2px;
 		}
 	}
 
@@ -79,35 +82,6 @@
 		&:after {
 			border-color: #eee;
 			background-color: #ddd;
-		}
-	}
-}
-
-.msie8 {
-	.camel-toggle {
-		.camel-checkbox[disabled][checked] + .handle {
-			background-color: #eee;
-
-			&:before {
-				background-color: #eee;
-			}
-
-			&:after {
-				border-color: #eee;
-				background-color: #ddd;
-			}
-		}
-
-		.camel-checkbox[checked] + .handle {
-			&:before{
-				width: 50px;
-				background-color: #269ecb;
-			}
-
-			&:after {
-				left: 25px;
-				border-color: #269ecb;
-			}
 		}
 	}
 }

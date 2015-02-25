@@ -34,6 +34,33 @@
 		}
 	}
 
+	.camel-toggle {
+		.camel-checkbox[disabled][checked] + .handle {
+			background-color: #eee;
+
+			&:before {
+				background-color: #eee;
+			}
+
+			&:after {
+				border-color: #eee;
+				background-color: #ddd;
+			}
+		}
+
+		.camel-checkbox[checked] + .handle {
+			&:before{
+				width: 50px;
+				background-color: #16A085;
+			}
+
+			&:after {
+				left: 28px;
+				border-color: #16A085;
+			}
+		}
+	}
+
 	.camel-button,
 	.camel-input,
 	.camel-select,

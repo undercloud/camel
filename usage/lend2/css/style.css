@@ -197,6 +197,7 @@ code[src-data] {
 	word-break: break-word;
 	width: 100px;
 	box-sizing: border-box;
+	vertical-align: top;
 }
 
 .font-awesome > span.fa:hover {

@@ -47,8 +47,8 @@ form.camel-form {
 			vertical-align: middle;
 			box-sizing: border-box;
 			padding: 0 $form-grid-h-gutter;
-			float: none;
 			font-size: $default-font-size;
+			float: none;
 
 			.camel-input,
 			.camel-input-addon,
@@ -187,8 +187,6 @@ input[type=radio] {
 	height: 14px;
 	top: 0;
 	left: 0;
-	margin: 0;
-	padding: 0;
 }
 
 .camel-input[disabled],

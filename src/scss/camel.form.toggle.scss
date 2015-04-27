@@ -1,16 +1,26 @@
 @import 'local';
 
 .camel-toggle {
+	margin: 0 2px;
+	line-height: 14px;
 	display: inline-block;
 	width:auto;
 
+	.camel-label {
+		.handle {
+			margin-right: 10px;
+			margin-top: -4px;
+		}
+	}
+
 	.handle {
 		position: relative;
-		display: block;
-		width: 50px;
-		height: 22px;
-		background-color: #ddd;
-		border-radius: 22px;
+		display: inline-block;
+		vertical-align: middle;
+		width: 40px;
+		height: 14px;
+		background-color: #ccc;
+		border-radius: 14px;
 
 		&:before,
 		&:after {
@@ -21,28 +31,32 @@
 			content: "";
 
 			background-color: #fff;
-			border-radius: 22px;
+			border-radius: 20px;
 			transition: all 0.25s ease-in-out;
 		}
 
 		&:before {
 			margin: 0;
-			width: 22px;
-			height: 22px;
+			width: 20px;
+			height: 14px;
 			background-color: transparent;
 		}
 
 		&:after {
-			margin: 2px;
-			width: 18px;
-			height: 18px;
+			left: -2px;
+			width: 20px;
+			height: 20px;
+			margin-top: -3px;
+			border: 1px solid #ddd;
+			box-shadow: 0 1px 3px 1px #aaa;
+			box-sizing: border-box;
 		}
 	}
 
 	.camel-checkbox {
 		position: absolute;
-		width: 100%;
-		height: 100%;
+		width: 40px;
+		height: 20px;
 		top: 0;
 		left: 0;
 		padding: 0;
@@ -53,14 +67,15 @@
 
 	.camel-checkbox:checked + .handle {
 		&:before{
-			width: 50px;
+			width: 40px;
 			background-color: #16A085;
+			opacity: 0.5;
 		}
 
 		&:after {
-			left: 28px;
-			border: none;
-			margin: 2px;
+			left: 22px;
+			background-color: #16A085;
+			border-color: #16A085;
 		}
 	}
 
@@ -80,7 +95,7 @@
 		}
 
 		&:after {
-			border-color: #eee;
+			border-color: #ddd;
 			background-color: #ddd;
 		}
 	}

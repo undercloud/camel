@@ -118,6 +118,7 @@ input[type=radio] {
 	width: 14px;
 	height: 14px;
 	font-size: 0;
+	margin-right: 3px;
 }
 
 .camel-pseudo-radio,
@@ -149,7 +150,7 @@ input[type=radio] {
 }
 
 .camel-radio-wrap .camel-radio + .camel-pseudo-radio:before {
-	color: #afafaf;
+	color: #ccc;
 	content: "\f10c";
 }
 
@@ -169,7 +170,7 @@ input[type=radio] {
 }
 
 .camel-checkbox-wrap .camel-checkbox + .camel-pseudo-checkbox:before {
-	color: #afafaf;
+	color: #ccc;
 	content: "\f096";
 }
 

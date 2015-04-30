@@ -1,5 +1,9 @@
 @import 'local';
 
+* {
+	box-sizing: border-box;
+}
+
 body {
 	font-family: $font-stack;
 	color: $primary-color;
@@ -35,14 +39,38 @@ img {
 		float: none;
 		clear: both;
 	}
+
+	&.rounded {
+		border-radius: 6px;
+	}
+
+	&.circle {
+		border-radius: 50%;
+	}
+
+	&.thumbnail {
+		display: inline-block;
+		max-width: 100%;
+		height: auto;
+		padding: 4px;
+		line-height: 1.42857143;
+		background-color: #fff;
+		border: 1px solid #ddd;
+		border-radius: 4px;
+	}
 }
 
 div  { display: block;position: relative; }
 span { display: inline;position: relative; }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	padding: 0;
-	margin: 0 0 0.7em;
+	margin: 0.7em 0;
 	font-weight: 500;
 	line-height: 1.1em;
 }
@@ -55,7 +83,6 @@ h5 { font-size: $h5-size; }
 h6 { font-size: $h6-size; }
 
 a {
-	outline: none;
 	cursor: pointer;
 	text-decoration:none;
 	color: $primary-link-color;
@@ -67,11 +94,32 @@ a:active {
 }
 
 p        { margin: 0.5em 0;}
-b,strong { font-weight: bold; }
-em,i,dfn { font-style: italic; }
-q,cite   { font-style: italic; }
-del,s    { text-decoration: line-through; }
-ins      { text-decoration: underline;}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+em,
+i,
+dfn {
+	font-style: italic;
+}
+
+q,
+cite {
+	font-style: italic;
+}
+
+del,
+s {
+	text-decoration: line-through;
+}
+
+ins {
+	text-decoration: underline;
+}
+
 kbd {
 	color: #fff;
 	background-color: $primary-color;

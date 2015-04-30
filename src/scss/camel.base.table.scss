@@ -19,6 +19,11 @@ table.camel-table {
 		border: none;
 	}
 
+	&.center th,
+	&.center td {
+		text-align: center;
+	}
+
 	&.border th,
 	&.border td {
 		border: 1px solid $secondary-color-dark;

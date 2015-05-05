@@ -149,3 +149,16 @@
 		behavior: url(../../dist/js/polyfills/PIE.php);*/
 	}
 }
+
+
+.ie8,
+.ie9 {
+	label.camel-select-wrap {
+		overflow: hidden;
+
+		select.camel-select {
+			padding-right: 0;
+			margin-right: -30px;
+		}
+	}
+}

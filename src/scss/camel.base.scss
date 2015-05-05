@@ -1,9 +1,5 @@
 @import 'local';
 
-* {
-	box-sizing: border-box;
-}
-
 body {
 	font-family: $font-stack;
 	color: $primary-color;
@@ -50,6 +46,7 @@ img {
 
 	&.thumbnail {
 		display: inline-block;
+		box-sizing: border-box;
 		padding: 4px;
 		background-color: #fff;
 		border: 1px solid $secondary-color-dark;
@@ -90,7 +87,7 @@ a:active {
 	text-decoration:underline;
 }
 
-p { margin: 0.5em 0;}
+p { margin: 0 0 1em; }
 
 b,
 strong {
@@ -137,7 +134,7 @@ samp {
 
 blockquote {
 	margin: 0.5em 0;
-	margin-left: 20px;
+	margin-left: 40px;
 	padding-left: 10px;
 	border-left: 5px solid $secondary-color-light;
 	quotes: "\201C" "\201D";
@@ -226,17 +223,6 @@ figcaption {
 mark {
    background-color: #ffff00;
 }
-
-/*
-article
-aside
-footer
-header
-main
-nav
-section
-*/
-
 
 ::-moz-selection {
     background: #b3d4fc;

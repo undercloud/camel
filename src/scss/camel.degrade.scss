@@ -154,11 +154,25 @@
 .ie8,
 .ie9 {
 	label.camel-select-wrap {
-		overflow: hidden;
+		&:before,
+		&:after {
+			display: none;
+		}
 
 		select.camel-select {
-			padding-right: 0;
-			margin-right: -30px;
+			padding-right: 10px;
+		}
+
+		&.sm {
+			select.camel-select {
+				padding-right: 5px;
+			}
+		}
+
+		&.lg {
+			select.camel-select {
+				padding-right: 11px;
+			}
 		}
 	}
 }

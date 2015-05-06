@@ -117,8 +117,10 @@ input[type=radio] {
 	vertical-align: text-top;
 	width: 14px;
 	height: 14px;
-	font-size: 0;
+	line-height: 14px;
+	font-size: 12px;
 	margin-right: 3px;
+	vertical-align: middle;
 }
 
 .camel-pseudo-radio,
@@ -132,6 +134,7 @@ input[type=radio] {
 	background-position: 0 0;
 	background-repeat: no-repeat;
 	overflow: visible;
+	vertical-align: top;
 
 	&:before {
 		line-height: 18px;
@@ -152,6 +155,8 @@ input[type=radio] {
 .camel-radio-wrap .camel-radio + .camel-pseudo-radio:before {
 	color: #ccc;
 	content: "\f10c";
+	margin-top: -3px;
+ 	display: inline-block;
 }
 
 .camel-radio-wrap .camel-radio:checked + .camel-pseudo-radio:before {
@@ -172,6 +177,8 @@ input[type=radio] {
 .camel-checkbox-wrap .camel-checkbox + .camel-pseudo-checkbox:before {
 	color: #ccc;
 	content: "\f096";
+	margin-top: -3px;
+ 	display: inline-block;
 }
 
 .camel-checkbox-wrap .camel-checkbox:checked + .camel-pseudo-checkbox:before {

@@ -69,14 +69,14 @@
 	.camel-checkbox:checked + .handle {
 		&:before{
 			width: 40px;
-			background-color: #16A085;
+			background-color: $main-color;
 			opacity: 0.5;
 		}
 
 		&:after {
 			left: 22px;
-			background-color: #16A085;
-			border-color: #16A085;
+			background-color: $main-color;
+			border-color: $main-color;
 		}
 	}
 

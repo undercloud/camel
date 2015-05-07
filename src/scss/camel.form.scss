@@ -160,7 +160,7 @@ input[type=radio] {
 }
 
 .camel-radio-wrap .camel-radio:checked + .camel-pseudo-radio:before {
-	color: #16A085;
+	color: $main-color;
 	content: "\f192";
 }
 
@@ -182,7 +182,7 @@ input[type=radio] {
 }
 
 .camel-checkbox-wrap .camel-checkbox:checked + .camel-pseudo-checkbox:before {
-	color: #16A085;
+	color: $main-color;
 	content: "\f14a";
 }
 

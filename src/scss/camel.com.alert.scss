@@ -7,6 +7,7 @@
 	border-style: solid;
 	background-color: #f5f5f5;
 	border: 1px solid #ddd;
+	box-sizing: border-box;
 
 	&.info {
 		color: #31708F;
@@ -30,6 +31,16 @@
 		color: #A94442;
 		background-color: #F2DEDE;
 		border-color: #EBCCD1;
+	}
+
+	&.sticky {
+		position: fixed;
+		top: 0;
+		left: 0;
+		margin: 0;
+		border-radius: 0;
+		width: 100%;
+		z-index: 100;
 	}
 
 	.close {

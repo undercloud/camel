@@ -215,11 +215,11 @@
 
 .camel-button.dropdown.split,
 .camel-button-group .camel-button {
-	border-left: 1px solid #16A085;
-	border-right: 1px solid #16A085;
+	border-left: 1px solid $main-color;
+	border-right: 1px solid $main-color;
 }
 
 .camel-button-group.stack .camel-button {
-	border-top: 1px solid #16A085;
-	border-bottom: 1px solid #16A085;
+	border-top: 1px solid $main-color;
+	border-bottom: 1px solid $main-color;
 }

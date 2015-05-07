@@ -26,7 +26,8 @@
 
 		&:before {
 			position: relative;
-			content: "\f0ee";
+			content: "\f15b";
+			color: $main-color;
 			font-family: FontAwesome;
 			margin-right: 0.5em;
 			font-size: 20px;

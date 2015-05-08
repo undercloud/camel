@@ -186,6 +186,12 @@ input[type=radio] {
 	content: "\f14a";
 }
 
+.camel-checkbox-wrap .camel-checkbox:focus + .camel-pseudo-checkbox:before,
+.camel-checkbox-wrap .camel-radio:focus + .camel-pseudo-radio:before {
+	border-color: #49bf9d;
+	box-shadow: 0 0 0 1px #49bf9d;
+}
+
 .camel-checkbox-wrap .camel-checkbox,
 .camel-radio-wrap .camel-radio  {
 	position: absolute;

@@ -1,0 +1,24 @@
+@import 'local';
+
+.camel-divider {
+	margin: 15px 0;
+	text-align: center;
+	position: relative;
+
+	.line {
+		height: 1px;
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		background-color: $secondary-color-dark;
+	}
+
+	.text {
+		background-color: #fff;
+		padding: 0 10px;
+		position: relative;
+		color: #777;
+		font-size: 1.08em;
+		display: inline-block;
+	}
+}

@@ -1,7 +1,7 @@
 @import 'local';
 
 .camel-divider {
-	margin: 15px 0;
+	margin: 1em 0;
 	text-align: center;
 	position: relative;
 
@@ -15,10 +15,13 @@
 
 	.text {
 		background-color: #fff;
-		padding: 0 10px;
+		padding: 0 0.75em;
 		position: relative;
-		color: #777;
-		font-size: 1.08em;
+		font-size: 1em;
 		display: inline-block;
+
+		.fa {
+			font-size: 1.5em;
+		}
 	}
 }

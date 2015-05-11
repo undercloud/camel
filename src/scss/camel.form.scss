@@ -115,11 +115,12 @@ input[type=radio] {
 	position: relative;
 	display: inline-block;
 	vertical-align: text-top;
-	width: 14px;
-	height: 14px;
+	width: 18px;
+	height: 18px;
 	line-height: 14px;
 	font-size: 12px;
 	margin-right: 3px;
+	margin-top: -2px;
 	vertical-align: middle;
 }
 
@@ -127,7 +128,7 @@ input[type=radio] {
 .camel-pseudo-checkbox {
 	position: relative;
 	width: 18px;
-	height: 14px;
+	height: 18px;
 	font-family: FontAwesome;
 	display: inline-block;
 	overflow: hidden;
@@ -138,7 +139,7 @@ input[type=radio] {
 
 	&:before {
 		line-height: 18px;
-		font-size: 18px;
+		font-size: 21px;
 	}
 }
 
@@ -155,7 +156,6 @@ input[type=radio] {
 .camel-radio-wrap .camel-radio + .camel-pseudo-radio:before {
 	color: #ccc;
 	content: "\f10c";
-	margin-top: -3px;
  	display: inline-block;
 }
 
@@ -177,8 +177,8 @@ input[type=radio] {
 .camel-checkbox-wrap .camel-checkbox + .camel-pseudo-checkbox:before {
 	color: #ccc;
 	content: "\f096";
-	margin-top: -3px;
  	display: inline-block;
+ 	top: 1px;
 }
 
 .camel-checkbox-wrap .camel-checkbox:checked + .camel-pseudo-checkbox:before {
@@ -186,10 +186,13 @@ input[type=radio] {
 	content: "\f14a";
 }
 
+input[type=checkbox]:focus,
+input[type=radio]:focus,
+.camel-button:focus,
 .camel-checkbox-wrap .camel-checkbox:focus + .camel-pseudo-checkbox:before,
-.camel-checkbox-wrap .camel-radio:focus + .camel-pseudo-radio:before {
-	border-color: #49bf9d;
-	box-shadow: 0 0 0 1px #49bf9d;
+.camel-toggle .camel-checkbox:focus + .handle:after,
+.camel-radio-wrap .camel-radio:focus + .camel-pseudo-radio:before {
+	outline: 1px dashed #777;
 }
 
 .camel-checkbox-wrap .camel-checkbox,
@@ -198,7 +201,7 @@ input[type=radio] {
 	z-index: 1;
 	opacity: 0;
 	width: 18px;
-	height: 14px;
+	height: 18px;
 	top: 0;
 	left: 0;
 }

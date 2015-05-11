@@ -1,8 +1,8 @@
 @import 'local';
 
 body {
-	font-family: $font-stack;
 	color: $primary-color;
+	font-family: $font-stack;
 	font-size: $default-font-size;
 	line-height: $line-height;
 	text-rendering: optimizelegibility;
@@ -11,8 +11,8 @@ body {
 iframe       { border: 0; }
 img,map,area { border: 0; }
 img {
-	vertical-align: top;
 	position: relative;
+	vertical-align: top;
 	max-width: 100%;
 	height: auto;
 	width: auto\9; /* ie8 */

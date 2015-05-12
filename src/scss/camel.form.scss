@@ -117,7 +117,7 @@ input[type=radio] {
 	display: inline-block;
 	vertical-align: text-top;
 	width: 18px;
-	height: 18px;
+	height: 14px;
 	line-height: 14px;
 	font-size: 12px;
 	margin-right: 3px;
@@ -129,7 +129,7 @@ input[type=radio] {
 .camel-pseudo-checkbox {
 	position: relative;
 	width: 18px;
-	height: 18px;
+	height: 14px;
 	font-family: FontAwesome;
 	display: inline-block;
 	overflow: hidden;
@@ -139,8 +139,8 @@ input[type=radio] {
 	vertical-align: top;
 
 	&:before {
-		line-height: 18px;
-		font-size: 21px;
+		line-height: 14px;
+		font-size: 18px;
 	}
 }
 

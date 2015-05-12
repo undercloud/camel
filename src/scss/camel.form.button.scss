@@ -13,7 +13,7 @@
 
 	font-size: 14px;
 	line-height: 14px;
-	padding: 11px 30px;
+	padding: 11px 25px;
 	height: 36px;
 	border-radius: $form-element-radius;
 
@@ -26,14 +26,14 @@
 	&.sm {
 		font-size: 12px;
 		line-height: 12px;
-		padding: 6px 20px;
+		padding: 6px 15px;
 		height: 26px;
 	}
 
 	&.lg {
 		line-height: 16px;
 		font-size: 16px;
-		padding: 17px 35px;
+		padding: 17px 30px;
 		height: 50px;
 	}
 
@@ -90,18 +90,10 @@
 
 	&.addon {
 		padding-left: 0;
-
-		.addon-icon {
-			margin-right: 5px;
-		}
 	}
 
 	&.addon-right {
 		padding-right: 0;
-
-		.addon-icon {
-			margin-left: 5px;
-		}
 	}
 
 	&.addon-no-text {

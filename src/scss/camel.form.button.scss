@@ -42,6 +42,18 @@
 		display: block;
 		width: 100%;
 		margin: 0;
+
+		&.addon .label {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		&.addon-right .label {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
 	}
 
 	&:active {
@@ -107,19 +119,19 @@
 		&:after {
 			content: "\f107";
 			font-family: FontAwesome;
-			padding: 0 11px;
+			padding: 0 9px;
 			vertical-align: middle;
 			font-size: 20px;
 			line-height: 10px;
 		}
 
 		&.sm:after {
-			padding: 0 8px;
+			padding: 0 6px;
 			font-size: 16px;
 		}
 
 		&.lg:after {
-			padding: 0 17px;
+			padding: 0 15px;
 			font-size: 24px;
 		}
 
@@ -140,6 +152,18 @@
 		width: 36px;
 		top: 0;
 		left: 0;
+	}
+
+	&.success {
+		background-color: #26C281;
+	}
+
+	&.error {
+		background-color: #CF3A24;
+	}
+
+	&.warning {
+		background-color: #FFB61E;
 	}
 
 	&.preload {
@@ -165,7 +189,7 @@
 
 	&.addon .label,
 	&.addon-right .label {
-		background-color: #123;
+		background-color: #4E7D9E;
 	}
 
 	&.addon {
@@ -207,11 +231,11 @@
 
 .camel-button.dropdown.split,
 .camel-button-group .camel-button {
-	border-left: 1px solid $main-color;
-	border-right: 1px solid $main-color;
+	border-left: 1px solid #4E7D9E;
+	border-right: 1px solid #4E7D9E;
 }
 
 .camel-button-group.stack .camel-button {
-	border-top: 1px solid $main-color;
-	border-bottom: 1px solid $main-color;
+	border-top: 1px solid #4E7D9E;
+	border-bottom: 1px solid #4E7D9E;
 }

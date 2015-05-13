@@ -52,13 +52,15 @@
 
 		.camel-checkbox[checked] + .handle {
 			&:before{
-				width: 50px;
-				background-color: #16A085;
+				width: 40px;
+				background-color: $main-color;
+				filter: alpha(opacity=0);
 			}
 
 			&:after {
-				left: 28px;
-				border-color: #16A085;
+				left: 22px;
+				border-color: $main-color;
+				background-color: $main-color;
 			}
 		}
 	}

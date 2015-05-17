@@ -9,6 +9,7 @@
 }
 
 textarea.camel-input {
+	vertical-align: top;
 	height: auto;
 	overflow: auto;
 	line-height: 1.2em;
@@ -46,6 +47,7 @@ input.camel-input {
 
 	.fa {
 		font-size: 1.5em;
+		width: 1em;
 	}
 }
 
@@ -139,7 +141,7 @@ input.camel-input.lg {
 		}
 
 		.addon-icon {
-			left: 8px;
+			left: 7px;
 
 			~ .camel-input {
 				padding-left: 26px;
@@ -147,7 +149,7 @@ input.camel-input.lg {
 		}
 
 		.addon-icon-right {
-			right: 8px;
+			right: 7px;
 
 			~ .camel-input {
 				padding-right: 26px;

@@ -4,6 +4,10 @@ body {
 	position: relative;
 }
 
+p {
+	text-indent: 20px;
+}
+
 .page-wrap {
 	height: auto;
 	min-height: 90%;
@@ -193,6 +197,7 @@ code[src-data] {
 	word-break: break-word;
 	width: 100px;
 	box-sizing: border-box;
+	vertical-align: top;
 }
 
 .font-awesome > span.fa:hover {
@@ -252,4 +257,12 @@ code[src-data] {
 
 .footer-menu li + li {
 	border-left: 1px solid #fff;
+}
+
+
+.preload-wrap {
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	background-color: #526;
 }

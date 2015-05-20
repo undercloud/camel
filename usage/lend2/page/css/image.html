@@ -1,55 +1,24 @@
 <div class="content-section">
 	<h2 class="section-head">#img</h2>
-	<span src-data="img">
-		<style>
-			.example-row {
-				white-space: nowrap;
-				font-size: 0;
-			}
-
-			.col100,
-			.col50,
-			.col25 {
-				display: inline-block;
-				white-space: nowrap;
-				padding: 7px;
-				box-sizing: border-box;
-			}
-
-			.col100 { width: 100%; }
-			.col50 { width: 50%; }
-			.col25 { width: 25%; }
-		</style>
-
-		<div class="example-row">
-			<span class="col100">
-				<img src="img/default.jpg" />
-			</span>
+	<div class="row">
+		<div class="col-md-12">
+			<img src="img/default.jpg" />
 		</div>
-		<div class="example-row">
-			<span class="col50">
-				<img src="img/default.jpg" />
-			</span>
-			<span class="col50">
-				<img src="img/default.jpg" />
-			</span>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<h3>.rounded</h3>
+			<img src="img/default-square.jpg" class="rounded" />
 		</div>
-		<div class="example-row">
-			<span class="col25">
-				<img src="img/default.jpg" />
-			</span>
-			<span class="col25">
-				<img src="img/default.jpg" />
-			</span>
-			<span class="col25">
-				<img src="img/default.jpg" />
-			</span>
-			<span class="col25">
-				<img src="img/default.jpg" />
-			</span>
+		<div class="col-md-4">
+			<h3>.thumbnail</h3>
+			<img src="img/default-square.jpg" class="thumbnail" />
 		</div>
-	</span>
-	<code src-data="img" class="language-markup"></code>
+		<div class="col-md-4">
+			<h3>.circle</h3>
+			<img src="img/default-square.jpg" class="circle" />
+		</div>
+	</div>
 </div>
 
 <div class="content-section">

@@ -10,7 +10,7 @@ p {
 
 .page-wrap {
 	height: auto;
-	min-height: 90%;
+	min-height: 100%;
 	padding-bottom: 212px;
 }
 
@@ -21,9 +21,9 @@ p {
 }
 
 .header {
-	width: 960px;
+	width: 800px;
 	margin: 0 auto;
-	padding: 10px 0;
+	padding: 10px 20px;
 }
 
 .header .logo {
@@ -86,7 +86,7 @@ p {
 }
 
 .page-body {
-	width: 860px;
+	width: 800px;
 	margin: 50px auto;
 	min-height: 100%;
 }
@@ -131,7 +131,7 @@ p {
 .page-body .page-content {
 	border-left: 1px solid #eee;
 	float: left;
-	width: 650px;
+	width: 630px;
 	padding-left: 30px;
 }
 
@@ -265,4 +265,20 @@ code[src-data] {
 	width: 200px;
 	height: 200px;
 	background-color: #526;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar:horizontal {
+	height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #444;
+}
+
+::-webkit-scrollbar-track-piece {
+	background-color: #aaa;
 }

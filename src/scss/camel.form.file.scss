@@ -9,7 +9,6 @@
 	position: relative;
 	text-align: center;
 	overflow: hidden;
-	line-height: 0;
 
 	&:hover {
 		opacity: 0.85;
@@ -21,6 +20,7 @@
 		line-height: 100%;
 		padding: 11px 0px;
 		display: inline-block;
+		vertical-align: top;
 
 		@include text-truncate;
 
@@ -36,6 +36,23 @@
 		}
 	}
 
+	.drop-area {
+		margin: 1em;
+		padding: 3em 0;
+		border: 2px dashed $secondary-color-dark;
+		border-radius: $form-element-radius;
+
+		&:before {
+			content: "\f0ed";
+			display: block;
+			text-align: center;
+			font-family: FontAwesome;
+			font-size: 2em;
+			margin-bottom: 1em;
+			margin-bottom: 0.5em;
+		}
+	}
+
 	&.sm {
 		.title {
 			font-size: 12px;
@@ -45,6 +62,10 @@
 			&:before {
 				font-size: 14px;
 			}
+		}
+
+		.drop-area {
+			font-size: 12px;
 		}
 	}
 
@@ -58,6 +79,10 @@
 				font-size: 30px;
 			}
 		}
+
+		.drop-area {
+			font-size: 16px;
+		}
 	}
 
 	input[type=file] {
@@ -69,6 +94,7 @@
 		padding: 0;
 		font-size: 500px;
 		opacity: 0;
+		z-index: 0;
 
 		&[disabled]{
 			cursor: not-allowed;

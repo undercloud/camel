@@ -7,13 +7,6 @@
 	width:auto;
 	vertical-align: middle;
 
-	.camel-label {
-		.handle {
-			margin-right: 10px;
-			margin-top: -4px;
-		}
-	}
-
 	.handle {
 		position: relative;
 		display: inline-block;
@@ -54,7 +47,7 @@
 		}
 	}
 
-	.camel-checkbox {
+	input[type=checkbox] {
 		position: absolute;
 		width: 40px;
 		height: 30px;
@@ -66,7 +59,7 @@
 		z-index: 1;
 	}
 
-	.camel-checkbox:checked + .handle {
+	input[type=checkbox]:checked + .handle {
 		&:before{
 			width: 40px;
 			background-color: $main-color;
@@ -80,7 +73,7 @@
 		}
 	}
 
-	.camel-checkbox[disabled] + .handle {
+	input[type=checkbox][disabled] + .handle {
 		background-color: #eee;
 
 		&:after {
@@ -88,7 +81,7 @@
 		}
 	}
 
-	.camel-checkbox[disabled]:checked + .handle {
+	input[type=checkbox][disabled]:checked + .handle {
 		background-color: #eee;
 
 		&:before {
@@ -98,6 +91,17 @@
 		&:after {
 			border-color: #ddd;
 			background-color: #ddd;
+		}
+	}
+}
+
+
+.camel-label {
+	.camel-toggle {
+		 line-height: normal;
+
+		.handle {
+			vertical-align: baseline;
 		}
 	}
 }

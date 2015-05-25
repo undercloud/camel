@@ -5,6 +5,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box
 }
+
 :after,
 :before {
     -webkit-box-sizing: border-box;
@@ -20,7 +21,8 @@ body {
 	text-rendering: optimizelegibility;
 }
 
-iframe       { border: 0; }
+iframe { border: 0; }
+
 img,map,area { border: 0; }
 img {
 	position: relative;
@@ -66,8 +68,15 @@ img {
 	}
 }
 
-div  { display: block;position: relative; }
-span { display: inline;position: relative; }
+div {
+	display: block;
+	position: relative;
+}
+
+span {
+	display: inline;
+	position: relative;
+}
 
 h1,
 h2,
@@ -90,13 +99,13 @@ h6 { font-size: $h6-size; }
 
 a {
 	cursor: pointer;
-	text-decoration:none;
+	text-decoration: none;
 	color: $primary-link-color;
 }
 
 a:hover,
 a:active {
-	text-decoration:underline;
+	text-decoration: underline;
 }
 
 p { margin: 0 0 1em; }
@@ -175,8 +184,12 @@ blockquote:after {
 small { font-size: 85%; }
 big   { font-size: 120%; }
 
-abbr    { cursor: help;}
-address { display: block;font-style: italic;}
+abbr { cursor: help;}
+
+address {
+	display: block;
+	font-style: italic;
+}
 
 hr {
 	margin: 1em 0;

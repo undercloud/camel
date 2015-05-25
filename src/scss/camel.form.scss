@@ -166,24 +166,24 @@ input[type=radio] {
 	content: "\f192";
 }
 
-.camel-checkbox-wrap .camel-checkbox[disabled] + .camel-pseudo-checkbox:before {
+.camel-checkbox-wrap input[type=checkbox][disabled] + .camel-pseudo-checkbox:before {
 	color: #ddd;
 	content: "\f096";
 }
 
-.camel-checkbox-wrap .camel-checkbox[disabled]:checked + .camel-pseudo-checkbox:before {
+.camel-checkbox-wrap input[type=checkbox][disabled]:checked + .camel-pseudo-checkbox:before {
 	color: #ddd;
 	content: "\f14a";
 }
 
-.camel-checkbox-wrap .camel-checkbox + .camel-pseudo-checkbox:before {
+.camel-checkbox-wrap input[type=checkbox] + .camel-pseudo-checkbox:before {
 	color: #ccc;
 	content: "\f096";
  	display: inline-block;
  	top: 1px;
 }
 
-.camel-checkbox-wrap .camel-checkbox:checked + .camel-pseudo-checkbox:before {
+.camel-checkbox-wrap input[type=checkbox]:checked + .camel-pseudo-checkbox:before {
 	color: $main-color;
 	content: "\f14a";
 }
@@ -191,14 +191,14 @@ input[type=radio] {
 input[type=checkbox]:focus,
 input[type=radio]:focus,
 .camel-button:focus,
-.camel-checkbox-wrap .camel-checkbox:focus + .camel-pseudo-checkbox:before,
-.camel-toggle .camel-checkbox:focus + .handle:after,
+.camel-checkbox-wrap input[type=checkbox]:focus + .camel-pseudo-checkbox:before,
+.camel-toggle input[type=checkbox]:focus + .handle:after,
 .camel-radio-wrap .camel-radio:focus + .camel-pseudo-radio:before {
 	outline: 1px dashed #777;
 	z-index: 1;
 }
 
-.camel-checkbox-wrap .camel-checkbox,
+.camel-checkbox-wrap input[type=checkbox],
 .camel-radio-wrap .camel-radio  {
 	position: absolute;
 	z-index: 1;

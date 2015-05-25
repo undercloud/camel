@@ -2,7 +2,6 @@
 
 .camel-toggle {
 	margin: 0 2px;
-	line-height: 30px;
 	display: inline-block;
 	width:auto;
 	vertical-align: middle;
@@ -10,7 +9,7 @@
 	.handle {
 		position: relative;
 		display: inline-block;
-		vertical-align: middle;
+		vertical-align: baseline;
 		width: 40px;
 		height: 14px;
 		background-color: #ccc;
@@ -50,7 +49,7 @@
 	input[type=checkbox] {
 		position: absolute;
 		width: 40px;
-		height: 30px;
+		height: 20px;
 		top: 0;
 		left: 0;
 		padding: 0;

@@ -145,23 +145,23 @@ input[type=radio] {
 	}
 }
 
-.camel-radio-wrap .camel-radio[disabled] + .camel-pseudo-radio:before {
+.camel-radio-wrap input[type=radio][disabled] + .camel-pseudo-radio:before {
 	color: #ddd;
 	content: "\f10c";
 }
 
-.camel-radio-wrap .camel-radio[disabled]:checked + .camel-pseudo-radio:before {
+.camel-radio-wrap input[type=radio][disabled]:checked + .camel-pseudo-radio:before {
 	color: #ddd;
 	content: "\f192";
 }
 
-.camel-radio-wrap .camel-radio + .camel-pseudo-radio:before {
+.camel-radio-wrap input[type=radio] + .camel-pseudo-radio:before {
 	color: #ccc;
 	content: "\f10c";
  	display: inline-block;
 }
 
-.camel-radio-wrap .camel-radio:checked + .camel-pseudo-radio:before {
+.camel-radio-wrap input[type=radio]:checked + .camel-pseudo-radio:before {
 	color: $main-color;
 	content: "\f192";
 }
@@ -193,13 +193,13 @@ input[type=radio]:focus,
 .camel-button:focus,
 .camel-checkbox-wrap input[type=checkbox]:focus + .camel-pseudo-checkbox:before,
 .camel-toggle input[type=checkbox]:focus + .handle:after,
-.camel-radio-wrap .camel-radio:focus + .camel-pseudo-radio:before {
+.camel-radio-wrap input[type=radio]:focus + .camel-pseudo-radio:before {
 	outline: 1px dashed #777;
 	z-index: 1;
 }
 
 .camel-checkbox-wrap input[type=checkbox],
-.camel-radio-wrap .camel-radio  {
+.camel-radio-wrap input[type=radio] {
 	position: absolute;
 	z-index: 1;
 	opacity: 0;

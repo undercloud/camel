@@ -1,43 +1,43 @@
 @import 'local';
 
 .ie8 {
-	.camel-checkbox-wrap .camel-checkbox,
+	.camel-checkbox-wrap input[type=checkbox],
 	.camel-radio-wrap .camel-radio {
 		filter: alpha(opacity=0);
 	}
 
 	.camel-checkbox-wrap {
-		.camel-checkbox[disabled][checked] + .camel-pseudo-checkbox:before {
+		input[type=checkbox][disabled][checked] + .camel-pseudo-checkbox:before {
 			color: #ddd;
 			content: "\f14a";
 		}
 
-		.camel-checkbox[checked] + .camel-pseudo-checkbox:before {
+		input[type=checkbox][checked] + .camel-pseudo-checkbox:before {
 			color: $main-color;
 			content: "\f14a";
 		}
 	}
 
 	.camel-radio-wrap {
-		.camel-radio[disabled][checked] + .camel-pseudo-radio:before {
+		input[type=radio][disabled][checked] + .camel-pseudo-radio:before {
 			color: #ddd;
 			content: "\f192";
 		}
 
-		.camel-radio[checked] + .camel-pseudo-radio:before {
+		input[type=radio][checked] + .camel-pseudo-radio:before {
 			color: $main-color;
 			content: "\f192";
 		}
 	}
 
 	.camel-toggle {
-		.camel-checkbox {
+		input[type=checkbox] {
 			filter: alpha(opacity=0);
 		}
 	}
 
 	.camel-toggle {
-		.camel-checkbox[disabled][checked] + .handle {
+		input[type=checkbox][disabled][checked] + .handle {
 			background-color: #eee;
 
 			&:before {
@@ -50,7 +50,7 @@
 			}
 		}
 
-		.camel-checkbox[checked] + .handle {
+		input[type=checkbox][checked] + .handle {
 			&:before{
 				width: 40px;
 				background-color: $main-color;

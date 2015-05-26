@@ -1,5 +1,4 @@
 <div class="content-body">
-	<a name="checkbox"></a>
 	<h2 class="section-head">#checkbox, radio, label</h2>
 	<div class="camel-form-row">
 		<div class="form-grid-12">
@@ -18,6 +17,7 @@
 			<code src-data="checkbox" class="language-markup"></code>
 		</div>
 	</div>
+
 	<div class="camel-form-row">
 		<div class="form-grid-12">
 			<span src-data="radio">
@@ -41,6 +41,7 @@
 			<code src-data="radio" class="language-markup"></code>
 		</div>
 	</div>
+
 	<div class="camel-form-row">
 		<div class="form-grid-12">
 			<span src-data="label">
@@ -65,82 +66,110 @@
 		</div>
 	</div>
 
-<div>
-	<label class="camel-label">
-		<span class="camel-checkbox-wrap">
-			<input type="checkbox" />
-			<span class="camel-pseudo-checkbox"></span>
-		</span>Unchecked
-	</label>
-	<label class="camel-label">
-		<span class="camel-checkbox-wrap">
-			<input type="checkbox" checked />
-			<span class="camel-pseudo-checkbox"></span>
-		</span>Unchecked
-	</label>
-	<label class="camel-label">
-		<span class="camel-checkbox-wrap">
-			<input type="checkbox" disabled/>
-			<span class="camel-pseudo-checkbox"></span>
-		</span>Unchecked
-	</label>
-	<label class="camel-label">
-		<span class="camel-checkbox-wrap">
-			<input type="checkbox" checked disabled />
-			<span class="camel-pseudo-checkbox"></span>
-		</span>Unchecked
-	</label>
-</div>
+	<div class="camel-form-row">
+		<div class="form-grid-12">
+			<span src-data="pseudo-checkbox">
+				<label class="camel-label">
+					<span class="camel-checkbox-wrap">
+						<input type="checkbox" />
+						<span class="camel-pseudo-checkbox"></span>
+					</span>Unchecked
+				</label>
+				<label class="camel-label">
+					<span class="camel-checkbox-wrap">
+						<input type="checkbox" checked />
+						<span class="camel-pseudo-checkbox"></span>
+					</span>Unchecked
+				</label>
+				<label class="camel-label">
+					<span class="camel-checkbox-wrap">
+						<input type="checkbox" disabled/>
+						<span class="camel-pseudo-checkbox"></span>
+					</span>Unchecked
+				</label>
+				<label class="camel-label">
+					<span class="camel-checkbox-wrap">
+						<input type="checkbox" checked disabled />
+						<span class="camel-pseudo-checkbox"></span>
+					</span>Unchecked
+				</label>
+		</div>
+	</div>
+	<div class="camel-form-row">
+		<div class="form-grid-12">
+			<code src-data="pseudo-checkbox" class="language-markup"></code>
+		</div>
+	</div>
 
-<div>
-	<label class="camel-label">
-		<span class="camel-radio-wrap">
-			<input class="camel-radio" type="radio" checked name="rd"/>
-			<span class="camel-pseudo-radio"></span>
-		</span>One
-	</label>
-	<label class="camel-label">
-		<span class="camel-radio-wrap">
-			<input class="camel-radio" type="radio" name="rd"/>
-			<span class="camel-pseudo-radio"></span>
-		</span>Two
-	</label>
-	<label class="camel-label">
-		<span class="camel-radio-wrap">
-			<input class="camel-radio" type="radio" name="rd"/>
-			<span class="camel-pseudo-radio"></span>
-		</span>Three
-	</label>
-	<label class="camel-label">
-		<span class="camel-radio-wrap">
-			<input class="camel-radio" type="radio" disabled/>
-			<span class="camel-pseudo-radio"></span>
-		</span>Three
-	</label>
-	<label class="camel-label">
-		<span class="camel-radio-wrap">
-			<input class="camel-radio" type="radio" checked disabled/>
-			<span class="camel-pseudo-radio"></span>
-		</span>Four
-	</label>
-</div>
+	<div class="camel-form-row">
+		<div class="form-grid-12">
+			<span src-data="pseudo-radio">
+				<label class="camel-label">
+					<span class="camel-radio-wrap">
+						<input type="radio" checked name="rd"/>
+						<span class="camel-pseudo-radio"></span>
+					</span>One
+				</label>
+				<label class="camel-label">
+					<span class="camel-radio-wrap">
+						<input type="radio" name="rd"/>
+						<span class="camel-pseudo-radio"></span>
+					</span>Two
+				</label>
+				<label class="camel-label">
+					<span class="camel-radio-wrap">
+						<input type="radio" disabled/>
+						<span class="camel-pseudo-radio"></span>
+					</span>Three
+				</label>
+				<label class="camel-label">
+					<span class="camel-radio-wrap">
+						<input type="radio" checked disabled/>
+						<span class="camel-pseudo-radio"></span>
+					</span>Four
+				</label>
+			</span>
+		</div>
+	</div>
+	<div class="camel-form-row">
+		<div class="form-grid-12">
+			<code src-data="pseudo-radio" class="language-markup"></code>
+		</div>
+	</div>
 
-<div>
-	<span class="camel-toggle">
-		<input type="checkbox" />
-		<span class="handle"></span>
-	</span>
-	<span class="camel-toggle">
-		<input type="checkbox" checked />
-		<span class="handle"></span>
-	</span>
-	<span class="camel-toggle">
-		<input type="checkbox" disabled />
-		<span class="handle"></span>
-	</span>
-	<span class="camel-toggle">
-		<input type="checkbox" checked disabled />
-		<span class="handle"></span>
-	</span>
-</div>
+	<div class="camel-form-row">
+		<div class="form-grid-12">
+			<span src-data="toggle">
+				<label class="camel-label block">
+					<span class="camel-toggle">
+						<input type="checkbox" />
+						<span class="handle"></span>
+					</span> First toggle item
+				</label>
+				<label class="camel-label block">
+					<span class="camel-toggle">
+						<input type="checkbox" checked />
+						<span class="handle"></span>
+					</span> Second toggle item
+				</label>
+				<label class="camel-label block">
+					<span class="camel-toggle">
+						<input type="checkbox" disabled />
+						<span class="handle"></span>
+					</span> Third toggle item
+				</label>
+				<label class="camel-label block">
+					<span class="camel-toggle">
+						<input type="checkbox" checked disabled />
+						<span class="handle"></span>
+					</span> Fourth toggle item
+				</label>
+			</span>
+		</div>
+	</div>
+	<div class="camel-form-row">
+		<div class="form-grid-12">
+			<code src-data="toggle" class="language-markup"></code>
+		</div>
+	</div>
 </div>

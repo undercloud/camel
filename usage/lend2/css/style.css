@@ -136,14 +136,18 @@ p {
 }
 
 .content-section {
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 }
 
 code[src-data] {
-	margin: 20px 0 !important;
+	margin: 10px 0 10px 0 !important;
 	border-radius: 0 !important;
 	padding: 0.7em !important;
 	font-size: 14px;
+}
+
+span[src-data] {
+	display: block;
 }
 
 .exmple-grid-system .row-12 div,
